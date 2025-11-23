@@ -71,18 +71,18 @@ def get_directive_description(directive_line):
             return f"{base_desc} ({macro_name})"
     
     elif directive_type == '#if':
-        return f"{base_desc} - {directive_line[3:].strip()}"
+        return f"{base_desc} - {directive_line[len('#if'):].strip()}"
     
     elif directive_type == '#error':
-        msg = directive_line[6:].strip()
+        msg = directive_line[len('#error'):].strip()
         return f"{base_desc}: {msg}"
     
     elif directive_type == '#warning':
-        msg = directive_line[8:].strip()
+        msg = directive_line[len('#warning'):].strip()
         return f"{base_desc}: {msg}"
     
     elif directive_type == '#pragma':
-        return f"{base_desc} - {directive_line[7:].strip()}"
+        return f"{base_desc} - {directive_line[len('#pragma'):].strip()}"
     
     return base_desc
 
@@ -91,7 +91,7 @@ def is_preprocessor_directive(line):
     Check if a line is a preprocessor directive.
     """
     line = line.strip()
-    return line.startswith('#') and any(line.startswith(d) for d in DIRECTIVE_DESCRIPTIONS.keys())
+    return any(line.startswith(d) for d in DIRECTIVE_DESCRIPTIONS.keys())
 
 def scan_file(filepath):
     """
