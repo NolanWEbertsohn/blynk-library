@@ -1,0 +1,529 @@
+# Distinct #define Directives
+
+Total unique macro names: 490
+
+## Statistics
+
+- Total #define directives: 1158
+- Unique macro names: 490
+- Average occurrences per macro: 2.36
+
+## Most Frequently Defined Macros
+
+| Rank | Macro Name | Occurrences |
+|------|------------|-------------|
+| 1 | `BLYNK_INFO_DEVICE` | 117 |
+| 2 | `BLYNK_PRINT` | 80 |
+| 3 | `BLYNK_INFO_CONNECTION` | 49 |
+| 4 | `BLYNK_BUFFERS_SIZE` | 32 |
+| 5 | `BLYNK_USE_128_VPINS` | 31 |
+| 6 | `BLYNK_SEND_ATOMIC` | 24 |
+| 7 | `BLYNK_SEND_CHUNK` | 19 |
+| 8 | `BLYNK_INFO_CPU` | 18 |
+| 9 | `BOARD_LED_BRIGHTNESS` | 14 |
+| 10 | `BOARD_BUTTON_PIN` | 12 |
+| 11 | `BOARD_BUTTON_ACTIVE_LOW` | 12 |
+| 12 | `SerialNCP` | 12 |
+| 13 | `BOARD_LED_INVERSE` | 10 |
+| 14 | `_BLYNK_USE_DEFAULT_DELAY` | 10 |
+| 15 | `_BLYNK_USE_DEFAULT_MILLIS` | 9 |
+| 16 | `_BLYNK_USE_DEFAULT_FREE_RAM` | 9 |
+| 17 | `BLYNK_FIRMWARE_VERSION` | 8 |
+| 18 | `SDCARD_CS` | 8 |
+| 19 | `BLYNK_DECODE_PIN` | 8 |
+| 20 | `BLYNK_NO_YIELD` | 8 |
+
+## All Unique Macros
+
+| Macro Name | First Occurrence | File | Line | Total Occurrences |
+|------------|------------------|------|------|-------------------|
+| `ADAFRUIT_CC3000_CS` | `#define ADAFRUIT_CC3000_CS   8` | src/BlynkSimpleTinyDuino.h | 23 | 1 |
+| `ADAFRUIT_CC3000_IRQ` | `#define ADAFRUIT_CC3000_IRQ  2` | src/BlynkSimpleTinyDuino.h | 21 | 1 |
+| `ADAFRUIT_CC3000_VBAT` | `#define ADAFRUIT_CC3000_VBAT A3` | src/BlynkSimpleTinyDuino.h | 22 | 1 |
+| `APP_DEBUG` | `#define APP_DEBUG` | examples/Blynk.Edgent/Edgent_ESP32/Edgen | 32 | 3 |
+| `BLE_DEVICE_NAME` | `#define BLE_DEVICE_NAME            "Blynk"` | src/BlynkSimpleRedBear_Duo_BLE.h | 42 | 1 |
+| `BLE_PERIPHERAL_APPEARANCE` | `#define BLE_PERIPHERAL_APPEARANCE  BLE_APPEARANCE_UNKNOWN` | src/BlynkSimpleRedBear_Duo_BLE.h | 40 | 1 |
+| `BLYNKEVERYN_H` | `#define BLYNKEVERYN_H` | src/Blynk/BlynkEveryN.h | 3 | 1 |
+| `BLYNKTIMER_H` | `#define BLYNKTIMER_H` | src/Blynk/BlynkTimer.h | 30 | 1 |
+| `BLYNK_ASSERT` | `#define BLYNK_ASSERT(expr)   { if(!(expr)) { BLYNK_LOG2(BLYN...` | src/Blynk/BlynkDebug.h | 97 | 4 |
+| `BLYNK_ATTACH_WIDGET` | `#define BLYNK_ATTACH_WIDGET(widget, pin) \` | src/Blynk/BlynkWidgetBase.h | 58 | 1 |
+| `BLYNK_ATTR_PACKED` | `#define BLYNK_ATTR_PACKED     __attribute__ ((__packed__))` | src/Blynk/BlynkHelpers.h | 47 | 1 |
+| `BLYNK_BLUE` | `#define BLYNK_BLUE      "#04C0F8"` | examples/More/SetProperty/SetProperty_Si | 40 | 2 |
+| `BLYNK_BUFFERS_SIZE` | `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 82 | 32 |
+| `BLYNK_CONCAT` | `#define BLYNK_CONCAT(a, b)    a ## b` | src/Blynk/BlynkHelpers.h | 39 | 1 |
+| `BLYNK_CONCAT2` | `#define BLYNK_CONCAT2(a, b)   BLYNK_CONCAT(a, b)` | src/Blynk/BlynkHelpers.h | 40 | 1 |
+| `BLYNK_CONNECTED` | `#define BLYNK_CONNECTED()    void BlynkOnConnected()` | src/Blynk/BlynkHandlers.h | 177 | 1 |
+| `BLYNK_CONSOLE_INPUT_BUFFER` | `#define BLYNK_CONSOLE_INPUT_BUFFER 256` | src/Blynk/BlynkConsole.h | 18 | 1 |
+| `BLYNK_CONSOLE_MAX_COMMANDS` | `#define BLYNK_CONSOLE_MAX_COMMANDS 64` | src/Blynk/BlynkConsole.h | 17 | 1 |
+| `BLYNK_CONSOLE_USE_STREAM` | `#define BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 19 | 1 |
+| `BLYNK_CONSTRUCTOR` | `#define BLYNK_CONSTRUCTOR     __attribute__ ((constructor))` | src/Blynk/BlynkHelpers.h | 51 | 1 |
+| `BLYNK_COUNT_OF` | `#define BLYNK_COUNT_OF(x)     ((sizeof(x)/sizeof(0[x])) / ((...` | src/Blynk/BlynkHelpers.h | 45 | 1 |
+| `BLYNK_DARK_BLUE` | `#define BLYNK_DARK_BLUE "#5F7CD8"` | examples/More/SetProperty/SetProperty_Si | 43 | 2 |
+| `BLYNK_DBG_BREAK` | `#define BLYNK_DBG_BREAK()    { for(;;); }` | src/Blynk/BlynkDebug.h | 96 | 4 |
+| `BLYNK_DBG_DUMP` | `#define BLYNK_DBG_DUMP(msg, addr, len)` | src/Blynk/BlynkDebug.h | 257 | 1 |
+| `BLYNK_DEBUG` | `#define BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 57 | 1 |
+| `BLYNK_DECODE_PIN` | `#define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? ana...` | linux/BlynkApiWiringPi.h | 67 | 8 |
+| `BLYNK_DEFAULT_DOMAIN` | `#define BLYNK_DEFAULT_DOMAIN     "blynk.cloud"` | src/Blynk/BlynkConfig.h | 19 | 1 |
+| `BLYNK_DEFAULT_PORT` | `#define BLYNK_DEFAULT_PORT       80` | src/Blynk/BlynkConfig.h | 20 | 1 |
+| `BLYNK_DEFAULT_PORT_SSL` | `#define BLYNK_DEFAULT_PORT_SSL   443` | src/Blynk/BlynkConfig.h | 21 | 1 |
+| `BLYNK_DEPRECATED` | `#define BLYNK_DEPRECATED      __attribute__ ((deprecated))` | src/Blynk/BlynkHelpers.h | 50 | 1 |
+| `BLYNK_DISCONNECTED` | `#define BLYNK_DISCONNECTED() void BlynkOnDisconnected()` | src/Blynk/BlynkHandlers.h | 178 | 1 |
+| `BLYNK_ESP8266_MUX` | `#define BLYNK_ESP8266_MUX  1` | src/BlynkSimpleShieldEsp8266.h | 23 | 1 |
+| `BLYNK_EVERY_N_HOURS` | `#define BLYNK_EVERY_N_HOURS(N)   BLYNK_EVERY_N_HOURS_I(BLYNK...` | src/Blynk/BlynkEveryN.h | 67 | 1 |
+| `BLYNK_EVERY_N_HOURS_I` | `#define BLYNK_EVERY_N_HOURS_I(NAME,N)   static BlynkEveryNHo...` | src/Blynk/BlynkEveryN.h | 62 | 1 |
+| `BLYNK_EVERY_N_MILLIS` | `#define BLYNK_EVERY_N_MILLIS(N)  BLYNK_EVERY_N_MILLIS_I(BLYN...` | src/Blynk/BlynkEveryN.h | 64 | 1 |
+| `BLYNK_EVERY_N_MILLIS_I` | `#define BLYNK_EVERY_N_MILLIS_I(NAME,N)  static BlynkEveryNMi...` | src/Blynk/BlynkEveryN.h | 59 | 1 |
+| `BLYNK_EVERY_N_MINUTES` | `#define BLYNK_EVERY_N_MINUTES(N) BLYNK_EVERY_N_MINUTES_I(BLY...` | src/Blynk/BlynkEveryN.h | 66 | 1 |
+| `BLYNK_EVERY_N_MINUTES_I` | `#define BLYNK_EVERY_N_MINUTES_I(NAME,N) static BlynkEveryNMi...` | src/Blynk/BlynkEveryN.h | 61 | 1 |
+| `BLYNK_EVERY_N_SECONDS` | `#define BLYNK_EVERY_N_SECONDS(N) BLYNK_EVERY_N_SECONDS_I(BLY...` | src/Blynk/BlynkEveryN.h | 65 | 1 |
+| `BLYNK_EVERY_N_SECONDS_I` | `#define BLYNK_EVERY_N_SECONDS_I(NAME,N) static BlynkEveryNSe...` | src/Blynk/BlynkEveryN.h | 60 | 1 |
+| `BLYNK_F` | `#define BLYNK_F(s)        F(s)` | src/Blynk/BlynkHelpers.h | 73 | 2 |
+| `BLYNK_FALLTHROUGH` | `#define BLYNK_FALLTHROUGH     __attribute__ ((fallthrough))` | src/Blynk/BlynkHelpers.h | 52 | 1 |
+| `BLYNK_FATAL` | `#define BLYNK_FATAL(msg)     { BLYNK_LOG1(msg); BlynkFatal()...` | src/Blynk/BlynkDebug.h | 47 | 1 |
+| `BLYNK_FILE_READ` | `#define BLYNK_FILE_READ  "r"` | examples/Blynk.Edgent/Edgent_ESP8266/Bly | 24 | 1 |
+| `BLYNK_FILE_WRITE` | `#define BLYNK_FILE_WRITE "w"` | examples/Blynk.Edgent/Edgent_ESP8266/Bly | 25 | 1 |
+| `BLYNK_FIRMWARE_TYPE` | `#define BLYNK_FIRMWARE_TYPE         BOARD_FIRMWARE_TYPE` | src/Blynk/BlynkApi.h | 17 | 3 |
+| `BLYNK_FIRMWARE_VERSION` | `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | examples/Blynk.Edgent/Edgent_ESP32/Edgen | 27 | 8 |
+| `BLYNK_FORCE_INLINE` | `#define BLYNK_FORCE_INLINE    inline //__attribute__((always...` | src/Blynk/BlynkHelpers.h | 55 | 1 |
+| `BLYNK_FS` | `#define BLYNK_FS LittleFS` | examples/Blynk.Edgent/Edgent_ESP32/Blynk | 12 | 4 |
+| `BLYNK_GREEN` | `#define BLYNK_GREEN     "#23C48E"` | examples/More/SetProperty/SetProperty_Si | 39 | 2 |
+| `BLYNK_HAS_FUNCTIONAL_H` | `#define BLYNK_HAS_FUNCTIONAL_H` | src/Blynk/BlynkHelpers.h | 84 | 1 |
+| `BLYNK_HAS_PROGMEM` | `#define BLYNK_HAS_PROGMEM` | src/Blynk/BlynkHelpers.h | 71 | 1 |
+| `BLYNK_HEARTBEAT` | `#define BLYNK_HEARTBEAT 60` | src/Adapters/BlynkArduinoGSM.h | 18 | 4 |
+| `BLYNK_HW_AR` | `#define BLYNK_HW_AR BLYNK_STR_16('a','r')` | src/Blynk/BlynkProtocolDefs.h | 109 | 1 |
+| `BLYNK_HW_AW` | `#define BLYNK_HW_AW BLYNK_STR_16('a','w')` | src/Blynk/BlynkProtocolDefs.h | 108 | 1 |
+| `BLYNK_HW_DR` | `#define BLYNK_HW_DR BLYNK_STR_16('d','r')` | src/Blynk/BlynkProtocolDefs.h | 107 | 1 |
+| `BLYNK_HW_DW` | `#define BLYNK_HW_DW BLYNK_STR_16('d','w')` | src/Blynk/BlynkProtocolDefs.h | 106 | 1 |
+| `BLYNK_HW_PM` | `#define BLYNK_HW_PM BLYNK_STR_16('p','m')` | src/Blynk/BlynkProtocolDefs.h | 105 | 1 |
+| `BLYNK_HW_VR` | `#define BLYNK_HW_VR BLYNK_STR_16('v','r')` | src/Blynk/BlynkProtocolDefs.h | 111 | 1 |
+| `BLYNK_HW_VW` | `#define BLYNK_HW_VW BLYNK_STR_16('v','w')` | src/Blynk/BlynkProtocolDefs.h | 110 | 1 |
+| `BLYNK_INFO_CONNECTION` | `#define BLYNK_INFO_CONNECTION  "MKRGSM"` | src/Adapters/BlynkArduinoGSM.h | 14 | 49 |
+| `BLYNK_INFO_CPU` | `#define BLYNK_INFO_CPU      "ATmega168"` | src/Blynk/BlynkDetectDevice.h | 23 | 18 |
+| `BLYNK_INFO_DEVICE` | `#define BLYNK_INFO_DEVICE  "Linux"` | linux/BlynkApiLinux.h | 17 | 117 |
+| `BLYNK_INPUT` | `#define BLYNK_INPUT(pin)        BLYNK_IN_2(pin)` | src/Blynk/BlynkHandlers.h | 173 | 1 |
+| `BLYNK_INPUT_DEFAULT` | `#define BLYNK_INPUT_DEFAULT()   BLYNK_IN_2(Default)` | src/Blynk/BlynkHandlers.h | 170 | 1 |
+| `BLYNK_INT_ACON` | `#define BLYNK_INT_ACON BLYNK_STR_32('a','c','o','n')` | src/Blynk/BlynkProtocolDefs.h | 118 | 1 |
+| `BLYNK_INT_ADIS` | `#define BLYNK_INT_ADIS BLYNK_STR_32('a','d','i','s')` | src/Blynk/BlynkProtocolDefs.h | 119 | 1 |
+| `BLYNK_INT_DBG` | `#define BLYNK_INT_DBG  BLYNK_STR_32('d','b','g',0)` | src/Blynk/BlynkProtocolDefs.h | 117 | 1 |
+| `BLYNK_INT_META` | `#define BLYNK_INT_META BLYNK_STR_32('m','e','t','a')` | src/Blynk/BlynkProtocolDefs.h | 120 | 1 |
+| `BLYNK_INT_OTA` | `#define BLYNK_INT_OTA  BLYNK_STR_32('o','t','a',0)` | src/Blynk/BlynkProtocolDefs.h | 115 | 1 |
+| `BLYNK_INT_RTC` | `#define BLYNK_INT_RTC  BLYNK_STR_32('r','t','c',0)` | src/Blynk/BlynkProtocolDefs.h | 113 | 1 |
+| `BLYNK_INT_UTC` | `#define BLYNK_INT_UTC  BLYNK_STR_32('u','t','c',0)` | src/Blynk/BlynkProtocolDefs.h | 114 | 1 |
+| `BLYNK_INT_VFS` | `#define BLYNK_INT_VFS  BLYNK_STR_32('v','f','s',0)` | src/Blynk/BlynkProtocolDefs.h | 116 | 1 |
+| `BLYNK_IN_2` | `#define BLYNK_IN_2(pin)  \` | src/Blynk/BlynkHandlers.h | 164 | 1 |
+| `BLYNK_LOG` | `#define BLYNK_LOG(msg, ...)  BLYNK_LOG_UNAVAILABLE(msg, ##__...` | src/Blynk/BlynkDebug.h | 66 | 5 |
+| `BLYNK_LOG1` | `#define BLYNK_LOG1(p1)            { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 71 | 4 |
+| `BLYNK_LOG2` | `#define BLYNK_LOG2(p1,p2)         { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 72 | 4 |
+| `BLYNK_LOG3` | `#define BLYNK_LOG3(p1,p2,p3)      { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 73 | 4 |
+| `BLYNK_LOG4` | `#define BLYNK_LOG4(p1,p2,p3,p4)   { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 74 | 4 |
+| `BLYNK_LOG6` | `#define BLYNK_LOG6(p1,p2,p3,p4,p5,p6) { BLYNK_LOG_TIME(); BL...` | src/Blynk/BlynkDebug.h | 75 | 4 |
+| `BLYNK_LOG_FN` | `#define BLYNK_LOG_FN()       BLYNK_LOG3(BLYNK_F(__FUNCTION__...` | src/Blynk/BlynkDebug.h | 49 | 1 |
+| `BLYNK_LOG_IP` | `#define BLYNK_LOG_IP(msg, ip)     { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 76 | 2 |
+| `BLYNK_LOG_IP_REV` | `#define BLYNK_LOG_IP_REV(msg, ip) { BLYNK_LOG_TIME(); BLYNK_...` | src/Blynk/BlynkDebug.h | 81 | 2 |
+| `BLYNK_LOG_RAM` | `#define BLYNK_LOG_RAM()      { BLYNK_LOG2(BLYNK_F("Free RAM:...` | src/Blynk/BlynkDebug.h | 48 | 1 |
+| `BLYNK_LOG_TIME` | `#define BLYNK_LOG_TIME() BLYNK_PRINT.printf("[%ld]", BlynkMi...` | src/Blynk/BlynkDebug.h | 160 | 2 |
+| `BLYNK_LOG_TROUBLE` | `#define BLYNK_LOG_TROUBLE(t) BLYNK_LOG2(BLYNK_F("Trouble det...` | src/Blynk/BlynkDebug.h | 50 | 1 |
+| `BLYNK_MAX_CLIENT_QTY` | `#define BLYNK_MAX_CLIENT_QTY 4` | src/BlynkMultiClient.h | 22 | 1 |
+| `BLYNK_MAX_READBYTES` | `#define BLYNK_MAX_READBYTES  256` | src/Blynk/BlynkConfig.h | 48 | 2 |
+| `BLYNK_MAX_SENDBYTES` | `#define BLYNK_MAX_SENDBYTES  128` | src/Blynk/BlynkConfig.h | 53 | 2 |
+| `BLYNK_MAX_TIMERS` | `#define BLYNK_MAX_TIMERS 8` | src/Blynk/BlynkDetectDevice.h | 228 | 2 |
+| `BLYNK_MINIMIZE_PINMODE_USAGE` | `#define BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkSimpleIntelEdisonWiFi.h | 18 | 1 |
+| `BLYNK_MSG_LIMIT` | `#define BLYNK_MSG_LIMIT      15` | src/Blynk/BlynkConfig.h | 43 | 1 |
+| `BLYNK_MULTI_STREAM_MAX_QTY` | `#define BLYNK_MULTI_STREAM_MAX_QTY 6` | src/utility/BlynkStreamMulti.h | 5 | 1 |
+| `BLYNK_MUTEX_DECL` | `#define BLYNK_MUTEX_DECL(x)     std::mutex x` | src/Blynk/BlynkHelpers.h | 91 | 2 |
+| `BLYNK_MUTEX_GUARD` | `#define BLYNK_MUTEX_GUARD(x)    std::lock_guard<std::mutex> ...` | src/Blynk/BlynkHelpers.h | 92 | 2 |
+| `BLYNK_NCP_BAUD` | `#define BLYNK_NCP_BAUD  115200` | src/BlynkEdgentNCP.h | 28 | 4 |
+| `BLYNK_NCP_PORT` | `#define BLYNK_NCP_PORT "/dev/ttyACM0"` | src/BlynkEdgentNCP.h | 71 | 2 |
+| `BLYNK_NEWLINE` | `#define BLYNK_NEWLINE         "\r\n"` | src/Blynk/BlynkHelpers.h | 37 | 1 |
+| `BLYNK_NEW_LIBRARY` | `#define BLYNK_NEW_LIBRARY` | src/Blynk/BlynkConfig.h | 29 | 1 |
+| `BLYNK_NORETURN` | `#define BLYNK_NORETURN        __attribute__ ((noreturn))` | src/Blynk/BlynkHelpers.h | 48 | 1 |
+| `BLYNK_NO_BUILTIN` | `#define BLYNK_NO_BUILTIN` | tests/BlynkBuildTest/BlynkBuildTest.ino | 16 | 2 |
+| `BLYNK_NO_DEFAULT_BANNER` | `#define BLYNK_NO_DEFAULT_BANNER` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 124 | 3 |
+| `BLYNK_NO_FLOAT` | `#define BLYNK_NO_FLOAT` | src/Blynk/BlynkDetectDevice.h | 71 | 2 |
+| `BLYNK_NO_INFO` | `#define BLYNK_NO_INFO` | src/BlynkSimpleSerialBLE.h | 21 | 3 |
+| `BLYNK_NO_LONGLONG` | `#define BLYNK_NO_LONGLONG` | src/Blynk/BlynkDetectDevice.h | 72 | 1 |
+| `BLYNK_NO_YIELD` | `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 64 | 8 |
+| `BLYNK_ON_READ_IMPL` | `#define BLYNK_ON_READ_IMPL(pin)  void BlynkWidgetRead  ## pi...` | src/utility/BlynkHandlers.cpp | 27 | 1 |
+| `BLYNK_ON_WRITE_IMPL` | `#define BLYNK_ON_WRITE_IMPL(pin) void BlynkWidgetWrite ## pi...` | src/utility/BlynkHandlers.cpp | 30 | 1 |
+| `BLYNK_OUTPUT` | `#define BLYNK_OUTPUT(pin)       BLYNK_OUT_2(pin)` | src/Blynk/BlynkHandlers.h | 174 | 1 |
+| `BLYNK_OUTPUT_DEFAULT` | `#define BLYNK_OUTPUT_DEFAULT()  BLYNK_OUT_2(Default)` | src/Blynk/BlynkHandlers.h | 171 | 1 |
+| `BLYNK_OUT_2` | `#define BLYNK_OUT_2(pin) \` | src/Blynk/BlynkHandlers.h | 167 | 1 |
+| `BLYNK_PARAM_KV` | `#define BLYNK_PARAM_KV(k, v) k "\0" v "\0"` | src/Blynk/BlynkParam.h | 19 | 1 |
+| `BLYNK_PARAM_PLACEHOLDER_64` | `#define BLYNK_PARAM_PLACEHOLDER_64 "PlaceholderPlaceholderPl...` | src/Blynk/BlynkParam.h | 20 | 1 |
+| `BLYNK_PRINT` | `#define BLYNK_PRINT Serial` | examples/Blynk.Edgent/Edgent_ESP32/Edgen | 29 | 80 |
+| `BLYNK_PROGMEM` | `#define BLYNK_PROGMEM     PROGMEM` | src/Blynk/BlynkHelpers.h | 72 | 2 |
+| `BLYNK_PROV_ERR_CLOUD` | `#define BLYNK_PROV_ERR_CLOUD    702    // Could not connect ...` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 8 | 3 |
+| `BLYNK_PROV_ERR_CONFIG` | `#define BLYNK_PROV_ERR_CONFIG   700    // Invalid config fro...` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 6 | 3 |
+| `BLYNK_PROV_ERR_INTERNAL` | `#define BLYNK_PROV_ERR_INTERNAL 704    // Other issues (i.e....` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 10 | 3 |
+| `BLYNK_PROV_ERR_NETWORK` | `#define BLYNK_PROV_ERR_NETWORK  701    // Could not connect ...` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 7 | 3 |
+| `BLYNK_PROV_ERR_NONE` | `#define BLYNK_PROV_ERR_NONE     0      // All good` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 5 | 3 |
+| `BLYNK_PROV_ERR_TOKEN` | `#define BLYNK_PROV_ERR_TOKEN    703    // Invalid token erro...` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 9 | 3 |
+| `BLYNK_PSTR` | `#define BLYNK_PSTR(s)     PSTR(s)` | src/Blynk/BlynkHelpers.h | 74 | 2 |
+| `BLYNK_READ` | `#define BLYNK_READ(pin)       BLYNK_READ_2(pin)` | src/Blynk/BlynkHandlers.h | 161 | 1 |
+| `BLYNK_READ_2` | `#define BLYNK_READ_2(pin)  \` | src/Blynk/BlynkHandlers.h | 154 | 1 |
+| `BLYNK_READ_DEFAULT` | `#define BLYNK_READ_DEFAULT()  BLYNK_READ_2(Default)` | src/Blynk/BlynkHandlers.h | 158 | 1 |
+| `BLYNK_RED` | `#define BLYNK_RED       "#D3435C"` | examples/More/SetProperty/SetProperty_Si | 42 | 2 |
+| `BLYNK_RUN_YIELD` | `#define BLYNK_RUN_YIELD() {}` | src/Blynk/BlynkHelpers.h | 59 | 4 |
+| `BLYNK_SECS_PER_DAY` | `#define BLYNK_SECS_PER_DAY     (BLYNK_SECS_PER_HOUR * 24UL)` | src/Blynk/BlynkDateTime.h | 40 | 1 |
+| `BLYNK_SECS_PER_HOUR` | `#define BLYNK_SECS_PER_HOUR    (3600UL)` | src/Blynk/BlynkDateTime.h | 39 | 1 |
+| `BLYNK_SECS_PER_MIN` | `#define BLYNK_SECS_PER_MIN     (60UL)` | src/Blynk/BlynkDateTime.h | 38 | 1 |
+| `BLYNK_SECS_PER_WEEK` | `#define BLYNK_SECS_PER_WEEK    (BLYNK_SECS_PER_DAY * 7UL)` | src/Blynk/BlynkDateTime.h | 41 | 1 |
+| `BLYNK_SEND_ATOMIC` | `#define BLYNK_SEND_ATOMIC` | src/Adapters/BlynkArduinoGSM.h | 25 | 24 |
+| `BLYNK_SEND_CHUNK` | `#define BLYNK_SEND_CHUNK 64` | src/Blynk/BlynkDetectDevice.h | 81 | 19 |
+| `BLYNK_SEND_THROTTLE` | `#define BLYNK_SEND_THROTTLE 0` | src/Blynk/BlynkProtocol.h | 436 | 3 |
+| `BLYNK_SERVER_PORT` | `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT_SSL` | src/Adapters/BlynkEthernet.h | 19 | 6 |
+| `BLYNK_SSL_RX_BUF_SIZE` | `#define BLYNK_SSL_RX_BUF_SIZE 2048` | src/BlynkSimpleEsp8266_SSL.h | 42 | 1 |
+| `BLYNK_SSL_TX_BUF_SIZE` | `#define BLYNK_SSL_TX_BUF_SIZE 512` | src/BlynkSimpleEsp8266_SSL.h | 46 | 1 |
+| `BLYNK_STRINGIFY` | `#define BLYNK_STRINGIFY(x)    #x` | src/Blynk/BlynkHelpers.h | 42 | 1 |
+| `BLYNK_STR_16` | `#define BLYNK_STR_16(a,b)     ((uint16_t(a) << 0) \| (uint16_...` | src/Blynk/BlynkProtocolDefs.h | 96 | 2 |
+| `BLYNK_STR_32` | `#define BLYNK_STR_32(a,b,c,d) ((uint32_t(a) << 0) \| (uint32_...` | src/Blynk/BlynkProtocolDefs.h | 97 | 2 |
+| `BLYNK_TEMPLATE_ID` | `#define BLYNK_TEMPLATE_ID           BOARD_TEMPLATE_ID` | src/Blynk/BlynkApi.h | 25 | 1 |
+| `BLYNK_TEMPLATE_NAME` | `#define BLYNK_TEMPLATE_NAME BLYNK_DEVICE_NAME` | examples/Blynk.Edgent/Edgent_ESP32/Blynk | 27 | 3 |
+| `BLYNK_TERMINAL_BUFF_IN` | `#define BLYNK_TERMINAL_BUFF_IN BLYNK_MAX_READBYTES` | src/WidgetTerminal.h | 17 | 1 |
+| `BLYNK_TERMINAL_BUFF_OUT` | `#define BLYNK_TERMINAL_BUFF_OUT 250` | src/WidgetTerminal.h | 14 | 1 |
+| `BLYNK_TIMEOUT_MS` | `#define BLYNK_TIMEOUT_MS 6000` | src/Adapters/BlynkArduinoGSM.h | 22 | 5 |
+| `BLYNK_TOSTRING` | `#define BLYNK_TOSTRING(x)     BLYNK_STRINGIFY(x)` | src/Blynk/BlynkHelpers.h | 43 | 1 |
+| `BLYNK_UNUSED` | `#define BLYNK_UNUSED          __attribute__ ((__unused__))` | src/Blynk/BlynkHelpers.h | 49 | 1 |
+| `BLYNK_USE_128_VPINS` | `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 65 | 31 |
+| `BLYNK_USE_INTERNAL_ATOLL` | `#define BLYNK_USE_INTERNAL_ATOLL` | src/Blynk/BlynkDetectDevice.h | 227 | 2 |
+| `BLYNK_USE_INTERNAL_DTOSTRF` | `#define BLYNK_USE_INTERNAL_DTOSTRF` | src/Blynk/BlynkDetectDevice.h | 66 | 4 |
+| `BLYNK_USE_SSL` | `#define BLYNK_USE_SSL` | src/BlynkSimpleEthernetSSL.h | 24 | 1 |
+| `BLYNK_USE_STREAM_CLASS` | `#define BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 21 | 2 |
+| `BLYNK_VAR_DOUBLE` | `#define BLYNK_VAR_DOUBLE(name, pin) \` | src/Blynk/BlynkHandlers.h | 193 | 1 |
+| `BLYNK_VAR_INT` | `#define BLYNK_VAR_INT(name, pin) \` | src/Blynk/BlynkHandlers.h | 182 | 1 |
+| `BLYNK_VAR_LONG` | `#define BLYNK_VAR_LONG(name, pin) \` | src/Blynk/BlynkHandlers.h | 187 | 1 |
+| `BLYNK_VAR_STRING` | `#define BLYNK_VAR_STRING(name, pin) \` | src/Blynk/BlynkHandlers.h | 200 | 1 |
+| `BLYNK_VERSION` | `#define BLYNK_VERSION        "1.3.2"` | src/Blynk/BlynkConfig.h | 27 | 1 |
+| `BLYNK_WRITE` | `#define BLYNK_WRITE(pin)      BLYNK_WRITE_2(pin)` | src/Blynk/BlynkHandlers.h | 160 | 1 |
+| `BLYNK_WRITE_2` | `#define BLYNK_WRITE_2(pin) \` | src/Blynk/BlynkHandlers.h | 151 | 1 |
+| `BLYNK_WRITE_DEFAULT` | `#define BLYNK_WRITE_DEFAULT() BLYNK_WRITE_2(Default)` | src/Blynk/BlynkHandlers.h | 157 | 1 |
+| `BLYNK_YELLOW` | `#define BLYNK_YELLOW    "#ED9D00"` | examples/More/SetProperty/SetProperty_Si | 41 | 2 |
+| `BOARD_ANALOG_IN_MAX` | `#define BOARD_ANALOG_IN_MAX int(NUM_ANALOG_INPUTS)` | tests/GenerateJSON/GenerateJSON.ino | 18 | 2 |
+| `BOARD_ANALOG_MAX` | `#define BOARD_ANALOG_MAX    ((2^(ADC_RESOLUTION))-1)` | tests/GenerateJSON/GenerateJSON.ino | 61 | 2 |
+| `BOARD_BUTTON_ACTIVE_LOW` | `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 9 | 12 |
+| `BOARD_BUTTON_PIN` | `#define BOARD_BUTTON_PIN            15` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 8 | 12 |
+| `BOARD_DIGITAL_MAX` | `#define BOARD_DIGITAL_MAX int(NUM_DIGITAL_PINS)` | tests/GenerateJSON/GenerateJSON.ino | 9 | 3 |
+| `BOARD_INFO_MHZ` | `#define BOARD_INFO_MHZ clockCyclesPerMicrosecond()` | tests/GenerateJSON/GenerateJSON.ino | 69 | 2 |
+| `BOARD_LEDC_BASE_FREQ` | `#define BOARD_LEDC_BASE_FREQ          12000` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 96 | 1 |
+| `BOARD_LEDC_CHANNEL_1` | `#define BOARD_LEDC_CHANNEL_1          1` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 92 | 1 |
+| `BOARD_LEDC_CHANNEL_2` | `#define BOARD_LEDC_CHANNEL_2          2` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 93 | 1 |
+| `BOARD_LEDC_CHANNEL_3` | `#define BOARD_LEDC_CHANNEL_3          3` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 94 | 1 |
+| `BOARD_LEDC_TIMER_BITS` | `#define BOARD_LEDC_TIMER_BITS         10` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 95 | 1 |
+| `BOARD_LED_BRIGHTNESS` | `#define BOARD_LED_BRIGHTNESS 255` | examples/Blynk.Edgent/Edgent_ESP32/Indic | 11 | 14 |
+| `BOARD_LED_INVERSE` | `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 14 | 10 |
+| `BOARD_LED_IS_RGB` | `#define BOARD_LED_IS_RGB` | examples/Blynk.Edgent/Edgent_ESP32/Indic | 15 | 3 |
+| `BOARD_LED_PIN` | `#define BOARD_LED_PIN               19` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 24 | 5 |
+| `BOARD_LED_PIN_B` | `#define BOARD_LED_PIN_B             4` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 13 | 2 |
+| `BOARD_LED_PIN_G` | `#define BOARD_LED_PIN_G             2` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 12 | 2 |
+| `BOARD_LED_PIN_R` | `#define BOARD_LED_PIN_R             0` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 11 | 2 |
+| `BOARD_LED_PIN_WS2812` | `#define BOARD_LED_PIN_WS2812        8` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 51 | 2 |
+| `BOARD_PWM_MAX` | `#define BOARD_PWM_MAX                 1023` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 90 | 6 |
+| `BOARD_VIRTUAL_MAX` | `#define BOARD_VIRTUAL_MAX 127` | tests/GenerateJSON/GenerateJSON.ino | 25 | 2 |
+| `BUTTON_HOLD_TIME_ACTION` | `#define BUTTON_HOLD_TIME_ACTION       10000` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 87 | 3 |
+| `BUTTON_HOLD_TIME_INDICATION` | `#define BUTTON_HOLD_TIME_INDICATION   3000` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 86 | 3 |
+| `BUTTON_PRESS_TIME_ACTION` | `#define BUTTON_PRESS_TIME_ACTION      50` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 88 | 3 |
+| `BlynkApiArduino_h` | `#define BlynkApiArduino_h` | src/BlynkApiArduino.h | 12 | 1 |
+| `BlynkApiLinux_h` | `#define BlynkApiLinux_h` | linux/BlynkApiLinux.h | 12 | 1 |
+| `BlynkApiMbed_h` | `#define BlynkApiMbed_h` | src/BlynkApiMbed.h | 12 | 1 |
+| `BlynkApiParticle_h` | `#define BlynkApiParticle_h` | src/BlynkApiParticle.h | 12 | 1 |
+| `BlynkApiWiringPi_h` | `#define BlynkApiWiringPi_h` | linux/BlynkApiWiringPi.h | 12 | 1 |
+| `BlynkApi_h` | `#define BlynkApi_h` | src/Blynk/BlynkApi.h | 12 | 2 |
+| `BlynkArduinoClient_h` | `#define BlynkArduinoClient_h` | src/Adapters/BlynkArduinoClient.h | 12 | 1 |
+| `BlynkArduinoGSM_h` | `#define BlynkArduinoGSM_h` | src/Adapters/BlynkArduinoGSM.h | 11 | 1 |
+| `BlynkArduinoNB_h` | `#define BlynkArduinoNB_h` | src/Adapters/BlynkArduinoNB.h | 11 | 1 |
+| `BlynkBLEPeripheralSerial_h` | `#define BlynkBLEPeripheralSerial_h` | src/Adapters/BlynkBLEPeripheralSerial.h | 2 | 1 |
+| `BlynkBitClear` | `#define BlynkBitClear(value, bit) ((value) &= ~(1UL << (bit)...` | src/Blynk/BlynkUtility.h | 187 | 1 |
+| `BlynkBitRead` | `#define BlynkBitRead(value, bit)  (((value) >> (bit)) & 0x01...` | src/Blynk/BlynkUtility.h | 188 | 1 |
+| `BlynkBitSet` | `#define BlynkBitSet(value, bit)   ((value) \|= (1UL << (bit))...` | src/Blynk/BlynkUtility.h | 186 | 1 |
+| `BlynkBitWrite` | `#define BlynkBitWrite(value, bit, bitvalue) (bitvalue ? bitS...` | src/Blynk/BlynkUtility.h | 189 | 1 |
+| `BlynkCC3000_h` | `#define BlynkCC3000_h` | src/Adapters/BlynkCC3000.h | 12 | 1 |
+| `BlynkConfig_h` | `#define BlynkConfig_h` | src/Blynk/BlynkConfig.h | 12 | 1 |
+| `BlynkConsole_h` | `#define BlynkConsole_h` | src/Blynk/BlynkConsole.h | 12 | 1 |
+| `BlynkDateTime_h` | `#define BlynkDateTime_h` | src/Blynk/BlynkDateTime.h | 12 | 1 |
+| `BlynkDebug_h` | `#define BlynkDebug_h` | src/Blynk/BlynkDebug.h | 12 | 1 |
+| `BlynkDetectDevice_h` | `#define BlynkDetectDevice_h` | src/Blynk/BlynkDetectDevice.h | 12 | 1 |
+| `BlynkEthernet_h` | `#define BlynkEthernet_h` | src/Adapters/BlynkEthernet.h | 12 | 1 |
+| `BlynkFifo_h` | `#define BlynkFifo_h` | src/utility/BlynkFifo.h | 12 | 1 |
+| `BlynkGsmClient_h` | `#define BlynkGsmClient_h` | src/Adapters/BlynkGsmClient.h | 12 | 1 |
+| `BlynkHandlers_h` | `#define BlynkHandlers_h` | src/Blynk/BlynkHandlers.h | 12 | 1 |
+| `BlynkHelpers_h` | `#define BlynkHelpers_h` | src/Blynk/BlynkHelpers.h | 12 | 1 |
+| `BlynkMultiClient_h` | `#define BlynkMultiClient_h` | src/BlynkMultiClient.h | 12 | 1 |
+| `BlynkNcpClient_h` | `#define BlynkNcpClient_h` | src/BlynkEdgentNCP.h | 12 | 1 |
+| `BlynkParam_h` | `#define BlynkParam_h` | src/Blynk/BlynkParam.h | 12 | 1 |
+| `BlynkParticleBearSSL_h` | `#define BlynkParticleBearSSL_h` | src/Adapters/BlynkParticleBearSSL.h | 12 | 1 |
+| `BlynkParticle_h` | `#define BlynkParticle_h` | src/Adapters/BlynkParticle.h | 12 | 1 |
+| `BlynkProtocolDefs_h` | `#define BlynkProtocolDefs_h` | src/Blynk/BlynkProtocolDefs.h | 12 | 1 |
+| `BlynkProtocol_h` | `#define BlynkProtocol_h` | src/Blynk/BlynkProtocol.h | 12 | 1 |
+| `BlynkSerialBLE_h` | `#define BlynkSerialBLE_h` | src/BlynkSimpleSerialBLE.h | 12 | 1 |
+| `BlynkSimpleArduinoNano_BLE_h` | `#define BlynkSimpleArduinoNano_BLE_h` | src/BlynkSimpleArduinoNanoBLE.h | 12 | 1 |
+| `BlynkSimpleBLEPeripheral_h` | `#define BlynkSimpleBLEPeripheral_h` | src/BlynkSimpleBLEPeripheral.h | 12 | 1 |
+| `BlynkSimpleCC3000_h` | `#define BlynkSimpleCC3000_h` | src/BlynkSimpleCC3000.h | 11 | 1 |
+| `BlynkSimpleCurieBLE_h` | `#define BlynkSimpleCurieBLE_h` | src/BlynkSimpleCurieBLE.h | 12 | 1 |
+| `BlynkSimpleEnergiaEthernet_h` | `#define BlynkSimpleEnergiaEthernet_h` | src/BlynkSimpleEnergiaEthernet.h | 12 | 1 |
+| `BlynkSimpleEnergiaWiFi_h` | `#define BlynkSimpleEnergiaWiFi_h` | src/BlynkSimpleEnergiaWiFi.h | 12 | 1 |
+| `BlynkSimpleEsp32_BLE_h` | `#define BlynkSimpleEsp32_BLE_h` | src/BlynkSimpleEsp32_BLE.h | 12 | 1 |
+| `BlynkSimpleEsp32_BT_h` | `#define BlynkSimpleEsp32_BT_h` | src/BlynkSimpleEsp32_BT.h | 2 | 1 |
+| `BlynkSimpleEsp32_NimBLE_h` | `#define BlynkSimpleEsp32_NimBLE_h` | src/BlynkSimpleEsp32_NimBLE.h | 12 | 1 |
+| `BlynkSimpleEsp32_SSL_h` | `#define BlynkSimpleEsp32_SSL_h` | src/BlynkSimpleEsp32_SSL.h | 12 | 1 |
+| `BlynkSimpleEsp32_h` | `#define BlynkSimpleEsp32_h` | src/BlynkSimpleEsp32.h | 12 | 1 |
+| `BlynkSimpleEsp8266_SSL_h` | `#define BlynkSimpleEsp8266_SSL_h` | src/BlynkSimpleEsp8266_SSL.h | 12 | 1 |
+| `BlynkSimpleEsp8266_h` | `#define BlynkSimpleEsp8266_h` | src/BlynkSimpleEsp8266.h | 12 | 1 |
+| `BlynkSimpleEthernetSSL_h` | `#define BlynkSimpleEthernetSSL_h` | src/BlynkSimpleEthernetSSL.h | 12 | 1 |
+| `BlynkSimpleEthernet_h` | `#define BlynkSimpleEthernet_h` | src/BlynkSimpleEthernet.h | 12 | 1 |
+| `BlynkSimpleFishino_h` | `#define BlynkSimpleFishino_h` | src/BlynkSimpleFishino.h | 12 | 1 |
+| `BlynkSimpleIntelEdisonWiFi_h` | `#define BlynkSimpleIntelEdisonWiFi_h` | src/BlynkSimpleIntelEdisonWiFi.h | 12 | 1 |
+| `BlynkSimpleLinkItONE_h` | `#define BlynkSimpleLinkItONE_h` | src/BlynkSimpleLinkItONE.h | 12 | 1 |
+| `BlynkSimpleMKR1000_h` | `#define BlynkSimpleMKR1000_h` | src/BlynkSimpleMKR1000.h | 12 | 1 |
+| `BlynkSimpleMKRGSM_h` | `#define BlynkSimpleMKRGSM_h` | src/BlynkSimpleMKRGSM.h | 11 | 1 |
+| `BlynkSimpleMKRNB_h` | `#define BlynkSimpleMKRNB_h` | src/BlynkSimpleMKRNB.h | 11 | 1 |
+| `BlynkSimpleParticle_h` | `#define BlynkSimpleParticle_h` | src/BlynkSimpleParticle.h | 12 | 2 |
+| `BlynkSimpleRFduinoBLE_h` | `#define BlynkSimpleRFduinoBLE_h` | src/BlynkSimpleRFduinoBLE.h | 12 | 1 |
+| `BlynkSimpleRedBearLab_BLE_Nano_h` | `#define BlynkSimpleRedBearLab_BLE_Nano_h` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 12 | 1 |
+| `BlynkSimpleRedBear_Duo_BLE_h` | `#define BlynkSimpleRedBear_Duo_BLE_h` | src/BlynkSimpleRedBear_Duo_BLE.h | 12 | 1 |
+| `BlynkSimpleRedBear_Duo_h` | `#define BlynkSimpleRedBear_Duo_h` | src/BlynkSimpleRedBear_Duo.h | 12 | 1 |
+| `BlynkSimpleShieldEsp8266_h` | `#define BlynkSimpleShieldEsp8266_h` | src/BlynkSimpleShieldEsp8266.h | 12 | 1 |
+| `BlynkSimpleSimbleeBLE_h` | `#define BlynkSimpleSimbleeBLE_h` | src/BlynkSimpleSimbleeBLE.h | 12 | 1 |
+| `BlynkSimpleStream_h` | `#define BlynkSimpleStream_h` | src/BlynkSimpleStream.h | 12 | 1 |
+| `BlynkSimpleTinyDuino_h` | `#define BlynkSimpleTinyDuino_h` | src/BlynkSimpleTinyDuino.h | 11 | 1 |
+| `BlynkSimpleTinyGSM_h` | `#define BlynkSimpleTinyGSM_h` | src/BlynkSimpleTinyGSM.h | 12 | 1 |
+| `BlynkSimpleUipEthernet_h` | `#define BlynkSimpleUipEthernet_h` | src/BlynkSimpleEthernetENC.h | 12 | 2 |
+| `BlynkSimpleWiFiLink_h` | `#define BlynkSimpleWiFiLink_h` | src/BlynkSimpleWiFiLink.h | 11 | 1 |
+| `BlynkSimpleWiFiNINA_h` | `#define BlynkSimpleWiFiNINA_h` | src/BlynkSimpleWiFiNINA.h | 12 | 1 |
+| `BlynkSimpleWiFiShield101_h` | `#define BlynkSimpleWiFiShield101_h` | src/BlynkSimpleWiFiShield101.h | 12 | 2 |
+| `BlynkSimpleWiFly_h` | `#define BlynkSimpleWiFly_h` | src/BlynkSimpleWiFly.h | 12 | 1 |
+| `BlynkSimpleWifi_h` | `#define BlynkSimpleWifi_h` | src/BlynkSimpleWifi.h | 12 | 1 |
+| `BlynkSimpleWildFire_h` | `#define BlynkSimpleWildFire_h` | src/BlynkSimpleWildFire.h | 12 | 1 |
+| `BlynkSimpleWioTerminal_BLE_h` | `#define BlynkSimpleWioTerminal_BLE_h` | src/BlynkSimpleWioTerminal_BLE.h | 12 | 1 |
+| `BlynkSimpleWioTerminal_h` | `#define BlynkSimpleWioTerminal_h` | src/BlynkSimpleWioTerminal.h | 12 | 2 |
+| `BlynkSimpleWizFi250_h` | `#define BlynkSimpleWizFi250_h` | src/BlynkSimpleWizFi250.h | 11 | 1 |
+| `BlynkSimpleWizFi310_h` | `#define BlynkSimpleWizFi310_h` | src/BlynkSimpleWizFi310.h | 11 | 1 |
+| `BlynkSimpleYun_h` | `#define BlynkSimpleYun_h` | src/BlynkSimpleYun.h | 12 | 1 |
+| `BlynkSocket_h` | `#define BlynkSocket_h` | linux/BlynkSocket.h | 11 | 1 |
+| `BlynkStreamMulti_h` | `#define BlynkStreamMulti_h` | src/utility/BlynkStreamMulti.h | 2 | 1 |
+| `BlynkStreamNull_h` | `#define BlynkStreamNull_h` | src/utility/BlynkStreamNull.h | 2 | 1 |
+| `BlynkStream_h` | `#define BlynkStream_h` | src/Adapters/BlynkSerial.h | 12 | 1 |
+| `BlynkUtility_h` | `#define BlynkUtility_h` | src/Blynk/BlynkUtility.h | 12 | 1 |
+| `BlynkWiFiCommon_h` | `#define BlynkWiFiCommon_h` | src/Adapters/BlynkWiFiCommon.h | 12 | 1 |
+| `BlynkWiFly_h` | `#define BlynkWiFly_h` | src/Adapters/BlynkWiFly.h | 12 | 1 |
+| `BlynkWidgetBase_h` | `#define BlynkWidgetBase_h` | src/Blynk/BlynkWidgetBase.h | 11 | 1 |
+| `BlynkWildFire_h` | `#define BlynkWildFire_h` | src/Adapters/BlynkWildFire.h | 12 | 1 |
+| `BlynkWizFi250_h` | `#define BlynkWizFi250_h` | src/Adapters/BlynkWizFi250.h | 12 | 1 |
+| `Blynk_h` | `#define Blynk_h` | src/Blynk.h | 12 | 1 |
+| `CHARACTERISTIC1_MAX_LEN` | `#define CHARACTERISTIC1_MAX_LEN    20` | src/BlynkSimpleRedBear_Duo_BLE.h | 44 | 1 |
+| `CHARACTERISTIC2_MAX_LEN` | `#define CHARACTERISTIC2_MAX_LEN    20` | src/BlynkSimpleRedBear_Duo_BLE.h | 45 | 1 |
+| `CHARACTERISTIC_UUID_RX` | `#define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148...` | src/BlynkSimpleArduinoNanoBLE.h | 27 | 4 |
+| `CHARACTERISTIC_UUID_TX` | `#define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148...` | src/BlynkSimpleArduinoNanoBLE.h | 28 | 4 |
+| `CONFIG_AP_URL` | `#define CONFIG_AP_URL                 "blynk.setup"` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 102 | 3 |
+| `CONFIG_DEFAULT_PORT` | `#define CONFIG_DEFAULT_PORT           443` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 108 | 3 |
+| `CONFIG_DEFAULT_SERVER` | `#define CONFIG_DEFAULT_SERVER         "blynk.cloud"` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 105 | 3 |
+| `CONFIG_DEVICE_PREFIX` | `#define CONFIG_DEVICE_PREFIX          "Blynk"` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 99 | 3 |
+| `CONFIG_FLAG_STATIC_IP` | `#define CONFIG_FLAG_STATIC_IP   0x02` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 3 | 3 |
+| `CONFIG_FLAG_VALID` | `#define CONFIG_FLAG_VALID       0x01` | examples/Blynk.Edgent/Edgent_ESP32/Confi | 2 | 3 |
+| `CONN_SUPERVISION_TIMEOUT` | `#define CONN_SUPERVISION_TIMEOUT   0x03E8 // 10s.` | src/BlynkSimpleRedBear_Duo_BLE.h | 37 | 1 |
+| `DEBUG_PRINT` | `#define DEBUG_PRINT(...)  BLYNK_LOG1(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 127 | 6 |
+| `DEBUG_PRINTF` | `#define DEBUG_PRINTF(...) BLYNK_LOG(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 128 | 6 |
+| `DHTPIN` | `#define DHTPIN 2          // What digital pin we're connecte...` | examples/More/DHT11/DHT11.ino | 45 | 1 |
+| `DHTTYPE` | `#define DHTTYPE DHT11     // DHT 11` | examples/More/DHT11/DHT11.ino | 48 | 1 |
+| `DIMM` | `#define DIMM(x)    ((uint32_t)(x)*(BOARD_LED_BRIGHTNESS)/255...` | examples/Blynk.Edgent/Edgent_ESP32/Indic | 18 | 3 |
+| `EEPROM_CONFIG_START` | `#define EEPROM_CONFIG_START 0` | examples/Blynk.Edgent/Edgent_ESP8266/Con | 102 | 1 |
+| `ENABLE_HANDLERS` | `#define ENABLE_HANDLERS` | tests/BlynkFootprintTest/BlynkFootprintT | 12 | 1 |
+| `ESP8266_BAUD` | `#define ESP8266_BAUD 115200` | examples/Boards_WiFi/ESP8266_Shield/ESP8 | 54 | 1 |
+| `EspSerial` | `#define EspSerial Serial1` | examples/Boards_WiFi/ESP8266_Shield/ESP8 | 47 | 1 |
+| `GPRS_APN` | `#define GPRS_APN       "GPRS_APN" // replace your GPRS APN` | examples/Boards_With_HTTP_API/Arduino_GS | 36 | 2 |
+| `GPRS_LOGIN` | `#define GPRS_LOGIN     "login"    // replace with your GPRS ...` | examples/Boards_With_HTTP_API/Arduino_GS | 37 | 1 |
+| `GPRS_PASSWORD` | `#define GPRS_PASSWORD  "password" // replace with your GPRS ...` | examples/Boards_With_HTTP_API/Arduino_GS | 38 | 2 |
+| `GPRS_USER` | `#define GPRS_USER      ""           // Replace with your GPR...` | examples/Boards_With_HTTP_API/SIM800_SIM | 40 | 1 |
+| `IS_LEAP_YEAR` | `#define IS_LEAP_YEAR(year)      (!((year) % 4) && (((year) %...` | src/utility/BlynkTimeUtils.cpp | 9 | 1 |
+| `LED_PIN` | `#define LED_PIN 4` | examples/More/Stroboscope/Stroboscope.in | 40 | 1 |
+| `MAX_CONN_INTERVAL` | `#define MAX_CONN_INTERVAL          0x0190 // 500ms.` | src/BlynkSimpleRedBear_Duo_BLE.h | 35 | 1 |
+| `MIN_CONN_INTERVAL` | `#define MIN_CONN_INTERVAL          0x0028 // 50ms.` | src/BlynkSimpleRedBear_Duo_BLE.h | 34 | 1 |
+| `MKRETH_CS` | `#define MKRETH_CS  5` | examples/Boards_ArduinoClient/Arduino_MK | 52 | 4 |
+| `NCP_RESETN` | `#define NCP_RESETN      (101)` | src/BlynkEdgentNCP.h | 129 | 1 |
+| `OTA_FATAL` | `#define OTA_FATAL(...) { BLYNK_LOG1(__VA_ARGS__); delay(1000...` | examples/Blynk.Edgent/Edgent_ESP8266/OTA | 2 | 2 |
+| `PAD_BLE_SERIAL_X_RX` | `#define PAD_BLE_SERIAL_X_RX (SERCOM_RX_PAD_2)` | src/BlynkEdgentNCP.h | 36 | 1 |
+| `PAD_BLE_SERIAL_X_TX` | `#define PAD_BLE_SERIAL_X_TX (UART_TX_PAD_0)` | src/BlynkEdgentNCP.h | 37 | 1 |
+| `PIN` | `#define PIN 8` | examples/More/NeoPixel/NeoPixel.ino | 41 | 1 |
+| `PINNUMBER` | `#define PINNUMBER ""` | examples/Boards_With_HTTP_API/Arduino_GS | 33 | 1 |
+| `PIN_BLE_SERIAL_X_RX` | `#define PIN_BLE_SERIAL_X_RX (84ul)` | src/BlynkEdgentNCP.h | 34 | 1 |
+| `PIN_BLE_SERIAL_X_TX` | `#define PIN_BLE_SERIAL_X_TX (85ul)` | src/BlynkEdgentNCP.h | 35 | 1 |
+| `RGB` | `#define RGB(r,g,b) (DIMM(r) << 16 \| DIMM(g) << 8 \| DIMM(b) <...` | examples/Blynk.Edgent/Edgent_ESP32/Indic | 19 | 3 |
+| `SDCARD_CS` | `#define SDCARD_CS  4` | examples/Boards_ArduinoClient/Arduino_Et | 57 | 8 |
+| `SECS_IN_DAY` | `#define SECS_IN_DAY             (24L * 60L * 60L)` | src/utility/BlynkTimeUtils.cpp | 8 | 1 |
+| `SERCOM_BLE_SERIAL_X` | `#define SERCOM_BLE_SERIAL_X sercom0` | src/BlynkEdgentNCP.h | 38 | 1 |
+| `SERVICE_UUID` | `#define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148...` | src/BlynkSimpleArduinoNanoBLE.h | 26 | 4 |
+| `SIMPLETIMER_H` | `#define SIMPLETIMER_H` | src/Blynk/BlynkTimer.h | 35 | 1 |
+| `SKIP_WRITES_TEST` | `#define SKIP_WRITES_TEST` | tests/BlynkBuildTest/BlynkBuildTest.ino | 18 | 1 |
+| `SLAVE_LATENCY` | `#define SLAVE_LATENCY              0x0000 // No slave latenc...` | src/BlynkSimpleRedBear_Duo_BLE.h | 36 | 1 |
+| `SerialAT` | `#define SerialAT Serial1` | examples/Boards_GSM/TinyGSM_SIM800_SIM90 | 57 | 1 |
+| `SerialNCP` | `#define SerialNCP       BLYNK_NCP_SERIAL` | src/BlynkEdgentNCP.h | 84 | 12 |
+| `SimpleTimer` | `#define SimpleTimer BlynkTimer` | src/Blynk/BlynkTimer.h | 36 | 1 |
+| `TIME_MAX` | `#define TIME_MAX                2147483647L` | src/utility/BlynkTimeUtils.cpp | 12 | 1 |
+| `TINY_GSM_MODEM_SIM800` | `#define TINY_GSM_MODEM_SIM800` | examples/Boards_GSM/TinyGSM_SIM800_SIM90 | 35 | 1 |
+| `TINY_GSM_MODEM_UBLOX` | `#define TINY_GSM_MODEM_UBLOX` | examples/Boards_GSM/TinyGSM_MKR1400/Tiny | 35 | 1 |
+| `TO_PWM` | `#define TO_PWM(x)  ((uint32_t)(x)*(BOARD_PWM_MAX)/255)` | examples/Blynk.Edgent/Edgent_ESP32/Indic | 20 | 3 |
+| `TXRX_BUF_LEN` | `#define TXRX_BUF_LEN 20` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 36 | 1 |
+| `USE_PTHREAD` | `#define USE_PTHREAD` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 122 | 1 |
+| `USE_SSL` | `#define USE_SSL` | examples/Blynk.Edgent/Edgent_ESP8266/OTA | 4 | 2 |
+| `USE_TICKER` | `#define USE_TICKER` | examples/Blynk.Edgent/Edgent_ESP8266/Set | 86 | 1 |
+| `V0` | `#define V0  0` | src/Blynk/BlynkHandlers.h | 19 | 1 |
+| `V1` | `#define V1  1` | src/Blynk/BlynkHandlers.h | 20 | 1 |
+| `V10` | `#define V10 10` | src/Blynk/BlynkHandlers.h | 29 | 1 |
+| `V100` | `#define V100 100` | src/Blynk/BlynkHandlers.h | 120 | 1 |
+| `V101` | `#define V101 101` | src/Blynk/BlynkHandlers.h | 121 | 1 |
+| `V102` | `#define V102 102` | src/Blynk/BlynkHandlers.h | 122 | 1 |
+| `V103` | `#define V103 103` | src/Blynk/BlynkHandlers.h | 123 | 1 |
+| `V104` | `#define V104 104` | src/Blynk/BlynkHandlers.h | 124 | 1 |
+| `V105` | `#define V105 105` | src/Blynk/BlynkHandlers.h | 125 | 1 |
+| `V106` | `#define V106 106` | src/Blynk/BlynkHandlers.h | 126 | 1 |
+| `V107` | `#define V107 107` | src/Blynk/BlynkHandlers.h | 127 | 1 |
+| `V108` | `#define V108 108` | src/Blynk/BlynkHandlers.h | 128 | 1 |
+| `V109` | `#define V109 109` | src/Blynk/BlynkHandlers.h | 129 | 1 |
+| `V11` | `#define V11 11` | src/Blynk/BlynkHandlers.h | 30 | 1 |
+| `V110` | `#define V110 110` | src/Blynk/BlynkHandlers.h | 130 | 1 |
+| `V111` | `#define V111 111` | src/Blynk/BlynkHandlers.h | 131 | 1 |
+| `V112` | `#define V112 112` | src/Blynk/BlynkHandlers.h | 132 | 1 |
+| `V113` | `#define V113 113` | src/Blynk/BlynkHandlers.h | 133 | 1 |
+| `V114` | `#define V114 114` | src/Blynk/BlynkHandlers.h | 134 | 1 |
+| `V115` | `#define V115 115` | src/Blynk/BlynkHandlers.h | 135 | 1 |
+| `V116` | `#define V116 116` | src/Blynk/BlynkHandlers.h | 136 | 1 |
+| `V117` | `#define V117 117` | src/Blynk/BlynkHandlers.h | 137 | 1 |
+| `V118` | `#define V118 118` | src/Blynk/BlynkHandlers.h | 138 | 1 |
+| `V119` | `#define V119 119` | src/Blynk/BlynkHandlers.h | 139 | 1 |
+| `V12` | `#define V12 12` | src/Blynk/BlynkHandlers.h | 31 | 1 |
+| `V120` | `#define V120 120` | src/Blynk/BlynkHandlers.h | 140 | 1 |
+| `V121` | `#define V121 121` | src/Blynk/BlynkHandlers.h | 141 | 1 |
+| `V122` | `#define V122 122` | src/Blynk/BlynkHandlers.h | 142 | 1 |
+| `V123` | `#define V123 123` | src/Blynk/BlynkHandlers.h | 143 | 1 |
+| `V124` | `#define V124 124` | src/Blynk/BlynkHandlers.h | 144 | 1 |
+| `V125` | `#define V125 125` | src/Blynk/BlynkHandlers.h | 145 | 1 |
+| `V126` | `#define V126 126` | src/Blynk/BlynkHandlers.h | 146 | 1 |
+| `V127` | `#define V127 127` | src/Blynk/BlynkHandlers.h | 147 | 1 |
+| `V13` | `#define V13 13` | src/Blynk/BlynkHandlers.h | 32 | 1 |
+| `V14` | `#define V14 14` | src/Blynk/BlynkHandlers.h | 33 | 1 |
+| `V15` | `#define V15 15` | src/Blynk/BlynkHandlers.h | 34 | 1 |
+| `V16` | `#define V16 16` | src/Blynk/BlynkHandlers.h | 35 | 1 |
+| `V17` | `#define V17 17` | src/Blynk/BlynkHandlers.h | 36 | 1 |
+| `V18` | `#define V18 18` | src/Blynk/BlynkHandlers.h | 37 | 1 |
+| `V19` | `#define V19 19` | src/Blynk/BlynkHandlers.h | 38 | 1 |
+| `V2` | `#define V2  2` | src/Blynk/BlynkHandlers.h | 21 | 1 |
+| `V20` | `#define V20 20` | src/Blynk/BlynkHandlers.h | 39 | 1 |
+| `V21` | `#define V21 21` | src/Blynk/BlynkHandlers.h | 40 | 1 |
+| `V22` | `#define V22 22` | src/Blynk/BlynkHandlers.h | 41 | 1 |
+| `V23` | `#define V23 23` | src/Blynk/BlynkHandlers.h | 42 | 1 |
+| `V24` | `#define V24 24` | src/Blynk/BlynkHandlers.h | 43 | 1 |
+| `V25` | `#define V25 25` | src/Blynk/BlynkHandlers.h | 44 | 1 |
+| `V26` | `#define V26 26` | src/Blynk/BlynkHandlers.h | 45 | 1 |
+| `V27` | `#define V27 27` | src/Blynk/BlynkHandlers.h | 46 | 1 |
+| `V28` | `#define V28 28` | src/Blynk/BlynkHandlers.h | 47 | 1 |
+| `V29` | `#define V29 29` | src/Blynk/BlynkHandlers.h | 48 | 1 |
+| `V3` | `#define V3  3` | src/Blynk/BlynkHandlers.h | 22 | 1 |
+| `V30` | `#define V30 30` | src/Blynk/BlynkHandlers.h | 49 | 1 |
+| `V31` | `#define V31 31` | src/Blynk/BlynkHandlers.h | 50 | 1 |
+| `V32` | `#define V32 32` | src/Blynk/BlynkHandlers.h | 52 | 1 |
+| `V33` | `#define V33 33` | src/Blynk/BlynkHandlers.h | 53 | 1 |
+| `V34` | `#define V34 34` | src/Blynk/BlynkHandlers.h | 54 | 1 |
+| `V35` | `#define V35 35` | src/Blynk/BlynkHandlers.h | 55 | 1 |
+| `V36` | `#define V36 36` | src/Blynk/BlynkHandlers.h | 56 | 1 |
+| `V37` | `#define V37 37` | src/Blynk/BlynkHandlers.h | 57 | 1 |
+| `V38` | `#define V38 38` | src/Blynk/BlynkHandlers.h | 58 | 1 |
+| `V39` | `#define V39 39` | src/Blynk/BlynkHandlers.h | 59 | 1 |
+| `V4` | `#define V4  4` | src/Blynk/BlynkHandlers.h | 23 | 1 |
+| `V40` | `#define V40 40` | src/Blynk/BlynkHandlers.h | 60 | 1 |
+| `V41` | `#define V41 41` | src/Blynk/BlynkHandlers.h | 61 | 1 |
+| `V42` | `#define V42 42` | src/Blynk/BlynkHandlers.h | 62 | 1 |
+| `V43` | `#define V43 43` | src/Blynk/BlynkHandlers.h | 63 | 1 |
+| `V44` | `#define V44 44` | src/Blynk/BlynkHandlers.h | 64 | 1 |
+| `V45` | `#define V45 45` | src/Blynk/BlynkHandlers.h | 65 | 1 |
+| `V46` | `#define V46 46` | src/Blynk/BlynkHandlers.h | 66 | 1 |
+| `V47` | `#define V47 47` | src/Blynk/BlynkHandlers.h | 67 | 1 |
+| `V48` | `#define V48 48` | src/Blynk/BlynkHandlers.h | 68 | 1 |
+| `V49` | `#define V49 49` | src/Blynk/BlynkHandlers.h | 69 | 1 |
+| `V5` | `#define V5  5` | src/Blynk/BlynkHandlers.h | 24 | 1 |
+| `V50` | `#define V50 50` | src/Blynk/BlynkHandlers.h | 70 | 1 |
+| `V51` | `#define V51 51` | src/Blynk/BlynkHandlers.h | 71 | 1 |
+| `V52` | `#define V52 52` | src/Blynk/BlynkHandlers.h | 72 | 1 |
+| `V53` | `#define V53 53` | src/Blynk/BlynkHandlers.h | 73 | 1 |
+| `V54` | `#define V54 54` | src/Blynk/BlynkHandlers.h | 74 | 1 |
+| `V55` | `#define V55 55` | src/Blynk/BlynkHandlers.h | 75 | 1 |
+| `V56` | `#define V56 56` | src/Blynk/BlynkHandlers.h | 76 | 1 |
+| `V57` | `#define V57 57` | src/Blynk/BlynkHandlers.h | 77 | 1 |
+| `V58` | `#define V58 58` | src/Blynk/BlynkHandlers.h | 78 | 1 |
+| `V59` | `#define V59 59` | src/Blynk/BlynkHandlers.h | 79 | 1 |
+| `V6` | `#define V6  6` | src/Blynk/BlynkHandlers.h | 25 | 1 |
+| `V60` | `#define V60 60` | src/Blynk/BlynkHandlers.h | 80 | 1 |
+| `V61` | `#define V61 61` | src/Blynk/BlynkHandlers.h | 81 | 1 |
+| `V62` | `#define V62 62` | src/Blynk/BlynkHandlers.h | 82 | 1 |
+| `V63` | `#define V63 63` | src/Blynk/BlynkHandlers.h | 83 | 1 |
+| `V64` | `#define V64 64` | src/Blynk/BlynkHandlers.h | 84 | 1 |
+| `V65` | `#define V65 65` | src/Blynk/BlynkHandlers.h | 85 | 1 |
+| `V66` | `#define V66 66` | src/Blynk/BlynkHandlers.h | 86 | 1 |
+| `V67` | `#define V67 67` | src/Blynk/BlynkHandlers.h | 87 | 1 |
+| `V68` | `#define V68 68` | src/Blynk/BlynkHandlers.h | 88 | 1 |
+| `V69` | `#define V69 69` | src/Blynk/BlynkHandlers.h | 89 | 1 |
+| `V7` | `#define V7  7` | src/Blynk/BlynkHandlers.h | 26 | 1 |
+| `V70` | `#define V70 70` | src/Blynk/BlynkHandlers.h | 90 | 1 |
+| `V71` | `#define V71 71` | src/Blynk/BlynkHandlers.h | 91 | 1 |
+| `V72` | `#define V72 72` | src/Blynk/BlynkHandlers.h | 92 | 1 |
+| `V73` | `#define V73 73` | src/Blynk/BlynkHandlers.h | 93 | 1 |
+| `V74` | `#define V74 74` | src/Blynk/BlynkHandlers.h | 94 | 1 |
+| `V75` | `#define V75 75` | src/Blynk/BlynkHandlers.h | 95 | 1 |
+| `V76` | `#define V76 76` | src/Blynk/BlynkHandlers.h | 96 | 1 |
+| `V77` | `#define V77 77` | src/Blynk/BlynkHandlers.h | 97 | 1 |
+| `V78` | `#define V78 78` | src/Blynk/BlynkHandlers.h | 98 | 1 |
+| `V79` | `#define V79 79` | src/Blynk/BlynkHandlers.h | 99 | 1 |
+| `V8` | `#define V8  8` | src/Blynk/BlynkHandlers.h | 27 | 1 |
+| `V80` | `#define V80 80` | src/Blynk/BlynkHandlers.h | 100 | 1 |
+| `V81` | `#define V81 81` | src/Blynk/BlynkHandlers.h | 101 | 1 |
+| `V82` | `#define V82 82` | src/Blynk/BlynkHandlers.h | 102 | 1 |
+| `V83` | `#define V83 83` | src/Blynk/BlynkHandlers.h | 103 | 1 |
+| `V84` | `#define V84 84` | src/Blynk/BlynkHandlers.h | 104 | 1 |
+| `V85` | `#define V85 85` | src/Blynk/BlynkHandlers.h | 105 | 1 |
+| `V86` | `#define V86 86` | src/Blynk/BlynkHandlers.h | 106 | 1 |
+| `V87` | `#define V87 87` | src/Blynk/BlynkHandlers.h | 107 | 1 |
+| `V88` | `#define V88 88` | src/Blynk/BlynkHandlers.h | 108 | 1 |
+| `V89` | `#define V89 89` | src/Blynk/BlynkHandlers.h | 109 | 1 |
+| `V9` | `#define V9  9` | src/Blynk/BlynkHandlers.h | 28 | 1 |
+| `V90` | `#define V90 90` | src/Blynk/BlynkHandlers.h | 110 | 1 |
+| `V91` | `#define V91 91` | src/Blynk/BlynkHandlers.h | 111 | 1 |
+| `V92` | `#define V92 92` | src/Blynk/BlynkHandlers.h | 112 | 1 |
+| `V93` | `#define V93 93` | src/Blynk/BlynkHandlers.h | 113 | 1 |
+| `V94` | `#define V94 94` | src/Blynk/BlynkHandlers.h | 114 | 1 |
+| `V95` | `#define V95 95` | src/Blynk/BlynkHandlers.h | 115 | 1 |
+| `V96` | `#define V96 96` | src/Blynk/BlynkHandlers.h | 116 | 1 |
+| `V97` | `#define V97 97` | src/Blynk/BlynkHandlers.h | 117 | 1 |
+| `V98` | `#define V98 98` | src/Blynk/BlynkHandlers.h | 118 | 1 |
+| `V99` | `#define V99 99` | src/Blynk/BlynkHandlers.h | 119 | 1 |
+| `W5100_CS` | `#define W5100_CS   10` | examples/Boards_ArduinoClient/Arduino_Et | 56 | 4 |
+| `WIFI_AP_IP` | `#define WIFI_AP_IP                    IPAddress(192, 168, 4,...` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 114 | 3 |
+| `WIFI_AP_Subnet` | `#define WIFI_AP_Subnet                IPAddress(255, 255, 25...` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 115 | 3 |
+| `WIFI_CLOUD_CONNECT_TIMEOUT` | `#define WIFI_CLOUD_CONNECT_TIMEOUT    50000` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 113 | 3 |
+| `WIFI_CLOUD_MAX_RETRIES` | `#define WIFI_CLOUD_MAX_RETRIES        500` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 111 | 3 |
+| `WIFI_NET_CONNECT_TIMEOUT` | `#define WIFI_NET_CONNECT_TIMEOUT      50000` | examples/Blynk.Edgent/Edgent_ESP32/Setti | 112 | 3 |
+| `WiFlySerial` | `#define WiFlySerial Serial1` | examples/Boards_WiFi/RN_XV_WiFly/RN_XV_W | 48 | 2 |
+| `WidgetLCD_h` | `#define WidgetLCD_h` | src/WidgetLCD.h | 11 | 1 |
+| `WidgetLED_h` | `#define WidgetLED_h` | src/WidgetLED.h | 11 | 1 |
+| `WidgetMap_h` | `#define WidgetMap_h` | src/WidgetMap.h | 11 | 1 |
+| `WidgetRTC_h` | `#define WidgetRTC_h` | src/WidgetRTC.h | 12 | 1 |
+| `WidgetTerminal_h` | `#define WidgetTerminal_h` | src/WidgetTerminal.h | 11 | 1 |
+| `WidgetTimeInput_h` | `#define WidgetTimeInput_h` | src/WidgetTimeInput.h | 12 | 1 |
+| `YEAR_0` | `#define YEAR_0                  1900` | src/utility/BlynkTimeUtils.cpp | 6 | 1 |
+| `YEAR_DAYS` | `#define YEAR_DAYS(year)         (IS_LEAP_YEAR(year) ? 366 : ...` | src/utility/BlynkTimeUtils.cpp | 10 | 1 |
+| `YEAR_EPOCH` | `#define YEAR_EPOCH              1970` | src/utility/BlynkTimeUtils.cpp | 7 | 1 |
+| `YIELD_FIX` | `#define YIELD_FIX() BLYNK_RUN_YIELD();` | src/Adapters/BlynkArduinoClient.h | 19 | 2 |
+| `_BLYNK_USE_DEFAULT_DELAY` | `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 40 | 10 |
+| `_BLYNK_USE_DEFAULT_FREE_RAM` | `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 91 | 9 |
+| `_BLYNK_USE_DEFAULT_MILLIS` | `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 39 | 9 |
+| `_BLYNK_USE_DEFAULT_RESET` | `#define _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 131 | 3 |
+| `_POSIX_C_SOURCE` | `#define _POSIX_C_SOURCE 200809L` | src/utility/BlynkDebug.cpp | 218 | 1 |
+| `analogInputToDigitalPin` | `#define analogInputToDigitalPin(x) -1` | tests/GenerateJSON/GenerateJSON.ino | 41 | 1 |
+| `digitalPinHasPWM` | `#define digitalPinHasPWM(x) false` | tests/GenerateJSON/GenerateJSON.ino | 36 | 1 |
+| `g_buttonPressTime` | `#define g_buttonPressTime   0` | examples/Blynk.Edgent/Edgent_ESP32/Reset | 49 | 3 |
+| `g_buttonPressed` | `#define g_buttonPressed     false` | examples/Blynk.Edgent/Edgent_ESP32/Reset | 48 | 3 |
+| `htonl` | `#define htonl(x) ( ((x)<<24 & 0xFF000000UL) \| \` | src/Blynk/BlynkProtocolDefs.h | 79 | 2 |
+| `htons` | `#define htons(x) ( ((x)<<8) \| (((x)>>8)&0xFF) )` | src/Blynk/BlynkProtocolDefs.h | 78 | 2 |
+| `interrupts` | `#define interrupts()   __enable_irq()` | src/Blynk/BlynkDetectDevice.h | 159 | 1 |
+| `noInterrupts` | `#define noInterrupts() __disable_irq()` | src/Blynk/BlynkDetectDevice.h | 158 | 1 |
+| `ntohl` | `#define ntohl(x) htonl(x)` | src/Blynk/BlynkProtocolDefs.h | 84 | 2 |
+| `ntohs` | `#define ntohs(x) htons(x)` | src/Blynk/BlynkProtocolDefs.h | 83 | 2 |
+| `ser1` | `#define ser1 Serial` | tests/SerialXconnect/SerialXconnect.ino | 17 | 1 |
+| `ser2` | `#define ser2 Serial1` | tests/SerialXconnect/SerialXconnect.ino | 20 | 2 |
