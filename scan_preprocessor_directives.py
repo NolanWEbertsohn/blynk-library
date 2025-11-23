@@ -33,9 +33,9 @@ def get_directive_description(directive_line):
     """
     directive_line = directive_line.strip()
     
-    # Extract the directive type
+    # Extract the directive type (check longer directives first to avoid false matches)
     directive_type = None
-    for key in DIRECTIVE_DESCRIPTIONS.keys():
+    for key in sorted(DIRECTIVE_DESCRIPTIONS.keys(), key=len, reverse=True):
         if directive_line.startswith(key):
             directive_type = key
             break
@@ -68,7 +68,7 @@ def get_directive_description(directive_line):
         match = re.search(r'#ifndef\s+(\w+)', directive_line)
         if match:
             macro_name = match.group(1)
-            return f"{base_desc} ({macro_name}) - likely header guard"
+            return f"{base_desc} ({macro_name})"
     
     elif directive_type == '#if':
         return f"{base_desc} - {directive_line[3:].strip()}"
@@ -111,6 +111,9 @@ def scan_file(filepath):
     
     return results
 
+# Directories to exclude from scanning
+EXCLUDED_DIRS = {'build', 'dist', 'node_modules', '__pycache__', 'venv', '.venv'}
+
 def find_source_files(root_dir):
     """
     Find all C/C++ source files in the repository.
@@ -120,7 +123,7 @@ def find_source_files(root_dir):
     
     for root, dirs, files in os.walk(root_dir):
         # Skip hidden directories and common build directories
-        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ['build', 'dist', 'node_modules']]
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in EXCLUDED_DIRS]
         
         for file in files:
             if Path(file).suffix in extensions:
@@ -133,7 +136,7 @@ def main():
     Main function to scan all files and output results.
     """
     # Get the repository root (current directory)
-    repo_root = os.path.dirname(os.path.abspath(__file__))
+    repo_root = str(Path(__file__).parent.resolve())
     
     print(f"Scanning repository: {repo_root}")
     print("Finding source files...")
