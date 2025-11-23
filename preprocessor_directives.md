@@ -1,0 +1,3484 @@
+# Preprocessor Directives in Blynk Library
+
+Total directives found: 3461
+
+## Summary by Directive Type
+
+- `#define`: 1158
+- `#elif`: 207
+- `#else`: 144
+- `#endif`: 584
+- `#error`: 31
+- `#if`: 237
+- `#ifdef`: 152
+- `#ifndef`: 195
+- `#include`: 716
+- `#pragma`: 7
+- `#undef`: 2
+- `#warning`: 28
+
+## All Directives
+
+| Directive | File | Line | Description |
+|-----------|------|------|-------------|
+| `#include "Settings.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 7 | Includes the contents of a file (Settings.h) |
+| `#include <BlynkSimpleEsp32_SSL.h>` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 8 | Includes the contents of a file (BlynkSimpleEsp32_SSL.h) |
+| `#if defined(BLYNK_USE_LITTLEFS)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 10 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_USE_LITTLEFS) |
+| `#include <LittleFS.h>` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 11 | Includes the contents of a file (LittleFS.h) |
+| `#define BLYNK_FS LittleFS` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 12 | Defines a macro or constant (BLYNK_FS) |
+| `#elif defined(BLYNK_USE_SPIFFS)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 13 | Else-if for conditional compilation |
+| `#if defined(ESP32)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 14 | Conditional compilation - evaluates compile-time expression - defined(ESP32) |
+| `#include <SPIFFS.h>` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 15 | Includes the contents of a file (SPIFFS.h) |
+| `#elif defined(ESP8266)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 16 | Else-if for conditional compilation |
+| `#include <FS.h>` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 17 | Includes the contents of a file (FS.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 18 | Ends conditional compilation block |
+| `#define BLYNK_FS SPIFFS` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 19 | Defines a macro or constant (BLYNK_FS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 20 | Ends conditional compilation block |
+| `#ifndef BLYNK_NEW_LIBRARY` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 22 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NEW_LIBRARY |
+| `#error "Old version of Blynk library is in use. Please replace it with the new one."` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 23 | Generates a compilation error with a message: "Old version of Blynk library is in use. Please replace it with the new one." |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 24 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 26 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME) |
+| `#define BLYNK_TEMPLATE_NAME BLYNK_DEVICE_NAME` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 27 | Defines a macro or constant (BLYNK_TEMPLATE_NAME) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 28 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 30 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME) |
+| `#error "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 31 | Generates a compilation error with a message: "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME" |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 32 | Ends conditional compilation block |
+| `#if defined(BLYNK_AUTH_TOKEN)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 34 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_AUTH_TOKEN) |
+| `#error "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 35 | Generates a compilation error with a message: "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration" |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 36 | Ends conditional compilation block |
+| `#include "BlynkState.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 40 | Includes the contents of a file (BlynkState.h) |
+| `#include "ConfigStore.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 41 | Includes the contents of a file (ConfigStore.h) |
+| `#include "ResetButton.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 42 | Includes the contents of a file (ResetButton.h) |
+| `#include "ConfigMode.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 43 | Includes the contents of a file (ConfigMode.h) |
+| `#include "Indicator.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 44 | Includes the contents of a file (Indicator.h) |
+| `#include "OTA.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 45 | Includes the contents of a file (OTA.h) |
+| `#include "Console.h"` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 46 | Includes the contents of a file (Console.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 62 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 78 | Ends conditional compilation block |
+| `#if (ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0))` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 101 | Conditional compilation - evaluates compile-time expression - (ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0)) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 103 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 105 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h | 107 | Ends conditional compilation block |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_ESP32/BlynkState.h | 16 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/BlynkState.h | 30 | Ends conditional compilation block |
+| `#include <WiFiClient.h>` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 2 | Includes the contents of a file (WiFiClient.h) |
+| `#include <WebServer.h>` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 3 | Includes the contents of a file (WebServer.h) |
+| `#include <DNSServer.h>` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 4 | Includes the contents of a file (DNSServer.h) |
+| `#include <Update.h>` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 5 | Includes the contents of a file (Update.h) |
+| `#ifndef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 7 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 58 | Ends conditional compilation block |
+| `#if (ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 3, 0))` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 136 | Conditional compilation - evaluates compile-time expression - (ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 3, 0)) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 140 | Ends conditional compilation block |
+| `#ifdef WIFI_CAPTIVE_PORTAL_ENABLE` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 178 | Conditional compilation - evaluates compile-time expression - def WIFI_CAPTIVE_PORTAL_ENABLE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 181 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 184 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 213 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 215 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 217 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 219 | Ends conditional compilation block |
+| `#ifndef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 228 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 232 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 391 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ConfigMode.h | 395 | Ends conditional compilation block |
+| `#define CONFIG_FLAG_VALID       0x01` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 2 | Defines a macro or constant (CONFIG_FLAG_VALID) |
+| `#define CONFIG_FLAG_STATIC_IP   0x02` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 3 | Defines a macro or constant (CONFIG_FLAG_STATIC_IP) |
+| `#define BLYNK_PROV_ERR_NONE     0      // All good` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 5 | Defines a macro or constant (BLYNK_PROV_ERR_NONE) |
+| `#define BLYNK_PROV_ERR_CONFIG   700    // Invalid config from app (malformed token,etc)` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 6 | Defines a macro or constant (BLYNK_PROV_ERR_CONFIG) |
+| `#define BLYNK_PROV_ERR_NETWORK  701    // Could not connect to the router` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 7 | Defines a macro or constant (BLYNK_PROV_ERR_NETWORK) |
+| `#define BLYNK_PROV_ERR_CLOUD    702    // Could not connect to the cloud` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 8 | Defines a macro or constant (BLYNK_PROV_ERR_CLOUD) |
+| `#define BLYNK_PROV_ERR_TOKEN    703    // Invalid token error (after connection)` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 9 | Defines a macro or constant (BLYNK_PROV_ERR_TOKEN) |
+| `#define BLYNK_PROV_ERR_INTERNAL 704    // Other issues (i.e. hardware failure)` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 10 | Defines a macro or constant (BLYNK_PROV_ERR_INTERNAL) |
+| `#include <Preferences.h>` | examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h | 101 | Includes the contents of a file (Preferences.h) |
+| `#include <Blynk/BlynkConsole.h>` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 2 | Includes the contents of a file (Blynk/BlynkConsole.h) |
+| `#include "esp_partition.h"` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 5 | Includes the contents of a file (esp_partition.h) |
+| `#include "esp_ota_ops.h"` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 6 | Includes the contents of a file (esp_ota_ops.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 13 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 15 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 136 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 139 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 142 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#if defined(BLYNK_USE_SPIFFS) && (ESP_IDF_VERSION < ESP_IDF_VERSION_VAL(4, 0, 0))` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 148 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_USE_SPIFFS) && (ESP_IDF_VERSION < ESP_IDF_VERSION_VAL(4, 0, 0)) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 150 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 152 | Ends conditional compilation block |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Console.h | 217 | Ends conditional compilation block |
+| `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino | 27 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_PRINT Serial` | examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#define APP_DEBUG` | examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino | 32 | Defines a macro or constant (APP_DEBUG) |
+| `#include "BlynkEdgent.h"` | examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino | 42 | Includes the contents of a file (BlynkEdgent.h) |
+| `#if defined(BOARD_LED_PIN_WS2812)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 2 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) |
+| `#include <Adafruit_NeoPixel.h>    // Library: https://github.com/adafruit/Adafruit_NeoPixel` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 3 | Includes the contents of a file (Adafruit_NeoPixel.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 6 | Ends conditional compilation block |
+| `#if !defined(BOARD_LED_BRIGHTNESS)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 10 | Conditional compilation - evaluates compile-time expression - !defined(BOARD_LED_BRIGHTNESS) |
+| `#define BOARD_LED_BRIGHTNESS 255` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 11 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 12 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 14 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R) |
+| `#define BOARD_LED_IS_RGB` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 15 | Defines a macro or constant (BOARD_LED_IS_RGB) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 16 | Ends conditional compilation block |
+| `#define DIMM(x)    ((uint32_t)(x)*(BOARD_LED_BRIGHTNESS)/255)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 18 | Defines a macro or constant (DIMM) |
+| `#define RGB(r,g,b) (DIMM(r) << 16 \| DIMM(g) << 8 \| DIMM(b) << 0)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 19 | Defines a macro or constant (RGB) |
+| `#define TO_PWM(x)  ((uint32_t)(x)*(BOARD_PWM_MAX)/255)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 20 | Defines a macro or constant (TO_PWM) |
+| `#if defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 74 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED |
+| `#elif defined(BOARD_LED_PIN_R)     // Normal RGB LED (common anode or common cathode)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 86 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 102 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 106 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 110 | Ends conditional compilation block |
+| `#elif defined(BOARD_LED_PIN)       // Single color LED` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 113 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 121 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 123 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 125 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 128 | Else clause for conditional compilation |
+| `#warning Invalid LED configuration.` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 130 | Generates a compilation warning with a message: Invalid LED configuration. |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 138 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_IS_RGB)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 148 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_IS_RGB) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 179 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 200 | Ends conditional compilation block |
+| `#if defined(USE_TICKER)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 213 | Conditional compilation - evaluates compile-time expression - defined(USE_TICKER) |
+| `#include <Ticker.h>` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 215 | Includes the contents of a file (Ticker.h) |
+| `#elif defined(USE_PTHREAD)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 231 | Else-if for conditional compilation |
+| `#include <pthread.h>` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 233 | Includes the contents of a file (pthread.h) |
+| `#elif defined(USE_TIMER_ONE)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 250 | Else-if for conditional compilation |
+| `#include <TimerOne.h>` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 252 | Includes the contents of a file (TimerOne.h) |
+| `#elif defined(USE_TIMER_THREE)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 267 | Else-if for conditional compilation |
+| `#include <TimerThree.h>` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 269 | Includes the contents of a file (TimerThree.h) |
+| `#elif defined(USE_TIMER_FIVE)` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 284 | Else-if for conditional compilation |
+| `#include <Timer5.h>    // Library: https://github.com/michael71/Timer5` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 286 | Includes the contents of a file (Timer5.h) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 303 | Else clause for conditional compilation |
+| `#warning LED indicator needs a functional timer!` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 305 | Generates a compilation warning with a message: LED indicator needs a functional timer! |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Indicator.h | 310 | Ends conditional compilation block |
+| `#include <WiFi.h>` | examples/Blynk.Edgent/Edgent_ESP32/OTA.h | 2 | Includes the contents of a file (WiFi.h) |
+| `#include <Update.h>` | examples/Blynk.Edgent/Edgent_ESP32/OTA.h | 3 | Includes the contents of a file (Update.h) |
+| `#include <HTTPClient.h>` | examples/Blynk.Edgent/Edgent_ESP32/OTA.h | 4 | Includes the contents of a file (HTTPClient.h) |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP32/OTA.h | 64 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/OTA.h | 66 | Ends conditional compilation block |
+| `#ifdef BOARD_BUTTON_PIN` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 2 | Conditional compilation - evaluates compile-time expression - def BOARD_BUTTON_PIN |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 14 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 16 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 18 | Ends conditional compilation block |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 38 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 40 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 42 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 46 | Else clause for conditional compilation |
+| `#define g_buttonPressed     false` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 48 | Defines a macro or constant (g_buttonPressed) |
+| `#define g_buttonPressTime   0` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 49 | Defines a macro or constant (g_buttonPressTime) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h | 53 | Ends conditional compilation block |
+| `#if defined(USE_WROVER_BOARD)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 6 | Conditional compilation - evaluates compile-time expression - defined(USE_WROVER_BOARD) |
+| `#define BOARD_BUTTON_PIN            15` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 8 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 9 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN_R             0` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 11 | Defines a macro or constant (BOARD_LED_PIN_R) |
+| `#define BOARD_LED_PIN_G             2` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 12 | Defines a macro or constant (BOARD_LED_PIN_G) |
+| `#define BOARD_LED_PIN_B             4` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 13 | Defines a macro or constant (BOARD_LED_PIN_B) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 14 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        128` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 15 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_TTGO_T7)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 17 | Else-if for conditional compilation |
+| `#warning "This board does not have a button. Connect a button to gpio0 <> GND"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 19 | Generates a compilation warning with a message: "This board does not have a button. Connect a button to gpio0 <> GND" |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 21 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 22 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN               19` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 24 | Defines a macro or constant (BOARD_LED_PIN) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 25 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        64` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 26 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_TTGO_T_OI)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 28 | Else-if for conditional compilation |
+| `#warning "This board does not have a button. Connect a button to gpio0 <> GND"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 30 | Generates a compilation warning with a message: "This board does not have a button. Connect a button to gpio0 <> GND" |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 32 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 33 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN               3` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 35 | Defines a macro or constant (BOARD_LED_PIN) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 36 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        64` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 37 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_ESP32_DEV_MODULE)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 39 | Else-if for conditional compilation |
+| `#warning "The LED of this board is not configured"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 41 | Generates a compilation warning with a message: "The LED of this board is not configured" |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 43 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 44 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#elif defined(USE_ESP32C3_DEV_MODULE)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 46 | Else-if for conditional compilation |
+| `#define BOARD_BUTTON_PIN            9` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 48 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 49 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN_WS2812        8` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 51 | Defines a macro or constant (BOARD_LED_PIN_WS2812) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 52 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        32` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 53 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_ESP32S2_DEV_KIT)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 55 | Else-if for conditional compilation |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 57 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 58 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN               19` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 60 | Defines a macro or constant (BOARD_LED_PIN) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 61 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        128` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 62 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 64 | Else clause for conditional compilation |
+| `#warning "Custom board configuration is used"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 66 | Generates a compilation warning with a message: "Custom board configuration is used" |
+| `#define BOARD_BUTTON_PIN            0                     // Pin where user button is attached` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 68 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true                  // true if button is "active-low"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 69 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_INVERSE           false                 // true if LED is common anode, false if common cathode` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 76 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        64                    // 0..255 brightness control` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 77 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 79 | Ends conditional compilation block |
+| `#define BUTTON_HOLD_TIME_INDICATION   3000` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 86 | Defines a macro or constant (BUTTON_HOLD_TIME_INDICATION) |
+| `#define BUTTON_HOLD_TIME_ACTION       10000` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 87 | Defines a macro or constant (BUTTON_HOLD_TIME_ACTION) |
+| `#define BUTTON_PRESS_TIME_ACTION      50` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 88 | Defines a macro or constant (BUTTON_PRESS_TIME_ACTION) |
+| `#define BOARD_PWM_MAX                 1023` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 90 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#define BOARD_LEDC_CHANNEL_1          1` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 92 | Defines a macro or constant (BOARD_LEDC_CHANNEL_1) |
+| `#define BOARD_LEDC_CHANNEL_2          2` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 93 | Defines a macro or constant (BOARD_LEDC_CHANNEL_2) |
+| `#define BOARD_LEDC_CHANNEL_3          3` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 94 | Defines a macro or constant (BOARD_LEDC_CHANNEL_3) |
+| `#define BOARD_LEDC_TIMER_BITS         10` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 95 | Defines a macro or constant (BOARD_LEDC_TIMER_BITS) |
+| `#define BOARD_LEDC_BASE_FREQ          12000` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 96 | Defines a macro or constant (BOARD_LEDC_BASE_FREQ) |
+| `#if !defined(CONFIG_DEVICE_PREFIX)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 98 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEVICE_PREFIX) |
+| `#define CONFIG_DEVICE_PREFIX          "Blynk"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 99 | Defines a macro or constant (CONFIG_DEVICE_PREFIX) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 100 | Ends conditional compilation block |
+| `#if !defined(CONFIG_AP_URL)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 101 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_AP_URL) |
+| `#define CONFIG_AP_URL                 "blynk.setup"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 102 | Defines a macro or constant (CONFIG_AP_URL) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 103 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_SERVER)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 104 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_SERVER) |
+| `#define CONFIG_DEFAULT_SERVER         "blynk.cloud"` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 105 | Defines a macro or constant (CONFIG_DEFAULT_SERVER) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 106 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_PORT)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 107 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_PORT) |
+| `#define CONFIG_DEFAULT_PORT           443` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 108 | Defines a macro or constant (CONFIG_DEFAULT_PORT) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 109 | Ends conditional compilation block |
+| `#define WIFI_CLOUD_MAX_RETRIES        500` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 111 | Defines a macro or constant (WIFI_CLOUD_MAX_RETRIES) |
+| `#define WIFI_NET_CONNECT_TIMEOUT      50000` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 112 | Defines a macro or constant (WIFI_NET_CONNECT_TIMEOUT) |
+| `#define WIFI_CLOUD_CONNECT_TIMEOUT    50000` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 113 | Defines a macro or constant (WIFI_CLOUD_CONNECT_TIMEOUT) |
+| `#define WIFI_AP_IP                    IPAddress(192, 168, 4, 1)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 114 | Defines a macro or constant (WIFI_AP_IP) |
+| `#define WIFI_AP_Subnet                IPAddress(255, 255, 255, 0)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 115 | Defines a macro or constant (WIFI_AP_Subnet) |
+| `#define USE_PTHREAD` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 122 | Defines a macro or constant (USE_PTHREAD) |
+| `#define BLYNK_NO_DEFAULT_BANNER` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 124 | Defines a macro or constant (BLYNK_NO_DEFAULT_BANNER) |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 126 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#define DEBUG_PRINT(...)  BLYNK_LOG1(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 127 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...) BLYNK_LOG(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 128 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 129 | Else clause for conditional compilation |
+| `#define DEBUG_PRINT(...)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 130 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...)` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 131 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP32/Settings.h | 132 | Ends conditional compilation block |
+| `#include "user_interface.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 3 | Includes the contents of a file (user_interface.h) |
+| `#include "Settings.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 9 | Includes the contents of a file (Settings.h) |
+| `#include <BlynkSimpleEsp8266_SSL.h>` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 10 | Includes the contents of a file (BlynkSimpleEsp8266_SSL.h) |
+| `#if defined(BLYNK_USE_LITTLEFS)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 12 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_USE_LITTLEFS) |
+| `#include <LittleFS.h>` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 13 | Includes the contents of a file (LittleFS.h) |
+| `#define BLYNK_FS LittleFS` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 14 | Defines a macro or constant (BLYNK_FS) |
+| `#elif defined(BLYNK_USE_SPIFFS)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 15 | Else-if for conditional compilation |
+| `#if defined(ESP32)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 16 | Conditional compilation - evaluates compile-time expression - defined(ESP32) |
+| `#include <SPIFFS.h>` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 17 | Includes the contents of a file (SPIFFS.h) |
+| `#elif defined(ESP8266)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 18 | Else-if for conditional compilation |
+| `#include <FS.h>` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 19 | Includes the contents of a file (FS.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 20 | Ends conditional compilation block |
+| `#define BLYNK_FS SPIFFS` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 21 | Defines a macro or constant (BLYNK_FS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 22 | Ends conditional compilation block |
+| `#if defined(BLYNK_FS) && defined(ESP8266)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 23 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_FS) && defined(ESP8266) |
+| `#define BLYNK_FILE_READ  "r"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 24 | Defines a macro or constant (BLYNK_FILE_READ) |
+| `#define BLYNK_FILE_WRITE "w"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 25 | Defines a macro or constant (BLYNK_FILE_WRITE) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 26 | Ends conditional compilation block |
+| `#ifndef BLYNK_NEW_LIBRARY` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 28 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NEW_LIBRARY |
+| `#error "Old version of Blynk library is in use. Please replace it with the new one."` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 29 | Generates a compilation error with a message: "Old version of Blynk library is in use. Please replace it with the new one." |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 30 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 32 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME) |
+| `#define BLYNK_TEMPLATE_NAME BLYNK_DEVICE_NAME` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 33 | Defines a macro or constant (BLYNK_TEMPLATE_NAME) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 34 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 36 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME) |
+| `#error "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 37 | Generates a compilation error with a message: "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME" |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 38 | Ends conditional compilation block |
+| `#if defined(BLYNK_AUTH_TOKEN)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 40 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_AUTH_TOKEN) |
+| `#error "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 41 | Generates a compilation error with a message: "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration" |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 42 | Ends conditional compilation block |
+| `#include "BlynkState.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 46 | Includes the contents of a file (BlynkState.h) |
+| `#include "ConfigStore.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 47 | Includes the contents of a file (ConfigStore.h) |
+| `#include "ResetButton.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 48 | Includes the contents of a file (ResetButton.h) |
+| `#include "ConfigMode.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 49 | Includes the contents of a file (ConfigMode.h) |
+| `#include "Indicator.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 50 | Includes the contents of a file (Indicator.h) |
+| `#include "OTA.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 51 | Includes the contents of a file (OTA.h) |
+| `#include "Console.h"` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 52 | Includes the contents of a file (Console.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 68 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 85 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 107 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h | 109 | Ends conditional compilation block |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkState.h | 16 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/BlynkState.h | 30 | Ends conditional compilation block |
+| `#include <ESP8266WiFi.h>` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 2 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <ESP8266WebServer.h>` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 3 | Includes the contents of a file (ESP8266WebServer.h) |
+| `#include <ESP8266HTTPUpdateServer.h>` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 4 | Includes the contents of a file (ESP8266HTTPUpdateServer.h) |
+| `#include <DNSServer.h>` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 5 | Includes the contents of a file (DNSServer.h) |
+| `#ifndef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 7 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 58 | Ends conditional compilation block |
+| `#ifdef WIFI_CAPTIVE_PORTAL_ENABLE` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 174 | Conditional compilation - evaluates compile-time expression - def WIFI_CAPTIVE_PORTAL_ENABLE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 177 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 180 | Ends conditional compilation block |
+| `#ifndef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 184 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 188 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 349 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigMode.h | 352 | Ends conditional compilation block |
+| `#define CONFIG_FLAG_VALID       0x01` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 2 | Defines a macro or constant (CONFIG_FLAG_VALID) |
+| `#define CONFIG_FLAG_STATIC_IP   0x02` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 3 | Defines a macro or constant (CONFIG_FLAG_STATIC_IP) |
+| `#define BLYNK_PROV_ERR_NONE     0      // All good` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 5 | Defines a macro or constant (BLYNK_PROV_ERR_NONE) |
+| `#define BLYNK_PROV_ERR_CONFIG   700    // Invalid config from app (malformed token,etc)` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 6 | Defines a macro or constant (BLYNK_PROV_ERR_CONFIG) |
+| `#define BLYNK_PROV_ERR_NETWORK  701    // Could not connect to the router` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 7 | Defines a macro or constant (BLYNK_PROV_ERR_NETWORK) |
+| `#define BLYNK_PROV_ERR_CLOUD    702    // Could not connect to the cloud` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 8 | Defines a macro or constant (BLYNK_PROV_ERR_CLOUD) |
+| `#define BLYNK_PROV_ERR_TOKEN    703    // Invalid token error (after connection)` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 9 | Defines a macro or constant (BLYNK_PROV_ERR_TOKEN) |
+| `#define BLYNK_PROV_ERR_INTERNAL 704    // Other issues (i.e. hardware failure)` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 10 | Defines a macro or constant (BLYNK_PROV_ERR_INTERNAL) |
+| `#include <EEPROM.h>` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 101 | Includes the contents of a file (EEPROM.h) |
+| `#define EEPROM_CONFIG_START 0` | examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h | 102 | Defines a macro or constant (EEPROM_CONFIG_START) |
+| `#include <Blynk/BlynkConsole.h>` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 2 | Includes the contents of a file (Blynk/BlynkConsole.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 8 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 10 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 123 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 127 | Ends conditional compilation block |
+| `#ifdef BLYNK_FS` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 130 | Conditional compilation - evaluates compile-time expression - def BLYNK_FS |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Console.h | 201 | Ends conditional compilation block |
+| `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | examples/Blynk.Edgent/Edgent_ESP8266/Edgent_ESP8266.ino | 27 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_PRINT Serial` | examples/Blynk.Edgent/Edgent_ESP8266/Edgent_ESP8266.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#define APP_DEBUG` | examples/Blynk.Edgent/Edgent_ESP8266/Edgent_ESP8266.ino | 32 | Defines a macro or constant (APP_DEBUG) |
+| `#include "BlynkEdgent.h"` | examples/Blynk.Edgent/Edgent_ESP8266/Edgent_ESP8266.ino | 40 | Includes the contents of a file (BlynkEdgent.h) |
+| `#if defined(BOARD_LED_PIN_WS2812)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 2 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) |
+| `#include <Adafruit_NeoPixel.h>    // Library: https://github.com/adafruit/Adafruit_NeoPixel` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 3 | Includes the contents of a file (Adafruit_NeoPixel.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 6 | Ends conditional compilation block |
+| `#if !defined(BOARD_LED_BRIGHTNESS)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 10 | Conditional compilation - evaluates compile-time expression - !defined(BOARD_LED_BRIGHTNESS) |
+| `#define BOARD_LED_BRIGHTNESS 255` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 11 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 12 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 14 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R) |
+| `#define BOARD_LED_IS_RGB` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 15 | Defines a macro or constant (BOARD_LED_IS_RGB) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 16 | Ends conditional compilation block |
+| `#define DIMM(x)    ((uint32_t)(x)*(BOARD_LED_BRIGHTNESS)/255)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 18 | Defines a macro or constant (DIMM) |
+| `#define RGB(r,g,b) (DIMM(r) << 16 \| DIMM(g) << 8 \| DIMM(b) << 0)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 19 | Defines a macro or constant (RGB) |
+| `#define TO_PWM(x)  ((uint32_t)(x)*(BOARD_PWM_MAX)/255)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 20 | Defines a macro or constant (TO_PWM) |
+| `#if defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 74 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED |
+| `#elif defined(BOARD_LED_PIN_R)     // Normal RGB LED (common anode or common cathode)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 86 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 98 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 102 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 106 | Ends conditional compilation block |
+| `#elif defined(BOARD_LED_PIN)       // Single color LED` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 109 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 116 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 118 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 120 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 123 | Else clause for conditional compilation |
+| `#warning Invalid LED configuration.` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 125 | Generates a compilation warning with a message: Invalid LED configuration. |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 133 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_IS_RGB)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 143 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_IS_RGB) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 174 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 195 | Ends conditional compilation block |
+| `#if defined(USE_TICKER)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 208 | Conditional compilation - evaluates compile-time expression - defined(USE_TICKER) |
+| `#include <Ticker.h>` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 210 | Includes the contents of a file (Ticker.h) |
+| `#elif defined(USE_PTHREAD)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 226 | Else-if for conditional compilation |
+| `#include <pthread.h>` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 228 | Includes the contents of a file (pthread.h) |
+| `#elif defined(USE_TIMER_ONE)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 245 | Else-if for conditional compilation |
+| `#include <TimerOne.h>` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 247 | Includes the contents of a file (TimerOne.h) |
+| `#elif defined(USE_TIMER_THREE)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 262 | Else-if for conditional compilation |
+| `#include <TimerThree.h>` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 264 | Includes the contents of a file (TimerThree.h) |
+| `#elif defined(USE_TIMER_FIVE)` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 279 | Else-if for conditional compilation |
+| `#include <Timer5.h>    // Library: https://github.com/michael71/Timer5` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 281 | Includes the contents of a file (Timer5.h) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 298 | Else clause for conditional compilation |
+| `#warning LED indicator needs a functional timer!` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 300 | Generates a compilation warning with a message: LED indicator needs a functional timer! |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Indicator.h | 305 | Ends conditional compilation block |
+| `#define OTA_FATAL(...) { BLYNK_LOG1(__VA_ARGS__); delay(1000); restartMCU(); }` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 2 | Defines a macro or constant (OTA_FATAL) |
+| `#define USE_SSL` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 4 | Defines a macro or constant (USE_SSL) |
+| `#if defined(ESP32)` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 24 | Conditional compilation - evaluates compile-time expression - defined(ESP32) |
+| `#include <Update.h>` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 25 | Includes the contents of a file (Update.h) |
+| `#include <WiFiClientSecure.h>` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 26 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#elif defined(ESP8266)` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 27 | Else-if for conditional compilation |
+| `#include <ESP8266WiFi.h>` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 28 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <WiFiClientSecure.h>` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 29 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#include <time.h>` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 30 | Includes the contents of a file (time.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 31 | Ends conditional compilation block |
+| `#if defined(USE_SSL) && defined(ESP8266)` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 33 | Conditional compilation - evaluates compile-time expression - defined(USE_SSL) && defined(ESP8266) |
+| `#elif defined(USE_SSL) && defined(ESP32)` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 63 | Else-if for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 80 | Ends conditional compilation block |
+| `#ifdef USE_SSL` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 149 | Conditional compilation - evaluates compile-time expression - def USE_SSL |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 152 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 195 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 197 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 234 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 236 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 240 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 242 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 246 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 248 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 253 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/OTA.h | 255 | Ends conditional compilation block |
+| `#ifdef BOARD_BUTTON_PIN` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 2 | Conditional compilation - evaluates compile-time expression - def BOARD_BUTTON_PIN |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 15 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 17 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 19 | Ends conditional compilation block |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 39 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 41 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 43 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 47 | Else clause for conditional compilation |
+| `#define g_buttonPressed     false` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 49 | Defines a macro or constant (g_buttonPressed) |
+| `#define g_buttonPressTime   0` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 50 | Defines a macro or constant (g_buttonPressTime) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/ResetButton.h | 54 | Ends conditional compilation block |
+| `#if defined(USE_NODE_MCU_BOARD) \|\| defined(USE_WEMOS_D1_MINI)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 6 | Conditional compilation - evaluates compile-time expression - defined(USE_NODE_MCU_BOARD) \|\| defined(USE_WEMOS_D1_MINI) |
+| `#if defined(USE_WEMOS_D1_MINI)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 8 | Conditional compilation - evaluates compile-time expression - defined(USE_WEMOS_D1_MINI) |
+| `#warning "This board does not have a button. Connect a button to gpio0 <> GND"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 9 | Generates a compilation warning with a message: "This board does not have a button. Connect a button to gpio0 <> GND" |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 10 | Ends conditional compilation block |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 12 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 13 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN               2` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 15 | Defines a macro or constant (BOARD_LED_PIN) |
+| `#define BOARD_LED_INVERSE           true` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 16 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        255` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 17 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_SPARKFUN_BLYNK_BOARD)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 19 | Else-if for conditional compilation |
+| `#define BOARD_BUTTON_PIN            0` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 21 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 22 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN_WS2812        4` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 24 | Defines a macro or constant (BOARD_LED_PIN_WS2812) |
+| `#define BOARD_LED_BRIGHTNESS        64` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 25 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#elif defined(USE_WITTY_CLOUD_BOARD)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 27 | Else-if for conditional compilation |
+| `#define BOARD_BUTTON_PIN            4` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 29 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 30 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN_R             15` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 32 | Defines a macro or constant (BOARD_LED_PIN_R) |
+| `#define BOARD_LED_PIN_G             12` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 33 | Defines a macro or constant (BOARD_LED_PIN_G) |
+| `#define BOARD_LED_PIN_B             13` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 34 | Defines a macro or constant (BOARD_LED_PIN_B) |
+| `#define BOARD_LED_INVERSE           false` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 35 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        64` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 36 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 38 | Else clause for conditional compilation |
+| `#warning "Custom board configuration is used"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 40 | Generates a compilation warning with a message: "Custom board configuration is used" |
+| `#define BOARD_BUTTON_PIN            0                     // Pin where user button is attached` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 42 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true                  // true if button is "active-low"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 43 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_INVERSE           false                 // true if LED is common anode, false if common cathode` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 50 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        64                    // 0..255 brightness control` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 51 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 53 | Ends conditional compilation block |
+| `#define BUTTON_HOLD_TIME_INDICATION   3000` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 60 | Defines a macro or constant (BUTTON_HOLD_TIME_INDICATION) |
+| `#define BUTTON_HOLD_TIME_ACTION       10000` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 61 | Defines a macro or constant (BUTTON_HOLD_TIME_ACTION) |
+| `#define BUTTON_PRESS_TIME_ACTION      50` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 62 | Defines a macro or constant (BUTTON_PRESS_TIME_ACTION) |
+| `#define BOARD_PWM_MAX                 1023` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 64 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#if !defined(CONFIG_DEVICE_PREFIX)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 66 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEVICE_PREFIX) |
+| `#define CONFIG_DEVICE_PREFIX          "Blynk"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 67 | Defines a macro or constant (CONFIG_DEVICE_PREFIX) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 68 | Ends conditional compilation block |
+| `#if !defined(CONFIG_AP_URL)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 69 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_AP_URL) |
+| `#define CONFIG_AP_URL                 "blynk.setup"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 70 | Defines a macro or constant (CONFIG_AP_URL) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 71 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_SERVER)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 72 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_SERVER) |
+| `#define CONFIG_DEFAULT_SERVER         "blynk.cloud"` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 73 | Defines a macro or constant (CONFIG_DEFAULT_SERVER) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 74 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_PORT)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 75 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_PORT) |
+| `#define CONFIG_DEFAULT_PORT           443` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 76 | Defines a macro or constant (CONFIG_DEFAULT_PORT) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 77 | Ends conditional compilation block |
+| `#define WIFI_CLOUD_MAX_RETRIES        500` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 79 | Defines a macro or constant (WIFI_CLOUD_MAX_RETRIES) |
+| `#define WIFI_NET_CONNECT_TIMEOUT      50000` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 80 | Defines a macro or constant (WIFI_NET_CONNECT_TIMEOUT) |
+| `#define WIFI_CLOUD_CONNECT_TIMEOUT    50000` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 81 | Defines a macro or constant (WIFI_CLOUD_CONNECT_TIMEOUT) |
+| `#define WIFI_AP_IP                    IPAddress(192, 168, 4, 1)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 82 | Defines a macro or constant (WIFI_AP_IP) |
+| `#define WIFI_AP_Subnet                IPAddress(255, 255, 255, 0)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 83 | Defines a macro or constant (WIFI_AP_Subnet) |
+| `#define USE_TICKER` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 86 | Defines a macro or constant (USE_TICKER) |
+| `#define BLYNK_NO_DEFAULT_BANNER` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 92 | Defines a macro or constant (BLYNK_NO_DEFAULT_BANNER) |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 94 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#define DEBUG_PRINT(...)  BLYNK_LOG1(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 95 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...) BLYNK_LOG(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 96 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#else` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 97 | Else clause for conditional compilation |
+| `#define DEBUG_PRINT(...)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 98 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...)` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 99 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#endif` | examples/Blynk.Edgent/Edgent_ESP8266/Settings.h | 100 | Ends conditional compilation block |
+| `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | examples/Blynk.Edgent/Edgent_NCP/Edgent_NCP.ino | 30 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_PRINT                   Serial` | examples/Blynk.Edgent/Edgent_NCP/Edgent_NCP.ino | 33 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkEdgentNCP.h>` | examples/Blynk.Edgent/Edgent_NCP/Edgent_NCP.ino | 39 | Includes the contents of a file (BlynkEdgentNCP.h) |
+| `#include "Settings.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 7 | Includes the contents of a file (Settings.h) |
+| `#include <BlynkSimpleWioTerminal_SSL.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 8 | Includes the contents of a file (BlynkSimpleWioTerminal_SSL.h) |
+| `#ifndef BLYNK_NEW_LIBRARY` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NEW_LIBRARY |
+| `#error "Old version of Blynk library is in use. Please replace it with the new one."` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 11 | Generates a compilation error with a message: "Old version of Blynk library is in use. Please replace it with the new one." |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 12 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 14 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_NAME) && defined(BLYNK_DEVICE_NAME) |
+| `#define BLYNK_TEMPLATE_NAME BLYNK_DEVICE_NAME` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 15 | Defines a macro or constant (BLYNK_TEMPLATE_NAME) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 16 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 18 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME) |
+| `#error "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 19 | Generates a compilation error with a message: "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME" |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 20 | Ends conditional compilation block |
+| `#if defined(BLYNK_AUTH_TOKEN)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 22 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_AUTH_TOKEN) |
+| `#error "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 23 | Generates a compilation error with a message: "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration" |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 24 | Ends conditional compilation block |
+| `#include "BlynkState.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 28 | Includes the contents of a file (BlynkState.h) |
+| `#include "ConfigStore.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 29 | Includes the contents of a file (ConfigStore.h) |
+| `#include "ResetButton.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 30 | Includes the contents of a file (ResetButton.h) |
+| `#include "ConfigMode.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 31 | Includes the contents of a file (ConfigMode.h) |
+| `#include "Indicator.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 32 | Includes the contents of a file (Indicator.h) |
+| `#include "OTA.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 33 | Includes the contents of a file (OTA.h) |
+| `#include "Console.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 34 | Includes the contents of a file (Console.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 50 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkEdgent.h | 63 | Ends conditional compilation block |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkState.h | 16 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/BlynkState.h | 30 | Ends conditional compilation block |
+| `#include <WiFiClient.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 2 | Includes the contents of a file (WiFiClient.h) |
+| `#include <WebServer.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 3 | Includes the contents of a file (WebServer.h) |
+| `#include <DNSServer.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 4 | Includes the contents of a file (DNSServer.h) |
+| `#ifdef WIFI_CAPTIVE_PORTAL_ENABLE` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 216 | Conditional compilation - evaluates compile-time expression - def WIFI_CAPTIVE_PORTAL_ENABLE |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 219 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigMode.h | 222 | Ends conditional compilation block |
+| `#define CONFIG_FLAG_VALID       0x01` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 2 | Defines a macro or constant (CONFIG_FLAG_VALID) |
+| `#define CONFIG_FLAG_STATIC_IP   0x02` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 3 | Defines a macro or constant (CONFIG_FLAG_STATIC_IP) |
+| `#define BLYNK_PROV_ERR_NONE     0      // All good` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 5 | Defines a macro or constant (BLYNK_PROV_ERR_NONE) |
+| `#define BLYNK_PROV_ERR_CONFIG   700    // Invalid config from app (malformed token,etc)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 6 | Defines a macro or constant (BLYNK_PROV_ERR_CONFIG) |
+| `#define BLYNK_PROV_ERR_NETWORK  701    // Could not connect to the router` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 7 | Defines a macro or constant (BLYNK_PROV_ERR_NETWORK) |
+| `#define BLYNK_PROV_ERR_CLOUD    702    // Could not connect to the cloud` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 8 | Defines a macro or constant (BLYNK_PROV_ERR_CLOUD) |
+| `#define BLYNK_PROV_ERR_TOKEN    703    // Invalid token error (after connection)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 9 | Defines a macro or constant (BLYNK_PROV_ERR_TOKEN) |
+| `#define BLYNK_PROV_ERR_INTERNAL 704    // Other issues (i.e. hardware failure)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 10 | Defines a macro or constant (BLYNK_PROV_ERR_INTERNAL) |
+| `#include <sfud.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ConfigStore.h | 101 | Includes the contents of a file (sfud.h) |
+| `#include <Blynk/BlynkConsole.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Console.h | 2 | Includes the contents of a file (Blynk/BlynkConsole.h) |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Console.h | 8 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Console.h | 10 | Ends conditional compilation block |
+| `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Edgent_Wio_Terminal.ino | 40 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_PRINT Serial` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Edgent_Wio_Terminal.ino | 42 | Defines a macro or constant (BLYNK_PRINT) |
+| `#define APP_DEBUG` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Edgent_Wio_Terminal.ino | 45 | Defines a macro or constant (APP_DEBUG) |
+| `#include "BlynkEdgent.h"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Edgent_Wio_Terminal.ino | 47 | Includes the contents of a file (BlynkEdgent.h) |
+| `#if defined(BOARD_LED_PIN_WS2812)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 2 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) |
+| `#include <Adafruit_NeoPixel.h>    // Library: https://github.com/adafruit/Adafruit_NeoPixel` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 3 | Includes the contents of a file (Adafruit_NeoPixel.h) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 6 | Ends conditional compilation block |
+| `#if !defined(BOARD_LED_BRIGHTNESS)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 10 | Conditional compilation - evaluates compile-time expression - !defined(BOARD_LED_BRIGHTNESS) |
+| `#define BOARD_LED_BRIGHTNESS 255` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 11 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 12 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 14 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812) \|\| defined(BOARD_LED_PIN_R) |
+| `#define BOARD_LED_IS_RGB` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 15 | Defines a macro or constant (BOARD_LED_IS_RGB) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 16 | Ends conditional compilation block |
+| `#define DIMM(x)    ((uint32_t)(x)*(BOARD_LED_BRIGHTNESS)/255)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 18 | Defines a macro or constant (DIMM) |
+| `#define RGB(r,g,b) (DIMM(r) << 16 \| DIMM(g) << 8 \| DIMM(b) << 0)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 19 | Defines a macro or constant (RGB) |
+| `#define TO_PWM(x)  ((uint32_t)(x)*(BOARD_PWM_MAX)/255)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 20 | Defines a macro or constant (TO_PWM) |
+| `#if defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 74 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_PIN_WS2812)  // Addressable, NeoPixel RGB LED |
+| `#elif defined(BOARD_LED_PIN_R)     // Normal RGB LED (common anode or common cathode)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 86 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 98 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 102 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 106 | Ends conditional compilation block |
+| `#elif defined(BOARD_LED_PIN)       // Single color LED` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 109 | Else-if for conditional compilation |
+| `#if BOARD_LED_INVERSE` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 116 | Conditional compilation - evaluates compile-time expression - BOARD_LED_INVERSE |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 118 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 120 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 123 | Else clause for conditional compilation |
+| `#warning Invalid LED configuration.` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 125 | Generates a compilation warning with a message: Invalid LED configuration. |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 133 | Ends conditional compilation block |
+| `#if defined(BOARD_LED_IS_RGB)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 143 | Conditional compilation - evaluates compile-time expression - defined(BOARD_LED_IS_RGB) |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 174 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 195 | Ends conditional compilation block |
+| `#if defined(USE_TC3)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 208 | Conditional compilation - evaluates compile-time expression - defined(USE_TC3) |
+| `#include <TimerTC3.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 210 | Includes the contents of a file (TimerTC3.h) |
+| `#elif defined(USE_TCC0)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 225 | Else-if for conditional compilation |
+| `#include <TimerThree.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 227 | Includes the contents of a file (TimerThree.h) |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 242 | Else clause for conditional compilation |
+| `#warning LED indicator needs a functional timer!` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 244 | Generates a compilation warning with a message: LED indicator needs a functional timer! |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Indicator.h | 249 | Ends conditional compilation block |
+| `#include <ArduinoOTA.h> // only for InternalStorage` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 2 | Includes the contents of a file (ArduinoOTA.h) |
+| `#include <ArduinoHttpClient.h>` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 3 | Includes the contents of a file (ArduinoHttpClient.h) |
+| `#define OTA_FATAL(...) { BLYNK_LOG1(__VA_ARGS__); delay(1000); restartMCU(); }` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 5 | Defines a macro or constant (OTA_FATAL) |
+| `#define USE_SSL` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 7 | Defines a macro or constant (USE_SSL) |
+| `#ifdef USE_SSL` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 85 | Conditional compilation - evaluates compile-time expression - def USE_SSL |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 89 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 132 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 134 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 138 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/OTA.h | 140 | Ends conditional compilation block |
+| `#ifdef BOARD_BUTTON_PIN` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 2 | Conditional compilation - evaluates compile-time expression - def BOARD_BUTTON_PIN |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 14 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 16 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 18 | Ends conditional compilation block |
+| `#if BOARD_BUTTON_ACTIVE_LOW` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 38 | Conditional compilation - evaluates compile-time expression - BOARD_BUTTON_ACTIVE_LOW |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 40 | Else clause for conditional compilation |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 42 | Ends conditional compilation block |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 46 | Else clause for conditional compilation |
+| `#define g_buttonPressed     false` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 48 | Defines a macro or constant (g_buttonPressed) |
+| `#define g_buttonPressTime   0` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 49 | Defines a macro or constant (g_buttonPressTime) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/ResetButton.h | 53 | Ends conditional compilation block |
+| `#define BOARD_BUTTON_PIN            WIO_KEY_A             // Pin where user button is attached` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 7 | Defines a macro or constant (BOARD_BUTTON_PIN) |
+| `#define BOARD_BUTTON_ACTIVE_LOW     true                  // true if button is "active-low"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 8 | Defines a macro or constant (BOARD_BUTTON_ACTIVE_LOW) |
+| `#define BOARD_LED_PIN               LED_BUILTIN           // Set LED pin - if you have a single-color LED attached` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 10 | Defines a macro or constant (BOARD_LED_PIN) |
+| `#define BOARD_LED_INVERSE           false                 // true if LED is common anode, false if common cathode` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 15 | Defines a macro or constant (BOARD_LED_INVERSE) |
+| `#define BOARD_LED_BRIGHTNESS        255                   // 0..255 brightness control` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 16 | Defines a macro or constant (BOARD_LED_BRIGHTNESS) |
+| `#define BUTTON_HOLD_TIME_INDICATION   3000` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 23 | Defines a macro or constant (BUTTON_HOLD_TIME_INDICATION) |
+| `#define BUTTON_HOLD_TIME_ACTION       10000` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 24 | Defines a macro or constant (BUTTON_HOLD_TIME_ACTION) |
+| `#define BUTTON_PRESS_TIME_ACTION      50` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 25 | Defines a macro or constant (BUTTON_PRESS_TIME_ACTION) |
+| `#define BOARD_PWM_MAX                 1023` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 27 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#if !defined(CONFIG_DEVICE_PREFIX)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 29 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEVICE_PREFIX) |
+| `#define CONFIG_DEVICE_PREFIX          "Blynk"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 30 | Defines a macro or constant (CONFIG_DEVICE_PREFIX) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 31 | Ends conditional compilation block |
+| `#if !defined(CONFIG_AP_URL)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 32 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_AP_URL) |
+| `#define CONFIG_AP_URL                 "blynk.setup"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 33 | Defines a macro or constant (CONFIG_AP_URL) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 34 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_SERVER)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 35 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_SERVER) |
+| `#define CONFIG_DEFAULT_SERVER         "blynk.cloud"` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 36 | Defines a macro or constant (CONFIG_DEFAULT_SERVER) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 37 | Ends conditional compilation block |
+| `#if !defined(CONFIG_DEFAULT_PORT)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 38 | Conditional compilation - evaluates compile-time expression - !defined(CONFIG_DEFAULT_PORT) |
+| `#define CONFIG_DEFAULT_PORT           443` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 39 | Defines a macro or constant (CONFIG_DEFAULT_PORT) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 40 | Ends conditional compilation block |
+| `#define WIFI_CLOUD_MAX_RETRIES        500` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 42 | Defines a macro or constant (WIFI_CLOUD_MAX_RETRIES) |
+| `#define WIFI_NET_CONNECT_TIMEOUT      50000` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 43 | Defines a macro or constant (WIFI_NET_CONNECT_TIMEOUT) |
+| `#define WIFI_CLOUD_CONNECT_TIMEOUT    50000` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 44 | Defines a macro or constant (WIFI_CLOUD_CONNECT_TIMEOUT) |
+| `#define WIFI_AP_IP                    IPAddress(192, 168, 4, 1)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 45 | Defines a macro or constant (WIFI_AP_IP) |
+| `#define WIFI_AP_Subnet                IPAddress(255, 255, 255, 0)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 46 | Defines a macro or constant (WIFI_AP_Subnet) |
+| `#define BLYNK_NO_DEFAULT_BANNER` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 52 | Defines a macro or constant (BLYNK_NO_DEFAULT_BANNER) |
+| `#if defined(APP_DEBUG)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 54 | Conditional compilation - evaluates compile-time expression - defined(APP_DEBUG) |
+| `#define DEBUG_PRINT(...)  BLYNK_LOG1(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 55 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...) BLYNK_LOG(__VA_ARGS__)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 56 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#else` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 57 | Else clause for conditional compilation |
+| `#define DEBUG_PRINT(...)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 58 | Defines a macro or constant (DEBUG_PRINT) |
+| `#define DEBUG_PRINTF(...)` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 59 | Defines a macro or constant (DEBUG_PRINTF) |
+| `#endif` | examples/Blynk.Edgent/Edgent_Wio_Terminal/Settings.h | 60 | Ends conditional compilation block |
+| `#define BLYNK_PRINT Serial` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkMultiClient.h>` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 43 | Includes the contents of a file (BlynkMultiClient.h) |
+| `#include <SPI.h>` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 52 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>   // For ENC28J60, replace this with <EthernetENC.h> library` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 53 | Includes the contents of a file (Ethernet.h) |
+| `#define W5100_CS   10` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 56 | Defines a macro or constant (W5100_CS) |
+| `#define SDCARD_CS  4` | examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino | 57 | Defines a macro or constant (SDCARD_CS) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkMultiClient.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 39 | Includes the contents of a file (BlynkMultiClient.h) |
+| `#include <SPI.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 48 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 49 | Includes the contents of a file (Ethernet.h) |
+| `#define MKRETH_CS  5` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 52 | Defines a macro or constant (MKRETH_CS) |
+| `#define SDCARD_CS  4` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 53 | Defines a macro or constant (SDCARD_CS) |
+| `#include <MKRGSM.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino | 67 | Includes the contents of a file (MKRGSM.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkMultiClient.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 39 | Includes the contents of a file (BlynkMultiClient.h) |
+| `#include <SPI.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 48 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 49 | Includes the contents of a file (Ethernet.h) |
+| `#include <ArduinoECCX08.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 50 | Includes the contents of a file (ArduinoECCX08.h) |
+| `#include <ArduinoBearSSL.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 51 | Includes the contents of a file (ArduinoBearSSL.h) |
+| `#define MKRETH_CS  5` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 54 | Defines a macro or constant (MKRETH_CS) |
+| `#define SDCARD_CS  4` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 55 | Defines a macro or constant (SDCARD_CS) |
+| `#include <MKRGSM.h>` | examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH_SSL/Arduino_MKR1400_GSM_ETH_SSL.ino | 70 | Includes the contents of a file (MKRGSM.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkMultiClient.h>` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 39 | Includes the contents of a file (BlynkMultiClient.h) |
+| `#ifdef ESP32` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 50 | Conditional compilation - evaluates compile-time expression - def ESP32 |
+| `#include <WiFi.h>` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 51 | Includes the contents of a file (WiFi.h) |
+| `#else` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 52 | Else clause for conditional compilation |
+| `#include <ESP8266WiFi.h>` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 53 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#endif` | examples/Boards_ArduinoClient/ESP8266_ESP32/ESP8266_ESP32.ino | 54 | Ends conditional compilation block |
+| `#define BLYNK_PRINT Serial` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 31 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 39 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 40 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 41 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define W5100_CS  10` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 43 | Defines a macro or constant (W5100_CS) |
+| `#define SDCARD_CS 4` | examples/Boards_Ethernet/Arduino_Ethernet/Arduino_Ethernet.ino | 44 | Defines a macro or constant (SDCARD_CS) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 31 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 39 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 40 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 41 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define W5100_CS  10` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 52 | Defines a macro or constant (W5100_CS) |
+| `#define SDCARD_CS 4` | examples/Boards_Ethernet/Arduino_Ethernet_Manual/Arduino_Ethernet_Manual.ino | 53 | Defines a macro or constant (SDCARD_CS) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 38 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 39 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 40 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define MKRETH_CS  5` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 42 | Defines a macro or constant (MKRETH_CS) |
+| `#define SDCARD_CS  4` | examples/Boards_Ethernet/Arduino_MKR_ETH/Arduino_MKR_ETH.ino | 43 | Defines a macro or constant (SDCARD_CS) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 38 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 39 | Includes the contents of a file (Ethernet.h) |
+| `#include <ArduinoECCX08.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 40 | Includes the contents of a file (ArduinoECCX08.h) |
+| `#include <ArduinoBearSSL.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 41 | Includes the contents of a file (ArduinoBearSSL.h) |
+| `#include <BlynkSimpleEthernetSSL.h>` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 42 | Includes the contents of a file (BlynkSimpleEthernetSSL.h) |
+| `#define MKRETH_CS  5` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 44 | Defines a macro or constant (MKRETH_CS) |
+| `#define SDCARD_CS  4` | examples/Boards_Ethernet/Arduino_MKR_ETH_SSL/Arduino_MKR_ETH_SSL.ino | 45 | Defines a macro or constant (SDCARD_CS) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_Ethernet/ENC28J60/ENC28J60.ino | 34 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <EthernetENC.h>` | examples/Boards_Ethernet/ENC28J60/ENC28J60.ino | 42 | Includes the contents of a file (EthernetENC.h) |
+| `#include <BlynkSimpleEthernetENC.h>` | examples/Boards_Ethernet/ENC28J60/ENC28J60.ino | 43 | Includes the contents of a file (BlynkSimpleEthernetENC.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_GSM/Arduino_MKRGSM/Arduino_MKRGSM.ino | 27 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_GSM/Arduino_MKRGSM/Arduino_MKRGSM.ino | 35 | Includes the contents of a file (SPI.h) |
+| `#include <MKRGSM.h>` | examples/Boards_GSM/Arduino_MKRGSM/Arduino_MKRGSM.ino | 36 | Includes the contents of a file (MKRGSM.h) |
+| `#include <BlynkSimpleMKRGSM.h>` | examples/Boards_GSM/Arduino_MKRGSM/Arduino_MKRGSM.ino | 37 | Includes the contents of a file (BlynkSimpleMKRGSM.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_GSM/Arduino_MKRNB/Arduino_MKRNB.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <MKRNB.h>` | examples/Boards_GSM/Arduino_MKRNB/Arduino_MKRNB.ino | 32 | Includes the contents of a file (MKRNB.h) |
+| `#include <BlynkSimpleMKRNB.h>` | examples/Boards_GSM/Arduino_MKRNB/Arduino_MKRNB.ino | 33 | Includes the contents of a file (BlynkSimpleMKRNB.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_GSM/TinyGSM_MKR1400/TinyGSM_MKR1400.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#define TINY_GSM_MODEM_UBLOX` | examples/Boards_GSM/TinyGSM_MKR1400/TinyGSM_MKR1400.ino | 35 | Defines a macro or constant (TINY_GSM_MODEM_UBLOX) |
+| `#include <TinyGsmClient.h>` | examples/Boards_GSM/TinyGSM_MKR1400/TinyGSM_MKR1400.ino | 41 | Includes the contents of a file (TinyGsmClient.h) |
+| `#include <BlynkSimpleTinyGSM.h>` | examples/Boards_GSM/TinyGSM_MKR1400/TinyGSM_MKR1400.ino | 42 | Includes the contents of a file (BlynkSimpleTinyGSM.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#define TINY_GSM_MODEM_SIM800` | examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino | 35 | Defines a macro or constant (TINY_GSM_MODEM_SIM800) |
+| `#include <TinyGsmClient.h>` | examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino | 47 | Includes the contents of a file (TinyGsmClient.h) |
+| `#include <BlynkSimpleTinyGSM.h>` | examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino | 48 | Includes the contents of a file (BlynkSimpleTinyGSM.h) |
+| `#define SerialAT Serial1` | examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino | 57 | Defines a macro or constant (SerialAT) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Adafruit_Feather_M0_WiFi/Adafruit_Feather_M0_WiFi.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WiFi101.h>` | examples/Boards_WiFi/Adafruit_Feather_M0_WiFi/Adafruit_Feather_M0_WiFi.ino | 34 | Includes the contents of a file (WiFi101.h) |
+| `#include <BlynkSimpleWiFiShield101.h>` | examples/Boards_WiFi/Adafruit_Feather_M0_WiFi/Adafruit_Feather_M0_WiFi.ino | 35 | Includes the contents of a file (BlynkSimpleWiFiShield101.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_MKR1000/Arduino_MKR1000.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/Arduino_MKR1000/Arduino_MKR1000.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <WiFi101.h>` | examples/Boards_WiFi/Arduino_MKR1000/Arduino_MKR1000.ino | 35 | Includes the contents of a file (WiFi101.h) |
+| `#include <BlynkSimpleMKR1000.h>` | examples/Boards_WiFi/Arduino_MKR1000/Arduino_MKR1000.ino | 36 | Includes the contents of a file (BlynkSimpleMKR1000.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_MKR1010/Arduino_MKR1010.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/Arduino_MKR1010/Arduino_MKR1010.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <WiFiNINA.h>` | examples/Boards_WiFi/Arduino_MKR1010/Arduino_MKR1010.ino | 35 | Includes the contents of a file (WiFiNINA.h) |
+| `#include <BlynkSimpleWiFiNINA.h>` | examples/Boards_WiFi/Arduino_MKR1010/Arduino_MKR1010.ino | 36 | Includes the contents of a file (BlynkSimpleWiFiNINA.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_WiFi_Shield/Arduino_WiFi_Shield.ino | 27 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield/Arduino_WiFi_Shield.ino | 35 | Includes the contents of a file (SPI.h) |
+| `#include <WiFi.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield/Arduino_WiFi_Shield.ino | 36 | Includes the contents of a file (WiFi.h) |
+| `#include <BlynkSimpleWifi.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield/Arduino_WiFi_Shield.ino | 37 | Includes the contents of a file (BlynkSimpleWifi.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_WiFi_Shield_101/Arduino_WiFi_Shield_101.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield_101/Arduino_WiFi_Shield_101.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <WiFi101.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield_101/Arduino_WiFi_Shield_101.ino | 35 | Includes the contents of a file (WiFi101.h) |
+| `#include <BlynkSimpleWiFiShield101.h>` | examples/Boards_WiFi/Arduino_WiFi_Shield_101/Arduino_WiFi_Shield_101.ino | 36 | Includes the contents of a file (BlynkSimpleWiFiShield101.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_Yun/Arduino_Yun.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <Bridge.h>` | examples/Boards_WiFi/Arduino_Yun/Arduino_Yun.ino | 32 | Includes the contents of a file (Bridge.h) |
+| `#include <BlynkSimpleYun.h>` | examples/Boards_WiFi/Arduino_Yun/Arduino_Yun.ino | 33 | Includes the contents of a file (BlynkSimpleYun.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Arduino_org_UNO_WiFi/Arduino_org_UNO_WiFi.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WiFiLink.h>` | examples/Boards_WiFi/Arduino_org_UNO_WiFi/Arduino_org_UNO_WiFi.ino | 36 | Includes the contents of a file (WiFiLink.h) |
+| `#include <BlynkSimpleWiFiLink.h>` | examples/Boards_WiFi/Arduino_org_UNO_WiFi/Arduino_org_UNO_WiFi.ino | 37 | Includes the contents of a file (BlynkSimpleWiFiLink.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP32_WiFi/ESP32_WiFi.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WiFi.h>` | examples/Boards_WiFi/ESP32_WiFi/ESP32_WiFi.ino | 38 | Includes the contents of a file (WiFi.h) |
+| `#include <WiFiClient.h>` | examples/Boards_WiFi/ESP32_WiFi/ESP32_WiFi.ino | 39 | Includes the contents of a file (WiFiClient.h) |
+| `#include <BlynkSimpleEsp32.h>` | examples/Boards_WiFi/ESP32_WiFi/ESP32_WiFi.ino | 40 | Includes the contents of a file (BlynkSimpleEsp32.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP32_WiFi_SSL/ESP32_WiFi_SSL.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WiFi.h>` | examples/Boards_WiFi/ESP32_WiFi_SSL/ESP32_WiFi_SSL.ino | 38 | Includes the contents of a file (WiFi.h) |
+| `#include <WiFiClientSecure.h>` | examples/Boards_WiFi/ESP32_WiFi_SSL/ESP32_WiFi_SSL.ino | 39 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#include <BlynkSimpleEsp32_SSL.h>` | examples/Boards_WiFi/ESP32_WiFi_SSL/ESP32_WiFi_SSL.ino | 40 | Includes the contents of a file (BlynkSimpleEsp32_SSL.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266_Lib.h>` | examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino | 38 | Includes the contents of a file (ESP8266_Lib.h) |
+| `#include <BlynkSimpleShieldEsp8266.h>` | examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino | 39 | Includes the contents of a file (BlynkSimpleShieldEsp8266.h) |
+| `#define EspSerial Serial1` | examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino | 47 | Defines a macro or constant (EspSerial) |
+| `#define ESP8266_BAUD 115200` | examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino | 54 | Defines a macro or constant (ESP8266_BAUD) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP8266_Standalone/ESP8266_Standalone.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266WiFi.h>` | examples/Boards_WiFi/ESP8266_Standalone/ESP8266_Standalone.ino | 38 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <BlynkSimpleEsp8266.h>` | examples/Boards_WiFi/ESP8266_Standalone/ESP8266_Standalone.ino | 39 | Includes the contents of a file (BlynkSimpleEsp8266.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP8266_Standalone_Manual_IP/ESP8266_Standalone_Manual_IP.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266WiFi.h>` | examples/Boards_WiFi/ESP8266_Standalone_Manual_IP/ESP8266_Standalone_Manual_IP.ino | 36 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <BlynkSimpleEsp8266.h>` | examples/Boards_WiFi/ESP8266_Standalone_Manual_IP/ESP8266_Standalone_Manual_IP.ino | 37 | Includes the contents of a file (BlynkSimpleEsp8266.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/ESP8266_Standalone_SSL/ESP8266_Standalone_SSL.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266WiFi.h>` | examples/Boards_WiFi/ESP8266_Standalone_SSL/ESP8266_Standalone_SSL.ino | 38 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <BlynkSimpleEsp8266_SSL.h>` | examples/Boards_WiFi/ESP8266_Standalone_SSL/ESP8266_Standalone_SSL.ino | 39 | Includes the contents of a file (BlynkSimpleEsp8266_SSL.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Fishino/Fishino.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/Fishino/Fishino.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Fishino.h>` | examples/Boards_WiFi/Fishino/Fishino.ino | 37 | Includes the contents of a file (Fishino.h) |
+| `#include <BlynkSimpleFishino.h>` | examples/Boards_WiFi/Fishino/Fishino.ino | 38 | Includes the contents of a file (BlynkSimpleFishino.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/LinkItONE/LinkItONE.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <LWiFi.h>` | examples/Boards_WiFi/LinkItONE/LinkItONE.ino | 32 | Includes the contents of a file (LWiFi.h) |
+| `#include <LWiFiClient.h>` | examples/Boards_WiFi/LinkItONE/LinkItONE.ino | 33 | Includes the contents of a file (LWiFiClient.h) |
+| `#include <BlynkSimpleLinkItONE.h>` | examples/Boards_WiFi/LinkItONE/LinkItONE.ino | 34 | Includes the contents of a file (BlynkSimpleLinkItONE.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/RN_XV_WiFly/RN_XV_WiFly.ino | 32 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WiFlyHQ.h>` | examples/Boards_WiFi/RN_XV_WiFly/RN_XV_WiFly.ino | 40 | Includes the contents of a file (WiFlyHQ.h) |
+| `#include <BlynkSimpleWiFly.h>` | examples/Boards_WiFi/RN_XV_WiFly/RN_XV_WiFly.ino | 41 | Includes the contents of a file (BlynkSimpleWiFly.h) |
+| `#define WiFlySerial Serial1` | examples/Boards_WiFi/RN_XV_WiFly/RN_XV_WiFly.ino | 48 | Defines a macro or constant (WiFlySerial) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/RedBear_Duo_WiFi/RedBear_Duo_WiFi.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <BlynkSimpleRedBear_Duo.h>` | examples/Boards_WiFi/RedBear_Duo_WiFi/RedBear_Duo_WiFi.ino | 32 | Includes the contents of a file (BlynkSimpleRedBear_Duo.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Sparkfun_Blynk_Board/Sparkfun_Blynk_Board.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266WiFi.h>` | examples/Boards_WiFi/Sparkfun_Blynk_Board/Sparkfun_Blynk_Board.ino | 38 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <BlynkSimpleEsp8266.h>` | examples/Boards_WiFi/Sparkfun_Blynk_Board/Sparkfun_Blynk_Board.ino | 39 | Includes the contents of a file (BlynkSimpleEsp8266.h) |
+| `#include <SoftwareSerial.h>` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 30 | Includes the contents of a file (SoftwareSerial.h) |
+| `#define BLYNK_PRINT DebugSerial` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 34 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <TheAirBoard.h>` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 42 | Includes the contents of a file (TheAirBoard.h) |
+| `#include <WiFlyHQ.h>` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 43 | Includes the contents of a file (WiFlyHQ.h) |
+| `#include <BlynkSimpleWiFly.h>` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 44 | Includes the contents of a file (BlynkSimpleWiFly.h) |
+| `#define WiFlySerial Serial` | examples/Boards_WiFi/TheAirBoard_WiFly/TheAirBoard_WiFly.ino | 51 | Defines a macro or constant (WiFlySerial) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/TinyDuino_WiFi/TinyDuino_WiFi.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/TinyDuino_WiFi/TinyDuino_WiFi.ino | 37 | Includes the contents of a file (SPI.h) |
+| `#include <Adafruit_CC3000.h>` | examples/Boards_WiFi/TinyDuino_WiFi/TinyDuino_WiFi.ino | 38 | Includes the contents of a file (Adafruit_CC3000.h) |
+| `#include <BlynkSimpleTinyDuino.h>` | examples/Boards_WiFi/TinyDuino_WiFi/TinyDuino_WiFi.ino | 39 | Includes the contents of a file (BlynkSimpleTinyDuino.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/WildFire_V3/WildFire_V3.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Boards_WiFi/WildFire_V3/WildFire_V3.ino | 38 | Includes the contents of a file (SPI.h) |
+| `#include <WildFire.h>` | examples/Boards_WiFi/WildFire_V3/WildFire_V3.ino | 39 | Includes the contents of a file (WildFire.h) |
+| `#include <WildFire_CC3000.h>` | examples/Boards_WiFi/WildFire_V3/WildFire_V3.ino | 40 | Includes the contents of a file (WildFire_CC3000.h) |
+| `#include <BlynkSimpleWildFire.h>` | examples/Boards_WiFi/WildFire_V3/WildFire_V3.ino | 41 | Includes the contents of a file (BlynkSimpleWildFire.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/WildFire_V4/WildFire_V4.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266_Lib.h>` | examples/Boards_WiFi/WildFire_V4/WildFire_V4.ino | 36 | Includes the contents of a file (ESP8266_Lib.h) |
+| `#include <BlynkSimpleShieldEsp8266.h>` | examples/Boards_WiFi/WildFire_V4/WildFire_V4.ino | 37 | Includes the contents of a file (BlynkSimpleShieldEsp8266.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/Wio_Terminal/Wio_Terminal.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <rpcWiFi.h>` | examples/Boards_WiFi/Wio_Terminal/Wio_Terminal.ino | 38 | Includes the contents of a file (rpcWiFi.h) |
+| `#include <WiFiClient.h>` | examples/Boards_WiFi/Wio_Terminal/Wio_Terminal.ino | 39 | Includes the contents of a file (WiFiClient.h) |
+| `#include <BlynkSimpleWioTerminal.h>` | examples/Boards_WiFi/Wio_Terminal/Wio_Terminal.ino | 40 | Includes the contents of a file (BlynkSimpleWioTerminal.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/WizFi250/WizFi250.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WizFi250.h>` | examples/Boards_WiFi/WizFi250/WizFi250.ino | 33 | Includes the contents of a file (WizFi250.h) |
+| `#include <BlynkSimpleWizFi250.h>` | examples/Boards_WiFi/WizFi250/WizFi250.ino | 34 | Includes the contents of a file (BlynkSimpleWizFi250.h) |
+| `#define BLYNK_PRINT Serial` | examples/Boards_WiFi/WizFi310/WizFi310.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <WizFi310.h>` | examples/Boards_WiFi/WizFi310/WizFi310.ino | 34 | Includes the contents of a file (WizFi310.h) |
+| `#include <BlynkSimpleWizFi310.h>` | examples/Boards_WiFi/WizFi310/WizFi310.ino | 35 | Includes the contents of a file (BlynkSimpleWizFi310.h) |
+| `#include <SPI.h>` | examples/Boards_With_HTTP_API/Arduino_Ethernet/Arduino_Ethernet.ino | 28 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Boards_With_HTTP_API/Arduino_Ethernet/Arduino_Ethernet.ino | 29 | Includes the contents of a file (Ethernet.h) |
+| `#define W5100_CS  10` | examples/Boards_With_HTTP_API/Arduino_Ethernet/Arduino_Ethernet.ino | 45 | Defines a macro or constant (W5100_CS) |
+| `#define SDCARD_CS 4` | examples/Boards_With_HTTP_API/Arduino_Ethernet/Arduino_Ethernet.ino | 46 | Defines a macro or constant (SDCARD_CS) |
+| `#include <GSM.h>` | examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino | 21 | Includes the contents of a file (GSM.h) |
+| `#define PINNUMBER ""` | examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino | 33 | Defines a macro or constant (PINNUMBER) |
+| `#define GPRS_APN       "GPRS_APN" // replace your GPRS APN` | examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino | 36 | Defines a macro or constant (GPRS_APN) |
+| `#define GPRS_LOGIN     "login"    // replace with your GPRS login` | examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino | 37 | Defines a macro or constant (GPRS_LOGIN) |
+| `#define GPRS_PASSWORD  "password" // replace with your GPRS password` | examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino | 38 | Defines a macro or constant (GPRS_PASSWORD) |
+| `#ifdef ESP32` | examples/Boards_With_HTTP_API/ESP8266_ESP32/ESP8266_ESP32.ino | 21 | Conditional compilation - evaluates compile-time expression - def ESP32 |
+| `#include <WiFi.h>` | examples/Boards_With_HTTP_API/ESP8266_ESP32/ESP8266_ESP32.ino | 22 | Includes the contents of a file (WiFi.h) |
+| `#else` | examples/Boards_With_HTTP_API/ESP8266_ESP32/ESP8266_ESP32.ino | 23 | Else clause for conditional compilation |
+| `#include <ESP8266WiFi.h>` | examples/Boards_With_HTTP_API/ESP8266_ESP32/ESP8266_ESP32.ino | 24 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#endif` | examples/Boards_With_HTTP_API/ESP8266_ESP32/ESP8266_ESP32.ino | 25 | Ends conditional compilation block |
+| `#define GPRS_APN       "YourAPN"    // Replace your GPRS APN` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 39 | Defines a macro or constant (GPRS_APN) |
+| `#define GPRS_USER      ""           // Replace with your GPRS user` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 40 | Defines a macro or constant (GPRS_USER) |
+| `#define GPRS_PASSWORD  ""           // Replace with your GPRS password` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 41 | Defines a macro or constant (GPRS_PASSWORD) |
+| `#ifdef GPRS_USER` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 181 | Conditional compilation - evaluates compile-time expression - def GPRS_USER |
+| `#endif` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 184 | Ends conditional compilation block |
+| `#ifdef GPRS_PASSWORD` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 185 | Conditional compilation - evaluates compile-time expression - def GPRS_PASSWORD |
+| `#endif` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 188 | Ends conditional compilation block |
+| `#ifdef USE_HTTPS` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 245 | Conditional compilation - evaluates compile-time expression - def USE_HTTPS |
+| `#else` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 250 | Else clause for conditional compilation |
+| `#endif` | examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino | 253 | Ends conditional compilation block |
+| `#define BLYNK_PRINT Serial // Enables Serial Monitor` | examples/GettingStarted/BlynkBlink/BlynkBlink.ino | 50 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/BlynkBlink/BlynkBlink.ino | 60 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/BlynkBlink/BlynkBlink.ino | 61 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/BlynkBlink/BlynkBlink.ino | 62 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/GettingStarted/GetData/GetData.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/GetData/GetData.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/GetData/GetData.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/GetData/GetData.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/GettingStarted/PushData/PushData.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/PushData/PushData.ino | 38 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/PushData/PushData.ino | 39 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/PushData/PushData.ino | 40 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/GettingStarted/Servo/Servo.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/Servo/Servo.ino | 33 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/Servo/Servo.ino | 34 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/Servo/Servo.ino | 35 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#include <Servo.h>` | examples/GettingStarted/Servo/Servo.ino | 36 | Includes the contents of a file (Servo.h) |
+| `#define BLYNK_PRINT Serial` | examples/GettingStarted/VirtualPinRead/VirtualPinRead.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/VirtualPinRead/VirtualPinRead.ino | 33 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/VirtualPinRead/VirtualPinRead.ino | 34 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/VirtualPinRead/VirtualPinRead.ino | 35 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/GettingStarted/VirtualPinWrite/VirtualPinWrite.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/GettingStarted/VirtualPinWrite/VirtualPinWrite.ino | 37 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/GettingStarted/VirtualPinWrite/VirtualPinWrite.ino | 38 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/GettingStarted/VirtualPinWrite/VirtualPinWrite.ino | 39 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/DHT11/DHT11.ino | 32 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/DHT11/DHT11.ino | 40 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/DHT11/DHT11.ino | 41 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/DHT11/DHT11.ino | 42 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#include <DHT.h>` | examples/More/DHT11/DHT11.ino | 43 | Includes the contents of a file (DHT.h) |
+| `#define DHTPIN 2          // What digital pin we're connected to` | examples/More/DHT11/DHT11.ino | 45 | Defines a macro or constant (DHTPIN) |
+| `#define DHTTYPE DHT11     // DHT 11` | examples/More/DHT11/DHT11.ino | 48 | Defines a macro or constant (DHTTYPE) |
+| `#define BLYNK_PRINT Serial` | examples/More/FormatString/FormatString.ino | 25 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/FormatString/FormatString.ino | 33 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/FormatString/FormatString.ino | 34 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/FormatString/FormatString.ino | 35 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/HandleDisconnect/HandleDisconnect.ino | 23 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <ESP8266WiFi.h>` | examples/More/HandleDisconnect/HandleDisconnect.ino | 31 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <BlynkSimpleEsp8266.h>` | examples/More/HandleDisconnect/HandleDisconnect.ino | 32 | Includes the contents of a file (BlynkSimpleEsp8266.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/NeoPixel/NeoPixel.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/NeoPixel/NeoPixel.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/NeoPixel/NeoPixel.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/NeoPixel/NeoPixel.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#include <Adafruit_NeoPixel.h>` | examples/More/NeoPixel/NeoPixel.ino | 39 | Includes the contents of a file (Adafruit_NeoPixel.h) |
+| `#define PIN 8` | examples/More/NeoPixel/NeoPixel.ino | 41 | Defines a macro or constant (PIN) |
+| `#define BLYNK_PRINT Serial` | examples/More/PrintAllVirtual/PrintAllVirtual.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/PrintAllVirtual/PrintAllVirtual.ino | 32 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/PrintAllVirtual/PrintAllVirtual.ino | 33 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/PrintAllVirtual/PrintAllVirtual.ino | 34 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/RTC/RTC.ino | 40 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/RTC/RTC.ino | 48 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/RTC/RTC.ino | 49 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/RTC/RTC.ino | 50 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#include <TimeLib.h>` | examples/More/RTC/RTC.ino | 51 | Includes the contents of a file (TimeLib.h) |
+| `#include <WidgetRTC.h>` | examples/More/RTC/RTC.ino | 52 | Includes the contents of a file (WidgetRTC.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/RTC_Advanced/RTC_Advanced.ino | 27 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/RTC_Advanced/RTC_Advanced.ino | 35 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/RTC_Advanced/RTC_Advanced.ino | 36 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/RTC_Advanced/RTC_Advanced.ino | 37 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/ServerAsDataStorage/ServerAsDataStorage_MultiValue/ServerAsDataStorage_MultiValue.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_MultiValue/ServerAsDataStorage_MultiValue.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_MultiValue/ServerAsDataStorage_MultiValue.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_MultiValue/ServerAsDataStorage_MultiValue.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/ServerAsDataStorage/ServerAsDataStorage_SingleValue/ServerAsDataStorage_SingleValue.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_SingleValue/ServerAsDataStorage_SingleValue.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_SingleValue/ServerAsDataStorage_SingleValue.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/ServerAsDataStorage/ServerAsDataStorage_SingleValue/ServerAsDataStorage_SingleValue.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/SetProperty/SetProperty_MultiValue/SetProperty_MultiValue.ino | 29 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/SetProperty/SetProperty_MultiValue/SetProperty_MultiValue.ino | 37 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/SetProperty/SetProperty_MultiValue/SetProperty_MultiValue.ino | 38 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/SetProperty/SetProperty_MultiValue/SetProperty_MultiValue.ino | 39 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 27 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 35 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 36 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 37 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_GREEN     "#23C48E"` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 39 | Defines a macro or constant (BLYNK_GREEN) |
+| `#define BLYNK_BLUE      "#04C0F8"` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 40 | Defines a macro or constant (BLYNK_BLUE) |
+| `#define BLYNK_YELLOW    "#ED9D00"` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 41 | Defines a macro or constant (BLYNK_YELLOW) |
+| `#define BLYNK_RED       "#D3435C"` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 42 | Defines a macro or constant (BLYNK_RED) |
+| `#define BLYNK_DARK_BLUE "#5F7CD8"` | examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino | 43 | Defines a macro or constant (BLYNK_DARK_BLUE) |
+| `#define BLYNK_PRINT Serial` | examples/More/Stroboscope/Stroboscope.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/Stroboscope/Stroboscope.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/Stroboscope/Stroboscope.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/Stroboscope/Stroboscope.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define LED_PIN 4` | examples/More/Stroboscope/Stroboscope.ino | 40 | Defines a macro or constant (LED_PIN) |
+| `#define BLYNK_PRINT Serial` | examples/More/Sync/ButtonInterrupt/ButtonInterrupt.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/Sync/ButtonInterrupt/ButtonInterrupt.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/Sync/ButtonInterrupt/ButtonInterrupt.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/Sync/ButtonInterrupt/ButtonInterrupt.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/Sync/ButtonPoll/ButtonPoll.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/Sync/ButtonPoll/ButtonPoll.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/Sync/ButtonPoll/ButtonPoll.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/Sync/ButtonPoll/ButtonPoll.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/Sync/HardwareSyncStateFromApp/HardwareSyncStateFromApp.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/Sync/HardwareSyncStateFromApp/HardwareSyncStateFromApp.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/Sync/HardwareSyncStateFromApp/HardwareSyncStateFromApp.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/Sync/HardwareSyncStateFromApp/HardwareSyncStateFromApp.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/Sync/SyncPhysicalButton/SyncPhysicalButton.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/Sync/SyncPhysicalButton/SyncPhysicalButton.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/Sync/SyncPhysicalButton/SyncPhysicalButton.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/Sync/SyncPhysicalButton/SyncPhysicalButton.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/More/TimeAndLocation/TimeAndLocation.ino | 24 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/More/TimeAndLocation/TimeAndLocation.ino | 31 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/More/TimeAndLocation/TimeAndLocation.ino | 32 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/More/TimeAndLocation/TimeAndLocation.ino | 33 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/Joystick/Joystick.ino | 30 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/Joystick/Joystick.ino | 38 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/Joystick/Joystick.ino | 39 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/Joystick/Joystick.ino | 40 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LCD/LCD_AdvancedMode/LCD_AdvancedMode.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LCD/LCD_AdvancedMode/LCD_AdvancedMode.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LCD/LCD_AdvancedMode/LCD_AdvancedMode.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LCD/LCD_AdvancedMode/LCD_AdvancedMode.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LCD/LCD_SimpleMode/LCD_SimpleMode.ino | 34 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LCD/LCD_SimpleMode/LCD_SimpleMode.ino | 42 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LCD/LCD_SimpleMode/LCD_SimpleMode.ino | 43 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LCD/LCD_SimpleMode/LCD_SimpleMode.ino | 44 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LED/LED_Blink/LED_Blink.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LED/LED_Blink/LED_Blink.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LED/LED_Blink/LED_Blink.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LED/LED_Blink/LED_Blink.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LED/LED_Color/LED_Color.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LED/LED_Color/LED_Color.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LED/LED_Color/LED_Color.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LED/LED_Color/LED_Color.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_GREEN     "#23C48E"` | examples/Widgets/LED/LED_Color/LED_Color.ino | 45 | Defines a macro or constant (BLYNK_GREEN) |
+| `#define BLYNK_BLUE      "#04C0F8"` | examples/Widgets/LED/LED_Color/LED_Color.ino | 46 | Defines a macro or constant (BLYNK_BLUE) |
+| `#define BLYNK_YELLOW    "#ED9D00"` | examples/Widgets/LED/LED_Color/LED_Color.ino | 47 | Defines a macro or constant (BLYNK_YELLOW) |
+| `#define BLYNK_RED       "#D3435C"` | examples/Widgets/LED/LED_Color/LED_Color.ino | 48 | Defines a macro or constant (BLYNK_RED) |
+| `#define BLYNK_DARK_BLUE "#5F7CD8"` | examples/Widgets/LED/LED_Color/LED_Color.ino | 49 | Defines a macro or constant (BLYNK_DARK_BLUE) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LED/LED_Fade/LED_Fade.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LED/LED_Fade/LED_Fade.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LED/LED_Fade/LED_Fade.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LED/LED_Fade/LED_Fade.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/LED/LED_StatusOfButton/LED_StatusOfButton.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/LED/LED_StatusOfButton/LED_StatusOfButton.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/LED/LED_StatusOfButton/LED_StatusOfButton.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/LED/LED_StatusOfButton/LED_StatusOfButton.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/Map/Map.ino | 32 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/Map/Map.ino | 40 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/Map/Map.ino | 41 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/Map/Map.ino | 42 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/Menu/Menu.ino | 33 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/Menu/Menu.ino | 41 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/Menu/Menu.ino | 42 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/Menu/Menu.ino | 43 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/MusicPlayer/MusicPlayer.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/MusicPlayer/MusicPlayer.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/MusicPlayer/MusicPlayer.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/MusicPlayer/MusicPlayer.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/Terminal/Terminal.ino | 28 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/Terminal/Terminal.ino | 36 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/Terminal/Terminal.ino | 37 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/Terminal/Terminal.ino | 38 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/TimeInput/AdvancedTimeInput/AdvancedTimeInput.ino | 34 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/TimeInput/AdvancedTimeInput/AdvancedTimeInput.ino | 42 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/TimeInput/AdvancedTimeInput/AdvancedTimeInput.ino | 43 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/TimeInput/AdvancedTimeInput/AdvancedTimeInput.ino | 44 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/TimeInput/SimpleTimeInput/SimpleTimeInput.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/TimeInput/SimpleTimeInput/SimpleTimeInput.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/TimeInput/SimpleTimeInput/SimpleTimeInput.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/TimeInput/SimpleTimeInput/SimpleTimeInput.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#define BLYNK_PRINT Serial` | examples/Widgets/TimeInput/UpdateTimeInputState/UpdateTimeInputState.ino | 26 | Defines a macro or constant (BLYNK_PRINT) |
+| `#include <SPI.h>` | examples/Widgets/TimeInput/UpdateTimeInputState/UpdateTimeInputState.ino | 34 | Includes the contents of a file (SPI.h) |
+| `#include <Ethernet.h>` | examples/Widgets/TimeInput/UpdateTimeInputState/UpdateTimeInputState.ino | 35 | Includes the contents of a file (Ethernet.h) |
+| `#include <BlynkSimpleEthernet.h>` | examples/Widgets/TimeInput/UpdateTimeInputState/UpdateTimeInputState.ino | 36 | Includes the contents of a file (BlynkSimpleEthernet.h) |
+| `#ifndef BlynkApiLinux_h` | linux/BlynkApiLinux.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApiLinux_h |
+| `#define BlynkApiLinux_h` | linux/BlynkApiLinux.h | 12 | Defines a macro or constant (BlynkApiLinux_h) |
+| `#include <Blynk/BlynkApi.h>` | linux/BlynkApiLinux.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#ifndef BLYNK_INFO_DEVICE` | linux/BlynkApiLinux.h | 16 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_DEVICE |
+| `#define BLYNK_INFO_DEVICE  "Linux"` | linux/BlynkApiLinux.h | 17 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | linux/BlynkApiLinux.h | 18 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_DEVICE` | linux/BlynkApiLinux.h | 28 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_DEVICE |
+| `#endif` | linux/BlynkApiLinux.h | 30 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | linux/BlynkApiLinux.h | 31 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | linux/BlynkApiLinux.h | 33 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CONNECTION` | linux/BlynkApiLinux.h | 34 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CONNECTION |
+| `#endif` | linux/BlynkApiLinux.h | 36 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_TYPE` | linux/BlynkApiLinux.h | 37 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_TYPE |
+| `#endif` | linux/BlynkApiLinux.h | 39 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_VERSION` | linux/BlynkApiLinux.h | 40 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_VERSION |
+| `#endif` | linux/BlynkApiLinux.h | 42 | Ends conditional compilation block |
+| `#ifdef BLYNK_TEMPLATE_ID` | linux/BlynkApiLinux.h | 51 | Conditional compilation - evaluates compile-time expression - def BLYNK_TEMPLATE_ID |
+| `#endif` | linux/BlynkApiLinux.h | 58 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_BUILTIN` | linux/BlynkApiLinux.h | 83 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_BUILTIN |
+| `#ifdef BLYNK_DEBUG` | linux/BlynkApiLinux.h | 88 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | linux/BlynkApiLinux.h | 90 | Ends conditional compilation block |
+| `#endif` | linux/BlynkApiLinux.h | 117 | Ends conditional compilation block |
+| `#endif` | linux/BlynkApiLinux.h | 146 | Ends conditional compilation block |
+| `#ifndef BlynkApiWiringPi_h` | linux/BlynkApiWiringPi.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApiWiringPi_h |
+| `#define BlynkApiWiringPi_h` | linux/BlynkApiWiringPi.h | 12 | Defines a macro or constant (BlynkApiWiringPi_h) |
+| `#include <Blynk/BlynkApi.h>` | linux/BlynkApiWiringPi.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#ifndef BLYNK_INFO_DEVICE` | linux/BlynkApiWiringPi.h | 16 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_DEVICE |
+| `#define BLYNK_INFO_DEVICE  "Raspberry"` | linux/BlynkApiWiringPi.h | 17 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | linux/BlynkApiWiringPi.h | 18 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_DEVICE` | linux/BlynkApiWiringPi.h | 28 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_DEVICE |
+| `#endif` | linux/BlynkApiWiringPi.h | 30 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | linux/BlynkApiWiringPi.h | 31 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | linux/BlynkApiWiringPi.h | 33 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CONNECTION` | linux/BlynkApiWiringPi.h | 34 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CONNECTION |
+| `#endif` | linux/BlynkApiWiringPi.h | 36 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_TYPE` | linux/BlynkApiWiringPi.h | 37 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_TYPE |
+| `#endif` | linux/BlynkApiWiringPi.h | 39 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_VERSION` | linux/BlynkApiWiringPi.h | 40 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_VERSION |
+| `#endif` | linux/BlynkApiWiringPi.h | 42 | Ends conditional compilation block |
+| `#ifdef BLYNK_TEMPLATE_ID` | linux/BlynkApiWiringPi.h | 51 | Conditional compilation - evaluates compile-time expression - def BLYNK_TEMPLATE_ID |
+| `#endif` | linux/BlynkApiWiringPi.h | 58 | Ends conditional compilation block |
+| `#if defined(analogInputToDigitalPin)` | linux/BlynkApiWiringPi.h | 66 | Conditional compilation - evaluates compile-time expression - defined(analogInputToDigitalPin) |
+| `#define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? analogInputToDigitalPin(atoi((it).asStr()+1)) : (it).asInt())` | linux/BlynkApiWiringPi.h | 67 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#else` | linux/BlynkApiWiringPi.h | 68 | Else clause for conditional compilation |
+| `#define BLYNK_DECODE_PIN(it) ((it).asInt())` | linux/BlynkApiWiringPi.h | 69 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#if defined(BLYNK_DEBUG_ALL)` | linux/BlynkApiWiringPi.h | 71 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#pragma message "analogInputToDigitalPin not defined"` | linux/BlynkApiWiringPi.h | 72 | Compiler-specific directive - message "analogInputToDigitalPin not defined" |
+| `#endif` | linux/BlynkApiWiringPi.h | 73 | Ends conditional compilation block |
+| `#endif` | linux/BlynkApiWiringPi.h | 74 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_BUILTIN` | linux/BlynkApiWiringPi.h | 94 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_BUILTIN |
+| `#ifdef BLYNK_DEBUG` | linux/BlynkApiWiringPi.h | 114 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | linux/BlynkApiWiringPi.h | 116 | Ends conditional compilation block |
+| `#endif` | linux/BlynkApiWiringPi.h | 146 | Ends conditional compilation block |
+| `#endif` | linux/BlynkApiWiringPi.h | 175 | Ends conditional compilation block |
+| `#include <getopt.h>` | linux/BlynkOptionsParser.h | 2 | Includes the contents of a file (getopt.h) |
+| `#include <Blynk/BlynkDebug.h>` | linux/BlynkOptionsParser.h | 3 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#ifndef BlynkSocket_h` | linux/BlynkSocket.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSocket_h |
+| `#define BlynkSocket_h` | linux/BlynkSocket.h | 11 | Defines a macro or constant (BlynkSocket_h) |
+| `#include <sys/socket.h>` | linux/BlynkSocket.h | 13 | Includes the contents of a file (sys/socket.h) |
+| `#include <sys/types.h>` | linux/BlynkSocket.h | 14 | Includes the contents of a file (sys/types.h) |
+| `#include <sys/ioctl.h>` | linux/BlynkSocket.h | 15 | Includes the contents of a file (sys/ioctl.h) |
+| `#include <netinet/in.h>` | linux/BlynkSocket.h | 16 | Includes the contents of a file (netinet/in.h) |
+| `#include <netinet/tcp.h>` | linux/BlynkSocket.h | 17 | Includes the contents of a file (netinet/tcp.h) |
+| `#include <netdb.h>` | linux/BlynkSocket.h | 18 | Includes the contents of a file (netdb.h) |
+| `#include <stdio.h>` | linux/BlynkSocket.h | 19 | Includes the contents of a file (stdio.h) |
+| `#include <string.h>` | linux/BlynkSocket.h | 20 | Includes the contents of a file (string.h) |
+| `#include <stdlib.h>` | linux/BlynkSocket.h | 21 | Includes the contents of a file (stdlib.h) |
+| `#include <unistd.h>` | linux/BlynkSocket.h | 22 | Includes the contents of a file (unistd.h) |
+| `#include <errno.h>` | linux/BlynkSocket.h | 23 | Includes the contents of a file (errno.h) |
+| `#include <arpa/inet.h>` | linux/BlynkSocket.h | 24 | Includes the contents of a file (arpa/inet.h) |
+| `#include <Blynk/BlynkProtocol.h>` | linux/BlynkSocket.h | 26 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#endif` | linux/BlynkSocket.h | 157 | Ends conditional compilation block |
+| `#define BLYNK_FIRMWARE_VERSION        "0.1.0"` | linux/main.cpp | 14 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_PRINT stdout` | linux/main.cpp | 17 | Defines a macro or constant (BLYNK_PRINT) |
+| `#ifdef RASPBERRY` | linux/main.cpp | 18 | Conditional compilation - evaluates compile-time expression - def RASPBERRY |
+| `#include <BlynkApiWiringPi.h>` | linux/main.cpp | 19 | Includes the contents of a file (BlynkApiWiringPi.h) |
+| `#else` | linux/main.cpp | 20 | Else clause for conditional compilation |
+| `#include <BlynkApiLinux.h>` | linux/main.cpp | 21 | Includes the contents of a file (BlynkApiLinux.h) |
+| `#endif` | linux/main.cpp | 22 | Ends conditional compilation block |
+| `#include <BlynkSocket.h>` | linux/main.cpp | 23 | Includes the contents of a file (BlynkSocket.h) |
+| `#include <BlynkOptionsParser.h>` | linux/main.cpp | 24 | Includes the contents of a file (BlynkOptionsParser.h) |
+| `#include <BlynkWidgets.h>` | linux/main.cpp | 32 | Includes the contents of a file (BlynkWidgets.h) |
+| `#ifndef BlynkArduinoClient_h` | src/Adapters/BlynkArduinoClient.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkArduinoClient_h |
+| `#define BlynkArduinoClient_h` | src/Adapters/BlynkArduinoClient.h | 12 | Defines a macro or constant (BlynkArduinoClient_h) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkArduinoClient.h | 14 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkDebug.h>` | src/Adapters/BlynkArduinoClient.h | 15 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#include <Client.h>` | src/Adapters/BlynkArduinoClient.h | 16 | Includes the contents of a file (Client.h) |
+| `#if defined(ESP8266) && !defined(BLYNK_NO_YIELD)` | src/Adapters/BlynkArduinoClient.h | 18 | Conditional compilation - evaluates compile-time expression - defined(ESP8266) && !defined(BLYNK_NO_YIELD) |
+| `#define YIELD_FIX() BLYNK_RUN_YIELD();` | src/Adapters/BlynkArduinoClient.h | 19 | Defines a macro or constant (YIELD_FIX) |
+| `#else` | src/Adapters/BlynkArduinoClient.h | 20 | Else clause for conditional compilation |
+| `#define YIELD_FIX()` | src/Adapters/BlynkArduinoClient.h | 21 | Defines a macro or constant (YIELD_FIX) |
+| `#endif` | src/Adapters/BlynkArduinoClient.h | 22 | Ends conditional compilation block |
+| `#ifdef BLYNK_NODELAY` | src/Adapters/BlynkArduinoClient.h | 75 | Conditional compilation - evaluates compile-time expression - def BLYNK_NODELAY |
+| `#endif` | src/Adapters/BlynkArduinoClient.h | 79 | Ends conditional compilation block |
+| `#ifdef BLYNK_RETRY_SEND` | src/Adapters/BlynkArduinoClient.h | 96 | Conditional compilation - evaluates compile-time expression - def BLYNK_RETRY_SEND |
+| `#if defined(BLYNK_DEBUG) && defined(BLYNK_PRINT)` | src/Adapters/BlynkArduinoClient.h | 106 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG) && defined(BLYNK_PRINT) |
+| `#endif` | src/Adapters/BlynkArduinoClient.h | 114 | Ends conditional compilation block |
+| `#else` | src/Adapters/BlynkArduinoClient.h | 119 | Else clause for conditional compilation |
+| `#endif` | src/Adapters/BlynkArduinoClient.h | 126 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkArduinoClient.h | 141 | Ends conditional compilation block |
+| `#ifndef BlynkArduinoGSM_h` | src/Adapters/BlynkArduinoGSM.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkArduinoGSM_h |
+| `#define BlynkArduinoGSM_h` | src/Adapters/BlynkArduinoGSM.h | 11 | Defines a macro or constant (BlynkArduinoGSM_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkArduinoGSM.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "MKRGSM"` | src/Adapters/BlynkArduinoGSM.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkArduinoGSM.h | 15 | Ends conditional compilation block |
+| `#ifndef BLYNK_HEARTBEAT` | src/Adapters/BlynkArduinoGSM.h | 17 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_HEARTBEAT |
+| `#define BLYNK_HEARTBEAT 60` | src/Adapters/BlynkArduinoGSM.h | 18 | Defines a macro or constant (BLYNK_HEARTBEAT) |
+| `#endif` | src/Adapters/BlynkArduinoGSM.h | 19 | Ends conditional compilation block |
+| `#ifndef BLYNK_TIMEOUT_MS` | src/Adapters/BlynkArduinoGSM.h | 21 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TIMEOUT_MS |
+| `#define BLYNK_TIMEOUT_MS 6000` | src/Adapters/BlynkArduinoGSM.h | 22 | Defines a macro or constant (BLYNK_TIMEOUT_MS) |
+| `#endif` | src/Adapters/BlynkArduinoGSM.h | 23 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/Adapters/BlynkArduinoGSM.h | 25 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkArduinoGSM.h | 27 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkArduinoGSM.h | 28 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkArduinoGSM.h | 29 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <MKRGSM.h>` | src/Adapters/BlynkArduinoGSM.h | 30 | Includes the contents of a file (MKRGSM.h) |
+| `#endif` | src/Adapters/BlynkArduinoGSM.h | 96 | Ends conditional compilation block |
+| `#ifndef BlynkArduinoNB_h` | src/Adapters/BlynkArduinoNB.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkArduinoNB_h |
+| `#define BlynkArduinoNB_h` | src/Adapters/BlynkArduinoNB.h | 11 | Defines a macro or constant (BlynkArduinoNB_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkArduinoNB.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "MKRNB"` | src/Adapters/BlynkArduinoNB.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkArduinoNB.h | 15 | Ends conditional compilation block |
+| `#ifndef BLYNK_HEARTBEAT` | src/Adapters/BlynkArduinoNB.h | 17 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_HEARTBEAT |
+| `#define BLYNK_HEARTBEAT 60` | src/Adapters/BlynkArduinoNB.h | 18 | Defines a macro or constant (BLYNK_HEARTBEAT) |
+| `#endif` | src/Adapters/BlynkArduinoNB.h | 19 | Ends conditional compilation block |
+| `#ifndef BLYNK_TIMEOUT_MS` | src/Adapters/BlynkArduinoNB.h | 21 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TIMEOUT_MS |
+| `#define BLYNK_TIMEOUT_MS 6000` | src/Adapters/BlynkArduinoNB.h | 22 | Defines a macro or constant (BLYNK_TIMEOUT_MS) |
+| `#endif` | src/Adapters/BlynkArduinoNB.h | 23 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/Adapters/BlynkArduinoNB.h | 25 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkArduinoNB.h | 27 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkArduinoNB.h | 28 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkArduinoNB.h | 29 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <MKRNB.h>` | src/Adapters/BlynkArduinoNB.h | 30 | Includes the contents of a file (MKRNB.h) |
+| `#endif` | src/Adapters/BlynkArduinoNB.h | 93 | Ends conditional compilation block |
+| `#ifndef BlynkBLEPeripheralSerial_h` | src/Adapters/BlynkBLEPeripheralSerial.h | 1 | Conditional compilation - evaluates compile-time expression - ndef BlynkBLEPeripheralSerial_h |
+| `#define BlynkBLEPeripheralSerial_h` | src/Adapters/BlynkBLEPeripheralSerial.h | 2 | Defines a macro or constant (BlynkBLEPeripheralSerial_h) |
+| `#include <BLEPeripheral.h>` | src/Adapters/BlynkBLEPeripheralSerial.h | 4 | Includes the contents of a file (BLEPeripheral.h) |
+| `#endif` | src/Adapters/BlynkBLEPeripheralSerial.h | 164 | Ends conditional compilation block |
+| `#ifndef BlynkCC3000_h` | src/Adapters/BlynkCC3000.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkCC3000_h |
+| `#define BlynkCC3000_h` | src/Adapters/BlynkCC3000.h | 12 | Defines a macro or constant (BlynkCC3000_h) |
+| `#define BLYNK_INFO_CONNECTION "CC3000"` | src/Adapters/BlynkCC3000.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkCC3000.h | 16 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkCC3000.h | 17 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adafruit_CC3000.h>` | src/Adapters/BlynkCC3000.h | 18 | Includes the contents of a file (Adafruit_CC3000.h) |
+| `#include <utility/netapp.h>` | src/Adapters/BlynkCC3000.h | 19 | Includes the contents of a file (utility/netapp.h) |
+| `#if !defined(CC3000_TINY_DRIVER) && defined(BLYNK_DEBUG)` | src/Adapters/BlynkCC3000.h | 105 | Conditional compilation - evaluates compile-time expression - !defined(CC3000_TINY_DRIVER) && defined(BLYNK_DEBUG) |
+| `#endif` | src/Adapters/BlynkCC3000.h | 113 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | src/Adapters/BlynkCC3000.h | 145 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | src/Adapters/BlynkCC3000.h | 152 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkCC3000.h | 199 | Ends conditional compilation block |
+| `#ifndef BlynkEthernet_h` | src/Adapters/BlynkEthernet.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkEthernet_h |
+| `#define BlynkEthernet_h` | src/Adapters/BlynkEthernet.h | 12 | Defines a macro or constant (BlynkEthernet_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkEthernet.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "W5000"` | src/Adapters/BlynkEthernet.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkEthernet.h | 16 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_SSL` | src/Adapters/BlynkEthernet.h | 18 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_SSL |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT_SSL` | src/Adapters/BlynkEthernet.h | 19 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#else` | src/Adapters/BlynkEthernet.h | 20 | Else clause for conditional compilation |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT` | src/Adapters/BlynkEthernet.h | 21 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#endif` | src/Adapters/BlynkEthernet.h | 22 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkEthernet.h | 24 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkEthernet.h | 25 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkEthernet.h | 26 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#endif` | src/Adapters/BlynkEthernet.h | 205 | Ends conditional compilation block |
+| `#ifndef BlynkGsmClient_h` | src/Adapters/BlynkGsmClient.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkGsmClient_h |
+| `#define BlynkGsmClient_h` | src/Adapters/BlynkGsmClient.h | 12 | Defines a macro or constant (BlynkGsmClient_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkGsmClient.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#if defined(TINY_GSM_MODEM_SIM800)` | src/Adapters/BlynkGsmClient.h | 15 | Conditional compilation - evaluates compile-time expression - defined(TINY_GSM_MODEM_SIM800) |
+| `#define BLYNK_INFO_CONNECTION  "SIM800"` | src/Adapters/BlynkGsmClient.h | 16 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_SIM900)` | src/Adapters/BlynkGsmClient.h | 17 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "SIM900"` | src/Adapters/BlynkGsmClient.h | 18 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_UBLOX)` | src/Adapters/BlynkGsmClient.h | 19 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "UBLOX"` | src/Adapters/BlynkGsmClient.h | 20 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_BG96)` | src/Adapters/BlynkGsmClient.h | 21 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "BG96"` | src/Adapters/BlynkGsmClient.h | 22 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_A6)` | src/Adapters/BlynkGsmClient.h | 23 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "A6"` | src/Adapters/BlynkGsmClient.h | 24 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_A7)` | src/Adapters/BlynkGsmClient.h | 25 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "A7"` | src/Adapters/BlynkGsmClient.h | 26 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_M590)` | src/Adapters/BlynkGsmClient.h | 27 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "M590"` | src/Adapters/BlynkGsmClient.h | 28 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#elif defined(TINY_GSM_MODEM_XBEE)` | src/Adapters/BlynkGsmClient.h | 29 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "XBEE"` | src/Adapters/BlynkGsmClient.h | 30 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#else` | src/Adapters/BlynkGsmClient.h | 31 | Else clause for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "TinyGSM"` | src/Adapters/BlynkGsmClient.h | 32 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkGsmClient.h | 33 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkGsmClient.h | 34 | Ends conditional compilation block |
+| `#ifndef BLYNK_HEARTBEAT` | src/Adapters/BlynkGsmClient.h | 36 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_HEARTBEAT |
+| `#define BLYNK_HEARTBEAT 60` | src/Adapters/BlynkGsmClient.h | 37 | Defines a macro or constant (BLYNK_HEARTBEAT) |
+| `#endif` | src/Adapters/BlynkGsmClient.h | 38 | Ends conditional compilation block |
+| `#ifndef BLYNK_TIMEOUT_MS` | src/Adapters/BlynkGsmClient.h | 40 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TIMEOUT_MS |
+| `#define BLYNK_TIMEOUT_MS 6000` | src/Adapters/BlynkGsmClient.h | 41 | Defines a macro or constant (BLYNK_TIMEOUT_MS) |
+| `#endif` | src/Adapters/BlynkGsmClient.h | 42 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/Adapters/BlynkGsmClient.h | 44 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkGsmClient.h | 46 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkGsmClient.h | 47 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkGsmClient.h | 48 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <TinyGsmClient.h>` | src/Adapters/BlynkGsmClient.h | 49 | Includes the contents of a file (TinyGsmClient.h) |
+| `#endif` | src/Adapters/BlynkGsmClient.h | 122 | Ends conditional compilation block |
+| `#ifndef BlynkParticle_h` | src/Adapters/BlynkParticle.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkParticle_h |
+| `#define BlynkParticle_h` | src/Adapters/BlynkParticle.h | 12 | Defines a macro or constant (BlynkParticle_h) |
+| `#include "BlynkApiParticle.h"` | src/Adapters/BlynkParticle.h | 14 | Includes the contents of a file (BlynkApiParticle.h) |
+| `#include "Blynk/BlynkProtocol.h"` | src/Adapters/BlynkParticle.h | 15 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#endif` | src/Adapters/BlynkParticle.h | 133 | Ends conditional compilation block |
+| `#ifndef BlynkParticleBearSSL_h` | src/Adapters/BlynkParticleBearSSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkParticleBearSSL_h |
+| `#define BlynkParticleBearSSL_h` | src/Adapters/BlynkParticleBearSSL.h | 12 | Defines a macro or constant (BlynkParticleBearSSL_h) |
+| `#include <BlynkApiParticle.h>` | src/Adapters/BlynkParticleBearSSL.h | 14 | Includes the contents of a file (BlynkApiParticle.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkParticleBearSSL.h | 15 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <ArduinoBearSSL.h>` | src/Adapters/BlynkParticleBearSSL.h | 17 | Includes the contents of a file (ArduinoBearSSL.h) |
+| `#endif` | src/Adapters/BlynkParticleBearSSL.h | 127 | Ends conditional compilation block |
+| `#ifndef BlynkStream_h` | src/Adapters/BlynkSerial.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkStream_h |
+| `#define BlynkStream_h` | src/Adapters/BlynkSerial.h | 12 | Defines a macro or constant (BlynkStream_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkSerial.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "Serial"` | src/Adapters/BlynkSerial.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkSerial.h | 16 | Ends conditional compilation block |
+| `#ifdef PARTICLE` | src/Adapters/BlynkSerial.h | 18 | Conditional compilation - evaluates compile-time expression - def PARTICLE |
+| `#include <BlynkApiParticle.h>` | src/Adapters/BlynkSerial.h | 19 | Includes the contents of a file (BlynkApiParticle.h) |
+| `#else` | src/Adapters/BlynkSerial.h | 20 | Else clause for conditional compilation |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkSerial.h | 21 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#endif` | src/Adapters/BlynkSerial.h | 22 | Ends conditional compilation block |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkSerial.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#endif` | src/Adapters/BlynkSerial.h | 93 | Ends conditional compilation block |
+| `#ifndef BlynkWiFiCommon_h` | src/Adapters/BlynkWiFiCommon.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkWiFiCommon_h |
+| `#define BlynkWiFiCommon_h` | src/Adapters/BlynkWiFiCommon.h | 12 | Defines a macro or constant (BlynkWiFiCommon_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkWiFiCommon.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "WiFi"` | src/Adapters/BlynkWiFiCommon.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkWiFiCommon.h | 16 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_SSL` | src/Adapters/BlynkWiFiCommon.h | 18 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_SSL |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT_SSL` | src/Adapters/BlynkWiFiCommon.h | 19 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#else` | src/Adapters/BlynkWiFiCommon.h | 20 | Else clause for conditional compilation |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT` | src/Adapters/BlynkWiFiCommon.h | 21 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#endif` | src/Adapters/BlynkWiFiCommon.h | 22 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkWiFiCommon.h | 24 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkWiFiCommon.h | 25 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkWiFiCommon.h | 26 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#ifdef BLYNK_DEBUG` | src/Adapters/BlynkWiFiCommon.h | 45 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Adapters/BlynkWiFiCommon.h | 47 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkWiFiCommon.h | 111 | Ends conditional compilation block |
+| `#ifndef BlynkWiFly_h` | src/Adapters/BlynkWiFly.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkWiFly_h |
+| `#define BlynkWiFly_h` | src/Adapters/BlynkWiFly.h | 12 | Defines a macro or constant (BlynkWiFly_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkWiFly.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "RN-XV"` | src/Adapters/BlynkWiFly.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkWiFly.h | 16 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkWiFly.h | 18 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkWiFly.h | 19 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <WiFlyHQ.h>` | src/Adapters/BlynkWiFly.h | 20 | Includes the contents of a file (WiFlyHQ.h) |
+| `#endif` | src/Adapters/BlynkWiFly.h | 129 | Ends conditional compilation block |
+| `#ifndef BlynkWildFire_h` | src/Adapters/BlynkWildFire.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkWildFire_h |
+| `#define BlynkWildFire_h` | src/Adapters/BlynkWildFire.h | 12 | Defines a macro or constant (BlynkWildFire_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkWildFire.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "CC3000"` | src/Adapters/BlynkWildFire.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkWildFire.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/Adapters/BlynkWildFire.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkWildFire.h | 20 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkWildFire.h | 21 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <IPAddress.h>` | src/Adapters/BlynkWildFire.h | 22 | Includes the contents of a file (IPAddress.h) |
+| `#include <WildFire_CC3000.h>` | src/Adapters/BlynkWildFire.h | 23 | Includes the contents of a file (WildFire_CC3000.h) |
+| `#include <utility/netapp.h>` | src/Adapters/BlynkWildFire.h | 24 | Includes the contents of a file (utility/netapp.h) |
+| `#if !defined(CC3000_TINY_DRIVER) && defined(BLYNK_DEBUG)` | src/Adapters/BlynkWildFire.h | 118 | Conditional compilation - evaluates compile-time expression - !defined(CC3000_TINY_DRIVER) && defined(BLYNK_DEBUG) |
+| `#endif` | src/Adapters/BlynkWildFire.h | 126 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | src/Adapters/BlynkWildFire.h | 158 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | src/Adapters/BlynkWildFire.h | 165 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkWildFire.h | 212 | Ends conditional compilation block |
+| `#ifndef BlynkWizFi250_h` | src/Adapters/BlynkWizFi250.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkWizFi250_h |
+| `#define BlynkWizFi250_h` | src/Adapters/BlynkWizFi250.h | 12 | Defines a macro or constant (BlynkWizFi250_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/Adapters/BlynkWizFi250.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "WiFi"` | src/Adapters/BlynkWizFi250.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/Adapters/BlynkWizFi250.h | 16 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_SSL` | src/Adapters/BlynkWizFi250.h | 18 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_SSL |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT_SSL` | src/Adapters/BlynkWizFi250.h | 19 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#else` | src/Adapters/BlynkWizFi250.h | 20 | Else clause for conditional compilation |
+| `#define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT` | src/Adapters/BlynkWizFi250.h | 21 | Defines a macro or constant (BLYNK_SERVER_PORT) |
+| `#endif` | src/Adapters/BlynkWizFi250.h | 22 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/Adapters/BlynkWizFi250.h | 24 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/Adapters/BlynkWizFi250.h | 25 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/Adapters/BlynkWizFi250.h | 26 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#ifdef BLYNK_DEBUG` | src/Adapters/BlynkWizFi250.h | 45 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Adapters/BlynkWizFi250.h | 47 | Ends conditional compilation block |
+| `#endif` | src/Adapters/BlynkWizFi250.h | 107 | Ends conditional compilation block |
+| `#ifndef Blynk_h` | src/Blynk.h | 11 | Conditional compilation - evaluates compile-time expression - ndef Blynk_h |
+| `#define Blynk_h` | src/Blynk.h | 12 | Defines a macro or constant (Blynk_h) |
+| `#include <Blynk/BlynkApi.h>` | src/Blynk.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#warning "Please include a board-specific header file, instead of Blynk.h (see examples)"` | src/Blynk.h | 15 | Generates a compilation warning with a message: "Please include a board-specific header file, instead of Blynk.h (see examples)" |
+| `#endif` | src/Blynk.h | 17 | Ends conditional compilation block |
+| `#ifndef BlynkApi_h` | src/Blynk/BlynkApi.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApi_h |
+| `#define BlynkApi_h` | src/Blynk/BlynkApi.h | 12 | Defines a macro or constant (BlynkApi_h) |
+| `#ifdef BOARD_FIRMWARE_TYPE` | src/Blynk/BlynkApi.h | 16 | Conditional compilation - evaluates compile-time expression - def BOARD_FIRMWARE_TYPE |
+| `#define BLYNK_FIRMWARE_TYPE         BOARD_FIRMWARE_TYPE` | src/Blynk/BlynkApi.h | 17 | Defines a macro or constant (BLYNK_FIRMWARE_TYPE) |
+| `#endif` | src/Blynk/BlynkApi.h | 18 | Ends conditional compilation block |
+| `#ifdef BOARD_FIRMWARE_VERSION` | src/Blynk/BlynkApi.h | 20 | Conditional compilation - evaluates compile-time expression - def BOARD_FIRMWARE_VERSION |
+| `#define BLYNK_FIRMWARE_VERSION      BOARD_FIRMWARE_VERSION` | src/Blynk/BlynkApi.h | 21 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#endif` | src/Blynk/BlynkApi.h | 22 | Ends conditional compilation block |
+| `#ifdef BOARD_TEMPLATE_ID` | src/Blynk/BlynkApi.h | 24 | Conditional compilation - evaluates compile-time expression - def BOARD_TEMPLATE_ID |
+| `#define BLYNK_TEMPLATE_ID           BOARD_TEMPLATE_ID` | src/Blynk/BlynkApi.h | 25 | Defines a macro or constant (BLYNK_TEMPLATE_ID) |
+| `#endif` | src/Blynk/BlynkApi.h | 26 | Ends conditional compilation block |
+| `#if !defined(BLYNK_FIRMWARE_TYPE) && defined(BLYNK_TEMPLATE_ID)` | src/Blynk/BlynkApi.h | 30 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_FIRMWARE_TYPE) && defined(BLYNK_TEMPLATE_ID) |
+| `#define BLYNK_FIRMWARE_TYPE         BLYNK_TEMPLATE_ID` | src/Blynk/BlynkApi.h | 31 | Defines a macro or constant (BLYNK_FIRMWARE_TYPE) |
+| `#endif` | src/Blynk/BlynkApi.h | 32 | Ends conditional compilation block |
+| `#if !defined(BLYNK_FIRMWARE_VERSION)` | src/Blynk/BlynkApi.h | 34 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_FIRMWARE_VERSION      "0.0.0"` | src/Blynk/BlynkApi.h | 35 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#endif` | src/Blynk/BlynkApi.h | 36 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME)` | src/Blynk/BlynkApi.h | 38 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME) |
+| `#error "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME"` | src/Blynk/BlynkApi.h | 39 | Generates a compilation error with a message: "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME" |
+| `#endif` | src/Blynk/BlynkApi.h | 40 | Ends conditional compilation block |
+| `#include <Blynk/BlynkConfig.h>` | src/Blynk/BlynkApi.h | 42 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkDebug.h>` | src/Blynk/BlynkApi.h | 43 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#include <Blynk/BlynkParam.h>` | src/Blynk/BlynkApi.h | 44 | Includes the contents of a file (Blynk/BlynkParam.h) |
+| `#include <Blynk/BlynkTimer.h>` | src/Blynk/BlynkApi.h | 45 | Includes the contents of a file (Blynk/BlynkTimer.h) |
+| `#include <Blynk/BlynkHandlers.h>` | src/Blynk/BlynkApi.h | 46 | Includes the contents of a file (Blynk/BlynkHandlers.h) |
+| `#include <Blynk/BlynkProtocolDefs.h>` | src/Blynk/BlynkApi.h | 47 | Includes the contents of a file (Blynk/BlynkProtocolDefs.h) |
+| `#if defined(BLYNK_EXPERIMENTAL)` | src/Blynk/BlynkApi.h | 49 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_EXPERIMENTAL) |
+| `#include <Blynk/BlynkEveryN.h>` | src/Blynk/BlynkApi.h | 50 | Includes the contents of a file (Blynk/BlynkEveryN.h) |
+| `#endif` | src/Blynk/BlynkApi.h | 51 | Ends conditional compilation block |
+| `#if (BLYNK_TIMEOUT_MS < 1000 \|\| BLYNK_TIMEOUT_MS > 10000)` | src/Blynk/BlynkApi.h | 53 | Conditional compilation - evaluates compile-time expression - (BLYNK_TIMEOUT_MS < 1000 \|\| BLYNK_TIMEOUT_MS > 10000) |
+| `#error "BLYNK_TIMEOUT_MS should be 1000..10000 milliseconds"` | src/Blynk/BlynkApi.h | 54 | Generates a compilation error with a message: "BLYNK_TIMEOUT_MS should be 1000..10000 milliseconds" |
+| `#endif` | src/Blynk/BlynkApi.h | 55 | Ends conditional compilation block |
+| `#if (BLYNK_HEARTBEAT < 10 \|\| BLYNK_HEARTBEAT > 3600)` | src/Blynk/BlynkApi.h | 57 | Conditional compilation - evaluates compile-time expression - (BLYNK_HEARTBEAT < 10 \|\| BLYNK_HEARTBEAT > 3600) |
+| `#error "BLYNK_HEARTBEAT should be 10..3600 seconds"` | src/Blynk/BlynkApi.h | 58 | Generates a compilation error with a message: "BLYNK_HEARTBEAT should be 10..3600 seconds" |
+| `#endif` | src/Blynk/BlynkApi.h | 59 | Ends conditional compilation block |
+| `#ifdef DOXYGEN // These API here are only for the documentation` | src/Blynk/BlynkApi.h | 74 | Conditional compilation - evaluates compile-time expression - def DOXYGEN // These API here are only for the documentation |
+| `#endif // DOXYGEN` | src/Blynk/BlynkApi.h | 106 | Ends conditional compilation block |
+| `#if defined(BLYNK_EXPERIMENTAL)` | src/Blynk/BlynkApi.h | 305 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_EXPERIMENTAL) |
+| `#if !defined(BLYNK_NO_YIELD)` | src/Blynk/BlynkApi.h | 336 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_YIELD) |
+| `#endif` | src/Blynk/BlynkApi.h | 338 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkApi.h | 346 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkApi.h | 382 | Ends conditional compilation block |
+| `#ifndef BlynkApi_h` | src/Blynk/BlynkApiNCP.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApi_h |
+| `#define BlynkApi_h` | src/Blynk/BlynkApiNCP.h | 12 | Defines a macro or constant (BlynkApi_h) |
+| `#if !defined(BLYNK_FIRMWARE_TYPE) && defined(BLYNK_TEMPLATE_ID)` | src/Blynk/BlynkApiNCP.h | 14 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_FIRMWARE_TYPE) && defined(BLYNK_TEMPLATE_ID) |
+| `#define BLYNK_FIRMWARE_TYPE         BLYNK_TEMPLATE_ID` | src/Blynk/BlynkApiNCP.h | 15 | Defines a macro or constant (BLYNK_FIRMWARE_TYPE) |
+| `#endif` | src/Blynk/BlynkApiNCP.h | 16 | Ends conditional compilation block |
+| `#if !defined(BLYNK_FIRMWARE_VERSION)` | src/Blynk/BlynkApiNCP.h | 18 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_FIRMWARE_VERSION) |
+| `#define BLYNK_FIRMWARE_VERSION      "0.0.0"` | src/Blynk/BlynkApiNCP.h | 19 | Defines a macro or constant (BLYNK_FIRMWARE_VERSION) |
+| `#endif` | src/Blynk/BlynkApiNCP.h | 20 | Ends conditional compilation block |
+| `#if !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME)` | src/Blynk/BlynkApiNCP.h | 22 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_TEMPLATE_ID) \|\| !defined(BLYNK_TEMPLATE_NAME) |
+| `#error "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME"` | src/Blynk/BlynkApiNCP.h | 23 | Generates a compilation error with a message: "Please specify your BLYNK_TEMPLATE_ID and BLYNK_TEMPLATE_NAME" |
+| `#endif` | src/Blynk/BlynkApiNCP.h | 24 | Ends conditional compilation block |
+| `#if defined(BLYNK_AUTH_TOKEN)` | src/Blynk/BlynkApiNCP.h | 26 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_AUTH_TOKEN) |
+| `#error "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration"` | src/Blynk/BlynkApiNCP.h | 27 | Generates a compilation error with a message: "BLYNK_AUTH_TOKEN is assigned automatically when using Blynk.Edgent, please remove it from the configuration" |
+| `#endif` | src/Blynk/BlynkApiNCP.h | 28 | Ends conditional compilation block |
+| `#include <Blynk/BlynkConfig.h>` | src/Blynk/BlynkApiNCP.h | 30 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkParam.h>` | src/Blynk/BlynkApiNCP.h | 31 | Includes the contents of a file (Blynk/BlynkParam.h) |
+| `#include <Blynk/BlynkHandlers.h>` | src/Blynk/BlynkApiNCP.h | 32 | Includes the contents of a file (Blynk/BlynkHandlers.h) |
+| `#endif` | src/Blynk/BlynkApiNCP.h | 187 | Ends conditional compilation block |
+| `#ifndef BlynkConfig_h` | src/Blynk/BlynkConfig.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkConfig_h |
+| `#define BlynkConfig_h` | src/Blynk/BlynkConfig.h | 12 | Defines a macro or constant (BlynkConfig_h) |
+| `#include <Blynk/BlynkDetectDevice.h>` | src/Blynk/BlynkConfig.h | 14 | Includes the contents of a file (Blynk/BlynkDetectDevice.h) |
+| `#define BLYNK_DEFAULT_DOMAIN     "blynk.cloud"` | src/Blynk/BlynkConfig.h | 19 | Defines a macro or constant (BLYNK_DEFAULT_DOMAIN) |
+| `#define BLYNK_DEFAULT_PORT       80` | src/Blynk/BlynkConfig.h | 20 | Defines a macro or constant (BLYNK_DEFAULT_PORT) |
+| `#define BLYNK_DEFAULT_PORT_SSL   443` | src/Blynk/BlynkConfig.h | 21 | Defines a macro or constant (BLYNK_DEFAULT_PORT_SSL) |
+| `#define BLYNK_VERSION        "1.3.2"` | src/Blynk/BlynkConfig.h | 27 | Defines a macro or constant (BLYNK_VERSION) |
+| `#define BLYNK_NEW_LIBRARY` | src/Blynk/BlynkConfig.h | 29 | Defines a macro or constant (BLYNK_NEW_LIBRARY) |
+| `#ifndef BLYNK_HEARTBEAT` | src/Blynk/BlynkConfig.h | 32 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_HEARTBEAT |
+| `#define BLYNK_HEARTBEAT      40` | src/Blynk/BlynkConfig.h | 33 | Defines a macro or constant (BLYNK_HEARTBEAT) |
+| `#endif` | src/Blynk/BlynkConfig.h | 34 | Ends conditional compilation block |
+| `#ifndef BLYNK_TIMEOUT_MS` | src/Blynk/BlynkConfig.h | 37 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TIMEOUT_MS |
+| `#define BLYNK_TIMEOUT_MS     6000UL` | src/Blynk/BlynkConfig.h | 38 | Defines a macro or constant (BLYNK_TIMEOUT_MS) |
+| `#endif` | src/Blynk/BlynkConfig.h | 39 | Ends conditional compilation block |
+| `#ifndef BLYNK_MSG_LIMIT` | src/Blynk/BlynkConfig.h | 42 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MSG_LIMIT |
+| `#define BLYNK_MSG_LIMIT      15` | src/Blynk/BlynkConfig.h | 43 | Defines a macro or constant (BLYNK_MSG_LIMIT) |
+| `#endif` | src/Blynk/BlynkConfig.h | 44 | Ends conditional compilation block |
+| `#ifndef BLYNK_MAX_READBYTES` | src/Blynk/BlynkConfig.h | 47 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MAX_READBYTES |
+| `#define BLYNK_MAX_READBYTES  256` | src/Blynk/BlynkConfig.h | 48 | Defines a macro or constant (BLYNK_MAX_READBYTES) |
+| `#endif` | src/Blynk/BlynkConfig.h | 49 | Ends conditional compilation block |
+| `#ifndef BLYNK_MAX_SENDBYTES` | src/Blynk/BlynkConfig.h | 52 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MAX_SENDBYTES |
+| `#define BLYNK_MAX_SENDBYTES  128` | src/Blynk/BlynkConfig.h | 53 | Defines a macro or constant (BLYNK_MAX_SENDBYTES) |
+| `#endif` | src/Blynk/BlynkConfig.h | 54 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkConfig.h | 90 | Ends conditional compilation block |
+| `#ifndef BlynkConsole_h` | src/Blynk/BlynkConsole.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkConsole_h |
+| `#define BlynkConsole_h` | src/Blynk/BlynkConsole.h | 12 | Defines a macro or constant (BlynkConsole_h) |
+| `#include <Blynk/BlynkDebug.h>` | src/Blynk/BlynkConsole.h | 14 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#include <Blynk/BlynkParam.h>` | src/Blynk/BlynkConsole.h | 15 | Includes the contents of a file (Blynk/BlynkParam.h) |
+| `#define BLYNK_CONSOLE_MAX_COMMANDS 64` | src/Blynk/BlynkConsole.h | 17 | Defines a macro or constant (BLYNK_CONSOLE_MAX_COMMANDS) |
+| `#define BLYNK_CONSOLE_INPUT_BUFFER 256` | src/Blynk/BlynkConsole.h | 18 | Defines a macro or constant (BLYNK_CONSOLE_INPUT_BUFFER) |
+| `#define BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 19 | Defines a macro or constant (BLYNK_CONSOLE_USE_STREAM) |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 21 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#include <stdarg.h>` | src/Blynk/BlynkConsole.h | 22 | Includes the contents of a file (stdarg.h) |
+| `#endif` | src/Blynk/BlynkConsole.h | 23 | Ends conditional compilation block |
+| `#if defined(ARDUINO_AMEBA)` | src/Blynk/BlynkConsole.h | 25 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_AMEBA) |
+| `#include <strings.h> // for strncasecmp` | src/Blynk/BlynkConsole.h | 26 | Includes the contents of a file (strings.h) |
+| `#endif` | src/Blynk/BlynkConsole.h | 27 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_FUNCTIONAL_H` | src/Blynk/BlynkConsole.h | 33 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_FUNCTIONAL_H |
+| `#else` | src/Blynk/BlynkConsole.h | 37 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkConsole.h | 41 | Ends conditional compilation block |
+| `#if defined(BLYNK_CONSOLE_USE_STREAM) && defined(BLYNK_HAS_FUNCTIONAL_H)` | src/Blynk/BlynkConsole.h | 86 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_CONSOLE_USE_STREAM) && defined(BLYNK_HAS_FUNCTIONAL_H) |
+| `#endif` | src/Blynk/BlynkConsole.h | 100 | Ends conditional compilation block |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 104 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#endif` | src/Blynk/BlynkConsole.h | 127 | Ends conditional compilation block |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 146 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#endif` | src/Blynk/BlynkConsole.h | 148 | Ends conditional compilation block |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 183 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#endif` | src/Blynk/BlynkConsole.h | 185 | Ends conditional compilation block |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 226 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#endif` | src/Blynk/BlynkConsole.h | 257 | Ends conditional compilation block |
+| `#ifdef BLYNK_CONSOLE_USE_STREAM` | src/Blynk/BlynkConsole.h | 266 | Conditional compilation - evaluates compile-time expression - def BLYNK_CONSOLE_USE_STREAM |
+| `#endif` | src/Blynk/BlynkConsole.h | 269 | Ends conditional compilation block |
+| `#endif // BlynkConsole` | src/Blynk/BlynkConsole.h | 338 | Ends conditional compilation block |
+| `#ifndef BlynkDateTime_h` | src/Blynk/BlynkDateTime.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkDateTime_h |
+| `#define BlynkDateTime_h` | src/Blynk/BlynkDateTime.h | 12 | Defines a macro or constant (BlynkDateTime_h) |
+| `#include <stdint.h>` | src/Blynk/BlynkDateTime.h | 14 | Includes the contents of a file (stdint.h) |
+| `#define BLYNK_SECS_PER_MIN     (60UL)` | src/Blynk/BlynkDateTime.h | 38 | Defines a macro or constant (BLYNK_SECS_PER_MIN) |
+| `#define BLYNK_SECS_PER_HOUR    (3600UL)` | src/Blynk/BlynkDateTime.h | 39 | Defines a macro or constant (BLYNK_SECS_PER_HOUR) |
+| `#define BLYNK_SECS_PER_DAY     (BLYNK_SECS_PER_HOUR * 24UL)` | src/Blynk/BlynkDateTime.h | 40 | Defines a macro or constant (BLYNK_SECS_PER_DAY) |
+| `#define BLYNK_SECS_PER_WEEK    (BLYNK_SECS_PER_DAY * 7UL)` | src/Blynk/BlynkDateTime.h | 41 | Defines a macro or constant (BLYNK_SECS_PER_WEEK) |
+| `#endif` | src/Blynk/BlynkDateTime.h | 224 | Ends conditional compilation block |
+| `#ifndef BlynkDebug_h` | src/Blynk/BlynkDebug.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkDebug_h |
+| `#define BlynkDebug_h` | src/Blynk/BlynkDebug.h | 12 | Defines a macro or constant (BlynkDebug_h) |
+| `#include <Blynk/BlynkConfig.h>` | src/Blynk/BlynkDebug.h | 14 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkHelpers.h>` | src/Blynk/BlynkDebug.h | 15 | Includes the contents of a file (Blynk/BlynkHelpers.h) |
+| `#include <stddef.h>` | src/Blynk/BlynkDebug.h | 17 | Includes the contents of a file (stddef.h) |
+| `#ifdef ESP8266` | src/Blynk/BlynkDebug.h | 18 | Conditional compilation - evaluates compile-time expression - def ESP8266 |
+| `#include "ets_sys.h"` | src/Blynk/BlynkDebug.h | 20 | Includes the contents of a file (ets_sys.h) |
+| `#include "os_type.h"` | src/Blynk/BlynkDebug.h | 21 | Includes the contents of a file (os_type.h) |
+| `#include "mem.h"` | src/Blynk/BlynkDebug.h | 22 | Includes the contents of a file (mem.h) |
+| `#else` | src/Blynk/BlynkDebug.h | 24 | Else clause for conditional compilation |
+| `#include <inttypes.h>` | src/Blynk/BlynkDebug.h | 25 | Includes the contents of a file (inttypes.h) |
+| `#endif` | src/Blynk/BlynkDebug.h | 26 | Ends conditional compilation block |
+| `#if defined(ARDUINO_ARCH_ARC32)` | src/Blynk/BlynkDebug.h | 28 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_ARCH_ARC32) |
+| `#else` | src/Blynk/BlynkDebug.h | 30 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkDebug.h | 32 | Ends conditional compilation block |
+| `#if defined(BLYNK_DEBUG_ALL) && !(__cplusplus >= 201103L \|\| defined(__GXX_EXPERIMENTAL_CXX0X__))` | src/Blynk/BlynkDebug.h | 41 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) && !(__cplusplus >= 201103L \|\| defined(__GXX_EXPERIMENTAL_CXX0X__)) |
+| `#warning "Compiler features not enabled -> please contact yor board vendor to enable c++0x"` | src/Blynk/BlynkDebug.h | 42 | Generates a compilation warning with a message: "Compiler features not enabled -> please contact yor board vendor to enable c++0x" |
+| `#endif` | src/Blynk/BlynkDebug.h | 43 | Ends conditional compilation block |
+| `#define BLYNK_FATAL(msg)     { BLYNK_LOG1(msg); BlynkFatal(); }` | src/Blynk/BlynkDebug.h | 47 | Defines a macro or constant (BLYNK_FATAL) |
+| `#define BLYNK_LOG_RAM()      { BLYNK_LOG2(BLYNK_F("Free RAM: "), BlynkFreeRam()); }` | src/Blynk/BlynkDebug.h | 48 | Defines a macro or constant (BLYNK_LOG_RAM) |
+| `#define BLYNK_LOG_FN()       BLYNK_LOG3(BLYNK_F(__FUNCTION__), '@', __LINE__);` | src/Blynk/BlynkDebug.h | 49 | Defines a macro or constant (BLYNK_LOG_FN) |
+| `#define BLYNK_LOG_TROUBLE(t) BLYNK_LOG2(BLYNK_F("Trouble detected: http://docs.blynk.cc/#troubleshooting-"), t)` | src/Blynk/BlynkDebug.h | 50 | Defines a macro or constant (BLYNK_LOG_TROUBLE) |
+| `#ifndef BLYNK_PRINT` | src/Blynk/BlynkDebug.h | 52 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_PRINT |
+| `#undef BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 53 | Undefines a previously defined macro |
+| `#endif` | src/Blynk/BlynkDebug.h | 54 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG_ALL` | src/Blynk/BlynkDebug.h | 56 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG_ALL |
+| `#define BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 57 | Defines a macro or constant (BLYNK_DEBUG) |
+| `#endif` | src/Blynk/BlynkDebug.h | 58 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | src/Blynk/BlynkDebug.h | 60 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#if defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkDebug.h | 62 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE) |
+| `#if defined(ARDUINO_ARCH_ARC32)` | src/Blynk/BlynkDebug.h | 64 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_ARCH_ARC32) |
+| `#define BLYNK_LOG(msg, ...)  BLYNK_LOG_UNAVAILABLE(msg, ##__VA_ARGS__)` | src/Blynk/BlynkDebug.h | 66 | Defines a macro or constant (BLYNK_LOG) |
+| `#else` | src/Blynk/BlynkDebug.h | 67 | Else clause for conditional compilation |
+| `#define BLYNK_LOG(msg, ...)  blynk_dbg_print(BLYNK_PSTR(msg), ##__VA_ARGS__)` | src/Blynk/BlynkDebug.h | 68 | Defines a macro or constant (BLYNK_LOG) |
+| `#endif` | src/Blynk/BlynkDebug.h | 69 | Ends conditional compilation block |
+| `#define BLYNK_LOG1(p1)            { BLYNK_LOG_TIME(); BLYNK_PRINT.println(p1); }` | src/Blynk/BlynkDebug.h | 71 | Defines a macro or constant (BLYNK_LOG1) |
+| `#define BLYNK_LOG2(p1,p2)         { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.println(p2); }` | src/Blynk/BlynkDebug.h | 72 | Defines a macro or constant (BLYNK_LOG2) |
+| `#define BLYNK_LOG3(p1,p2,p3)      { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.println(p3); }` | src/Blynk/BlynkDebug.h | 73 | Defines a macro or constant (BLYNK_LOG3) |
+| `#define BLYNK_LOG4(p1,p2,p3,p4)   { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.print(p3); BLYNK_PRINT.println(p4); }` | src/Blynk/BlynkDebug.h | 74 | Defines a macro or constant (BLYNK_LOG4) |
+| `#define BLYNK_LOG6(p1,p2,p3,p4,p5,p6) { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.print(p3); BLYNK_PRINT.print(p4); BLYNK_PRINT.print(p5); BLYNK_PRINT.println(p6); }` | src/Blynk/BlynkDebug.h | 75 | Defines a macro or constant (BLYNK_LOG6) |
+| `#define BLYNK_LOG_IP(msg, ip)     { BLYNK_LOG_TIME(); BLYNK_PRINT.print(BLYNK_F(msg)); \` | src/Blynk/BlynkDebug.h | 76 | Defines a macro or constant (BLYNK_LOG_IP) |
+| `#define BLYNK_LOG_IP_REV(msg, ip) { BLYNK_LOG_TIME(); BLYNK_PRINT.print(BLYNK_F(msg)); \` | src/Blynk/BlynkDebug.h | 81 | Defines a macro or constant (BLYNK_LOG_IP_REV) |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 94 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#include <ctype.h>` | src/Blynk/BlynkDebug.h | 95 | Includes the contents of a file (ctype.h) |
+| `#define BLYNK_DBG_BREAK()    { for(;;); }` | src/Blynk/BlynkDebug.h | 96 | Defines a macro or constant (BLYNK_DBG_BREAK) |
+| `#define BLYNK_ASSERT(expr)   { if(!(expr)) { BLYNK_LOG2(BLYNK_F("Assertion failed: "), BLYNK_F(#expr)); BLYNK_DBG_BREAK() } }` | src/Blynk/BlynkDebug.h | 97 | Defines a macro or constant (BLYNK_ASSERT) |
+| `#endif` | src/Blynk/BlynkDebug.h | 126 | Ends conditional compilation block |
+| `#if !defined(ARDUINO_ARCH_ARC32)` | src/Blynk/BlynkDebug.h | 128 | Conditional compilation - evaluates compile-time expression - !defined(ARDUINO_ARCH_ARC32) |
+| `#include <stdio.h>` | src/Blynk/BlynkDebug.h | 129 | Includes the contents of a file (stdio.h) |
+| `#include <stdarg.h>` | src/Blynk/BlynkDebug.h | 130 | Includes the contents of a file (stdarg.h) |
+| `#if defined(__AVR__)` | src/Blynk/BlynkDebug.h | 141 | Conditional compilation - evaluates compile-time expression - defined(__AVR__) |
+| `#else` | src/Blynk/BlynkDebug.h | 143 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkDebug.h | 145 | Ends conditional compilation block |
+| `#endif // ARDUINO_ARCH_ARC32` | src/Blynk/BlynkDebug.h | 149 | Ends conditional compilation block |
+| `#elif defined(__MBED__)` | src/Blynk/BlynkDebug.h | 151 | Else-if for conditional compilation |
+| `#define BLYNK_LOG(msg, ...)       { BLYNK_PRINT.printf("[%ld] " msg BLYNK_NEWLINE, BlynkMillis(), ##__VA_ARGS__); }` | src/Blynk/BlynkDebug.h | 153 | Defines a macro or constant (BLYNK_LOG) |
+| `#define BLYNK_LOG1(p1)            { BLYNK_LOG(p1);}` | src/Blynk/BlynkDebug.h | 154 | Defines a macro or constant (BLYNK_LOG1) |
+| `#define BLYNK_LOG2(p1,p2)         { BLYNK_LOG(p1,p2);}` | src/Blynk/BlynkDebug.h | 155 | Defines a macro or constant (BLYNK_LOG2) |
+| `#define BLYNK_LOG3(p1,p2,p3)      { BLYNK_LOG(p1,p2,p3);}` | src/Blynk/BlynkDebug.h | 156 | Defines a macro or constant (BLYNK_LOG3) |
+| `#define BLYNK_LOG4(p1,p2,p3,p4)   { BLYNK_LOG(p1,p2,p3,p4);}` | src/Blynk/BlynkDebug.h | 157 | Defines a macro or constant (BLYNK_LOG4) |
+| `#define BLYNK_LOG6(p1,p2,p3,p4,p5,p6)   { BLYNK_LOG(p1,p2,p3,p4,p5,p6);}` | src/Blynk/BlynkDebug.h | 158 | Defines a macro or constant (BLYNK_LOG6) |
+| `#define BLYNK_LOG_TIME() BLYNK_PRINT.printf("[%ld]", BlynkMillis());` | src/Blynk/BlynkDebug.h | 160 | Defines a macro or constant (BLYNK_LOG_TIME) |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 162 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#define BLYNK_DBG_BREAK()    raise(SIGTRAP);` | src/Blynk/BlynkDebug.h | 163 | Defines a macro or constant (BLYNK_DBG_BREAK) |
+| `#define BLYNK_ASSERT(expr)   assert(expr)` | src/Blynk/BlynkDebug.h | 164 | Defines a macro or constant (BLYNK_ASSERT) |
+| `#endif` | src/Blynk/BlynkDebug.h | 187 | Ends conditional compilation block |
+| `#elif defined(LINUX)` | src/Blynk/BlynkDebug.h | 189 | Else-if for conditional compilation |
+| `#include <assert.h>` | src/Blynk/BlynkDebug.h | 191 | Includes the contents of a file (assert.h) |
+| `#include <stdio.h>` | src/Blynk/BlynkDebug.h | 192 | Includes the contents of a file (stdio.h) |
+| `#include <string.h>` | src/Blynk/BlynkDebug.h | 193 | Includes the contents of a file (string.h) |
+| `#include <errno.h>` | src/Blynk/BlynkDebug.h | 194 | Includes the contents of a file (errno.h) |
+| `#include <signal.h>` | src/Blynk/BlynkDebug.h | 195 | Includes the contents of a file (signal.h) |
+| `#include <iostream>` | src/Blynk/BlynkDebug.h | 197 | Includes the contents of a file (iostream) |
+| `#define BLYNK_LOG(msg, ...)       { fprintf(BLYNK_PRINT, "[%ld] " msg BLYNK_NEWLINE, BlynkMillis(), ##__VA_ARGS__); }` | src/Blynk/BlynkDebug.h | 199 | Defines a macro or constant (BLYNK_LOG) |
+| `#define BLYNK_LOG1(p1)            { BLYNK_LOG_TIME(); cout << p1 << endl; }` | src/Blynk/BlynkDebug.h | 200 | Defines a macro or constant (BLYNK_LOG1) |
+| `#define BLYNK_LOG2(p1,p2)         { BLYNK_LOG_TIME(); cout << p1 << p2 << endl; }` | src/Blynk/BlynkDebug.h | 201 | Defines a macro or constant (BLYNK_LOG2) |
+| `#define BLYNK_LOG3(p1,p2,p3)      { BLYNK_LOG_TIME(); cout << p1 << p2 << p3 << endl; }` | src/Blynk/BlynkDebug.h | 202 | Defines a macro or constant (BLYNK_LOG3) |
+| `#define BLYNK_LOG4(p1,p2,p3,p4)   { BLYNK_LOG_TIME(); cout << p1 << p2 << p3 << p4 << endl; }` | src/Blynk/BlynkDebug.h | 203 | Defines a macro or constant (BLYNK_LOG4) |
+| `#define BLYNK_LOG6(p1,p2,p3,p4,p5,p6)   { BLYNK_LOG_TIME(); cout << p1 << p2 << p3 << p4 << p5 << p6 << endl; }` | src/Blynk/BlynkDebug.h | 204 | Defines a macro or constant (BLYNK_LOG6) |
+| `#define BLYNK_LOG_TIME() cout << '[' << BlynkMillis() << "] ";` | src/Blynk/BlynkDebug.h | 206 | Defines a macro or constant (BLYNK_LOG_TIME) |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkDebug.h | 208 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#define BLYNK_DBG_BREAK()    raise(SIGTRAP);` | src/Blynk/BlynkDebug.h | 209 | Defines a macro or constant (BLYNK_DBG_BREAK) |
+| `#define BLYNK_ASSERT(expr)   assert(expr)` | src/Blynk/BlynkDebug.h | 210 | Defines a macro or constant (BLYNK_ASSERT) |
+| `#endif` | src/Blynk/BlynkDebug.h | 233 | Ends conditional compilation block |
+| `#else` | src/Blynk/BlynkDebug.h | 235 | Else clause for conditional compilation |
+| `#warning "Cannot detect platform"` | src/Blynk/BlynkDebug.h | 237 | Generates a compilation warning with a message: "Cannot detect platform" |
+| `#endif` | src/Blynk/BlynkDebug.h | 239 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDebug.h | 241 | Ends conditional compilation block |
+| `#ifndef BLYNK_LOG` | src/Blynk/BlynkDebug.h | 243 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_LOG |
+| `#define BLYNK_LOG(...)` | src/Blynk/BlynkDebug.h | 244 | Defines a macro or constant (BLYNK_LOG) |
+| `#define BLYNK_LOG1(p1)` | src/Blynk/BlynkDebug.h | 245 | Defines a macro or constant (BLYNK_LOG1) |
+| `#define BLYNK_LOG2(p1,p2)` | src/Blynk/BlynkDebug.h | 246 | Defines a macro or constant (BLYNK_LOG2) |
+| `#define BLYNK_LOG3(p1,p2,p3)` | src/Blynk/BlynkDebug.h | 247 | Defines a macro or constant (BLYNK_LOG3) |
+| `#define BLYNK_LOG4(p1,p2,p3,p4)` | src/Blynk/BlynkDebug.h | 248 | Defines a macro or constant (BLYNK_LOG4) |
+| `#define BLYNK_LOG6(p1,p2,p3,p4,p5,p6)` | src/Blynk/BlynkDebug.h | 249 | Defines a macro or constant (BLYNK_LOG6) |
+| `#define BLYNK_LOG_IP(msg, ip)` | src/Blynk/BlynkDebug.h | 250 | Defines a macro or constant (BLYNK_LOG_IP) |
+| `#define BLYNK_LOG_IP_REV(msg, ip)` | src/Blynk/BlynkDebug.h | 251 | Defines a macro or constant (BLYNK_LOG_IP_REV) |
+| `#endif` | src/Blynk/BlynkDebug.h | 252 | Ends conditional compilation block |
+| `#ifndef BLYNK_DBG_BREAK` | src/Blynk/BlynkDebug.h | 254 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_DBG_BREAK |
+| `#define BLYNK_DBG_BREAK()` | src/Blynk/BlynkDebug.h | 255 | Defines a macro or constant (BLYNK_DBG_BREAK) |
+| `#define BLYNK_ASSERT(expr)` | src/Blynk/BlynkDebug.h | 256 | Defines a macro or constant (BLYNK_ASSERT) |
+| `#define BLYNK_DBG_DUMP(msg, addr, len)` | src/Blynk/BlynkDebug.h | 257 | Defines a macro or constant (BLYNK_DBG_DUMP) |
+| `#endif` | src/Blynk/BlynkDebug.h | 258 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDebug.h | 260 | Ends conditional compilation block |
+| `#ifndef BlynkDetectDevice_h` | src/Blynk/BlynkDetectDevice.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkDetectDevice_h |
+| `#define BlynkDetectDevice_h` | src/Blynk/BlynkDetectDevice.h | 12 | Defines a macro or constant (BlynkDetectDevice_h) |
+| `#include <Blynk/BlynkHelpers.h>` | src/Blynk/BlynkDetectDevice.h | 14 | Includes the contents of a file (Blynk/BlynkHelpers.h) |
+| `#ifndef BLYNK_INFO_CPU` | src/Blynk/BlynkDetectDevice.h | 16 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CPU |
+| `#if   defined(__AVR_ATmega168__)` | src/Blynk/BlynkDetectDevice.h | 22 | Conditional compilation - evaluates compile-time expression - defined(__AVR_ATmega168__) |
+| `#define BLYNK_INFO_CPU      "ATmega168"` | src/Blynk/BlynkDetectDevice.h | 23 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATmega328P__)` | src/Blynk/BlynkDetectDevice.h | 24 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATmega328P"` | src/Blynk/BlynkDetectDevice.h | 25 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATmega1280__)` | src/Blynk/BlynkDetectDevice.h | 26 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATmega1280"` | src/Blynk/BlynkDetectDevice.h | 27 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATmega1284__)` | src/Blynk/BlynkDetectDevice.h | 28 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATmega1284"` | src/Blynk/BlynkDetectDevice.h | 29 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATmega2560__)` | src/Blynk/BlynkDetectDevice.h | 30 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATmega2560"` | src/Blynk/BlynkDetectDevice.h | 31 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATmega32U4__)` | src/Blynk/BlynkDetectDevice.h | 32 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATmega32U4"` | src/Blynk/BlynkDetectDevice.h | 33 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__SAM3X8E__)` | src/Blynk/BlynkDetectDevice.h | 34 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "AT91SAM3X8E"` | src/Blynk/BlynkDetectDevice.h | 35 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny25__)` | src/Blynk/BlynkDetectDevice.h | 41 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny25"` | src/Blynk/BlynkDetectDevice.h | 42 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny45__)` | src/Blynk/BlynkDetectDevice.h | 43 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny45"` | src/Blynk/BlynkDetectDevice.h | 44 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny85__)` | src/Blynk/BlynkDetectDevice.h | 45 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny85"` | src/Blynk/BlynkDetectDevice.h | 46 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny24__)` | src/Blynk/BlynkDetectDevice.h | 47 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny24"` | src/Blynk/BlynkDetectDevice.h | 48 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny44__)` | src/Blynk/BlynkDetectDevice.h | 49 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny44"` | src/Blynk/BlynkDetectDevice.h | 50 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny84__)` | src/Blynk/BlynkDetectDevice.h | 51 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny84"` | src/Blynk/BlynkDetectDevice.h | 52 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny2313__)` | src/Blynk/BlynkDetectDevice.h | 53 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny2313"` | src/Blynk/BlynkDetectDevice.h | 54 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(__AVR_ATtiny4313__)` | src/Blynk/BlynkDetectDevice.h | 55 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CPU      "ATtiny4313"` | src/Blynk/BlynkDetectDevice.h | 56 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 57 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 58 | Ends conditional compilation block |
+| `#ifndef BLYNK_INFO_DEVICE` | src/Blynk/BlynkDetectDevice.h | 60 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_DEVICE |
+| `#if   defined(ENERGIA)` | src/Blynk/BlynkDetectDevice.h | 62 | Conditional compilation - evaluates compile-time expression - defined(ENERGIA) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 64 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 65 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_USE_INTERNAL_DTOSTRF` | src/Blynk/BlynkDetectDevice.h | 66 | Defines a macro or constant (BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#if   defined(ENERGIA_ARCH_MSP430)` | src/Blynk/BlynkDetectDevice.h | 68 | Conditional compilation - evaluates compile-time expression - defined(ENERGIA_ARCH_MSP430) |
+| `#define BLYNK_INFO_DEVICE  "LaunchPad MSP430"` | src/Blynk/BlynkDetectDevice.h | 69 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_INFO_CPU     "MSP430"` | src/Blynk/BlynkDetectDevice.h | 70 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#define BLYNK_NO_FLOAT` | src/Blynk/BlynkDetectDevice.h | 71 | Defines a macro or constant (BLYNK_NO_FLOAT) |
+| `#define BLYNK_NO_LONGLONG` | src/Blynk/BlynkDetectDevice.h | 72 | Defines a macro or constant (BLYNK_NO_LONGLONG) |
+| `#elif defined(ENERGIA_ARCH_MSP432)` | src/Blynk/BlynkDetectDevice.h | 73 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "LaunchPad MSP432"` | src/Blynk/BlynkDetectDevice.h | 74 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_INFO_CPU     "MSP432"` | src/Blynk/BlynkDetectDevice.h | 75 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#elif defined(ENERGIA_ARCH_TIVAC)` | src/Blynk/BlynkDetectDevice.h | 76 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "LaunchPad"` | src/Blynk/BlynkDetectDevice.h | 77 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ENERGIA_ARCH_CC3200EMT) \|\| defined(ENERGIA_ARCH_CC3200)` | src/Blynk/BlynkDetectDevice.h | 79 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "CC3200"` | src/Blynk/BlynkDetectDevice.h | 80 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#define BLYNK_SEND_CHUNK 64` | src/Blynk/BlynkDetectDevice.h | 81 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 82 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#if   defined(ENERGIA_CC3200_LAUNCHXL) //TODO: This is a bug in Energia IDE` | src/Blynk/BlynkDetectDevice.h | 84 | Conditional compilation - evaluates compile-time expression - defined(ENERGIA_CC3200_LAUNCHXL) //TODO: This is a bug in Energia IDE |
+| `#define BLYNK_INFO_DEVICE  "CC3200 LaunchXL"` | src/Blynk/BlynkDetectDevice.h | 85 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ENERGIA_RedBearLab_CC3200)` | src/Blynk/BlynkDetectDevice.h | 86 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RBL CC3200"` | src/Blynk/BlynkDetectDevice.h | 87 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ENERGIA_RedBearLab_WiFiMini)` | src/Blynk/BlynkDetectDevice.h | 88 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RBL WiFi Mini"` | src/Blynk/BlynkDetectDevice.h | 89 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ENERGIA_RedBearLab_WiFiMicro)` | src/Blynk/BlynkDetectDevice.h | 90 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RBL WiFi Micro"` | src/Blynk/BlynkDetectDevice.h | 91 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 92 | Ends conditional compilation block |
+| `#elif defined(ENERGIA_ARCH_CC3220EMT) \|\| defined(ENERGIA_ARCH_CC3220)` | src/Blynk/BlynkDetectDevice.h | 93 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_CONNECTION  "CC3220"` | src/Blynk/BlynkDetectDevice.h | 94 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#define BLYNK_SEND_CHUNK 64` | src/Blynk/BlynkDetectDevice.h | 95 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 96 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_INFO_DEVICE  "CC3220"` | src/Blynk/BlynkDetectDevice.h | 98 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_INFO_CPU     "CC3220"` | src/Blynk/BlynkDetectDevice.h | 99 | Defines a macro or constant (BLYNK_INFO_CPU) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 100 | Ends conditional compilation block |
+| `#if !defined(BLYNK_INFO_DEVICE)` | src/Blynk/BlynkDetectDevice.h | 102 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_INFO_DEVICE) |
+| `#define BLYNK_INFO_DEVICE  "Energia"` | src/Blynk/BlynkDetectDevice.h | 103 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 104 | Ends conditional compilation block |
+| `#elif defined(LINUX)` | src/Blynk/BlynkDetectDevice.h | 106 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Linux"` | src/Blynk/BlynkDetectDevice.h | 108 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 109 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 4096` | src/Blynk/BlynkDetectDevice.h | 110 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkDetectDevice.h | 112 | Else-if for conditional compilation |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 114 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 115 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#if PLATFORM_ID==0` | src/Blynk/BlynkDetectDevice.h | 117 | Conditional compilation - evaluates compile-time expression - PLATFORM_ID==0 |
+| `#define BLYNK_INFO_DEVICE  "Particle Core"` | src/Blynk/BlynkDetectDevice.h | 118 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#undef BLYNK_BUFFERS_SIZE // Use default on Core` | src/Blynk/BlynkDetectDevice.h | 119 | Undefines a previously defined macro |
+| `#elif PLATFORM_ID==6` | src/Blynk/BlynkDetectDevice.h | 120 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Photon"` | src/Blynk/BlynkDetectDevice.h | 121 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==8` | src/Blynk/BlynkDetectDevice.h | 122 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle P1"` | src/Blynk/BlynkDetectDevice.h | 123 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==9` | src/Blynk/BlynkDetectDevice.h | 124 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Ethernet"` | src/Blynk/BlynkDetectDevice.h | 125 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==10` | src/Blynk/BlynkDetectDevice.h | 126 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Electron"` | src/Blynk/BlynkDetectDevice.h | 127 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==12` | src/Blynk/BlynkDetectDevice.h | 129 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Argon"` | src/Blynk/BlynkDetectDevice.h | 130 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==13` | src/Blynk/BlynkDetectDevice.h | 131 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Boron"` | src/Blynk/BlynkDetectDevice.h | 132 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==14` | src/Blynk/BlynkDetectDevice.h | 133 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Xenon"` | src/Blynk/BlynkDetectDevice.h | 134 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==26` | src/Blynk/BlynkDetectDevice.h | 135 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle Tracker"` | src/Blynk/BlynkDetectDevice.h | 136 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==31` | src/Blynk/BlynkDetectDevice.h | 138 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Particle RPi"` | src/Blynk/BlynkDetectDevice.h | 139 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==82` | src/Blynk/BlynkDetectDevice.h | 140 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Digistump Oak"` | src/Blynk/BlynkDetectDevice.h | 141 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==88` | src/Blynk/BlynkDetectDevice.h | 142 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RedBear Duo"` | src/Blynk/BlynkDetectDevice.h | 143 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif PLATFORM_ID==103` | src/Blynk/BlynkDetectDevice.h | 144 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Bluz"` | src/Blynk/BlynkDetectDevice.h | 145 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 146 | Else clause for conditional compilation |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/Blynk/BlynkDetectDevice.h | 147 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#warning "Cannot detect board type"` | src/Blynk/BlynkDetectDevice.h | 148 | Generates a compilation warning with a message: "Cannot detect board type" |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 149 | Ends conditional compilation block |
+| `#define BLYNK_INFO_DEVICE  "Particle"` | src/Blynk/BlynkDetectDevice.h | 150 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 151 | Ends conditional compilation block |
+| `#elif defined(__MBED__)` | src/Blynk/BlynkDetectDevice.h | 153 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MBED"` | src/Blynk/BlynkDetectDevice.h | 155 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 156 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 512` | src/Blynk/BlynkDetectDevice.h | 157 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#define noInterrupts() __disable_irq()` | src/Blynk/BlynkDetectDevice.h | 158 | Defines a macro or constant (noInterrupts) |
+| `#define interrupts()   __enable_irq()` | src/Blynk/BlynkDetectDevice.h | 159 | Defines a macro or constant (interrupts) |
+| `#elif defined(ARDUINO) && defined(MPIDE)` | src/Blynk/BlynkDetectDevice.h | 161 | Else-if for conditional compilation |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 162 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#if   defined(_BOARD_UNO_)` | src/Blynk/BlynkDetectDevice.h | 164 | Conditional compilation - evaluates compile-time expression - defined(_BOARD_UNO_) |
+| `#define BLYNK_INFO_DEVICE  "chipKIT Uno32"` | src/Blynk/BlynkDetectDevice.h | 165 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 166 | Else clause for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "chipKIT"` | src/Blynk/BlynkDetectDevice.h | 167 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 168 | Ends conditional compilation block |
+| `#elif defined(ARDUINO) && defined(ARDUINO_AMEBA)` | src/Blynk/BlynkDetectDevice.h | 170 | Else-if for conditional compilation |
+| `#if defined(BOARD_RTL8710)` | src/Blynk/BlynkDetectDevice.h | 171 | Conditional compilation - evaluates compile-time expression - defined(BOARD_RTL8710) |
+| `#define BLYNK_INFO_DEVICE  "RTL8710"` | src/Blynk/BlynkDetectDevice.h | 172 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 173 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 174 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(BOARD_RTL8711AM)` | src/Blynk/BlynkDetectDevice.h | 175 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RTL8711AM"` | src/Blynk/BlynkDetectDevice.h | 176 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 177 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 178 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(BOARD_RTL8195A)` | src/Blynk/BlynkDetectDevice.h | 179 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RTL8195A"` | src/Blynk/BlynkDetectDevice.h | 180 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 181 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 182 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 183 | Else clause for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Ameba"` | src/Blynk/BlynkDetectDevice.h | 184 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 185 | Ends conditional compilation block |
+| `#elif defined(ARDUINO) && defined(TEENSYDUINO)` | src/Blynk/BlynkDetectDevice.h | 187 | Else-if for conditional compilation |
+| `#if   defined(__MK66FX1M0__)` | src/Blynk/BlynkDetectDevice.h | 189 | Conditional compilation - evaluates compile-time expression - defined(__MK66FX1M0__) |
+| `#define BLYNK_INFO_DEVICE  "Teensy 3.6"` | src/Blynk/BlynkDetectDevice.h | 190 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 191 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 192 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(__MK64FX512__)` | src/Blynk/BlynkDetectDevice.h | 193 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy 3.5"` | src/Blynk/BlynkDetectDevice.h | 194 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 195 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 196 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(__MK20DX256__)` | src/Blynk/BlynkDetectDevice.h | 197 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy 3.2/3.1"` | src/Blynk/BlynkDetectDevice.h | 198 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 199 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 200 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif   defined(__MK20DX128__)` | src/Blynk/BlynkDetectDevice.h | 201 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy 3.0"` | src/Blynk/BlynkDetectDevice.h | 202 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 203 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 204 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif   defined(__MKL26Z64__)` | src/Blynk/BlynkDetectDevice.h | 205 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy LC"` | src/Blynk/BlynkDetectDevice.h | 206 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_BUFFERS_SIZE 512` | src/Blynk/BlynkDetectDevice.h | 207 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif   defined(ARDUINO_ARCH_AVR)` | src/Blynk/BlynkDetectDevice.h | 208 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy 2.0"` | src/Blynk/BlynkDetectDevice.h | 209 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 210 | Else clause for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Teensy"` | src/Blynk/BlynkDetectDevice.h | 211 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 212 | Ends conditional compilation block |
+| `#elif defined(ARDUINO)` | src/Blynk/BlynkDetectDevice.h | 214 | Else-if for conditional compilation |
+| `#if defined(ARDUINO_ARCH_SAMD) \|\| \` | src/Blynk/BlynkDetectDevice.h | 216 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_ARCH_SAMD) \|\| \ |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 222 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 223 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 224 | Ends conditional compilation block |
+| `#if defined(ARDUINO_ARCH_AVR)` | src/Blynk/BlynkDetectDevice.h | 226 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_ARCH_AVR) |
+| `#define BLYNK_USE_INTERNAL_ATOLL` | src/Blynk/BlynkDetectDevice.h | 227 | Defines a macro or constant (BLYNK_USE_INTERNAL_ATOLL) |
+| `#define BLYNK_MAX_TIMERS 8` | src/Blynk/BlynkDetectDevice.h | 228 | Defines a macro or constant (BLYNK_MAX_TIMERS) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 229 | Ends conditional compilation block |
+| `#if defined(ARDUINO_ARCH_SAMD)` | src/Blynk/BlynkDetectDevice.h | 231 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_ARCH_SAMD) |
+| `#define BLYNK_USE_INTERNAL_DTOSTRF` | src/Blynk/BlynkDetectDevice.h | 232 | Defines a macro or constant (BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 233 | Ends conditional compilation block |
+| `#if   defined(ARDUINO_AVR_NANO)` | src/Blynk/BlynkDetectDevice.h | 236 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_AVR_NANO) |
+| `#define BLYNK_INFO_DEVICE  "Arduino Nano"` | src/Blynk/BlynkDetectDevice.h | 237 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_UNO) \|\| defined(ARDUINO_AVR_DUEMILANOVE)` | src/Blynk/BlynkDetectDevice.h | 238 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Uno"` | src/Blynk/BlynkDetectDevice.h | 239 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_YUN)` | src/Blynk/BlynkDetectDevice.h | 240 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Yun"` | src/Blynk/BlynkDetectDevice.h | 241 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_MINI)` | src/Blynk/BlynkDetectDevice.h | 242 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Mini"` | src/Blynk/BlynkDetectDevice.h | 243 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_ETHERNET)` | src/Blynk/BlynkDetectDevice.h | 244 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Ethernet"` | src/Blynk/BlynkDetectDevice.h | 245 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_FIO)` | src/Blynk/BlynkDetectDevice.h | 246 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Fio"` | src/Blynk/BlynkDetectDevice.h | 247 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_BT)` | src/Blynk/BlynkDetectDevice.h | 248 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino BT"` | src/Blynk/BlynkDetectDevice.h | 249 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_PRO)` | src/Blynk/BlynkDetectDevice.h | 250 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Pro"` | src/Blynk/BlynkDetectDevice.h | 251 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_NG)` | src/Blynk/BlynkDetectDevice.h | 252 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino NG"` | src/Blynk/BlynkDetectDevice.h | 253 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_GEMMA)` | src/Blynk/BlynkDetectDevice.h | 254 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Gemma"` | src/Blynk/BlynkDetectDevice.h | 255 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_MEGA) \|\| defined(ARDUINO_AVR_MEGA2560)` | src/Blynk/BlynkDetectDevice.h | 256 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Mega"` | src/Blynk/BlynkDetectDevice.h | 257 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 258 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 259 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_AVR_ADK)` | src/Blynk/BlynkDetectDevice.h | 260 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Mega ADK"` | src/Blynk/BlynkDetectDevice.h | 261 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 262 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 263 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_AVR_LEONARDO)` | src/Blynk/BlynkDetectDevice.h | 264 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Leonardo"` | src/Blynk/BlynkDetectDevice.h | 265 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_MICRO)` | src/Blynk/BlynkDetectDevice.h | 266 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Micro"` | src/Blynk/BlynkDetectDevice.h | 267 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_ESPLORA)` | src/Blynk/BlynkDetectDevice.h | 268 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Esplora"` | src/Blynk/BlynkDetectDevice.h | 269 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_LILYPAD)` | src/Blynk/BlynkDetectDevice.h | 270 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Lilypad"` | src/Blynk/BlynkDetectDevice.h | 271 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_LILYPAD_USB)` | src/Blynk/BlynkDetectDevice.h | 272 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Lilypad USB"` | src/Blynk/BlynkDetectDevice.h | 273 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_ROBOT_MOTOR)` | src/Blynk/BlynkDetectDevice.h | 274 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Robot Motor"` | src/Blynk/BlynkDetectDevice.h | 275 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_ROBOT_CONTROL)` | src/Blynk/BlynkDetectDevice.h | 276 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Robot Control"` | src/Blynk/BlynkDetectDevice.h | 277 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_UNO_WIFI_REV2)` | src/Blynk/BlynkDetectDevice.h | 280 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino UNO WiFi Rev2"` | src/Blynk/BlynkDetectDevice.h | 281 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_INTERNAL_ATOLL` | src/Blynk/BlynkDetectDevice.h | 282 | Defines a macro or constant (BLYNK_USE_INTERNAL_ATOLL) |
+| `#elif defined(ARDUINO_SAM_DUE)` | src/Blynk/BlynkDetectDevice.h | 285 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Due"` | src/Blynk/BlynkDetectDevice.h | 286 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 287 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 288 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_SAMD_ZERO)` | src/Blynk/BlynkDetectDevice.h | 291 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino Zero"` | src/Blynk/BlynkDetectDevice.h | 292 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKR1000)` | src/Blynk/BlynkDetectDevice.h | 293 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR1000"` | src/Blynk/BlynkDetectDevice.h | 294 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRZERO)` | src/Blynk/BlynkDetectDevice.h | 295 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKRZERO"` | src/Blynk/BlynkDetectDevice.h | 296 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRNB1500)` | src/Blynk/BlynkDetectDevice.h | 297 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR NB 1500"` | src/Blynk/BlynkDetectDevice.h | 298 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRGSM1400)` | src/Blynk/BlynkDetectDevice.h | 299 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR GSM 1400"` | src/Blynk/BlynkDetectDevice.h | 300 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRWAN1300)` | src/Blynk/BlynkDetectDevice.h | 301 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR WAN 1300"` | src/Blynk/BlynkDetectDevice.h | 302 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRFox1200)` | src/Blynk/BlynkDetectDevice.h | 303 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR FOX 1200"` | src/Blynk/BlynkDetectDevice.h | 304 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRWIFI1010)` | src/Blynk/BlynkDetectDevice.h | 305 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR WiFi 1010"` | src/Blynk/BlynkDetectDevice.h | 306 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_MKRVIDOR4000)` | src/Blynk/BlynkDetectDevice.h | 307 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "MKR Vidor 4000"` | src/Blynk/BlynkDetectDevice.h | 308 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_SAMD_NANO_33_IOT)` | src/Blynk/BlynkDetectDevice.h | 309 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Nano 33 IoT"` | src/Blynk/BlynkDetectDevice.h | 310 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(TARGET_ARDUINO_NANO33BLE) \|\| defined(ARDUINO_ARDUINO_NANO33BLE) \|\| defined(ARDUINO_NANO33BLE)` | src/Blynk/BlynkDetectDevice.h | 311 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Nano 33 BLE"` | src/Blynk/BlynkDetectDevice.h | 312 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_MINIMA)` | src/Blynk/BlynkDetectDevice.h | 315 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "UNO R4 Minima"` | src/Blynk/BlynkDetectDevice.h | 316 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_UNOWIFIR4)` | src/Blynk/BlynkDetectDevice.h | 317 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "UNO R4 WiFi"` | src/Blynk/BlynkDetectDevice.h | 318 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_PORTENTA_C33)` | src/Blynk/BlynkDetectDevice.h | 319 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Portenta C33"` | src/Blynk/BlynkDetectDevice.h | 320 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_INTERNAL_DTOSTRF` | src/Blynk/BlynkDetectDevice.h | 321 | Defines a macro or constant (BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#elif defined(ARDUINO_RASPBERRY_PI_PICO_W)` | src/Blynk/BlynkDetectDevice.h | 324 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RPi Pico W"` | src/Blynk/BlynkDetectDevice.h | 325 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_RASPBERRY_PI_PICO)` | src/Blynk/BlynkDetectDevice.h | 326 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RPi Pico"` | src/Blynk/BlynkDetectDevice.h | 327 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ARCH_RP2040)` | src/Blynk/BlynkDetectDevice.h | 328 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RP2040"` | src/Blynk/BlynkDetectDevice.h | 329 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_GALILEO)` | src/Blynk/BlynkDetectDevice.h | 332 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Galileo"` | src/Blynk/BlynkDetectDevice.h | 333 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 334 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 4096` | src/Blynk/BlynkDetectDevice.h | 335 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_GALILEOGEN2)` | src/Blynk/BlynkDetectDevice.h | 336 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Galileo Gen2"` | src/Blynk/BlynkDetectDevice.h | 337 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_BUFFERS_SIZE 4096` | src/Blynk/BlynkDetectDevice.h | 338 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 339 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#elif defined(ARDUINO_EDISON)` | src/Blynk/BlynkDetectDevice.h | 340 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Edison"` | src/Blynk/BlynkDetectDevice.h | 341 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 342 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 4096` | src/Blynk/BlynkDetectDevice.h | 343 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_ARCH_ARC32)` | src/Blynk/BlynkDetectDevice.h | 344 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Arduino 101"` | src/Blynk/BlynkDetectDevice.h | 345 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 346 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 347 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_DASH)` | src/Blynk/BlynkDetectDevice.h | 350 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Dash"` | src/Blynk/BlynkDetectDevice.h | 351 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_DASHPRO)` | src/Blynk/BlynkDetectDevice.h | 352 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Dash Pro"` | src/Blynk/BlynkDetectDevice.h | 353 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_RedBear_Duo)` | src/Blynk/BlynkDetectDevice.h | 356 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RedBear Duo"` | src/Blynk/BlynkDetectDevice.h | 357 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 358 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 359 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_BLEND)` | src/Blynk/BlynkDetectDevice.h | 360 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Blend"` | src/Blynk/BlynkDetectDevice.h | 361 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_BLEND_MICRO_8MHZ) \|\| defined(ARDUINO_BLEND_MICRO_16MHZ)` | src/Blynk/BlynkDetectDevice.h | 362 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Blend Micro"` | src/Blynk/BlynkDetectDevice.h | 363 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_RBL_nRF51822)` | src/Blynk/BlynkDetectDevice.h | 364 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "BLE Nano"` | src/Blynk/BlynkDetectDevice.h | 365 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ESP8266_NODEMCU)` | src/Blynk/BlynkDetectDevice.h | 368 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "NodeMCU"` | src/Blynk/BlynkDetectDevice.h | 369 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ARCH_ESP8266)` | src/Blynk/BlynkDetectDevice.h | 370 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP8266"` | src/Blynk/BlynkDetectDevice.h | 371 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ESP32C3_DEV) \|\| defined(CONFIG_IDF_TARGET_ESP32C3)` | src/Blynk/BlynkDetectDevice.h | 374 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP32-C3"` | src/Blynk/BlynkDetectDevice.h | 375 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ESP32C6_DEV) \|\| defined(CONFIG_IDF_TARGET_ESP32C6)` | src/Blynk/BlynkDetectDevice.h | 376 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP32-C6"` | src/Blynk/BlynkDetectDevice.h | 377 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ESP32S3_DEV) \|\| defined(CONFIG_IDF_TARGET_ESP32S3)` | src/Blynk/BlynkDetectDevice.h | 378 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP32-S3"` | src/Blynk/BlynkDetectDevice.h | 379 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ESP32S2_DEV) \|\| defined(CONFIG_IDF_TARGET_ESP32S2)` | src/Blynk/BlynkDetectDevice.h | 380 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP32-S2"` | src/Blynk/BlynkDetectDevice.h | 381 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ARCH_ESP32)  \|\| defined(CONFIG_IDF_TARGET_ESP32)` | src/Blynk/BlynkDetectDevice.h | 382 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "ESP32"` | src/Blynk/BlynkDetectDevice.h | 383 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_ARCH_STM32F1)` | src/Blynk/BlynkDetectDevice.h | 386 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "STM32F1"` | src/Blynk/BlynkDetectDevice.h | 387 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 388 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#elif defined(ARDUINO_ARCH_STM32F3)` | src/Blynk/BlynkDetectDevice.h | 389 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "STM32F3"` | src/Blynk/BlynkDetectDevice.h | 390 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 391 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#elif defined(ARDUINO_ARCH_STM32F4)` | src/Blynk/BlynkDetectDevice.h | 392 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "STM32F4"` | src/Blynk/BlynkDetectDevice.h | 393 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 394 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 395 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 396 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#elif defined(ARDUINO_ESP8266_OAK)` | src/Blynk/BlynkDetectDevice.h | 399 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Oak"` | src/Blynk/BlynkDetectDevice.h | 400 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 401 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#elif defined(ARDUINO_AVR_DIGISPARK)` | src/Blynk/BlynkDetectDevice.h | 402 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Digispark"` | src/Blynk/BlynkDetectDevice.h | 403 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 404 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#elif defined(ARDUINO_AVR_DIGISPARKPRO)` | src/Blynk/BlynkDetectDevice.h | 405 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Digispark Pro"` | src/Blynk/BlynkDetectDevice.h | 406 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_NO_YIELD` | src/Blynk/BlynkDetectDevice.h | 407 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#elif defined(ARDUINO_AVR_USB)` | src/Blynk/BlynkDetectDevice.h | 410 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "CoreUSB"` | src/Blynk/BlynkDetectDevice.h | 411 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_PLUS)` | src/Blynk/BlynkDetectDevice.h | 412 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Core+"` | src/Blynk/BlynkDetectDevice.h | 413 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_AVR_RF)` | src/Blynk/BlynkDetectDevice.h | 414 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "CoreRF"` | src/Blynk/BlynkDetectDevice.h | 415 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#elif defined(ARDUINO_WILDFIRE_V2)` | src/Blynk/BlynkDetectDevice.h | 418 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Wildfire V2"` | src/Blynk/BlynkDetectDevice.h | 419 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 420 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 421 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_WILDFIRE_V3)` | src/Blynk/BlynkDetectDevice.h | 422 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Wildfire V3"` | src/Blynk/BlynkDetectDevice.h | 423 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 424 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 425 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_WILDFIRE_V4)` | src/Blynk/BlynkDetectDevice.h | 426 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Wildfire V4"` | src/Blynk/BlynkDetectDevice.h | 427 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 428 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 429 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(SEEED_WIO_TERMINAL)` | src/Blynk/BlynkDetectDevice.h | 432 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE "Seeed Wio Terminal"` | src/Blynk/BlynkDetectDevice.h | 433 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 434 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 435 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(__Simblee__)` | src/Blynk/BlynkDetectDevice.h | 438 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Simblee"` | src/Blynk/BlynkDetectDevice.h | 439 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 440 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 512` | src/Blynk/BlynkDetectDevice.h | 441 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(__RFduino__)` | src/Blynk/BlynkDetectDevice.h | 444 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "RFduino"` | src/Blynk/BlynkDetectDevice.h | 445 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 446 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 512` | src/Blynk/BlynkDetectDevice.h | 447 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_ARCH_NRF5) && defined(NRF52_SERIES)` | src/Blynk/BlynkDetectDevice.h | 450 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "nRF52"` | src/Blynk/BlynkDetectDevice.h | 451 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 452 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 453 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#elif defined(ARDUINO_ARCH_NRF5)` | src/Blynk/BlynkDetectDevice.h | 456 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "nRF51"` | src/Blynk/BlynkDetectDevice.h | 457 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 458 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 512` | src/Blynk/BlynkDetectDevice.h | 459 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 461 | Else clause for conditional compilation |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/Blynk/BlynkDetectDevice.h | 462 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#warning "Cannot detect board type"` | src/Blynk/BlynkDetectDevice.h | 463 | Generates a compilation warning with a message: "Cannot detect board type" |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 464 | Ends conditional compilation block |
+| `#define BLYNK_INFO_DEVICE  "Arduino"` | src/Blynk/BlynkDetectDevice.h | 465 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 466 | Ends conditional compilation block |
+| `#elif defined(TI_CC3220)` | src/Blynk/BlynkDetectDevice.h | 468 | Else-if for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "TI CC3220"` | src/Blynk/BlynkDetectDevice.h | 469 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#define BLYNK_USE_128_VPINS` | src/Blynk/BlynkDetectDevice.h | 470 | Defines a macro or constant (BLYNK_USE_128_VPINS) |
+| `#define BLYNK_BUFFERS_SIZE 1024` | src/Blynk/BlynkDetectDevice.h | 471 | Defines a macro or constant (BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_USE_INTERNAL_DTOSTRF` | src/Blynk/BlynkDetectDevice.h | 473 | Defines a macro or constant (BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#else` | src/Blynk/BlynkDetectDevice.h | 475 | Else clause for conditional compilation |
+| `#define BLYNK_INFO_DEVICE  "Custom platform"` | src/Blynk/BlynkDetectDevice.h | 477 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 479 | Ends conditional compilation block |
+| `#if !defined(BLYNK_MAX_READBYTES) && defined(BLYNK_BUFFERS_SIZE)` | src/Blynk/BlynkDetectDevice.h | 481 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_MAX_READBYTES) && defined(BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_MAX_READBYTES  BLYNK_BUFFERS_SIZE` | src/Blynk/BlynkDetectDevice.h | 482 | Defines a macro or constant (BLYNK_MAX_READBYTES) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 483 | Ends conditional compilation block |
+| `#if !defined(BLYNK_MAX_SENDBYTES) && defined(BLYNK_BUFFERS_SIZE)` | src/Blynk/BlynkDetectDevice.h | 485 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_MAX_SENDBYTES) && defined(BLYNK_BUFFERS_SIZE) |
+| `#define BLYNK_MAX_SENDBYTES  BLYNK_BUFFERS_SIZE` | src/Blynk/BlynkDetectDevice.h | 486 | Defines a macro or constant (BLYNK_MAX_SENDBYTES) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 487 | Ends conditional compilation block |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/Blynk/BlynkDetectDevice.h | 491 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#if defined(BLYNK_INFO_DEVICE)` | src/Blynk/BlynkDetectDevice.h | 492 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_INFO_DEVICE) |
+| `#pragma message ("BLYNK_INFO_DEVICE=" BLYNK_TOSTRING(BLYNK_INFO_DEVICE))` | src/Blynk/BlynkDetectDevice.h | 493 | Compiler-specific directive - message ("BLYNK_INFO_DEVICE=" BLYNK_TOSTRING(BLYNK_INFO_DEVICE)) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 494 | Ends conditional compilation block |
+| `#if defined(BLYNK_INFO_CPU)` | src/Blynk/BlynkDetectDevice.h | 496 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_INFO_CPU) |
+| `#pragma message ("BLYNK_INFO_CPU="    BLYNK_TOSTRING(BLYNK_INFO_CPU))` | src/Blynk/BlynkDetectDevice.h | 497 | Compiler-specific directive - message ("BLYNK_INFO_CPU="    BLYNK_TOSTRING(BLYNK_INFO_CPU)) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 498 | Ends conditional compilation block |
+| `#if defined(BLYNK_BUFFERS_SIZE)` | src/Blynk/BlynkDetectDevice.h | 500 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_BUFFERS_SIZE) |
+| `#pragma message ("BLYNK_BUFFERS_SIZE=" BLYNK_TOSTRING(BLYNK_BUFFERS_SIZE))` | src/Blynk/BlynkDetectDevice.h | 501 | Compiler-specific directive - message ("BLYNK_BUFFERS_SIZE=" BLYNK_TOSTRING(BLYNK_BUFFERS_SIZE)) |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 502 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 503 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 505 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkDetectDevice.h | 507 | Ends conditional compilation block |
+| `#ifndef BLYNKEVERYN_H` | src/Blynk/BlynkEveryN.h | 2 | Conditional compilation - evaluates compile-time expression - ndef BLYNKEVERYN_H |
+| `#define BLYNKEVERYN_H` | src/Blynk/BlynkEveryN.h | 3 | Defines a macro or constant (BLYNKEVERYN_H) |
+| `#include <Blynk/BlynkDebug.h>` | src/Blynk/BlynkEveryN.h | 5 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#define BLYNK_EVERY_N_MILLIS_I(NAME,N)  static BlynkEveryNMillis NAME(N); if(NAME)` | src/Blynk/BlynkEveryN.h | 59 | Defines a macro or constant (BLYNK_EVERY_N_MILLIS_I) |
+| `#define BLYNK_EVERY_N_SECONDS_I(NAME,N) static BlynkEveryNSeconds NAME(N); if(NAME)` | src/Blynk/BlynkEveryN.h | 60 | Defines a macro or constant (BLYNK_EVERY_N_SECONDS_I) |
+| `#define BLYNK_EVERY_N_MINUTES_I(NAME,N) static BlynkEveryNMinutes NAME(N); if(NAME)` | src/Blynk/BlynkEveryN.h | 61 | Defines a macro or constant (BLYNK_EVERY_N_MINUTES_I) |
+| `#define BLYNK_EVERY_N_HOURS_I(NAME,N)   static BlynkEveryNHours NAME(N); if(NAME)` | src/Blynk/BlynkEveryN.h | 62 | Defines a macro or constant (BLYNK_EVERY_N_HOURS_I) |
+| `#define BLYNK_EVERY_N_MILLIS(N)  BLYNK_EVERY_N_MILLIS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)` | src/Blynk/BlynkEveryN.h | 64 | Defines a macro or constant (BLYNK_EVERY_N_MILLIS) |
+| `#define BLYNK_EVERY_N_SECONDS(N) BLYNK_EVERY_N_SECONDS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)` | src/Blynk/BlynkEveryN.h | 65 | Defines a macro or constant (BLYNK_EVERY_N_SECONDS) |
+| `#define BLYNK_EVERY_N_MINUTES(N) BLYNK_EVERY_N_MINUTES_I(BLYNK_CONCAT2(PER, __COUNTER__),N)` | src/Blynk/BlynkEveryN.h | 66 | Defines a macro or constant (BLYNK_EVERY_N_MINUTES) |
+| `#define BLYNK_EVERY_N_HOURS(N)   BLYNK_EVERY_N_HOURS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)` | src/Blynk/BlynkEveryN.h | 67 | Defines a macro or constant (BLYNK_EVERY_N_HOURS) |
+| `#endif` | src/Blynk/BlynkEveryN.h | 69 | Ends conditional compilation block |
+| `#ifndef BlynkHandlers_h` | src/Blynk/BlynkHandlers.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkHandlers_h |
+| `#define BlynkHandlers_h` | src/Blynk/BlynkHandlers.h | 12 | Defines a macro or constant (BlynkHandlers_h) |
+| `#include <Blynk/BlynkConfig.h>` | src/Blynk/BlynkHandlers.h | 14 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkParam.h>` | src/Blynk/BlynkHandlers.h | 15 | Includes the contents of a file (Blynk/BlynkParam.h) |
+| `#define V0  0` | src/Blynk/BlynkHandlers.h | 19 | Defines a macro or constant (V0) |
+| `#define V1  1` | src/Blynk/BlynkHandlers.h | 20 | Defines a macro or constant (V1) |
+| `#define V2  2` | src/Blynk/BlynkHandlers.h | 21 | Defines a macro or constant (V2) |
+| `#define V3  3` | src/Blynk/BlynkHandlers.h | 22 | Defines a macro or constant (V3) |
+| `#define V4  4` | src/Blynk/BlynkHandlers.h | 23 | Defines a macro or constant (V4) |
+| `#define V5  5` | src/Blynk/BlynkHandlers.h | 24 | Defines a macro or constant (V5) |
+| `#define V6  6` | src/Blynk/BlynkHandlers.h | 25 | Defines a macro or constant (V6) |
+| `#define V7  7` | src/Blynk/BlynkHandlers.h | 26 | Defines a macro or constant (V7) |
+| `#define V8  8` | src/Blynk/BlynkHandlers.h | 27 | Defines a macro or constant (V8) |
+| `#define V9  9` | src/Blynk/BlynkHandlers.h | 28 | Defines a macro or constant (V9) |
+| `#define V10 10` | src/Blynk/BlynkHandlers.h | 29 | Defines a macro or constant (V10) |
+| `#define V11 11` | src/Blynk/BlynkHandlers.h | 30 | Defines a macro or constant (V11) |
+| `#define V12 12` | src/Blynk/BlynkHandlers.h | 31 | Defines a macro or constant (V12) |
+| `#define V13 13` | src/Blynk/BlynkHandlers.h | 32 | Defines a macro or constant (V13) |
+| `#define V14 14` | src/Blynk/BlynkHandlers.h | 33 | Defines a macro or constant (V14) |
+| `#define V15 15` | src/Blynk/BlynkHandlers.h | 34 | Defines a macro or constant (V15) |
+| `#define V16 16` | src/Blynk/BlynkHandlers.h | 35 | Defines a macro or constant (V16) |
+| `#define V17 17` | src/Blynk/BlynkHandlers.h | 36 | Defines a macro or constant (V17) |
+| `#define V18 18` | src/Blynk/BlynkHandlers.h | 37 | Defines a macro or constant (V18) |
+| `#define V19 19` | src/Blynk/BlynkHandlers.h | 38 | Defines a macro or constant (V19) |
+| `#define V20 20` | src/Blynk/BlynkHandlers.h | 39 | Defines a macro or constant (V20) |
+| `#define V21 21` | src/Blynk/BlynkHandlers.h | 40 | Defines a macro or constant (V21) |
+| `#define V22 22` | src/Blynk/BlynkHandlers.h | 41 | Defines a macro or constant (V22) |
+| `#define V23 23` | src/Blynk/BlynkHandlers.h | 42 | Defines a macro or constant (V23) |
+| `#define V24 24` | src/Blynk/BlynkHandlers.h | 43 | Defines a macro or constant (V24) |
+| `#define V25 25` | src/Blynk/BlynkHandlers.h | 44 | Defines a macro or constant (V25) |
+| `#define V26 26` | src/Blynk/BlynkHandlers.h | 45 | Defines a macro or constant (V26) |
+| `#define V27 27` | src/Blynk/BlynkHandlers.h | 46 | Defines a macro or constant (V27) |
+| `#define V28 28` | src/Blynk/BlynkHandlers.h | 47 | Defines a macro or constant (V28) |
+| `#define V29 29` | src/Blynk/BlynkHandlers.h | 48 | Defines a macro or constant (V29) |
+| `#define V30 30` | src/Blynk/BlynkHandlers.h | 49 | Defines a macro or constant (V30) |
+| `#define V31 31` | src/Blynk/BlynkHandlers.h | 50 | Defines a macro or constant (V31) |
+| `#ifdef BLYNK_USE_128_VPINS` | src/Blynk/BlynkHandlers.h | 51 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#define V32 32` | src/Blynk/BlynkHandlers.h | 52 | Defines a macro or constant (V32) |
+| `#define V33 33` | src/Blynk/BlynkHandlers.h | 53 | Defines a macro or constant (V33) |
+| `#define V34 34` | src/Blynk/BlynkHandlers.h | 54 | Defines a macro or constant (V34) |
+| `#define V35 35` | src/Blynk/BlynkHandlers.h | 55 | Defines a macro or constant (V35) |
+| `#define V36 36` | src/Blynk/BlynkHandlers.h | 56 | Defines a macro or constant (V36) |
+| `#define V37 37` | src/Blynk/BlynkHandlers.h | 57 | Defines a macro or constant (V37) |
+| `#define V38 38` | src/Blynk/BlynkHandlers.h | 58 | Defines a macro or constant (V38) |
+| `#define V39 39` | src/Blynk/BlynkHandlers.h | 59 | Defines a macro or constant (V39) |
+| `#define V40 40` | src/Blynk/BlynkHandlers.h | 60 | Defines a macro or constant (V40) |
+| `#define V41 41` | src/Blynk/BlynkHandlers.h | 61 | Defines a macro or constant (V41) |
+| `#define V42 42` | src/Blynk/BlynkHandlers.h | 62 | Defines a macro or constant (V42) |
+| `#define V43 43` | src/Blynk/BlynkHandlers.h | 63 | Defines a macro or constant (V43) |
+| `#define V44 44` | src/Blynk/BlynkHandlers.h | 64 | Defines a macro or constant (V44) |
+| `#define V45 45` | src/Blynk/BlynkHandlers.h | 65 | Defines a macro or constant (V45) |
+| `#define V46 46` | src/Blynk/BlynkHandlers.h | 66 | Defines a macro or constant (V46) |
+| `#define V47 47` | src/Blynk/BlynkHandlers.h | 67 | Defines a macro or constant (V47) |
+| `#define V48 48` | src/Blynk/BlynkHandlers.h | 68 | Defines a macro or constant (V48) |
+| `#define V49 49` | src/Blynk/BlynkHandlers.h | 69 | Defines a macro or constant (V49) |
+| `#define V50 50` | src/Blynk/BlynkHandlers.h | 70 | Defines a macro or constant (V50) |
+| `#define V51 51` | src/Blynk/BlynkHandlers.h | 71 | Defines a macro or constant (V51) |
+| `#define V52 52` | src/Blynk/BlynkHandlers.h | 72 | Defines a macro or constant (V52) |
+| `#define V53 53` | src/Blynk/BlynkHandlers.h | 73 | Defines a macro or constant (V53) |
+| `#define V54 54` | src/Blynk/BlynkHandlers.h | 74 | Defines a macro or constant (V54) |
+| `#define V55 55` | src/Blynk/BlynkHandlers.h | 75 | Defines a macro or constant (V55) |
+| `#define V56 56` | src/Blynk/BlynkHandlers.h | 76 | Defines a macro or constant (V56) |
+| `#define V57 57` | src/Blynk/BlynkHandlers.h | 77 | Defines a macro or constant (V57) |
+| `#define V58 58` | src/Blynk/BlynkHandlers.h | 78 | Defines a macro or constant (V58) |
+| `#define V59 59` | src/Blynk/BlynkHandlers.h | 79 | Defines a macro or constant (V59) |
+| `#define V60 60` | src/Blynk/BlynkHandlers.h | 80 | Defines a macro or constant (V60) |
+| `#define V61 61` | src/Blynk/BlynkHandlers.h | 81 | Defines a macro or constant (V61) |
+| `#define V62 62` | src/Blynk/BlynkHandlers.h | 82 | Defines a macro or constant (V62) |
+| `#define V63 63` | src/Blynk/BlynkHandlers.h | 83 | Defines a macro or constant (V63) |
+| `#define V64 64` | src/Blynk/BlynkHandlers.h | 84 | Defines a macro or constant (V64) |
+| `#define V65 65` | src/Blynk/BlynkHandlers.h | 85 | Defines a macro or constant (V65) |
+| `#define V66 66` | src/Blynk/BlynkHandlers.h | 86 | Defines a macro or constant (V66) |
+| `#define V67 67` | src/Blynk/BlynkHandlers.h | 87 | Defines a macro or constant (V67) |
+| `#define V68 68` | src/Blynk/BlynkHandlers.h | 88 | Defines a macro or constant (V68) |
+| `#define V69 69` | src/Blynk/BlynkHandlers.h | 89 | Defines a macro or constant (V69) |
+| `#define V70 70` | src/Blynk/BlynkHandlers.h | 90 | Defines a macro or constant (V70) |
+| `#define V71 71` | src/Blynk/BlynkHandlers.h | 91 | Defines a macro or constant (V71) |
+| `#define V72 72` | src/Blynk/BlynkHandlers.h | 92 | Defines a macro or constant (V72) |
+| `#define V73 73` | src/Blynk/BlynkHandlers.h | 93 | Defines a macro or constant (V73) |
+| `#define V74 74` | src/Blynk/BlynkHandlers.h | 94 | Defines a macro or constant (V74) |
+| `#define V75 75` | src/Blynk/BlynkHandlers.h | 95 | Defines a macro or constant (V75) |
+| `#define V76 76` | src/Blynk/BlynkHandlers.h | 96 | Defines a macro or constant (V76) |
+| `#define V77 77` | src/Blynk/BlynkHandlers.h | 97 | Defines a macro or constant (V77) |
+| `#define V78 78` | src/Blynk/BlynkHandlers.h | 98 | Defines a macro or constant (V78) |
+| `#define V79 79` | src/Blynk/BlynkHandlers.h | 99 | Defines a macro or constant (V79) |
+| `#define V80 80` | src/Blynk/BlynkHandlers.h | 100 | Defines a macro or constant (V80) |
+| `#define V81 81` | src/Blynk/BlynkHandlers.h | 101 | Defines a macro or constant (V81) |
+| `#define V82 82` | src/Blynk/BlynkHandlers.h | 102 | Defines a macro or constant (V82) |
+| `#define V83 83` | src/Blynk/BlynkHandlers.h | 103 | Defines a macro or constant (V83) |
+| `#define V84 84` | src/Blynk/BlynkHandlers.h | 104 | Defines a macro or constant (V84) |
+| `#define V85 85` | src/Blynk/BlynkHandlers.h | 105 | Defines a macro or constant (V85) |
+| `#define V86 86` | src/Blynk/BlynkHandlers.h | 106 | Defines a macro or constant (V86) |
+| `#define V87 87` | src/Blynk/BlynkHandlers.h | 107 | Defines a macro or constant (V87) |
+| `#define V88 88` | src/Blynk/BlynkHandlers.h | 108 | Defines a macro or constant (V88) |
+| `#define V89 89` | src/Blynk/BlynkHandlers.h | 109 | Defines a macro or constant (V89) |
+| `#define V90 90` | src/Blynk/BlynkHandlers.h | 110 | Defines a macro or constant (V90) |
+| `#define V91 91` | src/Blynk/BlynkHandlers.h | 111 | Defines a macro or constant (V91) |
+| `#define V92 92` | src/Blynk/BlynkHandlers.h | 112 | Defines a macro or constant (V92) |
+| `#define V93 93` | src/Blynk/BlynkHandlers.h | 113 | Defines a macro or constant (V93) |
+| `#define V94 94` | src/Blynk/BlynkHandlers.h | 114 | Defines a macro or constant (V94) |
+| `#define V95 95` | src/Blynk/BlynkHandlers.h | 115 | Defines a macro or constant (V95) |
+| `#define V96 96` | src/Blynk/BlynkHandlers.h | 116 | Defines a macro or constant (V96) |
+| `#define V97 97` | src/Blynk/BlynkHandlers.h | 117 | Defines a macro or constant (V97) |
+| `#define V98 98` | src/Blynk/BlynkHandlers.h | 118 | Defines a macro or constant (V98) |
+| `#define V99 99` | src/Blynk/BlynkHandlers.h | 119 | Defines a macro or constant (V99) |
+| `#define V100 100` | src/Blynk/BlynkHandlers.h | 120 | Defines a macro or constant (V100) |
+| `#define V101 101` | src/Blynk/BlynkHandlers.h | 121 | Defines a macro or constant (V101) |
+| `#define V102 102` | src/Blynk/BlynkHandlers.h | 122 | Defines a macro or constant (V102) |
+| `#define V103 103` | src/Blynk/BlynkHandlers.h | 123 | Defines a macro or constant (V103) |
+| `#define V104 104` | src/Blynk/BlynkHandlers.h | 124 | Defines a macro or constant (V104) |
+| `#define V105 105` | src/Blynk/BlynkHandlers.h | 125 | Defines a macro or constant (V105) |
+| `#define V106 106` | src/Blynk/BlynkHandlers.h | 126 | Defines a macro or constant (V106) |
+| `#define V107 107` | src/Blynk/BlynkHandlers.h | 127 | Defines a macro or constant (V107) |
+| `#define V108 108` | src/Blynk/BlynkHandlers.h | 128 | Defines a macro or constant (V108) |
+| `#define V109 109` | src/Blynk/BlynkHandlers.h | 129 | Defines a macro or constant (V109) |
+| `#define V110 110` | src/Blynk/BlynkHandlers.h | 130 | Defines a macro or constant (V110) |
+| `#define V111 111` | src/Blynk/BlynkHandlers.h | 131 | Defines a macro or constant (V111) |
+| `#define V112 112` | src/Blynk/BlynkHandlers.h | 132 | Defines a macro or constant (V112) |
+| `#define V113 113` | src/Blynk/BlynkHandlers.h | 133 | Defines a macro or constant (V113) |
+| `#define V114 114` | src/Blynk/BlynkHandlers.h | 134 | Defines a macro or constant (V114) |
+| `#define V115 115` | src/Blynk/BlynkHandlers.h | 135 | Defines a macro or constant (V115) |
+| `#define V116 116` | src/Blynk/BlynkHandlers.h | 136 | Defines a macro or constant (V116) |
+| `#define V117 117` | src/Blynk/BlynkHandlers.h | 137 | Defines a macro or constant (V117) |
+| `#define V118 118` | src/Blynk/BlynkHandlers.h | 138 | Defines a macro or constant (V118) |
+| `#define V119 119` | src/Blynk/BlynkHandlers.h | 139 | Defines a macro or constant (V119) |
+| `#define V120 120` | src/Blynk/BlynkHandlers.h | 140 | Defines a macro or constant (V120) |
+| `#define V121 121` | src/Blynk/BlynkHandlers.h | 141 | Defines a macro or constant (V121) |
+| `#define V122 122` | src/Blynk/BlynkHandlers.h | 142 | Defines a macro or constant (V122) |
+| `#define V123 123` | src/Blynk/BlynkHandlers.h | 143 | Defines a macro or constant (V123) |
+| `#define V124 124` | src/Blynk/BlynkHandlers.h | 144 | Defines a macro or constant (V124) |
+| `#define V125 125` | src/Blynk/BlynkHandlers.h | 145 | Defines a macro or constant (V125) |
+| `#define V126 126` | src/Blynk/BlynkHandlers.h | 146 | Defines a macro or constant (V126) |
+| `#define V127 127` | src/Blynk/BlynkHandlers.h | 147 | Defines a macro or constant (V127) |
+| `#endif` | src/Blynk/BlynkHandlers.h | 148 | Ends conditional compilation block |
+| `#define BLYNK_WRITE_2(pin) \` | src/Blynk/BlynkHandlers.h | 151 | Defines a macro or constant (BLYNK_WRITE_2) |
+| `#define BLYNK_READ_2(pin)  \` | src/Blynk/BlynkHandlers.h | 154 | Defines a macro or constant (BLYNK_READ_2) |
+| `#define BLYNK_WRITE_DEFAULT() BLYNK_WRITE_2(Default)` | src/Blynk/BlynkHandlers.h | 157 | Defines a macro or constant (BLYNK_WRITE_DEFAULT) |
+| `#define BLYNK_READ_DEFAULT()  BLYNK_READ_2(Default)` | src/Blynk/BlynkHandlers.h | 158 | Defines a macro or constant (BLYNK_READ_DEFAULT) |
+| `#define BLYNK_WRITE(pin)      BLYNK_WRITE_2(pin)` | src/Blynk/BlynkHandlers.h | 160 | Defines a macro or constant (BLYNK_WRITE) |
+| `#define BLYNK_READ(pin)       BLYNK_READ_2(pin)` | src/Blynk/BlynkHandlers.h | 161 | Defines a macro or constant (BLYNK_READ) |
+| `#define BLYNK_IN_2(pin)  \` | src/Blynk/BlynkHandlers.h | 164 | Defines a macro or constant (BLYNK_IN_2) |
+| `#define BLYNK_OUT_2(pin) \` | src/Blynk/BlynkHandlers.h | 167 | Defines a macro or constant (BLYNK_OUT_2) |
+| `#define BLYNK_INPUT_DEFAULT()   BLYNK_IN_2(Default)` | src/Blynk/BlynkHandlers.h | 170 | Defines a macro or constant (BLYNK_INPUT_DEFAULT) |
+| `#define BLYNK_OUTPUT_DEFAULT()  BLYNK_OUT_2(Default)` | src/Blynk/BlynkHandlers.h | 171 | Defines a macro or constant (BLYNK_OUTPUT_DEFAULT) |
+| `#define BLYNK_INPUT(pin)        BLYNK_IN_2(pin)` | src/Blynk/BlynkHandlers.h | 173 | Defines a macro or constant (BLYNK_INPUT) |
+| `#define BLYNK_OUTPUT(pin)       BLYNK_OUT_2(pin)` | src/Blynk/BlynkHandlers.h | 174 | Defines a macro or constant (BLYNK_OUTPUT) |
+| `#define BLYNK_CONNECTED()    void BlynkOnConnected()` | src/Blynk/BlynkHandlers.h | 177 | Defines a macro or constant (BLYNK_CONNECTED) |
+| `#define BLYNK_DISCONNECTED() void BlynkOnDisconnected()` | src/Blynk/BlynkHandlers.h | 178 | Defines a macro or constant (BLYNK_DISCONNECTED) |
+| `#define BLYNK_VAR_INT(name, pin) \` | src/Blynk/BlynkHandlers.h | 182 | Defines a macro or constant (BLYNK_VAR_INT) |
+| `#define BLYNK_VAR_LONG(name, pin) \` | src/Blynk/BlynkHandlers.h | 187 | Defines a macro or constant (BLYNK_VAR_LONG) |
+| `#ifndef BLYNK_NO_FLOAT` | src/Blynk/BlynkHandlers.h | 192 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_FLOAT |
+| `#define BLYNK_VAR_DOUBLE(name, pin) \` | src/Blynk/BlynkHandlers.h | 193 | Defines a macro or constant (BLYNK_VAR_DOUBLE) |
+| `#endif` | src/Blynk/BlynkHandlers.h | 197 | Ends conditional compilation block |
+| `#ifdef ARDUINO` | src/Blynk/BlynkHandlers.h | 199 | Conditional compilation - evaluates compile-time expression - def ARDUINO |
+| `#define BLYNK_VAR_STRING(name, pin) \` | src/Blynk/BlynkHandlers.h | 200 | Defines a macro or constant (BLYNK_VAR_STRING) |
+| `#endif` | src/Blynk/BlynkHandlers.h | 204 | Ends conditional compilation block |
+| `#ifdef __cplusplus` | src/Blynk/BlynkHandlers.h | 207 | Conditional compilation - evaluates compile-time expression - def __cplusplus |
+| `#endif` | src/Blynk/BlynkHandlers.h | 209 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_128_VPINS` | src/Blynk/BlynkHandlers.h | 281 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/Blynk/BlynkHandlers.h | 378 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_128_VPINS` | src/Blynk/BlynkHandlers.h | 412 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/Blynk/BlynkHandlers.h | 509 | Ends conditional compilation block |
+| `#ifdef __cplusplus` | src/Blynk/BlynkHandlers.h | 511 | Conditional compilation - evaluates compile-time expression - def __cplusplus |
+| `#endif` | src/Blynk/BlynkHandlers.h | 513 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkHandlers.h | 515 | Ends conditional compilation block |
+| `#ifndef BlynkHelpers_h` | src/Blynk/BlynkHelpers.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkHelpers_h |
+| `#define BlynkHelpers_h` | src/Blynk/BlynkHelpers.h | 12 | Defines a macro or constant (BlynkHelpers_h) |
+| `#if defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkHelpers.h | 14 | Conditional compilation - evaluates compile-time expression - defined(SPARK) \|\| defined(PARTICLE) |
+| `#include "application.h"` | src/Blynk/BlynkHelpers.h | 15 | Includes the contents of a file (application.h) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 16 | Ends conditional compilation block |
+| `#if defined(ARDUINO)` | src/Blynk/BlynkHelpers.h | 18 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) |
+| `#if ARDUINO >= 100` | src/Blynk/BlynkHelpers.h | 19 | Conditional compilation - evaluates compile-time expression - ARDUINO >= 100 |
+| `#include <Arduino.h>` | src/Blynk/BlynkHelpers.h | 20 | Includes the contents of a file (Arduino.h) |
+| `#else` | src/Blynk/BlynkHelpers.h | 21 | Else clause for conditional compilation |
+| `#include <WProgram.h>` | src/Blynk/BlynkHelpers.h | 22 | Includes the contents of a file (WProgram.h) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 23 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkHelpers.h | 24 | Ends conditional compilation block |
+| `#if defined(LINUX)` | src/Blynk/BlynkHelpers.h | 26 | Conditional compilation - evaluates compile-time expression - defined(LINUX) |
+| `#if defined(RASPBERRY)` | src/Blynk/BlynkHelpers.h | 27 | Conditional compilation - evaluates compile-time expression - defined(RASPBERRY) |
+| `#include <wiringPi.h>` | src/Blynk/BlynkHelpers.h | 28 | Includes the contents of a file (wiringPi.h) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 29 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkHelpers.h | 30 | Ends conditional compilation block |
+| `#include <stddef.h>` | src/Blynk/BlynkHelpers.h | 32 | Includes the contents of a file (stddef.h) |
+| `#include <inttypes.h>` | src/Blynk/BlynkHelpers.h | 33 | Includes the contents of a file (inttypes.h) |
+| `#define BLYNK_NEWLINE         "\r\n"` | src/Blynk/BlynkHelpers.h | 37 | Defines a macro or constant (BLYNK_NEWLINE) |
+| `#define BLYNK_CONCAT(a, b)    a ## b` | src/Blynk/BlynkHelpers.h | 39 | Defines a macro or constant (BLYNK_CONCAT) |
+| `#define BLYNK_CONCAT2(a, b)   BLYNK_CONCAT(a, b)` | src/Blynk/BlynkHelpers.h | 40 | Defines a macro or constant (BLYNK_CONCAT2) |
+| `#define BLYNK_STRINGIFY(x)    #x` | src/Blynk/BlynkHelpers.h | 42 | Defines a macro or constant (BLYNK_STRINGIFY) |
+| `#define BLYNK_TOSTRING(x)     BLYNK_STRINGIFY(x)` | src/Blynk/BlynkHelpers.h | 43 | Defines a macro or constant (BLYNK_TOSTRING) |
+| `#define BLYNK_COUNT_OF(x)     ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))` | src/Blynk/BlynkHelpers.h | 45 | Defines a macro or constant (BLYNK_COUNT_OF) |
+| `#define BLYNK_ATTR_PACKED     __attribute__ ((__packed__))` | src/Blynk/BlynkHelpers.h | 47 | Defines a macro or constant (BLYNK_ATTR_PACKED) |
+| `#define BLYNK_NORETURN        __attribute__ ((noreturn))` | src/Blynk/BlynkHelpers.h | 48 | Defines a macro or constant (BLYNK_NORETURN) |
+| `#define BLYNK_UNUSED          __attribute__ ((__unused__))` | src/Blynk/BlynkHelpers.h | 49 | Defines a macro or constant (BLYNK_UNUSED) |
+| `#define BLYNK_DEPRECATED      __attribute__ ((deprecated))` | src/Blynk/BlynkHelpers.h | 50 | Defines a macro or constant (BLYNK_DEPRECATED) |
+| `#define BLYNK_CONSTRUCTOR     __attribute__ ((constructor))` | src/Blynk/BlynkHelpers.h | 51 | Defines a macro or constant (BLYNK_CONSTRUCTOR) |
+| `#define BLYNK_FALLTHROUGH     __attribute__ ((fallthrough))` | src/Blynk/BlynkHelpers.h | 52 | Defines a macro or constant (BLYNK_FALLTHROUGH) |
+| `#define BLYNK_FORCE_INLINE    inline //__attribute__((always_inline))` | src/Blynk/BlynkHelpers.h | 55 | Defines a macro or constant (BLYNK_FORCE_INLINE) |
+| `#if !defined(BLYNK_RUN_YIELD)` | src/Blynk/BlynkHelpers.h | 57 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_RUN_YIELD) |
+| `#if defined(BLYNK_NO_YIELD)` | src/Blynk/BlynkHelpers.h | 58 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NO_YIELD) |
+| `#define BLYNK_RUN_YIELD() {}` | src/Blynk/BlynkHelpers.h | 59 | Defines a macro or constant (BLYNK_RUN_YIELD) |
+| `#elif defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkHelpers.h | 60 | Else-if for conditional compilation |
+| `#define BLYNK_RUN_YIELD() { Particle.process(); }` | src/Blynk/BlynkHelpers.h | 61 | Defines a macro or constant (BLYNK_RUN_YIELD) |
+| `#elif !defined(ARDUINO) \|\| (ARDUINO < 151)` | src/Blynk/BlynkHelpers.h | 62 | Else-if for conditional compilation |
+| `#define BLYNK_RUN_YIELD() {}` | src/Blynk/BlynkHelpers.h | 63 | Defines a macro or constant (BLYNK_RUN_YIELD) |
+| `#else` | src/Blynk/BlynkHelpers.h | 64 | Else clause for conditional compilation |
+| `#define BLYNK_RUN_YIELD() { BlynkDelay(0); }` | src/Blynk/BlynkHelpers.h | 65 | Defines a macro or constant (BLYNK_RUN_YIELD) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 66 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkHelpers.h | 67 | Ends conditional compilation block |
+| `#if defined(__AVR__)` | src/Blynk/BlynkHelpers.h | 69 | Conditional compilation - evaluates compile-time expression - defined(__AVR__) |
+| `#include <avr/pgmspace.h>` | src/Blynk/BlynkHelpers.h | 70 | Includes the contents of a file (avr/pgmspace.h) |
+| `#define BLYNK_HAS_PROGMEM` | src/Blynk/BlynkHelpers.h | 71 | Defines a macro or constant (BLYNK_HAS_PROGMEM) |
+| `#define BLYNK_PROGMEM     PROGMEM` | src/Blynk/BlynkHelpers.h | 72 | Defines a macro or constant (BLYNK_PROGMEM) |
+| `#define BLYNK_F(s)        F(s)` | src/Blynk/BlynkHelpers.h | 73 | Defines a macro or constant (BLYNK_F) |
+| `#define BLYNK_PSTR(s)     PSTR(s)` | src/Blynk/BlynkHelpers.h | 74 | Defines a macro or constant (BLYNK_PSTR) |
+| `#else` | src/Blynk/BlynkHelpers.h | 75 | Else clause for conditional compilation |
+| `#define BLYNK_PROGMEM` | src/Blynk/BlynkHelpers.h | 76 | Defines a macro or constant (BLYNK_PROGMEM) |
+| `#define BLYNK_F(s)        s` | src/Blynk/BlynkHelpers.h | 77 | Defines a macro or constant (BLYNK_F) |
+| `#define BLYNK_PSTR(s)     s` | src/Blynk/BlynkHelpers.h | 78 | Defines a macro or constant (BLYNK_PSTR) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 79 | Ends conditional compilation block |
+| `#if defined(__has_include)` | src/Blynk/BlynkHelpers.h | 81 | Conditional compilation - evaluates compile-time expression - defined(__has_include) |
+| `#if __has_include(<functional>)` | src/Blynk/BlynkHelpers.h | 82 | Conditional compilation - evaluates compile-time expression - __has_include(<functional>) |
+| `#include <functional>` | src/Blynk/BlynkHelpers.h | 83 | Includes the contents of a file (functional) |
+| `#define BLYNK_HAS_FUNCTIONAL_H` | src/Blynk/BlynkHelpers.h | 84 | Defines a macro or constant (BLYNK_HAS_FUNCTIONAL_H) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 85 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkHelpers.h | 86 | Ends conditional compilation block |
+| `#if defined(BLYNK_MULTITHREADED)` | src/Blynk/BlynkHelpers.h | 88 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_MULTITHREADED) |
+| `#include <mutex>` | src/Blynk/BlynkHelpers.h | 89 | Includes the contents of a file (mutex) |
+| `#define BLYNK_MUTEX_DECL(x)     std::mutex x` | src/Blynk/BlynkHelpers.h | 91 | Defines a macro or constant (BLYNK_MUTEX_DECL) |
+| `#define BLYNK_MUTEX_GUARD(x)    std::lock_guard<std::mutex> BLYNK_CONCAT2(lg_, __LINE__)(x)` | src/Blynk/BlynkHelpers.h | 92 | Defines a macro or constant (BLYNK_MUTEX_GUARD) |
+| `#else` | src/Blynk/BlynkHelpers.h | 93 | Else clause for conditional compilation |
+| `#define BLYNK_MUTEX_DECL(x)` | src/Blynk/BlynkHelpers.h | 94 | Defines a macro or constant (BLYNK_MUTEX_DECL) |
+| `#define BLYNK_MUTEX_GUARD(x)` | src/Blynk/BlynkHelpers.h | 95 | Defines a macro or constant (BLYNK_MUTEX_GUARD) |
+| `#endif` | src/Blynk/BlynkHelpers.h | 96 | Ends conditional compilation block |
+| `#ifdef ARDUINO_AVR_DIGISPARK` | src/Blynk/BlynkHelpers.h | 98 | Conditional compilation - evaluates compile-time expression - def ARDUINO_AVR_DIGISPARK |
+| `#endif` | src/Blynk/BlynkHelpers.h | 100 | Ends conditional compilation block |
+| `#endif /* BlynkHelpers_h */` | src/Blynk/BlynkHelpers.h | 102 | Ends conditional compilation block |
+| `#ifndef BlynkParam_h` | src/Blynk/BlynkParam.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkParam_h |
+| `#define BlynkParam_h` | src/Blynk/BlynkParam.h | 12 | Defines a macro or constant (BlynkParam_h) |
+| `#include <string.h>` | src/Blynk/BlynkParam.h | 14 | Includes the contents of a file (string.h) |
+| `#include <stdlib.h>` | src/Blynk/BlynkParam.h | 15 | Includes the contents of a file (stdlib.h) |
+| `#include <Blynk/BlynkConfig.h>` | src/Blynk/BlynkParam.h | 16 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkHelpers.h>` | src/Blynk/BlynkParam.h | 17 | Includes the contents of a file (Blynk/BlynkHelpers.h) |
+| `#define BLYNK_PARAM_KV(k, v) k "\0" v "\0"` | src/Blynk/BlynkParam.h | 19 | Defines a macro or constant (BLYNK_PARAM_KV) |
+| `#define BLYNK_PARAM_PLACEHOLDER_64 "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"` | src/Blynk/BlynkParam.h | 20 | Defines a macro or constant (BLYNK_PARAM_PLACEHOLDER_64) |
+| `#if !defined(BLYNK_NO_FLOAT)` | src/Blynk/BlynkParam.h | 22 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_FLOAT) |
+| `#endif` | src/Blynk/BlynkParam.h | 24 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_LONGLONG)` | src/Blynk/BlynkParam.h | 26 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) |
+| `#endif` | src/Blynk/BlynkParam.h | 30 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL)` | src/Blynk/BlynkParam.h | 47 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL) |
+| `#elif !defined(BLYNK_NO_LONGLONG)` | src/Blynk/BlynkParam.h | 49 | Else-if for conditional compilation |
+| `#endif` | src/Blynk/BlynkParam.h | 51 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_FLOAT)` | src/Blynk/BlynkParam.h | 52 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_FLOAT) |
+| `#endif` | src/Blynk/BlynkParam.h | 55 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL)` | src/Blynk/BlynkParam.h | 88 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL) |
+| `#elif !defined(BLYNK_NO_LONGLONG)` | src/Blynk/BlynkParam.h | 90 | Else-if for conditional compilation |
+| `#endif` | src/Blynk/BlynkParam.h | 92 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_FLOAT)` | src/Blynk/BlynkParam.h | 93 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_FLOAT) |
+| `#endif` | src/Blynk/BlynkParam.h | 96 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_FLOAT` | src/Blynk/BlynkParam.h | 118 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_FLOAT |
+| `#endif` | src/Blynk/BlynkParam.h | 121 | Ends conditional compilation block |
+| `#if defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkParam.h | 123 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE) |
+| `#if defined(BLYNK_HAS_PROGMEM)` | src/Blynk/BlynkParam.h | 125 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_HAS_PROGMEM) |
+| `#endif` | src/Blynk/BlynkParam.h | 127 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkParam.h | 128 | Ends conditional compilation block |
+| `#if defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE)` | src/Blynk/BlynkParam.h | 238 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) \|\| defined(SPARK) \|\| defined(PARTICLE) |
+| `#if defined(ARDUINO_AVR_DIGISPARK) \` | src/Blynk/BlynkParam.h | 242 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_AVR_DIGISPARK) \ |
+| `#else` | src/Blynk/BlynkParam.h | 250 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkParam.h | 252 | Ends conditional compilation block |
+| `#if defined(BLYNK_HAS_PROGMEM)` | src/Blynk/BlynkParam.h | 255 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_HAS_PROGMEM) |
+| `#endif` | src/Blynk/BlynkParam.h | 269 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkParam.h | 271 | Ends conditional compilation block |
+| `#if defined(__AVR__) \|\| defined (ARDUINO_ARCH_ARC32)` | src/Blynk/BlynkParam.h | 273 | Conditional compilation - evaluates compile-time expression - defined(__AVR__) \|\| defined (ARDUINO_ARCH_ARC32) |
+| `#include <stdlib.h>` | src/Blynk/BlynkParam.h | 275 | Includes the contents of a file (stdlib.h) |
+| `#if !defined(BLYNK_NO_LONGLONG)` | src/Blynk/BlynkParam.h | 309 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) |
+| `#endif` | src/Blynk/BlynkParam.h | 325 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_FLOAT` | src/Blynk/BlynkParam.h | 327 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_FLOAT |
+| `#endif` | src/Blynk/BlynkParam.h | 344 | Ends conditional compilation block |
+| `#else` | src/Blynk/BlynkParam.h | 346 | Else clause for conditional compilation |
+| `#include <stdio.h>` | src/Blynk/BlynkParam.h | 348 | Includes the contents of a file (stdio.h) |
+| `#ifndef BLYNK_NO_FLOAT` | src/Blynk/BlynkParam.h | 386 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_FLOAT |
+| `#if defined(BLYNK_USE_INTERNAL_DTOSTRF)` | src/Blynk/BlynkParam.h | 388 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#else` | src/Blynk/BlynkParam.h | 406 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkParam.h | 420 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkParam.h | 422 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkParam.h | 424 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkParam.h | 427 | Ends conditional compilation block |
+| `#ifndef BlynkProtocol_h` | src/Blynk/BlynkProtocol.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkProtocol_h |
+| `#define BlynkProtocol_h` | src/Blynk/BlynkProtocol.h | 12 | Defines a macro or constant (BlynkProtocol_h) |
+| `#include <string.h>` | src/Blynk/BlynkProtocol.h | 14 | Includes the contents of a file (string.h) |
+| `#include <stdlib.h>` | src/Blynk/BlynkProtocol.h | 15 | Includes the contents of a file (stdlib.h) |
+| `#include <Blynk/BlynkUtility.h>` | src/Blynk/BlynkProtocol.h | 16 | Includes the contents of a file (Blynk/BlynkUtility.h) |
+| `#include <Blynk/BlynkProtocolDefs.h>` | src/Blynk/BlynkProtocol.h | 17 | Includes the contents of a file (Blynk/BlynkProtocolDefs.h) |
+| `#include <Blynk/BlynkApi.h>` | src/Blynk/BlynkProtocol.h | 18 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#if defined(BLYNK_NO_FANCY_LOGO)` | src/Blynk/BlynkProtocol.h | 85 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NO_FANCY_LOGO) |
+| `#else` | src/Blynk/BlynkProtocol.h | 91 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkProtocol.h | 102 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_DEFAULT_BANNER)` | src/Blynk/BlynkProtocol.h | 121 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_DEFAULT_BANNER) |
+| `#endif` | src/Blynk/BlynkProtocol.h | 123 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_DIRECT_CONNECT` | src/Blynk/BlynkProtocol.h | 170 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_DIRECT_CONNECT |
+| `#endif` | src/Blynk/BlynkProtocol.h | 172 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 194 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#else` | src/Blynk/BlynkProtocol.h | 196 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkProtocol.h | 198 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_DIRECT_CONNECT` | src/Blynk/BlynkProtocol.h | 211 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_DIRECT_CONNECT |
+| `#else` | src/Blynk/BlynkProtocol.h | 214 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkProtocol.h | 232 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 249 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 251 | Ends conditional compilation block |
+| `#ifndef BLYNK_USE_DIRECT_CONNECT` | src/Blynk/BlynkProtocol.h | 258 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_USE_DIRECT_CONNECT |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 266 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 270 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkProtocol.h | 287 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 301 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 303 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_DIRECT_CONNECT` | src/Blynk/BlynkProtocol.h | 315 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_DIRECT_CONNECT |
+| `#endif` | src/Blynk/BlynkProtocol.h | 321 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 325 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 329 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 392 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 394 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 404 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 406 | Ends conditional compilation block |
+| `#ifndef BLYNK_SEND_THROTTLE` | src/Blynk/BlynkProtocol.h | 435 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_SEND_THROTTLE |
+| `#define BLYNK_SEND_THROTTLE 0` | src/Blynk/BlynkProtocol.h | 436 | Defines a macro or constant (BLYNK_SEND_THROTTLE) |
+| `#endif` | src/Blynk/BlynkProtocol.h | 437 | Ends conditional compilation block |
+| `#ifndef BLYNK_SEND_CHUNK` | src/Blynk/BlynkProtocol.h | 439 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_SEND_CHUNK |
+| `#define BLYNK_SEND_CHUNK 1024 // Just a big number` | src/Blynk/BlynkProtocol.h | 440 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#endif` | src/Blynk/BlynkProtocol.h | 441 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG_ALL` | src/Blynk/BlynkProtocol.h | 447 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG_ALL |
+| `#endif` | src/Blynk/BlynkProtocol.h | 449 | Ends conditional compilation block |
+| `#if defined(BLYNK_MSG_LIMIT) && BLYNK_MSG_LIMIT > 0` | src/Blynk/BlynkProtocol.h | 453 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_MSG_LIMIT) && BLYNK_MSG_LIMIT > 0 |
+| `#ifdef BLYNK_DEBUG_ALL` | src/Blynk/BlynkProtocol.h | 458 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG_ALL |
+| `#endif` | src/Blynk/BlynkProtocol.h | 460 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkProtocol.h | 469 | Ends conditional compilation block |
+| `#if defined(BLYNK_SEND_ATOMIC) \|\| defined(ESP8266) \|\| defined(ESP32) \|\| defined(SPARK) \|\| defined(PARTICLE) \|\| defined(ENERGIA)` | src/Blynk/BlynkProtocol.h | 483 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_SEND_ATOMIC) \|\| defined(ESP8266) \|\| defined(ESP32) \|\| defined(SPARK) \|\| defined(PARTICLE) \|\| defined(ENERGIA) |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 509 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 511 | Ends conditional compilation block |
+| `#else` | src/Blynk/BlynkProtocol.h | 520 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkProtocol.h | 544 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/Blynk/BlynkProtocol.h | 547 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/Blynk/BlynkProtocol.h | 549 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkProtocol.h | 568 | Ends conditional compilation block |
+| `#ifndef BlynkProtocolDefs_h` | src/Blynk/BlynkProtocolDefs.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkProtocolDefs_h |
+| `#define BlynkProtocolDefs_h` | src/Blynk/BlynkProtocolDefs.h | 12 | Defines a macro or constant (BlynkProtocolDefs_h) |
+| `#if defined(ESP32) \|\| defined(ESP8266)` | src/Blynk/BlynkProtocolDefs.h | 74 | Conditional compilation - evaluates compile-time expression - defined(ESP32) \|\| defined(ESP8266) |
+| `#include <lwip/def.h>` | src/Blynk/BlynkProtocolDefs.h | 75 | Includes the contents of a file (lwip/def.h) |
+| `#elif !defined(htons) && (defined(ARDUINO) \|\| defined(PARTICLE) \|\| defined(__MBED__))` | src/Blynk/BlynkProtocolDefs.h | 76 | Else-if for conditional compilation |
+| `#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__` | src/Blynk/BlynkProtocolDefs.h | 77 | Conditional compilation - evaluates compile-time expression - __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__ |
+| `#define htons(x) ( ((x)<<8) \| (((x)>>8)&0xFF) )` | src/Blynk/BlynkProtocolDefs.h | 78 | Defines a macro or constant (htons) |
+| `#define htonl(x) ( ((x)<<24 & 0xFF000000UL) \| \` | src/Blynk/BlynkProtocolDefs.h | 79 | Defines a macro or constant (htonl) |
+| `#define ntohs(x) htons(x)` | src/Blynk/BlynkProtocolDefs.h | 83 | Defines a macro or constant (ntohs) |
+| `#define ntohl(x) htonl(x)` | src/Blynk/BlynkProtocolDefs.h | 84 | Defines a macro or constant (ntohl) |
+| `#elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__` | src/Blynk/BlynkProtocolDefs.h | 85 | Else-if for conditional compilation |
+| `#define htons(x) (x)` | src/Blynk/BlynkProtocolDefs.h | 86 | Defines a macro or constant (htons) |
+| `#define htonl(x) (x)` | src/Blynk/BlynkProtocolDefs.h | 87 | Defines a macro or constant (htonl) |
+| `#define ntohs(x) (x)` | src/Blynk/BlynkProtocolDefs.h | 88 | Defines a macro or constant (ntohs) |
+| `#define ntohl(x) (x)` | src/Blynk/BlynkProtocolDefs.h | 89 | Defines a macro or constant (ntohl) |
+| `#else` | src/Blynk/BlynkProtocolDefs.h | 90 | Else clause for conditional compilation |
+| `#error "Byte order not defined"` | src/Blynk/BlynkProtocolDefs.h | 91 | Generates a compilation error with a message: "Byte order not defined" |
+| `#endif` | src/Blynk/BlynkProtocolDefs.h | 92 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkProtocolDefs.h | 93 | Ends conditional compilation block |
+| `#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__` | src/Blynk/BlynkProtocolDefs.h | 95 | Conditional compilation - evaluates compile-time expression - __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__ |
+| `#define BLYNK_STR_16(a,b)     ((uint16_t(a) << 0) \| (uint16_t(b) << 8))` | src/Blynk/BlynkProtocolDefs.h | 96 | Defines a macro or constant (BLYNK_STR_16) |
+| `#define BLYNK_STR_32(a,b,c,d) ((uint32_t(a) << 0) \| (uint32_t(b) << 8) \| (uint32_t(c) << 16) \| (uint32_t(d) << 24))` | src/Blynk/BlynkProtocolDefs.h | 97 | Defines a macro or constant (BLYNK_STR_32) |
+| `#elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__` | src/Blynk/BlynkProtocolDefs.h | 98 | Else-if for conditional compilation |
+| `#define BLYNK_STR_16(a,b)     ((uint16_t(b) << 0) \| (uint16_t(a) << 8))` | src/Blynk/BlynkProtocolDefs.h | 99 | Defines a macro or constant (BLYNK_STR_16) |
+| `#define BLYNK_STR_32(a,b,c,d) ((uint32_t(d) << 0) \| (uint32_t(c) << 8) \| (uint32_t(b) << 16) \| (uint32_t(a) << 24))` | src/Blynk/BlynkProtocolDefs.h | 100 | Defines a macro or constant (BLYNK_STR_32) |
+| `#else` | src/Blynk/BlynkProtocolDefs.h | 101 | Else clause for conditional compilation |
+| `#error byte order problem` | src/Blynk/BlynkProtocolDefs.h | 102 | Generates a compilation error with a message: byte order problem |
+| `#endif` | src/Blynk/BlynkProtocolDefs.h | 103 | Ends conditional compilation block |
+| `#define BLYNK_HW_PM BLYNK_STR_16('p','m')` | src/Blynk/BlynkProtocolDefs.h | 105 | Defines a macro or constant (BLYNK_HW_PM) |
+| `#define BLYNK_HW_DW BLYNK_STR_16('d','w')` | src/Blynk/BlynkProtocolDefs.h | 106 | Defines a macro or constant (BLYNK_HW_DW) |
+| `#define BLYNK_HW_DR BLYNK_STR_16('d','r')` | src/Blynk/BlynkProtocolDefs.h | 107 | Defines a macro or constant (BLYNK_HW_DR) |
+| `#define BLYNK_HW_AW BLYNK_STR_16('a','w')` | src/Blynk/BlynkProtocolDefs.h | 108 | Defines a macro or constant (BLYNK_HW_AW) |
+| `#define BLYNK_HW_AR BLYNK_STR_16('a','r')` | src/Blynk/BlynkProtocolDefs.h | 109 | Defines a macro or constant (BLYNK_HW_AR) |
+| `#define BLYNK_HW_VW BLYNK_STR_16('v','w')` | src/Blynk/BlynkProtocolDefs.h | 110 | Defines a macro or constant (BLYNK_HW_VW) |
+| `#define BLYNK_HW_VR BLYNK_STR_16('v','r')` | src/Blynk/BlynkProtocolDefs.h | 111 | Defines a macro or constant (BLYNK_HW_VR) |
+| `#define BLYNK_INT_RTC  BLYNK_STR_32('r','t','c',0)` | src/Blynk/BlynkProtocolDefs.h | 113 | Defines a macro or constant (BLYNK_INT_RTC) |
+| `#define BLYNK_INT_UTC  BLYNK_STR_32('u','t','c',0)` | src/Blynk/BlynkProtocolDefs.h | 114 | Defines a macro or constant (BLYNK_INT_UTC) |
+| `#define BLYNK_INT_OTA  BLYNK_STR_32('o','t','a',0)` | src/Blynk/BlynkProtocolDefs.h | 115 | Defines a macro or constant (BLYNK_INT_OTA) |
+| `#define BLYNK_INT_VFS  BLYNK_STR_32('v','f','s',0)` | src/Blynk/BlynkProtocolDefs.h | 116 | Defines a macro or constant (BLYNK_INT_VFS) |
+| `#define BLYNK_INT_DBG  BLYNK_STR_32('d','b','g',0)` | src/Blynk/BlynkProtocolDefs.h | 117 | Defines a macro or constant (BLYNK_INT_DBG) |
+| `#define BLYNK_INT_ACON BLYNK_STR_32('a','c','o','n')` | src/Blynk/BlynkProtocolDefs.h | 118 | Defines a macro or constant (BLYNK_INT_ACON) |
+| `#define BLYNK_INT_ADIS BLYNK_STR_32('a','d','i','s')` | src/Blynk/BlynkProtocolDefs.h | 119 | Defines a macro or constant (BLYNK_INT_ADIS) |
+| `#define BLYNK_INT_META BLYNK_STR_32('m','e','t','a')` | src/Blynk/BlynkProtocolDefs.h | 120 | Defines a macro or constant (BLYNK_INT_META) |
+| `#endif` | src/Blynk/BlynkProtocolDefs.h | 122 | Ends conditional compilation block |
+| `#ifndef BLYNKTIMER_H` | src/Blynk/BlynkTimer.h | 29 | Conditional compilation - evaluates compile-time expression - ndef BLYNKTIMER_H |
+| `#define BLYNKTIMER_H` | src/Blynk/BlynkTimer.h | 30 | Defines a macro or constant (BLYNKTIMER_H) |
+| `#include <Blynk/BlynkDebug.h>` | src/Blynk/BlynkTimer.h | 32 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#define SIMPLETIMER_H` | src/Blynk/BlynkTimer.h | 35 | Defines a macro or constant (SIMPLETIMER_H) |
+| `#define SimpleTimer BlynkTimer` | src/Blynk/BlynkTimer.h | 36 | Defines a macro or constant (SimpleTimer) |
+| `#ifndef BLYNK_MAX_TIMERS` | src/Blynk/BlynkTimer.h | 38 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MAX_TIMERS |
+| `#define BLYNK_MAX_TIMERS 16` | src/Blynk/BlynkTimer.h | 39 | Defines a macro or constant (BLYNK_MAX_TIMERS) |
+| `#endif` | src/Blynk/BlynkTimer.h | 40 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_FUNCTIONAL_H` | src/Blynk/BlynkTimer.h | 43 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_FUNCTIONAL_H |
+| `#else` | src/Blynk/BlynkTimer.h | 45 | Else clause for conditional compilation |
+| `#endif` | src/Blynk/BlynkTimer.h | 47 | Ends conditional compilation block |
+| `#endif` | src/Blynk/BlynkTimer.h | 243 | Ends conditional compilation block |
+| `#ifndef BlynkUtility_h` | src/Blynk/BlynkUtility.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkUtility_h |
+| `#define BlynkUtility_h` | src/Blynk/BlynkUtility.h | 12 | Defines a macro or constant (BlynkUtility_h) |
+| `#include <Blynk/BlynkDebug.h>` | src/Blynk/BlynkUtility.h | 14 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#define BlynkBitSet(value, bit)   ((value) \|= (1UL << (bit)))` | src/Blynk/BlynkUtility.h | 186 | Defines a macro or constant (BlynkBitSet) |
+| `#define BlynkBitClear(value, bit) ((value) &= ~(1UL << (bit)))` | src/Blynk/BlynkUtility.h | 187 | Defines a macro or constant (BlynkBitClear) |
+| `#define BlynkBitRead(value, bit)  (((value) >> (bit)) & 0x01)` | src/Blynk/BlynkUtility.h | 188 | Defines a macro or constant (BlynkBitRead) |
+| `#define BlynkBitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))` | src/Blynk/BlynkUtility.h | 189 | Defines a macro or constant (BlynkBitWrite) |
+| `#endif` | src/Blynk/BlynkUtility.h | 191 | Ends conditional compilation block |
+| `#ifndef BlynkWidgetBase_h` | src/Blynk/BlynkWidgetBase.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkWidgetBase_h |
+| `#define BlynkWidgetBase_h` | src/Blynk/BlynkWidgetBase.h | 11 | Defines a macro or constant (BlynkWidgetBase_h) |
+| `#include <Blynk/BlynkApi.h>` | src/Blynk/BlynkWidgetBase.h | 13 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#define BLYNK_ATTACH_WIDGET(widget, pin) \` | src/Blynk/BlynkWidgetBase.h | 58 | Defines a macro or constant (BLYNK_ATTACH_WIDGET) |
+| `#endif` | src/Blynk/BlynkWidgetBase.h | 62 | Ends conditional compilation block |
+| `#ifndef BlynkApiArduino_h` | src/BlynkApiArduino.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApiArduino_h |
+| `#define BlynkApiArduino_h` | src/BlynkApiArduino.h | 12 | Defines a macro or constant (BlynkApiArduino_h) |
+| `#include <Blynk/BlynkApi.h>` | src/BlynkApiArduino.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#include <Arduino.h>` | src/BlynkApiArduino.h | 15 | Includes the contents of a file (Arduino.h) |
+| `#if defined(BLYNK_NCP_VERSION)` | src/BlynkApiArduino.h | 24 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_VERSION) |
+| `#else` | src/BlynkApiArduino.h | 26 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiArduino.h | 28 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_TYPE` | src/BlynkApiArduino.h | 29 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_TYPE |
+| `#endif` | src/BlynkApiArduino.h | 31 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_DEVICE` | src/BlynkApiArduino.h | 40 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_DEVICE |
+| `#endif` | src/BlynkApiArduino.h | 42 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | src/BlynkApiArduino.h | 43 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | src/BlynkApiArduino.h | 45 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CONNECTION` | src/BlynkApiArduino.h | 46 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CONNECTION |
+| `#endif` | src/BlynkApiArduino.h | 48 | Ends conditional compilation block |
+| `#ifdef BLYNK_TEMPLATE_ID` | src/BlynkApiArduino.h | 55 | Conditional compilation - evaluates compile-time expression - def BLYNK_TEMPLATE_ID |
+| `#endif` | src/BlynkApiArduino.h | 62 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_PROGMEM` | src/BlynkApiArduino.h | 64 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_PROGMEM |
+| `#else` | src/BlynkApiArduino.h | 68 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiArduino.h | 70 | Ends conditional compilation block |
+| `#if defined(analogInputToDigitalPin)` | src/BlynkApiArduino.h | 76 | Conditional compilation - evaluates compile-time expression - defined(analogInputToDigitalPin) |
+| `#define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? analogInputToDigitalPin(atoi((it).asStr()+1)) : (it).asInt())` | src/BlynkApiArduino.h | 77 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#else` | src/BlynkApiArduino.h | 78 | Else clause for conditional compilation |
+| `#define BLYNK_DECODE_PIN(it) ((it).asInt())` | src/BlynkApiArduino.h | 79 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/BlynkApiArduino.h | 81 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#pragma message "analogInputToDigitalPin not defined"` | src/BlynkApiArduino.h | 82 | Compiler-specific directive - message "analogInputToDigitalPin not defined" |
+| `#endif` | src/BlynkApiArduino.h | 83 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiArduino.h | 84 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_BUILTIN` | src/BlynkApiArduino.h | 104 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_BUILTIN |
+| `#ifdef INPUT_PULLUP` | src/BlynkApiArduino.h | 114 | Conditional compilation - evaluates compile-time expression - def INPUT_PULLUP |
+| `#endif` | src/BlynkApiArduino.h | 117 | Ends conditional compilation block |
+| `#ifdef INPUT_PULLDOWN` | src/BlynkApiArduino.h | 118 | Conditional compilation - evaluates compile-time expression - def INPUT_PULLDOWN |
+| `#endif` | src/BlynkApiArduino.h | 121 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/BlynkApiArduino.h | 123 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/BlynkApiArduino.h | 125 | Ends conditional compilation block |
+| `#ifdef ESP8266` | src/BlynkApiArduino.h | 143 | Conditional compilation - evaluates compile-time expression - def ESP8266 |
+| `#endif` | src/BlynkApiArduino.h | 146 | Ends conditional compilation block |
+| `#ifndef BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkApiArduino.h | 147 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MINIMIZE_PINMODE_USAGE |
+| `#endif` | src/BlynkApiArduino.h | 149 | Ends conditional compilation block |
+| `#ifndef BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkApiArduino.h | 165 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MINIMIZE_PINMODE_USAGE |
+| `#endif` | src/BlynkApiArduino.h | 167 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiArduino.h | 171 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiArduino.h | 190 | Ends conditional compilation block |
+| `#ifndef BlynkApiMbed_h` | src/BlynkApiMbed.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApiMbed_h |
+| `#define BlynkApiMbed_h` | src/BlynkApiMbed.h | 12 | Defines a macro or constant (BlynkApiMbed_h) |
+| `#include <Blynk/BlynkApi.h>` | src/BlynkApiMbed.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#include <mbed.h>` | src/BlynkApiMbed.h | 15 | Includes the contents of a file (mbed.h) |
+| `#if defined(BLYNK_NCP_VERSION)` | src/BlynkApiMbed.h | 24 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_VERSION) |
+| `#else` | src/BlynkApiMbed.h | 26 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiMbed.h | 28 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_TYPE` | src/BlynkApiMbed.h | 29 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_TYPE |
+| `#endif` | src/BlynkApiMbed.h | 31 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_DEVICE` | src/BlynkApiMbed.h | 40 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_DEVICE |
+| `#endif` | src/BlynkApiMbed.h | 42 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | src/BlynkApiMbed.h | 43 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | src/BlynkApiMbed.h | 45 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CONNECTION` | src/BlynkApiMbed.h | 46 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CONNECTION |
+| `#endif` | src/BlynkApiMbed.h | 48 | Ends conditional compilation block |
+| `#ifdef BLYNK_TEMPLATE_ID` | src/BlynkApiMbed.h | 55 | Conditional compilation - evaluates compile-time expression - def BLYNK_TEMPLATE_ID |
+| `#endif` | src/BlynkApiMbed.h | 62 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_PROGMEM` | src/BlynkApiMbed.h | 64 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_PROGMEM |
+| `#else` | src/BlynkApiMbed.h | 68 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiMbed.h | 70 | Ends conditional compilation block |
+| `#if defined(analogInputToDigitalPin)` | src/BlynkApiMbed.h | 76 | Conditional compilation - evaluates compile-time expression - defined(analogInputToDigitalPin) |
+| `#define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? analogInputToDigitalPin(atoi((it).asStr()+1)) : (it).asInt())` | src/BlynkApiMbed.h | 77 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#else` | src/BlynkApiMbed.h | 78 | Else clause for conditional compilation |
+| `#define BLYNK_DECODE_PIN(it) ((it).asInt())` | src/BlynkApiMbed.h | 79 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/BlynkApiMbed.h | 81 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#pragma message "analogInputToDigitalPin not defined"` | src/BlynkApiMbed.h | 82 | Compiler-specific directive - message "analogInputToDigitalPin not defined" |
+| `#endif` | src/BlynkApiMbed.h | 83 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiMbed.h | 84 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_BUILTIN` | src/BlynkApiMbed.h | 104 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_BUILTIN |
+| `#ifdef BLYNK_DEBUG` | src/BlynkApiMbed.h | 115 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/BlynkApiMbed.h | 117 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiMbed.h | 153 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiMbed.h | 172 | Ends conditional compilation block |
+| `#ifndef BlynkApiParticle_h` | src/BlynkApiParticle.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkApiParticle_h |
+| `#define BlynkApiParticle_h` | src/BlynkApiParticle.h | 12 | Defines a macro or constant (BlynkApiParticle_h) |
+| `#include "Blynk/BlynkApi.h"` | src/BlynkApiParticle.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#include "Particle.h"` | src/BlynkApiParticle.h | 15 | Includes the contents of a file (Particle.h) |
+| `#if defined(BLYNK_NCP_VERSION)` | src/BlynkApiParticle.h | 24 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_VERSION) |
+| `#else` | src/BlynkApiParticle.h | 26 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiParticle.h | 28 | Ends conditional compilation block |
+| `#ifdef BLYNK_FIRMWARE_TYPE` | src/BlynkApiParticle.h | 29 | Conditional compilation - evaluates compile-time expression - def BLYNK_FIRMWARE_TYPE |
+| `#endif` | src/BlynkApiParticle.h | 31 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_DEVICE` | src/BlynkApiParticle.h | 40 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_DEVICE |
+| `#endif` | src/BlynkApiParticle.h | 42 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | src/BlynkApiParticle.h | 43 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | src/BlynkApiParticle.h | 45 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CONNECTION` | src/BlynkApiParticle.h | 46 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CONNECTION |
+| `#endif` | src/BlynkApiParticle.h | 48 | Ends conditional compilation block |
+| `#ifdef BLYNK_TEMPLATE_ID` | src/BlynkApiParticle.h | 55 | Conditional compilation - evaluates compile-time expression - def BLYNK_TEMPLATE_ID |
+| `#endif` | src/BlynkApiParticle.h | 62 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_PROGMEM` | src/BlynkApiParticle.h | 64 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_PROGMEM |
+| `#else` | src/BlynkApiParticle.h | 68 | Else clause for conditional compilation |
+| `#endif` | src/BlynkApiParticle.h | 70 | Ends conditional compilation block |
+| `#if defined(analogInputToDigitalPin)` | src/BlynkApiParticle.h | 76 | Conditional compilation - evaluates compile-time expression - defined(analogInputToDigitalPin) |
+| `#define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? analogInputToDigitalPin(atoi((it).asStr()+1)) : (it).asInt())` | src/BlynkApiParticle.h | 77 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#else` | src/BlynkApiParticle.h | 78 | Else clause for conditional compilation |
+| `#define BLYNK_DECODE_PIN(it) ((it).asInt())` | src/BlynkApiParticle.h | 79 | Defines a macro or constant (BLYNK_DECODE_PIN) |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/BlynkApiParticle.h | 81 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#pragma message "analogInputToDigitalPin not defined"` | src/BlynkApiParticle.h | 82 | Compiler-specific directive - message "analogInputToDigitalPin not defined" |
+| `#endif` | src/BlynkApiParticle.h | 83 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiParticle.h | 84 | Ends conditional compilation block |
+| `#ifndef BLYNK_NO_BUILTIN` | src/BlynkApiParticle.h | 104 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_BUILTIN |
+| `#ifdef INPUT_PULLUP` | src/BlynkApiParticle.h | 114 | Conditional compilation - evaluates compile-time expression - def INPUT_PULLUP |
+| `#endif` | src/BlynkApiParticle.h | 117 | Ends conditional compilation block |
+| `#ifdef INPUT_PULLDOWN` | src/BlynkApiParticle.h | 118 | Conditional compilation - evaluates compile-time expression - def INPUT_PULLDOWN |
+| `#endif` | src/BlynkApiParticle.h | 121 | Ends conditional compilation block |
+| `#ifdef BLYNK_DEBUG` | src/BlynkApiParticle.h | 123 | Conditional compilation - evaluates compile-time expression - def BLYNK_DEBUG |
+| `#endif` | src/BlynkApiParticle.h | 125 | Ends conditional compilation block |
+| `#ifdef ESP8266` | src/BlynkApiParticle.h | 143 | Conditional compilation - evaluates compile-time expression - def ESP8266 |
+| `#endif` | src/BlynkApiParticle.h | 146 | Ends conditional compilation block |
+| `#ifndef BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkApiParticle.h | 147 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MINIMIZE_PINMODE_USAGE |
+| `#endif` | src/BlynkApiParticle.h | 149 | Ends conditional compilation block |
+| `#ifndef BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkApiParticle.h | 165 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MINIMIZE_PINMODE_USAGE |
+| `#endif` | src/BlynkApiParticle.h | 167 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiParticle.h | 171 | Ends conditional compilation block |
+| `#endif` | src/BlynkApiParticle.h | 190 | Ends conditional compilation block |
+| `#ifndef BlynkNcpClient_h` | src/BlynkEdgentNCP.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkNcpClient_h |
+| `#define BlynkNcpClient_h` | src/BlynkEdgentNCP.h | 12 | Defines a macro or constant (BlynkNcpClient_h) |
+| `#include <BlynkRpcClient.h>` | src/BlynkEdgentNCP.h | 14 | Includes the contents of a file (BlynkRpcClient.h) |
+| `#include <Blynk/BlynkApiNCP.h>` | src/BlynkEdgentNCP.h | 15 | Includes the contents of a file (Blynk/BlynkApiNCP.h) |
+| `#include <Blynk/BlynkUtility.h>` | src/BlynkEdgentNCP.h | 16 | Includes the contents of a file (Blynk/BlynkUtility.h) |
+| `#include <Blynk/BlynkTimer.h>` | src/BlynkEdgentNCP.h | 17 | Includes the contents of a file (Blynk/BlynkTimer.h) |
+| `#if defined(BLYNK_CUSTOM_NCP_OTA)` | src/BlynkEdgentNCP.h | 19 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_CUSTOM_NCP_OTA) |
+| `#else` | src/BlynkEdgentNCP.h | 21 | Else clause for conditional compilation |
+| `#include <utility/BlynkNcpOtaImpl.h>` | src/BlynkEdgentNCP.h | 22 | Includes the contents of a file (utility/BlynkNcpOtaImpl.h) |
+| `#endif` | src/BlynkEdgentNCP.h | 23 | Ends conditional compilation block |
+| `#if defined(BLYNK_NCP_BAUD)` | src/BlynkEdgentNCP.h | 25 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_BAUD) |
+| `#elif defined(BLYNK_NCP_SERIAL)` | src/BlynkEdgentNCP.h | 27 | Else-if for conditional compilation |
+| `#define BLYNK_NCP_BAUD  115200` | src/BlynkEdgentNCP.h | 28 | Defines a macro or constant (BLYNK_NCP_BAUD) |
+| `#elif defined(ARDUINO_UNOWIFIR4)` | src/BlynkEdgentNCP.h | 29 | Else-if for conditional compilation |
+| `#define BLYNK_NCP_BAUD  460800` | src/BlynkEdgentNCP.h | 30 | Defines a macro or constant (BLYNK_NCP_BAUD) |
+| `#elif defined(SEEED_WIO_TERMINAL)` | src/BlynkEdgentNCP.h | 31 | Else-if for conditional compilation |
+| `#define BLYNK_NCP_BAUD  2000000` | src/BlynkEdgentNCP.h | 32 | Defines a macro or constant (BLYNK_NCP_BAUD) |
+| `#define PIN_BLE_SERIAL_X_RX (84ul)` | src/BlynkEdgentNCP.h | 34 | Defines a macro or constant (PIN_BLE_SERIAL_X_RX) |
+| `#define PIN_BLE_SERIAL_X_TX (85ul)` | src/BlynkEdgentNCP.h | 35 | Defines a macro or constant (PIN_BLE_SERIAL_X_TX) |
+| `#define PAD_BLE_SERIAL_X_RX (SERCOM_RX_PAD_2)` | src/BlynkEdgentNCP.h | 36 | Defines a macro or constant (PAD_BLE_SERIAL_X_RX) |
+| `#define PAD_BLE_SERIAL_X_TX (UART_TX_PAD_0)` | src/BlynkEdgentNCP.h | 37 | Defines a macro or constant (PAD_BLE_SERIAL_X_TX) |
+| `#define SERCOM_BLE_SERIAL_X sercom0` | src/BlynkEdgentNCP.h | 38 | Defines a macro or constant (SERCOM_BLE_SERIAL_X) |
+| `#else` | src/BlynkEdgentNCP.h | 61 | Else clause for conditional compilation |
+| `#define BLYNK_NCP_BAUD  2000000` | src/BlynkEdgentNCP.h | 62 | Defines a macro or constant (BLYNK_NCP_BAUD) |
+| `#endif` | src/BlynkEdgentNCP.h | 63 | Ends conditional compilation block |
+| `#if defined(LINUX)` | src/BlynkEdgentNCP.h | 65 | Conditional compilation - evaluates compile-time expression - defined(LINUX) |
+| `#include <compat/LibSerialPort.h>` | src/BlynkEdgentNCP.h | 66 | Includes the contents of a file (compat/LibSerialPort.h) |
+| `#if defined(BLYNK_NCP_PORT)` | src/BlynkEdgentNCP.h | 68 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_PORT) |
+| `#elif defined(BLYNK_NCP_TYPE_TTGO_T7_S3)` | src/BlynkEdgentNCP.h | 70 | Else-if for conditional compilation |
+| `#define BLYNK_NCP_PORT "/dev/ttyACM0"` | src/BlynkEdgentNCP.h | 71 | Defines a macro or constant (BLYNK_NCP_PORT) |
+| `#else` | src/BlynkEdgentNCP.h | 72 | Else clause for conditional compilation |
+| `#define BLYNK_NCP_PORT "/dev/ttyUSB0"` | src/BlynkEdgentNCP.h | 73 | Defines a macro or constant (BLYNK_NCP_PORT) |
+| `#endif` | src/BlynkEdgentNCP.h | 74 | Ends conditional compilation block |
+| `#endif` | src/BlynkEdgentNCP.h | 76 | Ends conditional compilation block |
+| `#if defined(BLYNK_NCP_SERIAL)` | src/BlynkEdgentNCP.h | 83 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_SERIAL) |
+| `#define SerialNCP       BLYNK_NCP_SERIAL` | src/BlynkEdgentNCP.h | 84 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_NANO_RP2040_CONNECT) && defined(__MBED__)` | src/BlynkEdgentNCP.h | 89 | Else-if for conditional compilation |
+| `#define SerialNCP       SerialNina` | src/BlynkEdgentNCP.h | 90 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_NANO_RP2040_CONNECT) // Pico Core` | src/BlynkEdgentNCP.h | 96 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial2` | src/BlynkEdgentNCP.h | 97 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_TTGO_T_PICO_C3)` | src/BlynkEdgentNCP.h | 106 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial2` | src/BlynkEdgentNCP.h | 107 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_SAMD_NANO_33_IOT)` | src/BlynkEdgentNCP.h | 113 | Else-if for conditional compilation |
+| `#define SerialNCP       SerialNina` | src/BlynkEdgentNCP.h | 114 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_SAMD_MKRWIFI1010)` | src/BlynkEdgentNCP.h | 120 | Else-if for conditional compilation |
+| `#define SerialNCP       SerialNina` | src/BlynkEdgentNCP.h | 121 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_PORTENTA_C33)` | src/BlynkEdgentNCP.h | 127 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial5` | src/BlynkEdgentNCP.h | 128 | Defines a macro or constant (SerialNCP) |
+| `#define NCP_RESETN      (101)` | src/BlynkEdgentNCP.h | 129 | Defines a macro or constant (NCP_RESETN) |
+| `#elif defined(ARDUINO_UNOWIFIR4)` | src/BlynkEdgentNCP.h | 135 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial2` | src/BlynkEdgentNCP.h | 136 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_RASPBERRY_PI_PICO) && defined(__MBED__)` | src/BlynkEdgentNCP.h | 140 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial1` | src/BlynkEdgentNCP.h | 141 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(ARDUINO_RASPBERRY_PI_PICO)` | src/BlynkEdgentNCP.h | 144 | Else-if for conditional compilation |
+| `#define SerialNCP       Serial1` | src/BlynkEdgentNCP.h | 145 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(SEEED_WIO_TERMINAL)` | src/BlynkEdgentNCP.h | 149 | Else-if for conditional compilation |
+| `#define SerialNCP       rtl_uart //RTL8720D` | src/BlynkEdgentNCP.h | 150 | Defines a macro or constant (SerialNCP) |
+| `#elif defined(LINUX)` | src/BlynkEdgentNCP.h | 158 | Else-if for conditional compilation |
+| `#define SerialNCP       SerialUSB` | src/BlynkEdgentNCP.h | 159 | Defines a macro or constant (SerialNCP) |
+| `#else` | src/BlynkEdgentNCP.h | 163 | Else clause for conditional compilation |
+| `#error "Your board needs extra configuration to work with Blynk.NCP: please define BLYNK_NCP_SERIAL and perform NCP hardware initialization if needed"` | src/BlynkEdgentNCP.h | 164 | Generates a compilation error with a message: "Your board needs extra configuration to work with Blynk.NCP: please define BLYNK_NCP_SERIAL and perform NCP hardware initialization if needed" |
+| `#endif` | src/BlynkEdgentNCP.h | 165 | Ends conditional compilation block |
+| `#if defined(ARDUINO_NANO_RP2040_CONNECT)` | src/BlynkEdgentNCP.h | 168 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_NANO_RP2040_CONNECT) |
+| `#elif defined(ARDUINO_SAMD_NANO_33_IOT)` | src/BlynkEdgentNCP.h | 173 | Else-if for conditional compilation |
+| `#elif defined(ARDUINO_SAMD_MKRWIFI1010)` | src/BlynkEdgentNCP.h | 176 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_WITTY_CLOUD)` | src/BlynkEdgentNCP.h | 181 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_TTGO_T7)` | src/BlynkEdgentNCP.h | 187 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_TTGO_T7_S3)` | src/BlynkEdgentNCP.h | 193 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_TTGO_TOI_PLUS)` | src/BlynkEdgentNCP.h | 199 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_MACCHINA_SUPERB)` | src/BlynkEdgentNCP.h | 205 | Else-if for conditional compilation |
+| `#elif defined(BLYNK_NCP_TYPE_MICRODUINO_ESP8266)` | src/BlynkEdgentNCP.h | 211 | Else-if for conditional compilation |
+| `#else` | src/BlynkEdgentNCP.h | 215 | Else clause for conditional compilation |
+| `#endif` | src/BlynkEdgentNCP.h | 218 | Ends conditional compilation block |
+| `#if defined(BLYNK_NO_FANCY_LOGO)` | src/BlynkEdgentNCP.h | 459 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NO_FANCY_LOGO) |
+| `#else` | src/BlynkEdgentNCP.h | 465 | Else clause for conditional compilation |
+| `#endif` | src/BlynkEdgentNCP.h | 476 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkEdgentNCP.h | 598 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkEdgentNCP.h | 600 | Ends conditional compilation block |
+| `#ifndef BlynkMultiClient_h` | src/BlynkMultiClient.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkMultiClient_h |
+| `#define BlynkMultiClient_h` | src/BlynkMultiClient.h | 12 | Defines a macro or constant (BlynkMultiClient_h) |
+| `#include <certs/letsencrypt_pem.h>` | src/BlynkMultiClient.h | 15 | Includes the contents of a file (certs/letsencrypt_pem.h) |
+| `#include <BlynkApiArduino.h>` | src/BlynkMultiClient.h | 17 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkMultiClient.h | 18 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkMultiClient.h | 19 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#ifndef BLYNK_MAX_CLIENT_QTY` | src/BlynkMultiClient.h | 21 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MAX_CLIENT_QTY |
+| `#define BLYNK_MAX_CLIENT_QTY 4` | src/BlynkMultiClient.h | 22 | Defines a macro or constant (BLYNK_MAX_CLIENT_QTY) |
+| `#endif` | src/BlynkMultiClient.h | 23 | Ends conditional compilation block |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkMultiClient.h | 109 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkMultiClient.h | 113 | Else clause for conditional compilation |
+| `#endif` | src/BlynkMultiClient.h | 115 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkMultiClient.h | 117 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkMultiClient.h | 119 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleArduinoNano_BLE_h` | src/BlynkSimpleArduinoNanoBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleArduinoNano_BLE_h |
+| `#define BlynkSimpleArduinoNano_BLE_h` | src/BlynkSimpleArduinoNanoBLE.h | 12 | Defines a macro or constant (BlynkSimpleArduinoNano_BLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleArduinoNanoBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "ArduinoNano_BLE"` | src/BlynkSimpleArduinoNanoBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleArduinoNanoBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleArduinoNanoBLE.h | 17 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleArduinoNanoBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleArduinoNanoBLE.h | 20 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleArduinoNanoBLE.h | 21 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleArduinoNanoBLE.h | 22 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <ArduinoBLE.h>` | src/BlynkSimpleArduinoNanoBLE.h | 24 | Includes the contents of a file (ArduinoBLE.h) |
+| `#define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleArduinoNanoBLE.h | 26 | Defines a macro or constant (SERVICE_UUID) |
+| `#define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleArduinoNanoBLE.h | 27 | Defines a macro or constant (CHARACTERISTIC_UUID_RX) |
+| `#define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleArduinoNanoBLE.h | 28 | Defines a macro or constant (CHARACTERISTIC_UUID_TX) |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleArduinoNanoBLE.h | 191 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleArduinoNanoBLE.h | 193 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleBLEPeripheral_h` | src/BlynkSimpleBLEPeripheral.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleBLEPeripheral_h |
+| `#define BlynkSimpleBLEPeripheral_h` | src/BlynkSimpleBLEPeripheral.h | 12 | Defines a macro or constant (BlynkSimpleBLEPeripheral_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleBLEPeripheral.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "BLEPeripheral"` | src/BlynkSimpleBLEPeripheral.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleBLEPeripheral.h | 16 | Ends conditional compilation block |
+| `#include <BlynkSimpleSerialBLE.h>` | src/BlynkSimpleBLEPeripheral.h | 18 | Includes the contents of a file (BlynkSimpleSerialBLE.h) |
+| `#include <Adapters/BlynkBLEPeripheralSerial.h>` | src/BlynkSimpleBLEPeripheral.h | 19 | Includes the contents of a file (Adapters/BlynkBLEPeripheralSerial.h) |
+| `#endif` | src/BlynkSimpleBLEPeripheral.h | 21 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleCC3000_h` | src/BlynkSimpleCC3000.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleCC3000_h |
+| `#define BlynkSimpleCC3000_h` | src/BlynkSimpleCC3000.h | 11 | Defines a macro or constant (BlynkSimpleCC3000_h) |
+| `#include <Adapters/BlynkCC3000.h>` | src/BlynkSimpleCC3000.h | 13 | Includes the contents of a file (Adapters/BlynkCC3000.h) |
+| `#include <Adafruit_CC3000.h>` | src/BlynkSimpleCC3000.h | 14 | Includes the contents of a file (Adafruit_CC3000.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleCC3000.h | 21 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleCC3000.h | 24 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleCC3000.h | 26 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleCC3000.h | 28 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleCC3000.h | 30 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleCurieBLE_h` | src/BlynkSimpleCurieBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleCurieBLE_h |
+| `#define BlynkSimpleCurieBLE_h` | src/BlynkSimpleCurieBLE.h | 12 | Defines a macro or constant (BlynkSimpleCurieBLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleCurieBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "CurieBLE"` | src/BlynkSimpleCurieBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleCurieBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleCurieBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleCurieBLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleCurieBLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleCurieBLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleCurieBLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <CurieBLE.h>` | src/BlynkSimpleCurieBLE.h | 25 | Includes the contents of a file (CurieBLE.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleCurieBLE.h | 156 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleCurieBLE.h | 159 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleCurieBLE.h | 161 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleCurieBLE.h | 173 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleCurieBLE.h | 175 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEnergiaEthernet_h` | src/BlynkSimpleEnergiaEthernet.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEnergiaEthernet_h |
+| `#define BlynkSimpleEnergiaEthernet_h` | src/BlynkSimpleEnergiaEthernet.h | 12 | Defines a macro or constant (BlynkSimpleEnergiaEthernet_h) |
+| `#include <Ethernet.h>` | src/BlynkSimpleEnergiaEthernet.h | 14 | Includes the contents of a file (Ethernet.h) |
+| `#include <EthernetClient.h>` | src/BlynkSimpleEnergiaEthernet.h | 15 | Includes the contents of a file (EthernetClient.h) |
+| `#include <Adapters/BlynkEthernet.h>` | src/BlynkSimpleEnergiaEthernet.h | 16 | Includes the contents of a file (Adapters/BlynkEthernet.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEnergiaEthernet.h | 18 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEnergiaEthernet.h | 22 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEnergiaEthernet.h | 24 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEnergiaEthernet.h | 26 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEnergiaEthernet.h | 28 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEnergiaWiFi_h` | src/BlynkSimpleEnergiaWiFi.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEnergiaWiFi_h |
+| `#define BlynkSimpleEnergiaWiFi_h` | src/BlynkSimpleEnergiaWiFi.h | 12 | Defines a macro or constant (BlynkSimpleEnergiaWiFi_h) |
+| `#include <WiFi.h>` | src/BlynkSimpleEnergiaWiFi.h | 14 | Includes the contents of a file (WiFi.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleEnergiaWiFi.h | 15 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEnergiaWiFi.h | 17 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEnergiaWiFi.h | 21 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEnergiaWiFi.h | 23 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEnergiaWiFi.h | 25 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEnergiaWiFi.h | 27 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp32_h` | src/BlynkSimpleEsp32.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp32_h |
+| `#define BlynkSimpleEsp32_h` | src/BlynkSimpleEsp32.h | 12 | Defines a macro or constant (BlynkSimpleEsp32_h) |
+| `#ifndef ESP32` | src/BlynkSimpleEsp32.h | 14 | Conditional compilation - evaluates compile-time expression - ndef ESP32 |
+| `#error This code is intended to run on the ESP32 platform! Please check your Tools->Board setting.` | src/BlynkSimpleEsp32.h | 15 | Generates a compilation error with a message: This code is intended to run on the ESP32 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleEsp32.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleEsp32.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp32.h | 20 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp32.h | 21 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleEsp32.h | 22 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <WiFi.h>` | src/BlynkSimpleEsp32.h | 23 | Includes the contents of a file (WiFi.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp32.h | 95 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp32.h | 99 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32.h | 101 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp32.h | 103 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp32.h | 105 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp32_BLE_h` | src/BlynkSimpleEsp32_BLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp32_BLE_h |
+| `#define BlynkSimpleEsp32_BLE_h` | src/BlynkSimpleEsp32_BLE.h | 12 | Defines a macro or constant (BlynkSimpleEsp32_BLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEsp32_BLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "Esp32_BLE"` | src/BlynkSimpleEsp32_BLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEsp32_BLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleEsp32_BLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleEsp32_BLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp32_BLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp32_BLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleEsp32_BLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <BLEDevice.h>` | src/BlynkSimpleEsp32_BLE.h | 26 | Includes the contents of a file (BLEDevice.h) |
+| `#include <BLEServer.h>` | src/BlynkSimpleEsp32_BLE.h | 27 | Includes the contents of a file (BLEServer.h) |
+| `#include <BLEUtils.h>` | src/BlynkSimpleEsp32_BLE.h | 28 | Includes the contents of a file (BLEUtils.h) |
+| `#include <BLE2902.h>` | src/BlynkSimpleEsp32_BLE.h | 29 | Includes the contents of a file (BLE2902.h) |
+| `#define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_BLE.h | 31 | Defines a macro or constant (SERVICE_UUID) |
+| `#define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_BLE.h | 32 | Defines a macro or constant (CHARACTERISTIC_UUID_RX) |
+| `#define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_BLE.h | 33 | Defines a macro or constant (CHARACTERISTIC_UUID_TX) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp32_BLE.h | 177 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp32_BLE.h | 180 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32_BLE.h | 182 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp32_BLE.h | 200 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp32_BLE.h | 202 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp32_BT_h` | src/BlynkSimpleEsp32_BT.h | 1 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp32_BT_h |
+| `#define BlynkSimpleEsp32_BT_h` | src/BlynkSimpleEsp32_BT.h | 2 | Defines a macro or constant (BlynkSimpleEsp32_BT_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEsp32_BT.h | 4 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "ESP32_BT"` | src/BlynkSimpleEsp32_BT.h | 5 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 6 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleEsp32_BT.h | 8 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 40` | src/BlynkSimpleEsp32_BT.h | 9 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include "sdkconfig.h"` | src/BlynkSimpleEsp32_BT.h | 11 | Includes the contents of a file (sdkconfig.h) |
+| `#if defined(CONFIG_BT_ENABLED) && defined(CONFIG_BLUEDROID_ENABLED)` | src/BlynkSimpleEsp32_BT.h | 13 | Conditional compilation - evaluates compile-time expression - defined(CONFIG_BT_ENABLED) && defined(CONFIG_BLUEDROID_ENABLED) |
+| `#ifdef ARDUINO_ARCH_ESP32` | src/BlynkSimpleEsp32_BT.h | 15 | Conditional compilation - evaluates compile-time expression - def ARDUINO_ARCH_ESP32 |
+| `#include "esp32-hal-log.h"` | src/BlynkSimpleEsp32_BT.h | 16 | Includes the contents of a file (esp32-hal-log.h) |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 17 | Ends conditional compilation block |
+| `#include "esp_bt.h"` | src/BlynkSimpleEsp32_BT.h | 19 | Includes the contents of a file (esp_bt.h) |
+| `#include "esp_bt_main.h"` | src/BlynkSimpleEsp32_BT.h | 20 | Includes the contents of a file (esp_bt_main.h) |
+| `#include "esp_gap_bt_api.h"` | src/BlynkSimpleEsp32_BT.h | 21 | Includes the contents of a file (esp_gap_bt_api.h) |
+| `#include "esp_bt_device.h"` | src/BlynkSimpleEsp32_BT.h | 22 | Includes the contents of a file (esp_bt_device.h) |
+| `#include "esp_spp_api.h"` | src/BlynkSimpleEsp32_BT.h | 23 | Includes the contents of a file (esp_spp_api.h) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp32_BT.h | 25 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp32_BT.h | 26 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleEsp32_BT.h | 27 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0)` | src/BlynkSimpleEsp32_BT.h | 155 | Conditional compilation - evaluates compile-time expression - ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0) |
+| `#else` | src/BlynkSimpleEsp32_BT.h | 157 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 159 | Ends conditional compilation block |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp32_BT.h | 219 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp32_BT.h | 222 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 224 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp32_BT.h | 236 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 238 | Ends conditional compilation block |
+| `#endif` | src/BlynkSimpleEsp32_BT.h | 239 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp32_NimBLE_h` | src/BlynkSimpleEsp32_NimBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp32_NimBLE_h |
+| `#define BlynkSimpleEsp32_NimBLE_h` | src/BlynkSimpleEsp32_NimBLE.h | 12 | Defines a macro or constant (BlynkSimpleEsp32_NimBLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEsp32_NimBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "Esp32_NimBLE"` | src/BlynkSimpleEsp32_NimBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEsp32_NimBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleEsp32_NimBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleEsp32_NimBLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp32_NimBLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp32_NimBLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleEsp32_NimBLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <NimBLEDevice.h>` | src/BlynkSimpleEsp32_NimBLE.h | 26 | Includes the contents of a file (NimBLEDevice.h) |
+| `#include <NimBLEServer.h>` | src/BlynkSimpleEsp32_NimBLE.h | 27 | Includes the contents of a file (NimBLEServer.h) |
+| `#include <NimBLEUtils.h>` | src/BlynkSimpleEsp32_NimBLE.h | 28 | Includes the contents of a file (NimBLEUtils.h) |
+| `#define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_NimBLE.h | 30 | Defines a macro or constant (SERVICE_UUID) |
+| `#define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_NimBLE.h | 31 | Defines a macro or constant (CHARACTERISTIC_UUID_RX) |
+| `#define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleEsp32_NimBLE.h | 32 | Defines a macro or constant (CHARACTERISTIC_UUID_TX) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp32_NimBLE.h | 179 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp32_NimBLE.h | 182 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32_NimBLE.h | 184 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp32_NimBLE.h | 201 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp32_NimBLE.h | 203 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp32_SSL_h` | src/BlynkSimpleEsp32_SSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp32_SSL_h |
+| `#define BlynkSimpleEsp32_SSL_h` | src/BlynkSimpleEsp32_SSL.h | 12 | Defines a macro or constant (BlynkSimpleEsp32_SSL_h) |
+| `#ifndef ESP32` | src/BlynkSimpleEsp32_SSL.h | 14 | Conditional compilation - evaluates compile-time expression - ndef ESP32 |
+| `#error This code is intended to run on the ESP32 platform! Please check your Tools->Board setting.` | src/BlynkSimpleEsp32_SSL.h | 15 | Generates a compilation error with a message: This code is intended to run on the ESP32 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleEsp32_SSL.h | 16 | Ends conditional compilation block |
+| `#include <certs/letsencrypt_pem.h>` | src/BlynkSimpleEsp32_SSL.h | 19 | Includes the contents of a file (certs/letsencrypt_pem.h) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp32_SSL.h | 21 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp32_SSL.h | 22 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleEsp32_SSL.h | 23 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <WiFi.h>` | src/BlynkSimpleEsp32_SSL.h | 24 | Includes the contents of a file (WiFi.h) |
+| `#include <WiFiClientSecure.h>` | src/BlynkSimpleEsp32_SSL.h | 25 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp32_SSL.h | 130 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp32_SSL.h | 134 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp32_SSL.h | 136 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp32_SSL.h | 138 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp32_SSL.h | 140 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp8266_h` | src/BlynkSimpleEsp8266.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp8266_h |
+| `#define BlynkSimpleEsp8266_h` | src/BlynkSimpleEsp8266.h | 12 | Defines a macro or constant (BlynkSimpleEsp8266_h) |
+| `#ifndef ESP8266` | src/BlynkSimpleEsp8266.h | 14 | Conditional compilation - evaluates compile-time expression - ndef ESP8266 |
+| `#error This code is intended to run on the ESP8266 platform! Please check your Tools->Board setting.` | src/BlynkSimpleEsp8266.h | 15 | Generates a compilation error with a message: This code is intended to run on the ESP8266 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleEsp8266.h | 16 | Ends conditional compilation block |
+| `#include <version.h>` | src/BlynkSimpleEsp8266.h | 18 | Includes the contents of a file (version.h) |
+| `#if ESP_SDK_VERSION_NUMBER < 0x020200` | src/BlynkSimpleEsp8266.h | 20 | Conditional compilation - evaluates compile-time expression - ESP_SDK_VERSION_NUMBER < 0x020200 |
+| `#error Please update your ESP8266 Arduino Core` | src/BlynkSimpleEsp8266.h | 21 | Generates a compilation error with a message: Please update your ESP8266 Arduino Core |
+| `#endif` | src/BlynkSimpleEsp8266.h | 22 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp8266.h | 24 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp8266.h | 25 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleEsp8266.h | 26 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <ESP8266WiFi.h>` | src/BlynkSimpleEsp8266.h | 27 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp8266.h | 99 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp8266.h | 103 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp8266.h | 105 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp8266.h | 107 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp8266.h | 109 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEsp8266_SSL_h` | src/BlynkSimpleEsp8266_SSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEsp8266_SSL_h |
+| `#define BlynkSimpleEsp8266_SSL_h` | src/BlynkSimpleEsp8266_SSL.h | 12 | Defines a macro or constant (BlynkSimpleEsp8266_SSL_h) |
+| `#ifndef ESP8266` | src/BlynkSimpleEsp8266_SSL.h | 14 | Conditional compilation - evaluates compile-time expression - ndef ESP8266 |
+| `#error This code is intended to run on the ESP8266 platform! Please check your Tools->Board setting.` | src/BlynkSimpleEsp8266_SSL.h | 15 | Generates a compilation error with a message: This code is intended to run on the ESP8266 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 16 | Ends conditional compilation block |
+| `#include <version.h>` | src/BlynkSimpleEsp8266_SSL.h | 18 | Includes the contents of a file (version.h) |
+| `#if ESP_SDK_VERSION_NUMBER < 0x020200` | src/BlynkSimpleEsp8266_SSL.h | 20 | Conditional compilation - evaluates compile-time expression - ESP_SDK_VERSION_NUMBER < 0x020200 |
+| `#error Please update your ESP8266 Arduino Core` | src/BlynkSimpleEsp8266_SSL.h | 21 | Generates a compilation error with a message: Please update your ESP8266 Arduino Core |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 22 | Ends conditional compilation block |
+| `#include <certs/letsencrypt_pem.h>` | src/BlynkSimpleEsp8266_SSL.h | 25 | Includes the contents of a file (certs/letsencrypt_pem.h) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleEsp8266_SSL.h | 27 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleEsp8266_SSL.h | 28 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleEsp8266_SSL.h | 29 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <ESP8266WiFi.h>` | src/BlynkSimpleEsp8266_SSL.h | 30 | Includes the contents of a file (ESP8266WiFi.h) |
+| `#include <WiFiClientSecure.h>` | src/BlynkSimpleEsp8266_SSL.h | 31 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#include <time.h>` | src/BlynkSimpleEsp8266_SSL.h | 32 | Includes the contents of a file (time.h) |
+| `#ifndef wificlientbearssl_h` | src/BlynkSimpleEsp8266_SSL.h | 34 | Conditional compilation - evaluates compile-time expression - ndef wificlientbearssl_h |
+| `#error BearSSL is needed, please update your ESP8266 Arduino Core` | src/BlynkSimpleEsp8266_SSL.h | 35 | Generates a compilation error with a message: BearSSL is needed, please update your ESP8266 Arduino Core |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 36 | Ends conditional compilation block |
+| `#ifdef USING_AXTLS` | src/BlynkSimpleEsp8266_SSL.h | 37 | Conditional compilation - evaluates compile-time expression - def USING_AXTLS |
+| `#error BearSSL is needed, but USING_AXTLS is defined` | src/BlynkSimpleEsp8266_SSL.h | 38 | Generates a compilation error with a message: BearSSL is needed, but USING_AXTLS is defined |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 39 | Ends conditional compilation block |
+| `#ifndef BLYNK_SSL_RX_BUF_SIZE` | src/BlynkSimpleEsp8266_SSL.h | 41 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_SSL_RX_BUF_SIZE |
+| `#define BLYNK_SSL_RX_BUF_SIZE 2048` | src/BlynkSimpleEsp8266_SSL.h | 42 | Defines a macro or constant (BLYNK_SSL_RX_BUF_SIZE) |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 43 | Ends conditional compilation block |
+| `#ifndef BLYNK_SSL_TX_BUF_SIZE` | src/BlynkSimpleEsp8266_SSL.h | 45 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_SSL_TX_BUF_SIZE |
+| `#define BLYNK_SSL_TX_BUF_SIZE 512` | src/BlynkSimpleEsp8266_SSL.h | 46 | Defines a macro or constant (BLYNK_SSL_TX_BUF_SIZE) |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 47 | Ends conditional compilation block |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEsp8266_SSL.h | 191 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEsp8266_SSL.h | 195 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 197 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEsp8266_SSL.h | 199 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEsp8266_SSL.h | 201 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEthernet_h` | src/BlynkSimpleEthernet.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEthernet_h |
+| `#define BlynkSimpleEthernet_h` | src/BlynkSimpleEthernet.h | 12 | Defines a macro or constant (BlynkSimpleEthernet_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEthernet.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "W5100"` | src/BlynkSimpleEthernet.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEthernet.h | 16 | Ends conditional compilation block |
+| `#include <Ethernet.h>` | src/BlynkSimpleEthernet.h | 18 | Includes the contents of a file (Ethernet.h) |
+| `#include <EthernetClient.h>` | src/BlynkSimpleEthernet.h | 19 | Includes the contents of a file (EthernetClient.h) |
+| `#include <Adapters/BlynkEthernet.h>` | src/BlynkSimpleEthernet.h | 20 | Includes the contents of a file (Adapters/BlynkEthernet.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEthernet.h | 22 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEthernet.h | 26 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEthernet.h | 28 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEthernet.h | 30 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEthernet.h | 32 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleUipEthernet_h` | src/BlynkSimpleEthernetENC.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleUipEthernet_h |
+| `#define BlynkSimpleUipEthernet_h` | src/BlynkSimpleEthernetENC.h | 12 | Defines a macro or constant (BlynkSimpleUipEthernet_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEthernetENC.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "ENC28J60"` | src/BlynkSimpleEthernetENC.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEthernetENC.h | 16 | Ends conditional compilation block |
+| `#include <EthernetENC.h>` | src/BlynkSimpleEthernetENC.h | 18 | Includes the contents of a file (EthernetENC.h) |
+| `#include <Adapters/BlynkEthernet.h>` | src/BlynkSimpleEthernetENC.h | 19 | Includes the contents of a file (Adapters/BlynkEthernet.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEthernetENC.h | 21 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEthernetENC.h | 25 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEthernetENC.h | 27 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEthernetENC.h | 29 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEthernetENC.h | 31 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleEthernetSSL_h` | src/BlynkSimpleEthernetSSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleEthernetSSL_h |
+| `#define BlynkSimpleEthernetSSL_h` | src/BlynkSimpleEthernetSSL.h | 12 | Defines a macro or constant (BlynkSimpleEthernetSSL_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleEthernetSSL.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "W5000"` | src/BlynkSimpleEthernetSSL.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleEthernetSSL.h | 16 | Ends conditional compilation block |
+| `#include <Ethernet.h>` | src/BlynkSimpleEthernetSSL.h | 18 | Includes the contents of a file (Ethernet.h) |
+| `#include <EthernetClient.h>` | src/BlynkSimpleEthernetSSL.h | 19 | Includes the contents of a file (EthernetClient.h) |
+| `#include <EthernetUdp.h>` | src/BlynkSimpleEthernetSSL.h | 20 | Includes the contents of a file (EthernetUdp.h) |
+| `#include <ArduinoECCX08.h>` | src/BlynkSimpleEthernetSSL.h | 21 | Includes the contents of a file (ArduinoECCX08.h) |
+| `#include <ArduinoBearSSL.h>` | src/BlynkSimpleEthernetSSL.h | 22 | Includes the contents of a file (ArduinoBearSSL.h) |
+| `#define BLYNK_USE_SSL` | src/BlynkSimpleEthernetSSL.h | 24 | Defines a macro or constant (BLYNK_USE_SSL) |
+| `#include <Adapters/BlynkEthernet.h>` | src/BlynkSimpleEthernetSSL.h | 26 | Includes the contents of a file (Adapters/BlynkEthernet.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleEthernetSSL.h | 31 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleEthernetSSL.h | 34 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleEthernetSSL.h | 36 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleEthernetSSL.h | 38 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleEthernetSSL.h | 107 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleFishino_h` | src/BlynkSimpleFishino.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleFishino_h |
+| `#define BlynkSimpleFishino_h` | src/BlynkSimpleFishino.h | 12 | Defines a macro or constant (BlynkSimpleFishino_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleFishino.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "Fishino"` | src/BlynkSimpleFishino.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleFishino.h | 16 | Ends conditional compilation block |
+| `#ifdef ESP8266` | src/BlynkSimpleFishino.h | 18 | Conditional compilation - evaluates compile-time expression - def ESP8266 |
+| `#error This code is not intended to run on the ESP8266 platform! Please check your Tools->Board setting.` | src/BlynkSimpleFishino.h | 19 | Generates a compilation error with a message: This code is not intended to run on the ESP8266 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleFishino.h | 20 | Ends conditional compilation block |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleFishino.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleFishino.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleFishino.h | 24 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <Fishino.h>` | src/BlynkSimpleFishino.h | 25 | Includes the contents of a file (Fishino.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleFishino.h | 109 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleFishino.h | 113 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleFishino.h | 115 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleFishino.h | 117 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleFishino.h | 119 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleIntelEdisonWiFi_h` | src/BlynkSimpleIntelEdisonWiFi.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleIntelEdisonWiFi_h |
+| `#define BlynkSimpleIntelEdisonWiFi_h` | src/BlynkSimpleIntelEdisonWiFi.h | 12 | Defines a macro or constant (BlynkSimpleIntelEdisonWiFi_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleIntelEdisonWiFi.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFi"` | src/BlynkSimpleIntelEdisonWiFi.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleIntelEdisonWiFi.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_MINIMIZE_PINMODE_USAGE` | src/BlynkSimpleIntelEdisonWiFi.h | 18 | Defines a macro or constant (BLYNK_MINIMIZE_PINMODE_USAGE) |
+| `#include <BlynkSimpleWifi.h>` | src/BlynkSimpleIntelEdisonWiFi.h | 20 | Includes the contents of a file (BlynkSimpleWifi.h) |
+| `#endif` | src/BlynkSimpleIntelEdisonWiFi.h | 22 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleLinkItONE_h` | src/BlynkSimpleLinkItONE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleLinkItONE_h |
+| `#define BlynkSimpleLinkItONE_h` | src/BlynkSimpleLinkItONE.h | 12 | Defines a macro or constant (BlynkSimpleLinkItONE_h) |
+| `#ifndef BLYNK_INFO_DEVICE` | src/BlynkSimpleLinkItONE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_DEVICE |
+| `#define BLYNK_INFO_DEVICE  "LinkIt ONE"` | src/BlynkSimpleLinkItONE.h | 15 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/BlynkSimpleLinkItONE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_NO_YIELD` | src/BlynkSimpleLinkItONE.h | 19 | Defines a macro or constant (BLYNK_NO_YIELD) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleLinkItONE.h | 21 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleLinkItONE.h | 22 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleLinkItONE.h | 23 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <LWiFi.h>` | src/BlynkSimpleLinkItONE.h | 24 | Includes the contents of a file (LWiFi.h) |
+| `#include <LWiFiClient.h>` | src/BlynkSimpleLinkItONE.h | 25 | Includes the contents of a file (LWiFiClient.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleLinkItONE.h | 88 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleLinkItONE.h | 92 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleLinkItONE.h | 94 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleLinkItONE.h | 96 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleLinkItONE.h | 98 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleMKR1000_h` | src/BlynkSimpleMKR1000.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleMKR1000_h |
+| `#define BlynkSimpleMKR1000_h` | src/BlynkSimpleMKR1000.h | 12 | Defines a macro or constant (BlynkSimpleMKR1000_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleMKR1000.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFi"` | src/BlynkSimpleMKR1000.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleMKR1000.h | 16 | Ends conditional compilation block |
+| `#include <BlynkSimpleWiFiShield101.h>` | src/BlynkSimpleMKR1000.h | 18 | Includes the contents of a file (BlynkSimpleWiFiShield101.h) |
+| `#endif` | src/BlynkSimpleMKR1000.h | 20 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleMKRGSM_h` | src/BlynkSimpleMKRGSM.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleMKRGSM_h |
+| `#define BlynkSimpleMKRGSM_h` | src/BlynkSimpleMKRGSM.h | 11 | Defines a macro or constant (BlynkSimpleMKRGSM_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleMKRGSM.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "MKRGSM"` | src/BlynkSimpleMKRGSM.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleMKRGSM.h | 15 | Ends conditional compilation block |
+| `#include <MKRGSM.h>` | src/BlynkSimpleMKRGSM.h | 17 | Includes the contents of a file (MKRGSM.h) |
+| `#include <Adapters/BlynkArduinoGSM.h>` | src/BlynkSimpleMKRGSM.h | 18 | Includes the contents of a file (Adapters/BlynkArduinoGSM.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleMKRGSM.h | 20 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleMKRGSM.h | 23 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleMKRGSM.h | 25 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleMKRGSM.h | 27 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleMKRGSM.h | 29 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleMKRNB_h` | src/BlynkSimpleMKRNB.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleMKRNB_h |
+| `#define BlynkSimpleMKRNB_h` | src/BlynkSimpleMKRNB.h | 11 | Defines a macro or constant (BlynkSimpleMKRNB_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleMKRNB.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "MKRNB"` | src/BlynkSimpleMKRNB.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleMKRNB.h | 15 | Ends conditional compilation block |
+| `#include <MKRNB.h>` | src/BlynkSimpleMKRNB.h | 17 | Includes the contents of a file (MKRNB.h) |
+| `#include <Adapters/BlynkArduinoNB.h>` | src/BlynkSimpleMKRNB.h | 18 | Includes the contents of a file (Adapters/BlynkArduinoNB.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleMKRNB.h | 20 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleMKRNB.h | 23 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleMKRNB.h | 25 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleMKRNB.h | 27 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleMKRNB.h | 29 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleParticle_h` | src/BlynkSimpleParticle.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleParticle_h |
+| `#define BlynkSimpleParticle_h` | src/BlynkSimpleParticle.h | 12 | Defines a macro or constant (BlynkSimpleParticle_h) |
+| `#include <Adapters/BlynkParticle.h>` | src/BlynkSimpleParticle.h | 14 | Includes the contents of a file (Adapters/BlynkParticle.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleParticle.h | 16 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleParticle.h | 19 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleParticle.h | 21 | Ends conditional compilation block |
+| `#include "BlynkWidgets.h"` | src/BlynkSimpleParticle.h | 23 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleParticle.h | 25 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleParticle_h` | src/BlynkSimpleParticleSSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleParticle_h |
+| `#define BlynkSimpleParticle_h` | src/BlynkSimpleParticleSSL.h | 12 | Defines a macro or constant (BlynkSimpleParticle_h) |
+| `#include <Adapters/BlynkParticleBearSSL.h>` | src/BlynkSimpleParticleSSL.h | 14 | Includes the contents of a file (Adapters/BlynkParticleBearSSL.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleParticleSSL.h | 16 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleParticleSSL.h | 19 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleParticleSSL.h | 21 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleParticleSSL.h | 23 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleParticleSSL.h | 25 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleRFduinoBLE_h` | src/BlynkSimpleRFduinoBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleRFduinoBLE_h |
+| `#define BlynkSimpleRFduinoBLE_h` | src/BlynkSimpleRFduinoBLE.h | 12 | Defines a macro or constant (BlynkSimpleRFduinoBLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleRFduinoBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "RFduinoBLE"` | src/BlynkSimpleRFduinoBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleRFduinoBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleRFduinoBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleRFduinoBLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleRFduinoBLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleRFduinoBLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleRFduinoBLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <RFduinoBLE.h>` | src/BlynkSimpleRFduinoBLE.h | 25 | Includes the contents of a file (RFduinoBLE.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleRFduinoBLE.h | 120 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleRFduinoBLE.h | 123 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleRFduinoBLE.h | 125 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleRFduinoBLE.h | 145 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleRFduinoBLE.h | 147 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleRedBearLab_BLE_Nano_h` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleRedBearLab_BLE_Nano_h |
+| `#define BlynkSimpleRedBearLab_BLE_Nano_h` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 12 | Defines a macro or constant (BlynkSimpleRedBearLab_BLE_Nano_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "RBL_BLE_Nano"` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#define BLYNK_SEND_THROTTLE 20` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 20 | Defines a macro or constant (BLYNK_SEND_THROTTLE) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <BLE_API.h>` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 25 | Includes the contents of a file (BLE_API.h) |
+| `#define TXRX_BUF_LEN 20` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 36 | Defines a macro or constant (TXRX_BUF_LEN) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 171 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 174 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 176 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 193 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleRedBearLab_BLE_Nano.h | 195 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleRedBear_Duo_h` | src/BlynkSimpleRedBear_Duo.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleRedBear_Duo_h |
+| `#define BlynkSimpleRedBear_Duo_h` | src/BlynkSimpleRedBear_Duo.h | 12 | Defines a macro or constant (BlynkSimpleRedBear_Duo_h) |
+| `#include "BlynkParticle.h"` | src/BlynkSimpleRedBear_Duo.h | 14 | Includes the contents of a file (BlynkParticle.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleRedBear_Duo.h | 16 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleRedBear_Duo.h | 19 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleRedBear_Duo.h | 21 | Ends conditional compilation block |
+| `#include "BlynkWidgets.h"` | src/BlynkSimpleRedBear_Duo.h | 23 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleRedBear_Duo.h | 25 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleRedBear_Duo_BLE_h` | src/BlynkSimpleRedBear_Duo_BLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleRedBear_Duo_BLE_h |
+| `#define BlynkSimpleRedBear_Duo_BLE_h` | src/BlynkSimpleRedBear_Duo_BLE.h | 12 | Defines a macro or constant (BlynkSimpleRedBear_Duo_BLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleRedBear_Duo_BLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "RB_Duo_BLE"` | src/BlynkSimpleRedBear_Duo_BLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleRedBear_Duo_BLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleRedBear_Duo_BLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleRedBear_Duo_BLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleRedBear_Duo_BLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleRedBear_Duo_BLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleRedBear_Duo_BLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#define MIN_CONN_INTERVAL          0x0028 // 50ms.` | src/BlynkSimpleRedBear_Duo_BLE.h | 34 | Defines a macro or constant (MIN_CONN_INTERVAL) |
+| `#define MAX_CONN_INTERVAL          0x0190 // 500ms.` | src/BlynkSimpleRedBear_Duo_BLE.h | 35 | Defines a macro or constant (MAX_CONN_INTERVAL) |
+| `#define SLAVE_LATENCY              0x0000 // No slave latency.` | src/BlynkSimpleRedBear_Duo_BLE.h | 36 | Defines a macro or constant (SLAVE_LATENCY) |
+| `#define CONN_SUPERVISION_TIMEOUT   0x03E8 // 10s.` | src/BlynkSimpleRedBear_Duo_BLE.h | 37 | Defines a macro or constant (CONN_SUPERVISION_TIMEOUT) |
+| `#define BLE_PERIPHERAL_APPEARANCE  BLE_APPEARANCE_UNKNOWN` | src/BlynkSimpleRedBear_Duo_BLE.h | 40 | Defines a macro or constant (BLE_PERIPHERAL_APPEARANCE) |
+| `#define BLE_DEVICE_NAME            "Blynk"` | src/BlynkSimpleRedBear_Duo_BLE.h | 42 | Defines a macro or constant (BLE_DEVICE_NAME) |
+| `#define CHARACTERISTIC1_MAX_LEN    20` | src/BlynkSimpleRedBear_Duo_BLE.h | 44 | Defines a macro or constant (CHARACTERISTIC1_MAX_LEN) |
+| `#define CHARACTERISTIC2_MAX_LEN    20` | src/BlynkSimpleRedBear_Duo_BLE.h | 45 | Defines a macro or constant (CHARACTERISTIC2_MAX_LEN) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleRedBear_Duo_BLE.h | 264 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleRedBear_Duo_BLE.h | 267 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleRedBear_Duo_BLE.h | 269 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleRedBear_Duo_BLE.h | 287 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleRedBear_Duo_BLE.h | 289 | Ends conditional compilation block |
+| `#ifndef BlynkSerialBLE_h` | src/BlynkSimpleSerialBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSerialBLE_h |
+| `#define BlynkSerialBLE_h` | src/BlynkSimpleSerialBLE.h | 12 | Defines a macro or constant (BlynkSerialBLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleSerialBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "SerialBLE"` | src/BlynkSimpleSerialBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleSerialBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleSerialBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK      20` | src/BlynkSimpleSerialBLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#define BLYNK_SEND_THROTTLE   40` | src/BlynkSimpleSerialBLE.h | 20 | Defines a macro or constant (BLYNK_SEND_THROTTLE) |
+| `#define BLYNK_NO_INFO` | src/BlynkSimpleSerialBLE.h | 21 | Defines a macro or constant (BLYNK_NO_INFO) |
+| `#include <Adapters/BlynkSerial.h>` | src/BlynkSimpleSerialBLE.h | 23 | Includes the contents of a file (Adapters/BlynkSerial.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleSerialBLE.h | 25 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleSerialBLE.h | 28 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleSerialBLE.h | 30 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleSerialBLE.h | 32 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleSerialBLE.h | 34 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleShieldEsp8266_h` | src/BlynkSimpleShieldEsp8266.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleShieldEsp8266_h |
+| `#define BlynkSimpleShieldEsp8266_h` | src/BlynkSimpleShieldEsp8266.h | 12 | Defines a macro or constant (BlynkSimpleShieldEsp8266_h) |
+| `#ifdef ESP8266` | src/BlynkSimpleShieldEsp8266.h | 14 | Conditional compilation - evaluates compile-time expression - def ESP8266 |
+| `#error This code is not intended to run on the ESP8266 platform! Please check your Tools->Board setting.` | src/BlynkSimpleShieldEsp8266.h | 15 | Generates a compilation error with a message: This code is not intended to run on the ESP8266 platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleShieldEsp8266.h | 16 | Ends conditional compilation block |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleShieldEsp8266.h | 18 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "ESP8266"` | src/BlynkSimpleShieldEsp8266.h | 19 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleShieldEsp8266.h | 20 | Ends conditional compilation block |
+| `#ifndef BLYNK_ESP8266_MUX` | src/BlynkSimpleShieldEsp8266.h | 22 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_ESP8266_MUX |
+| `#define BLYNK_ESP8266_MUX  1` | src/BlynkSimpleShieldEsp8266.h | 23 | Defines a macro or constant (BLYNK_ESP8266_MUX) |
+| `#endif` | src/BlynkSimpleShieldEsp8266.h | 24 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleShieldEsp8266.h | 26 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 40` | src/BlynkSimpleShieldEsp8266.h | 27 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleShieldEsp8266.h | 29 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleShieldEsp8266.h | 30 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleShieldEsp8266.h | 31 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <ESP8266_Lib.h>` | src/BlynkSimpleShieldEsp8266.h | 32 | Includes the contents of a file (ESP8266_Lib.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleShieldEsp8266.h | 196 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleShieldEsp8266.h | 199 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleShieldEsp8266.h | 201 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleShieldEsp8266.h | 203 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleShieldEsp8266.h | 205 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleSimbleeBLE_h` | src/BlynkSimpleSimbleeBLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleSimbleeBLE_h |
+| `#define BlynkSimpleSimbleeBLE_h` | src/BlynkSimpleSimbleeBLE.h | 12 | Defines a macro or constant (BlynkSimpleSimbleeBLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleSimbleeBLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "SimbleeBLE"` | src/BlynkSimpleSimbleeBLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleSimbleeBLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleSimbleeBLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleSimbleeBLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleSimbleeBLE.h | 22 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleSimbleeBLE.h | 23 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleSimbleeBLE.h | 24 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <SimbleeBLE.h>` | src/BlynkSimpleSimbleeBLE.h | 25 | Includes the contents of a file (SimbleeBLE.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleSimbleeBLE.h | 120 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleSimbleeBLE.h | 123 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleSimbleeBLE.h | 125 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleSimbleeBLE.h | 144 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleSimbleeBLE.h | 146 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleStream_h` | src/BlynkSimpleStream.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleStream_h |
+| `#define BlynkSimpleStream_h` | src/BlynkSimpleStream.h | 12 | Defines a macro or constant (BlynkSimpleStream_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleStream.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "Stream"` | src/BlynkSimpleStream.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleStream.h | 16 | Ends conditional compilation block |
+| `#include <Adapters/BlynkSerial.h>` | src/BlynkSimpleStream.h | 18 | Includes the contents of a file (Adapters/BlynkSerial.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleStream.h | 20 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleStream.h | 23 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleStream.h | 25 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleStream.h | 27 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleStream.h | 29 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleTinyDuino_h` | src/BlynkSimpleTinyDuino.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleTinyDuino_h |
+| `#define BlynkSimpleTinyDuino_h` | src/BlynkSimpleTinyDuino.h | 11 | Defines a macro or constant (BlynkSimpleTinyDuino_h) |
+| `#ifndef BLYNK_INFO_DEVICE` | src/BlynkSimpleTinyDuino.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_DEVICE |
+| `#define BLYNK_INFO_DEVICE  "TinyDuino"` | src/BlynkSimpleTinyDuino.h | 14 | Defines a macro or constant (BLYNK_INFO_DEVICE) |
+| `#endif` | src/BlynkSimpleTinyDuino.h | 15 | Ends conditional compilation block |
+| `#include <Adapters/BlynkCC3000.h>` | src/BlynkSimpleTinyDuino.h | 17 | Includes the contents of a file (Adapters/BlynkCC3000.h) |
+| `#include <Adafruit_CC3000.h>` | src/BlynkSimpleTinyDuino.h | 18 | Includes the contents of a file (Adafruit_CC3000.h) |
+| `#define ADAFRUIT_CC3000_IRQ  2` | src/BlynkSimpleTinyDuino.h | 21 | Defines a macro or constant (ADAFRUIT_CC3000_IRQ) |
+| `#define ADAFRUIT_CC3000_VBAT A3` | src/BlynkSimpleTinyDuino.h | 22 | Defines a macro or constant (ADAFRUIT_CC3000_VBAT) |
+| `#define ADAFRUIT_CC3000_CS   8` | src/BlynkSimpleTinyDuino.h | 23 | Defines a macro or constant (ADAFRUIT_CC3000_CS) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleTinyDuino.h | 28 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleTinyDuino.h | 31 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleTinyDuino.h | 33 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleTinyDuino.h | 36 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleTinyDuino.h | 38 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleTinyGSM_h` | src/BlynkSimpleTinyGSM.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleTinyGSM_h |
+| `#define BlynkSimpleTinyGSM_h` | src/BlynkSimpleTinyGSM.h | 12 | Defines a macro or constant (BlynkSimpleTinyGSM_h) |
+| `#include <Adapters/BlynkGsmClient.h>` | src/BlynkSimpleTinyGSM.h | 14 | Includes the contents of a file (Adapters/BlynkGsmClient.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleTinyGSM.h | 16 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleTinyGSM.h | 19 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleTinyGSM.h | 21 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleTinyGSM.h | 23 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleTinyGSM.h | 25 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleUipEthernet_h` | src/BlynkSimpleUIPEthernet.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleUipEthernet_h |
+| `#define BlynkSimpleUipEthernet_h` | src/BlynkSimpleUIPEthernet.h | 12 | Defines a macro or constant (BlynkSimpleUipEthernet_h) |
+| `#error "BlynkSimpleUipEthernet.h is deprecated. Please use BlynkSimpleEthernetENC.h"` | src/BlynkSimpleUIPEthernet.h | 14 | Generates a compilation error with a message: "BlynkSimpleUipEthernet.h is deprecated. Please use BlynkSimpleEthernetENC.h" |
+| `#endif` | src/BlynkSimpleUIPEthernet.h | 16 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWiFiLink_h` | src/BlynkSimpleWiFiLink.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWiFiLink_h |
+| `#define BlynkSimpleWiFiLink_h` | src/BlynkSimpleWiFiLink.h | 11 | Defines a macro or constant (BlynkSimpleWiFiLink_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWiFiLink.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFiLink"` | src/BlynkSimpleWiFiLink.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWiFiLink.h | 15 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWiFiLink.h | 17 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 64` | src/BlynkSimpleWiFiLink.h | 18 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <WiFiLink.h>` | src/BlynkSimpleWiFiLink.h | 20 | Includes the contents of a file (WiFiLink.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWiFiLink.h | 21 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWiFiLink.h | 23 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWiFiLink.h | 27 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWiFiLink.h | 29 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWiFiLink.h | 31 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWiFiLink.h | 33 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWiFiNINA_h` | src/BlynkSimpleWiFiNINA.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWiFiNINA_h |
+| `#define BlynkSimpleWiFiNINA_h` | src/BlynkSimpleWiFiNINA.h | 12 | Defines a macro or constant (BlynkSimpleWiFiNINA_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWiFiNINA.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFiNINA"` | src/BlynkSimpleWiFiNINA.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWiFiNINA.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWiFiNINA.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <WiFiNINA.h>` | src/BlynkSimpleWiFiNINA.h | 21 | Includes the contents of a file (WiFiNINA.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWiFiNINA.h | 22 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWiFiNINA.h | 27 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWiFiNINA.h | 30 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWiFiNINA.h | 32 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWiFiNINA.h | 34 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWiFiNINA.h | 36 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWiFiShield101_h` | src/BlynkSimpleWiFiShield101.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWiFiShield101_h |
+| `#define BlynkSimpleWiFiShield101_h` | src/BlynkSimpleWiFiShield101.h | 12 | Defines a macro or constant (BlynkSimpleWiFiShield101_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWiFiShield101.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFi101"` | src/BlynkSimpleWiFiShield101.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWiFiShield101.h | 16 | Ends conditional compilation block |
+| `#include <WiFi101.h>` | src/BlynkSimpleWiFiShield101.h | 18 | Includes the contents of a file (WiFi101.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWiFiShield101.h | 19 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWiFiShield101.h | 21 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWiFiShield101.h | 25 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWiFiShield101.h | 27 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWiFiShield101.h | 29 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWiFiShield101.h | 31 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWiFiShield101_h` | src/BlynkSimpleWiFiShield101_SSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWiFiShield101_h |
+| `#define BlynkSimpleWiFiShield101_h` | src/BlynkSimpleWiFiShield101_SSL.h | 12 | Defines a macro or constant (BlynkSimpleWiFiShield101_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWiFiShield101_SSL.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WiFi101"` | src/BlynkSimpleWiFiShield101_SSL.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWiFiShield101_SSL.h | 16 | Ends conditional compilation block |
+| `#include <WiFi101.h>` | src/BlynkSimpleWiFiShield101_SSL.h | 18 | Includes the contents of a file (WiFi101.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWiFiShield101_SSL.h | 19 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWiFiShield101_SSL.h | 21 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWiFiShield101_SSL.h | 25 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWiFiShield101_SSL.h | 27 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWiFiShield101_SSL.h | 29 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWiFiShield101_SSL.h | 31 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWiFly_h` | src/BlynkSimpleWiFly.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWiFly_h |
+| `#define BlynkSimpleWiFly_h` | src/BlynkSimpleWiFly.h | 12 | Defines a macro or constant (BlynkSimpleWiFly_h) |
+| `#include <Adapters/BlynkWiFly.h>` | src/BlynkSimpleWiFly.h | 14 | Includes the contents of a file (Adapters/BlynkWiFly.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWiFly.h | 16 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWiFly.h | 19 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWiFly.h | 21 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWiFly.h | 23 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWiFly.h | 25 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWifi_h` | src/BlynkSimpleWifi.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWifi_h |
+| `#define BlynkSimpleWifi_h` | src/BlynkSimpleWifi.h | 12 | Defines a macro or constant (BlynkSimpleWifi_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWifi.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "HDG204"` | src/BlynkSimpleWifi.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWifi.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_TIMEOUT_MS 6000UL` | src/BlynkSimpleWifi.h | 19 | Defines a macro or constant (BLYNK_TIMEOUT_MS) |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWifi.h | 20 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 64` | src/BlynkSimpleWifi.h | 21 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <WiFi.h>` | src/BlynkSimpleWifi.h | 23 | Includes the contents of a file (WiFi.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWifi.h | 24 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWifi.h | 26 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWifi.h | 30 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWifi.h | 32 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWifi.h | 34 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWifi.h | 36 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWildFire_h` | src/BlynkSimpleWildFire.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWildFire_h |
+| `#define BlynkSimpleWildFire_h` | src/BlynkSimpleWildFire.h | 12 | Defines a macro or constant (BlynkSimpleWildFire_h) |
+| `#include <Adapters/BlynkWildFire.h>` | src/BlynkSimpleWildFire.h | 14 | Includes the contents of a file (Adapters/BlynkWildFire.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWildFire.h | 17 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWildFire.h | 20 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWildFire.h | 22 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWildFire.h | 24 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWildFire.h | 26 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWioTerminal_h` | src/BlynkSimpleWioTerminal.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWioTerminal_h |
+| `#define BlynkSimpleWioTerminal_h` | src/BlynkSimpleWioTerminal.h | 12 | Defines a macro or constant (BlynkSimpleWioTerminal_h) |
+| `#ifndef SEEED_WIO_TERMINAL` | src/BlynkSimpleWioTerminal.h | 14 | Conditional compilation - evaluates compile-time expression - ndef SEEED_WIO_TERMINAL |
+| `#error This code is intended to run on the Wio Terminal platform! Please check your Tools->Board setting.` | src/BlynkSimpleWioTerminal.h | 15 | Generates a compilation error with a message: This code is intended to run on the Wio Terminal platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleWioTerminal.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWioTerminal.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleWioTerminal.h | 20 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleWioTerminal.h | 21 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleWioTerminal.h | 22 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <rpcWiFi.h>` | src/BlynkSimpleWioTerminal.h | 23 | Includes the contents of a file (rpcWiFi.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWioTerminal.h | 93 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWioTerminal.h | 97 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWioTerminal.h | 99 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWioTerminal.h | 101 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWioTerminal.h | 103 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWioTerminal_BLE_h` | src/BlynkSimpleWioTerminal_BLE.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWioTerminal_BLE_h |
+| `#define BlynkSimpleWioTerminal_BLE_h` | src/BlynkSimpleWioTerminal_BLE.h | 12 | Defines a macro or constant (BlynkSimpleWioTerminal_BLE_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWioTerminal_BLE.h | 14 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION "WioTerminal_BLE"` | src/BlynkSimpleWioTerminal_BLE.h | 15 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWioTerminal_BLE.h | 16 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWioTerminal_BLE.h | 18 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 20` | src/BlynkSimpleWioTerminal_BLE.h | 19 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleWioTerminal_BLE.h | 23 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleWioTerminal_BLE.h | 24 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <utility/BlynkFifo.h>` | src/BlynkSimpleWioTerminal_BLE.h | 25 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#include <rpcBLEDevice.h>` | src/BlynkSimpleWioTerminal_BLE.h | 27 | Includes the contents of a file (rpcBLEDevice.h) |
+| `#include <BLEServer.h>` | src/BlynkSimpleWioTerminal_BLE.h | 28 | Includes the contents of a file (BLEServer.h) |
+| `#include <BLE2902.h>` | src/BlynkSimpleWioTerminal_BLE.h | 29 | Includes the contents of a file (BLE2902.h) |
+| `#define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleWioTerminal_BLE.h | 31 | Defines a macro or constant (SERVICE_UUID) |
+| `#define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleWioTerminal_BLE.h | 32 | Defines a macro or constant (CHARACTERISTIC_UUID_RX) |
+| `#define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148F18D941E"` | src/BlynkSimpleWioTerminal_BLE.h | 33 | Defines a macro or constant (CHARACTERISTIC_UUID_TX) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWioTerminal_BLE.h | 179 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWioTerminal_BLE.h | 182 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWioTerminal_BLE.h | 184 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWioTerminal_BLE.h | 201 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWioTerminal_BLE.h | 203 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWioTerminal_h` | src/BlynkSimpleWioTerminal_SSL.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWioTerminal_h |
+| `#define BlynkSimpleWioTerminal_h` | src/BlynkSimpleWioTerminal_SSL.h | 12 | Defines a macro or constant (BlynkSimpleWioTerminal_h) |
+| `#ifndef SEEED_WIO_TERMINAL` | src/BlynkSimpleWioTerminal_SSL.h | 14 | Conditional compilation - evaluates compile-time expression - ndef SEEED_WIO_TERMINAL |
+| `#error This code is intended to run on the Wio Terminal platform! Please check your Tools->Board setting.` | src/BlynkSimpleWioTerminal_SSL.h | 15 | Generates a compilation error with a message: This code is intended to run on the Wio Terminal platform! Please check your Tools->Board setting. |
+| `#endif` | src/BlynkSimpleWioTerminal_SSL.h | 16 | Ends conditional compilation block |
+| `#include <certs/letsencrypt_pem.h>` | src/BlynkSimpleWioTerminal_SSL.h | 19 | Includes the contents of a file (certs/letsencrypt_pem.h) |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWioTerminal_SSL.h | 21 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#include <BlynkApiArduino.h>` | src/BlynkSimpleWioTerminal_SSL.h | 23 | Includes the contents of a file (BlynkApiArduino.h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleWioTerminal_SSL.h | 24 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleWioTerminal_SSL.h | 25 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <rpcWiFi.h>` | src/BlynkSimpleWioTerminal_SSL.h | 26 | Includes the contents of a file (rpcWiFi.h) |
+| `#include <WiFiClientSecure.h>` | src/BlynkSimpleWioTerminal_SSL.h | 27 | Includes the contents of a file (WiFiClientSecure.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWioTerminal_SSL.h | 133 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWioTerminal_SSL.h | 137 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWioTerminal_SSL.h | 139 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWioTerminal_SSL.h | 141 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWioTerminal_SSL.h | 143 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWizFi250_h` | src/BlynkSimpleWizFi250.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWizFi250_h |
+| `#define BlynkSimpleWizFi250_h` | src/BlynkSimpleWizFi250.h | 11 | Defines a macro or constant (BlynkSimpleWizFi250_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWizFi250.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WizFi250"` | src/BlynkSimpleWizFi250.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWizFi250.h | 15 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWizFi250.h | 17 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 64` | src/BlynkSimpleWizFi250.h | 18 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <WizFi250.h>` | src/BlynkSimpleWizFi250.h | 20 | Includes the contents of a file (WizFi250.h) |
+| `#include <Adapters/BlynkWizFi250.h>` | src/BlynkSimpleWizFi250.h | 21 | Includes the contents of a file (Adapters/BlynkWizFi250.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWizFi250.h | 23 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWizFi250.h | 27 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWizFi250.h | 29 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWizFi250.h | 31 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWizFi250.h | 33 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleWizFi310_h` | src/BlynkSimpleWizFi310.h | 10 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleWizFi310_h |
+| `#define BlynkSimpleWizFi310_h` | src/BlynkSimpleWizFi310.h | 11 | Defines a macro or constant (BlynkSimpleWizFi310_h) |
+| `#ifndef BLYNK_INFO_CONNECTION` | src/BlynkSimpleWizFi310.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_INFO_CONNECTION |
+| `#define BLYNK_INFO_CONNECTION  "WizFi310"` | src/BlynkSimpleWizFi310.h | 14 | Defines a macro or constant (BLYNK_INFO_CONNECTION) |
+| `#endif` | src/BlynkSimpleWizFi310.h | 15 | Ends conditional compilation block |
+| `#define BLYNK_SEND_ATOMIC` | src/BlynkSimpleWizFi310.h | 17 | Defines a macro or constant (BLYNK_SEND_ATOMIC) |
+| `#define BLYNK_SEND_CHUNK 64` | src/BlynkSimpleWizFi310.h | 18 | Defines a macro or constant (BLYNK_SEND_CHUNK) |
+| `#include <WizFi310.h>` | src/BlynkSimpleWizFi310.h | 20 | Includes the contents of a file (WizFi310.h) |
+| `#include <Adapters/BlynkWiFiCommon.h>` | src/BlynkSimpleWizFi310.h | 21 | Includes the contents of a file (Adapters/BlynkWiFiCommon.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleWizFi310.h | 23 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleWizFi310.h | 27 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleWizFi310.h | 29 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleWizFi310.h | 31 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleWizFi310.h | 33 | Ends conditional compilation block |
+| `#ifndef BlynkSimpleYun_h` | src/BlynkSimpleYun.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkSimpleYun_h |
+| `#define BlynkSimpleYun_h` | src/BlynkSimpleYun.h | 12 | Defines a macro or constant (BlynkSimpleYun_h) |
+| `#include <Blynk/BlynkProtocol.h>` | src/BlynkSimpleYun.h | 14 | Includes the contents of a file (Blynk/BlynkProtocol.h) |
+| `#include <Adapters/BlynkArduinoClient.h>` | src/BlynkSimpleYun.h | 15 | Includes the contents of a file (Adapters/BlynkArduinoClient.h) |
+| `#include <BridgeClient.h>` | src/BlynkSimpleYun.h | 16 | Includes the contents of a file (BridgeClient.h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK)` | src/BlynkSimpleYun.h | 67 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_BLYNK) |
+| `#else` | src/BlynkSimpleYun.h | 71 | Else clause for conditional compilation |
+| `#endif` | src/BlynkSimpleYun.h | 73 | Ends conditional compilation block |
+| `#include <BlynkWidgets.h>` | src/BlynkSimpleYun.h | 75 | Includes the contents of a file (BlynkWidgets.h) |
+| `#endif` | src/BlynkSimpleYun.h | 77 | Ends conditional compilation block |
+| `#include <WidgetLED.h>` | src/BlynkWidgets.h | 10 | Includes the contents of a file (WidgetLED.h) |
+| `#include <WidgetLCD.h>` | src/BlynkWidgets.h | 11 | Includes the contents of a file (WidgetLCD.h) |
+| `#include <WidgetTerminal.h>` | src/BlynkWidgets.h | 12 | Includes the contents of a file (WidgetTerminal.h) |
+| `#include <WidgetTimeInput.h>` | src/BlynkWidgets.h | 13 | Includes the contents of a file (WidgetTimeInput.h) |
+| `#include <WidgetMap.h>` | src/BlynkWidgets.h | 14 | Includes the contents of a file (WidgetMap.h) |
+| `#ifndef WidgetLCD_h` | src/WidgetLCD.h | 10 | Conditional compilation - evaluates compile-time expression - ndef WidgetLCD_h |
+| `#define WidgetLCD_h` | src/WidgetLCD.h | 11 | Defines a macro or constant (WidgetLCD_h) |
+| `#include <Blynk/BlynkWidgetBase.h>` | src/WidgetLCD.h | 13 | Includes the contents of a file (Blynk/BlynkWidgetBase.h) |
+| `#endif` | src/WidgetLCD.h | 38 | Ends conditional compilation block |
+| `#ifndef WidgetLED_h` | src/WidgetLED.h | 10 | Conditional compilation - evaluates compile-time expression - ndef WidgetLED_h |
+| `#define WidgetLED_h` | src/WidgetLED.h | 11 | Defines a macro or constant (WidgetLED_h) |
+| `#include <Blynk/BlynkWidgetBase.h>` | src/WidgetLED.h | 13 | Includes the contents of a file (Blynk/BlynkWidgetBase.h) |
+| `#endif` | src/WidgetLED.h | 45 | Ends conditional compilation block |
+| `#ifndef WidgetMap_h` | src/WidgetMap.h | 10 | Conditional compilation - evaluates compile-time expression - ndef WidgetMap_h |
+| `#define WidgetMap_h` | src/WidgetMap.h | 11 | Defines a macro or constant (WidgetMap_h) |
+| `#include <Blynk/BlynkWidgetBase.h>` | src/WidgetMap.h | 13 | Includes the contents of a file (Blynk/BlynkWidgetBase.h) |
+| `#endif` | src/WidgetMap.h | 32 | Ends conditional compilation block |
+| `#ifndef WidgetRTC_h` | src/WidgetRTC.h | 11 | Conditional compilation - evaluates compile-time expression - ndef WidgetRTC_h |
+| `#define WidgetRTC_h` | src/WidgetRTC.h | 12 | Defines a macro or constant (WidgetRTC_h) |
+| `#if !defined(ARDUINO)` | src/WidgetRTC.h | 14 | Conditional compilation - evaluates compile-time expression - !defined(ARDUINO) |
+| `#error WidgetRTC is not available on this platform!` | src/WidgetRTC.h | 15 | Generates a compilation error with a message: WidgetRTC is not available on this platform! |
+| `#endif` | src/WidgetRTC.h | 16 | Ends conditional compilation block |
+| `#include <Blynk/BlynkWidgetBase.h>` | src/WidgetRTC.h | 18 | Includes the contents of a file (Blynk/BlynkWidgetBase.h) |
+| `#include <Blynk/BlynkTemplates.h>` | src/WidgetRTC.h | 19 | Includes the contents of a file (Blynk/BlynkTemplates.h) |
+| `#include <TimeLib.h>` | src/WidgetRTC.h | 20 | Includes the contents of a file (TimeLib.h) |
+| `#endif` | src/WidgetRTC.h | 58 | Ends conditional compilation block |
+| `#ifndef WidgetTerminal_h` | src/WidgetTerminal.h | 10 | Conditional compilation - evaluates compile-time expression - ndef WidgetTerminal_h |
+| `#define WidgetTerminal_h` | src/WidgetTerminal.h | 11 | Defines a macro or constant (WidgetTerminal_h) |
+| `#ifndef BLYNK_TERMINAL_BUFF_OUT` | src/WidgetTerminal.h | 13 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TERMINAL_BUFF_OUT |
+| `#define BLYNK_TERMINAL_BUFF_OUT 250` | src/WidgetTerminal.h | 14 | Defines a macro or constant (BLYNK_TERMINAL_BUFF_OUT) |
+| `#endif` | src/WidgetTerminal.h | 15 | Ends conditional compilation block |
+| `#ifndef BLYNK_TERMINAL_BUFF_IN` | src/WidgetTerminal.h | 16 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_TERMINAL_BUFF_IN |
+| `#define BLYNK_TERMINAL_BUFF_IN BLYNK_MAX_READBYTES` | src/WidgetTerminal.h | 17 | Defines a macro or constant (BLYNK_TERMINAL_BUFF_IN) |
+| `#endif` | src/WidgetTerminal.h | 18 | Ends conditional compilation block |
+| `#if defined(ARDUINO) && !(defined(LINUX) \|\| defined(__MBED__))` | src/WidgetTerminal.h | 20 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) && !(defined(LINUX) \|\| defined(__MBED__)) |
+| `#define BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 21 | Defines a macro or constant (BLYNK_USE_STREAM_CLASS) |
+| `#elif defined(SPARK) \|\| defined(PARTICLE)` | src/WidgetTerminal.h | 22 | Else-if for conditional compilation |
+| `#define BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 23 | Defines a macro or constant (BLYNK_USE_STREAM_CLASS) |
+| `#endif` | src/WidgetTerminal.h | 24 | Ends conditional compilation block |
+| `#include <Blynk/BlynkWidgetBase.h>` | src/WidgetTerminal.h | 26 | Includes the contents of a file (Blynk/BlynkWidgetBase.h) |
+| `#include <utility/BlynkFifo.h>` | src/WidgetTerminal.h | 27 | Includes the contents of a file (utility/BlynkFifo.h) |
+| `#ifdef BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 29 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_STREAM_CLASS |
+| `#include <Stream.h>` | src/WidgetTerminal.h | 30 | Includes the contents of a file (Stream.h) |
+| `#endif` | src/WidgetTerminal.h | 31 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 35 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_STREAM_CLASS |
+| `#endif` | src/WidgetTerminal.h | 37 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_STREAM_CLASS` | src/WidgetTerminal.h | 107 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_STREAM_CLASS |
+| `#else` | src/WidgetTerminal.h | 115 | Else clause for conditional compilation |
+| `#endif` | src/WidgetTerminal.h | 130 | Ends conditional compilation block |
+| `#endif` | src/WidgetTerminal.h | 143 | Ends conditional compilation block |
+| `#ifndef WidgetTimeInput_h` | src/WidgetTimeInput.h | 11 | Conditional compilation - evaluates compile-time expression - ndef WidgetTimeInput_h |
+| `#define WidgetTimeInput_h` | src/WidgetTimeInput.h | 12 | Defines a macro or constant (WidgetTimeInput_h) |
+| `#include <Blynk/BlynkApi.h>` | src/WidgetTimeInput.h | 14 | Includes the contents of a file (Blynk/BlynkApi.h) |
+| `#include <Blynk/BlynkDateTime.h>` | src/WidgetTimeInput.h | 15 | Includes the contents of a file (Blynk/BlynkDateTime.h) |
+| `#include <Blynk/BlynkUtility.h>` | src/WidgetTimeInput.h | 16 | Includes the contents of a file (Blynk/BlynkUtility.h) |
+| `#endif` | src/WidgetTimeInput.h | 129 | Ends conditional compilation block |
+| `#warning "Please include Blynk/BlynkDateTime.h, instead of utility/BlynkDateTime.h"` | src/utility/BlynkDateTime.h | 2 | Generates a compilation warning with a message: "Please include Blynk/BlynkDateTime.h, instead of utility/BlynkDateTime.h" |
+| `#include <Blynk/BlynkDateTime.h>` | src/utility/BlynkDateTime.h | 3 | Includes the contents of a file (Blynk/BlynkDateTime.h) |
+| `#include <Blynk/BlynkDebug.h>` | src/utility/BlynkDebug.cpp | 9 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#if defined(ARDUINO) && defined(__AVR__) && defined(BLYNK_USE_AVR_WDT)` | src/utility/BlynkDebug.cpp | 11 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO) && defined(__AVR__) && defined(BLYNK_USE_AVR_WDT) |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 13 | Includes the contents of a file (Arduino.h) |
+| `#include <avr/wdt.h>` | src/utility/BlynkDebug.cpp | 14 | Includes the contents of a file (avr/wdt.h) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 39 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 40 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(ARDUINO) && defined(__AVR__)` | src/utility/BlynkDebug.cpp | 42 | Else-if for conditional compilation |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 44 | Includes the contents of a file (Arduino.h) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 60 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 61 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(ARDUINO) && (defined(ESP8266) \|\| defined(ESP32))` | src/utility/BlynkDebug.cpp | 63 | Else-if for conditional compilation |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 65 | Includes the contents of a file (Arduino.h) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 78 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 79 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(ARDUINO_ARCH_RP2040) && !defined(__MBED__)` | src/utility/BlynkDebug.cpp | 81 | Else-if for conditional compilation |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 83 | Includes the contents of a file (Arduino.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 91 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 92 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 93 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(ARDUINO_ARCH_SAMD) \|\| \` | src/utility/BlynkDebug.cpp | 95 | Else-if for conditional compilation |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 99 | Includes the contents of a file (Arduino.h) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 115 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 116 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined (ARDUINO_ARCH_ARC32)` | src/utility/BlynkDebug.cpp | 118 | Else-if for conditional compilation |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 130 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 131 | Defines a macro or constant (_BLYNK_USE_DEFAULT_RESET) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 132 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(ARDUINO) && (defined(__STM32F1__) \|\| defined(__STM32F3__))` | src/utility/BlynkDebug.cpp | 134 | Else-if for conditional compilation |
+| `#include <Arduino.h>` | src/utility/BlynkDebug.cpp | 136 | Includes the contents of a file (Arduino.h) |
+| `#include <libmaple/nvic.h>` | src/utility/BlynkDebug.cpp | 137 | Includes the contents of a file (libmaple/nvic.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 145 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 146 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 147 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined (PARTICLE) \|\| defined(SPARK)` | src/utility/BlynkDebug.cpp | 149 | Else-if for conditional compilation |
+| `#include "application.h"` | src/utility/BlynkDebug.cpp | 151 | Includes the contents of a file (application.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 159 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 160 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 161 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(__MBED__) && !defined(ARDUINO)` | src/utility/BlynkDebug.cpp | 163 | Else-if for conditional compilation |
+| `#include "mbed.h"` | src/utility/BlynkDebug.cpp | 165 | Includes the contents of a file (mbed.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 192 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 193 | Defines a macro or constant (_BLYNK_USE_DEFAULT_RESET) |
+| `#elif defined(LINUX) && defined(RASPBERRY)` | src/utility/BlynkDebug.cpp | 195 | Else-if for conditional compilation |
+| `#include <stdlib.h>` | src/utility/BlynkDebug.cpp | 197 | Includes the contents of a file (stdlib.h) |
+| `#include <wiringPi.h>` | src/utility/BlynkDebug.cpp | 198 | Includes the contents of a file (wiringPi.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 212 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 213 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 214 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#elif defined(LINUX)` | src/utility/BlynkDebug.cpp | 216 | Else-if for conditional compilation |
+| `#define _POSIX_C_SOURCE 200809L` | src/utility/BlynkDebug.cpp | 218 | Defines a macro or constant (_POSIX_C_SOURCE) |
+| `#include <stdlib.h>` | src/utility/BlynkDebug.cpp | 219 | Includes the contents of a file (stdlib.h) |
+| `#include <time.h>` | src/utility/BlynkDebug.cpp | 220 | Includes the contents of a file (time.h) |
+| `#include <unistd.h>` | src/utility/BlynkDebug.cpp | 221 | Includes the contents of a file (unistd.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 249 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#elif defined(TI_CC3220)` | src/utility/BlynkDebug.cpp | 251 | Else-if for conditional compilation |
+| `#include <string.h>` | src/utility/BlynkDebug.cpp | 253 | Includes the contents of a file (string.h) |
+| `#include <stdlib.h>` | src/utility/BlynkDebug.cpp | 254 | Includes the contents of a file (stdlib.h) |
+| `#include <stdarg.h>` | src/utility/BlynkDebug.cpp | 255 | Includes the contents of a file (stdarg.h) |
+| `#include <unistd.h>` | src/utility/BlynkDebug.cpp | 256 | Includes the contents of a file (unistd.h) |
+| `#include <ti/devices/cc32xx/inc/hw_types.h>` | src/utility/BlynkDebug.cpp | 258 | Includes the contents of a file (ti/devices/cc32xx/inc/hw_types.h) |
+| `#include <ti/sysbios/knl/Clock.h>` | src/utility/BlynkDebug.cpp | 260 | Includes the contents of a file (ti/sysbios/knl/Clock.h) |
+| `#include <ti/drivers/net/wifi/device.h>` | src/utility/BlynkDebug.cpp | 261 | Includes the contents of a file (ti/drivers/net/wifi/device.h) |
+| `#include <ti/devices/cc32xx/driverlib/prcm.h>` | src/utility/BlynkDebug.cpp | 262 | Includes the contents of a file (ti/devices/cc32xx/driverlib/prcm.h) |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 282 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#else` | src/utility/BlynkDebug.cpp | 284 | Else clause for conditional compilation |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/utility/BlynkDebug.cpp | 286 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#warning "Need to implement board-specific utilities"` | src/utility/BlynkDebug.cpp | 287 | Generates a compilation warning with a message: "Need to implement board-specific utilities" |
+| `#endif` | src/utility/BlynkDebug.cpp | 288 | Ends conditional compilation block |
+| `#define _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 290 | Defines a macro or constant (_BLYNK_USE_DEFAULT_FREE_RAM) |
+| `#define _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 291 | Defines a macro or constant (_BLYNK_USE_DEFAULT_RESET) |
+| `#define _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 292 | Defines a macro or constant (_BLYNK_USE_DEFAULT_MILLIS) |
+| `#define _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 293 | Defines a macro or constant (_BLYNK_USE_DEFAULT_DELAY) |
+| `#endif` | src/utility/BlynkDebug.cpp | 295 | Ends conditional compilation block |
+| `#ifdef _BLYNK_USE_DEFAULT_DELAY` | src/utility/BlynkDebug.cpp | 297 | Conditional compilation - evaluates compile-time expression - def _BLYNK_USE_DEFAULT_DELAY |
+| `#endif` | src/utility/BlynkDebug.cpp | 302 | Ends conditional compilation block |
+| `#ifdef _BLYNK_USE_DEFAULT_MILLIS` | src/utility/BlynkDebug.cpp | 304 | Conditional compilation - evaluates compile-time expression - def _BLYNK_USE_DEFAULT_MILLIS |
+| `#endif` | src/utility/BlynkDebug.cpp | 309 | Ends conditional compilation block |
+| `#ifdef _BLYNK_USE_DEFAULT_FREE_RAM` | src/utility/BlynkDebug.cpp | 311 | Conditional compilation - evaluates compile-time expression - def _BLYNK_USE_DEFAULT_FREE_RAM |
+| `#endif` | src/utility/BlynkDebug.cpp | 316 | Ends conditional compilation block |
+| `#ifdef _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 318 | Conditional compilation - evaluates compile-time expression - def _BLYNK_USE_DEFAULT_RESET |
+| `#endif` | src/utility/BlynkDebug.cpp | 323 | Ends conditional compilation block |
+| `#ifdef _BLYNK_USE_DEFAULT_RESET` | src/utility/BlynkDebug.cpp | 325 | Conditional compilation - evaluates compile-time expression - def _BLYNK_USE_DEFAULT_RESET |
+| `#else` | src/utility/BlynkDebug.cpp | 327 | Else clause for conditional compilation |
+| `#endif` | src/utility/BlynkDebug.cpp | 329 | Ends conditional compilation block |
+| `#ifndef BlynkFifo_h` | src/utility/BlynkFifo.h | 11 | Conditional compilation - evaluates compile-time expression - ndef BlynkFifo_h |
+| `#define BlynkFifo_h` | src/utility/BlynkFifo.h | 12 | Defines a macro or constant (BlynkFifo_h) |
+| `#include <Blynk/BlynkUtility.h>` | src/utility/BlynkFifo.h | 14 | Includes the contents of a file (Blynk/BlynkUtility.h) |
+| `#endif` | src/utility/BlynkFifo.h | 158 | Ends conditional compilation block |
+| `#include <Blynk/BlynkConfig.h>` | src/utility/BlynkHandlers.cpp | 10 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkHandlers.h>` | src/utility/BlynkHandlers.cpp | 11 | Includes the contents of a file (Blynk/BlynkHandlers.h) |
+| `#include <Blynk/BlynkDebug.h>` | src/utility/BlynkHandlers.cpp | 12 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#define BLYNK_ON_READ_IMPL(pin)  void BlynkWidgetRead  ## pin (BlynkReq BLYNK_UNUSED &req) \` | src/utility/BlynkHandlers.cpp | 27 | Defines a macro or constant (BLYNK_ON_READ_IMPL) |
+| `#define BLYNK_ON_WRITE_IMPL(pin) void BlynkWidgetWrite ## pin (BlynkReq BLYNK_UNUSED &req, const BlynkParam BLYNK_UNUSED &param) \` | src/utility/BlynkHandlers.cpp | 30 | Defines a macro or constant (BLYNK_ON_WRITE_IMPL) |
+| `#ifdef BLYNK_USE_128_VPINS` | src/utility/BlynkHandlers.cpp | 82 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/utility/BlynkHandlers.cpp | 179 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_128_VPINS` | src/utility/BlynkHandlers.cpp | 213 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/utility/BlynkHandlers.cpp | 310 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_128_VPINS` | src/utility/BlynkHandlers.cpp | 321 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/utility/BlynkHandlers.cpp | 346 | Ends conditional compilation block |
+| `#ifdef BLYNK_USE_128_VPINS` | src/utility/BlynkHandlers.cpp | 358 | Conditional compilation - evaluates compile-time expression - def BLYNK_USE_128_VPINS |
+| `#endif` | src/utility/BlynkHandlers.cpp | 383 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_PROGMEM` | src/utility/BlynkHandlers.cpp | 390 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_PROGMEM |
+| `#else` | src/utility/BlynkHandlers.cpp | 392 | Else clause for conditional compilation |
+| `#endif` | src/utility/BlynkHandlers.cpp | 394 | Ends conditional compilation block |
+| `#ifdef BLYNK_HAS_PROGMEM` | src/utility/BlynkHandlers.cpp | 401 | Conditional compilation - evaluates compile-time expression - def BLYNK_HAS_PROGMEM |
+| `#else` | src/utility/BlynkHandlers.cpp | 403 | Else clause for conditional compilation |
+| `#endif` | src/utility/BlynkHandlers.cpp | 405 | Ends conditional compilation block |
+| `#include <Blynk/BlynkConfig.h>` | src/utility/BlynkHelpers.cpp | 1 | Includes the contents of a file (Blynk/BlynkConfig.h) |
+| `#include <Blynk/BlynkHelpers.h>` | src/utility/BlynkHelpers.cpp | 2 | Includes the contents of a file (Blynk/BlynkHelpers.h) |
+| `#include <math.h>` | src/utility/BlynkHelpers.cpp | 4 | Includes the contents of a file (math.h) |
+| `#if !defined(BLYNK_NO_FLOAT) && defined(BLYNK_USE_INTERNAL_DTOSTRF)` | src/utility/BlynkHelpers.cpp | 6 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_FLOAT) && defined(BLYNK_USE_INTERNAL_DTOSTRF) |
+| `#include <string.h>` | src/utility/BlynkHelpers.cpp | 8 | Includes the contents of a file (string.h) |
+| `#include <stdio.h>` | src/utility/BlynkHelpers.cpp | 9 | Includes the contents of a file (stdio.h) |
+| `#endif` | src/utility/BlynkHelpers.cpp | 66 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL)` | src/utility/BlynkHelpers.cpp | 68 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) && defined(BLYNK_USE_INTERNAL_ATOLL) |
+| `#endif` | src/utility/BlynkHelpers.cpp | 79 | Ends conditional compilation block |
+| `#if !defined(BLYNK_NO_LONGLONG)` | src/utility/BlynkHelpers.cpp | 81 | Conditional compilation - evaluates compile-time expression - !defined(BLYNK_NO_LONGLONG) |
+| `#endif` | src/utility/BlynkHelpers.cpp | 122 | Ends conditional compilation block |
+| `#if   defined(__AVR__) && (FLASHEND >= 0xFFFF)` | src/utility/BlynkNcpOtaImpl.h | 4 | Conditional compilation - evaluates compile-time expression - defined(__AVR__) && (FLASHEND >= 0xFFFF) |
+| `#include "InternalStorageAVR.h"` | src/utility/BlynkNcpOtaImpl.h | 5 | Includes the contents of a file (InternalStorageAVR.h) |
+| `#elif defined(ARDUINO_ARCH_STM32)` | src/utility/BlynkNcpOtaImpl.h | 6 | Else-if for conditional compilation |
+| `#include <InternalStorageSTM32.h>` | src/utility/BlynkNcpOtaImpl.h | 7 | Includes the contents of a file (InternalStorageSTM32.h) |
+| `#elif defined(ARDUINO_ARCH_RP2040) && !defined(__MBED__)` | src/utility/BlynkNcpOtaImpl.h | 8 | Else-if for conditional compilation |
+| `#include <InternalStorageRP2.h>` | src/utility/BlynkNcpOtaImpl.h | 9 | Includes the contents of a file (InternalStorageRP2.h) |
+| `#elif defined(ARDUINO_ARCH_RENESAS_UNO)` | src/utility/BlynkNcpOtaImpl.h | 10 | Else-if for conditional compilation |
+| `#include <InternalStorageRenesas.h>` | src/utility/BlynkNcpOtaImpl.h | 11 | Includes the contents of a file (InternalStorageRenesas.h) |
+| `#elif defined(ESP8266) \|\| defined(ESP32)` | src/utility/BlynkNcpOtaImpl.h | 12 | Else-if for conditional compilation |
+| `#include "InternalStorageESP.h"` | src/utility/BlynkNcpOtaImpl.h | 13 | Includes the contents of a file (InternalStorageESP.h) |
+| `#elif defined(ARDUINO_ARCH_SAMD) \|\| defined(ARDUINO_ARCH_NRF5)` | src/utility/BlynkNcpOtaImpl.h | 14 | Else-if for conditional compilation |
+| `#include "InternalStorage.h"` | src/utility/BlynkNcpOtaImpl.h | 15 | Includes the contents of a file (InternalStorage.h) |
+| `#elif defined(BLYNK_NCP_INTERNAL_STORAGE)` | src/utility/BlynkNcpOtaImpl.h | 16 | Else-if for conditional compilation |
+| `#include "BlynkNcpInternalStorage.h"` | src/utility/BlynkNcpOtaImpl.h | 17 | Includes the contents of a file (BlynkNcpInternalStorage.h) |
+| `#else` | src/utility/BlynkNcpOtaImpl.h | 18 | Else clause for conditional compilation |
+| `#warning "Blynk.Air: OTA update not implemented for this Primary MCU"` | src/utility/BlynkNcpOtaImpl.h | 19 | Generates a compilation warning with a message: "Blynk.Air: OTA update not implemented for this Primary MCU" |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 31 | Ends conditional compilation block |
+| `#if defined(BLYNK_NCP_OTA_PREFETCH)` | src/utility/BlynkNcpOtaImpl.h | 94 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_OTA_PREFETCH) |
+| `#else` | src/utility/BlynkNcpOtaImpl.h | 96 | Else clause for conditional compilation |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 98 | Ends conditional compilation block |
+| `#if defined(BLYNK_DEBUG_ALL)` | src/utility/BlynkNcpOtaImpl.h | 111 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_DEBUG_ALL) |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 114 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | src/utility/BlynkNcpOtaImpl.h | 134 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 142 | Ends conditional compilation block |
+| `#ifdef BLYNK_PRINT` | src/utility/BlynkNcpOtaImpl.h | 149 | Conditional compilation - evaluates compile-time expression - def BLYNK_PRINT |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 151 | Ends conditional compilation block |
+| `#if defined(BLYNK_NCP_OTA_PREFETCH)` | src/utility/BlynkNcpOtaImpl.h | 194 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_NCP_OTA_PREFETCH) |
+| `#endif` | src/utility/BlynkNcpOtaImpl.h | 204 | Ends conditional compilation block |
+| `#ifndef BlynkStreamMulti_h` | src/utility/BlynkStreamMulti.h | 1 | Conditional compilation - evaluates compile-time expression - ndef BlynkStreamMulti_h |
+| `#define BlynkStreamMulti_h` | src/utility/BlynkStreamMulti.h | 2 | Defines a macro or constant (BlynkStreamMulti_h) |
+| `#ifndef BLYNK_MULTI_STREAM_MAX_QTY` | src/utility/BlynkStreamMulti.h | 4 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_MULTI_STREAM_MAX_QTY |
+| `#define BLYNK_MULTI_STREAM_MAX_QTY 6` | src/utility/BlynkStreamMulti.h | 5 | Defines a macro or constant (BLYNK_MULTI_STREAM_MAX_QTY) |
+| `#endif` | src/utility/BlynkStreamMulti.h | 6 | Ends conditional compilation block |
+| `#endif` | src/utility/BlynkStreamMulti.h | 79 | Ends conditional compilation block |
+| `#ifndef BlynkStreamNull_h` | src/utility/BlynkStreamNull.h | 1 | Conditional compilation - evaluates compile-time expression - ndef BlynkStreamNull_h |
+| `#define BlynkStreamNull_h` | src/utility/BlynkStreamNull.h | 2 | Defines a macro or constant (BlynkStreamNull_h) |
+| `#if !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_NULLSTREAM)` | src/utility/BlynkStreamNull.h | 58 | Conditional compilation - evaluates compile-time expression - !defined(NO_GLOBAL_INSTANCES) && !defined(NO_GLOBAL_NULLSTREAM) |
+| `#endif` | src/utility/BlynkStreamNull.h | 60 | Ends conditional compilation block |
+| `#endif` | src/utility/BlynkStreamNull.h | 62 | Ends conditional compilation block |
+| `#include <Blynk/BlynkDebug.h>` | src/utility/BlynkTimeUtils.cpp | 1 | Includes the contents of a file (Blynk/BlynkDebug.h) |
+| `#include <Blynk/BlynkDateTime.h>` | src/utility/BlynkTimeUtils.cpp | 2 | Includes the contents of a file (Blynk/BlynkDateTime.h) |
+| `#include <math.h>` | src/utility/BlynkTimeUtils.cpp | 4 | Includes the contents of a file (math.h) |
+| `#define YEAR_0                  1900` | src/utility/BlynkTimeUtils.cpp | 6 | Defines a macro or constant (YEAR_0) |
+| `#define YEAR_EPOCH              1970` | src/utility/BlynkTimeUtils.cpp | 7 | Defines a macro or constant (YEAR_EPOCH) |
+| `#define SECS_IN_DAY             (24L * 60L * 60L)` | src/utility/BlynkTimeUtils.cpp | 8 | Defines a macro or constant (SECS_IN_DAY) |
+| `#define IS_LEAP_YEAR(year)      (!((year) % 4) && (((year) % 100) \|\| !((year) % 400)))` | src/utility/BlynkTimeUtils.cpp | 9 | Defines a macro or constant (IS_LEAP_YEAR) |
+| `#define YEAR_DAYS(year)         (IS_LEAP_YEAR(year) ? 366 : 365)` | src/utility/BlynkTimeUtils.cpp | 10 | Defines a macro or constant (YEAR_DAYS) |
+| `#define TIME_MAX                2147483647L` | src/utility/BlynkTimeUtils.cpp | 12 | Defines a macro or constant (TIME_MAX) |
+| `#include "Blynk/BlynkTimer.h"` | src/utility/BlynkTimer.cpp | 30 | Includes the contents of a file (Blynk/BlynkTimer.h) |
+| `#include <string.h>` | src/utility/BlynkTimer.cpp | 31 | Includes the contents of a file (string.h) |
+| `#warning "Please include Blynk/BlynkUtility.h, instead of utility/BlynkUtility.h"` | src/utility/BlynkUtility.h | 2 | Generates a compilation warning with a message: "Please include Blynk/BlynkUtility.h, instead of utility/BlynkUtility.h" |
+| `#include <Blynk/BlynkUtility.h>` | src/utility/BlynkUtility.h | 3 | Includes the contents of a file (Blynk/BlynkUtility.h) |
+| `#if defined(ARDUINO_AVR_GEMMA) \` | tests/BlynkBuildTest/BlynkBuildTest.ino | 9 | Conditional compilation - evaluates compile-time expression - defined(ARDUINO_AVR_GEMMA) \ |
+| `#define BLYNK_NO_INFO` | tests/BlynkBuildTest/BlynkBuildTest.ino | 15 | Defines a macro or constant (BLYNK_NO_INFO) |
+| `#define BLYNK_NO_BUILTIN` | tests/BlynkBuildTest/BlynkBuildTest.ino | 16 | Defines a macro or constant (BLYNK_NO_BUILTIN) |
+| `#define SKIP_WRITES_TEST` | tests/BlynkBuildTest/BlynkBuildTest.ino | 18 | Defines a macro or constant (SKIP_WRITES_TEST) |
+| `#endif` | tests/BlynkBuildTest/BlynkBuildTest.ino | 20 | Ends conditional compilation block |
+| `#include <BlynkSimpleUserDefined.h>` | tests/BlynkBuildTest/BlynkBuildTest.ino | 22 | Includes the contents of a file (BlynkSimpleUserDefined.h) |
+| `#ifndef SKIP_WRITES_TEST` | tests/BlynkBuildTest/BlynkBuildTest.ino | 69 | Conditional compilation - evaluates compile-time expression - ndef SKIP_WRITES_TEST |
+| `#ifndef BLYNK_NO_FLOAT` | tests/BlynkBuildTest/BlynkBuildTest.ino | 78 | Conditional compilation - evaluates compile-time expression - ndef BLYNK_NO_FLOAT |
+| `#endif` | tests/BlynkBuildTest/BlynkBuildTest.ino | 81 | Ends conditional compilation block |
+| `#endif` | tests/BlynkBuildTest/BlynkBuildTest.ino | 93 | Ends conditional compilation block |
+| `#define ENABLE_HANDLERS` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 12 | Defines a macro or constant (ENABLE_HANDLERS) |
+| `#ifdef ENABLE_MINIMIZATION` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 14 | Conditional compilation - evaluates compile-time expression - def ENABLE_MINIMIZATION |
+| `#define BLYNK_NO_BUILTIN` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 15 | Defines a macro or constant (BLYNK_NO_BUILTIN) |
+| `#define BLYNK_NO_INFO` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 16 | Defines a macro or constant (BLYNK_NO_INFO) |
+| `#define BLYNK_NO_FLOAT` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 17 | Defines a macro or constant (BLYNK_NO_FLOAT) |
+| `#endif` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 18 | Ends conditional compilation block |
+| `#include <BlynkSimpleUserDefined.h>` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 20 | Includes the contents of a file (BlynkSimpleUserDefined.h) |
+| `#ifdef ENABLE_HANDLERS` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 54 | Conditional compilation - evaluates compile-time expression - def ENABLE_HANDLERS |
+| `#endif /* ENABLE_HANDLERS */` | tests/BlynkFootprintTest/BlynkFootprintTest.ino | 76 | Ends conditional compilation block |
+| `#include <Blynk.h>` | tests/GenerateJSON/GenerateJSON.ino | 1 | Includes the contents of a file (Blynk.h) |
+| `#include <Blynk/BlynkDetectDevice.h>` | tests/GenerateJSON/GenerateJSON.ino | 2 | Includes the contents of a file (Blynk/BlynkDetectDevice.h) |
+| `#if defined(NUM_DIGITAL_PINS)` | tests/GenerateJSON/GenerateJSON.ino | 8 | Conditional compilation - evaluates compile-time expression - defined(NUM_DIGITAL_PINS) |
+| `#define BOARD_DIGITAL_MAX int(NUM_DIGITAL_PINS)` | tests/GenerateJSON/GenerateJSON.ino | 9 | Defines a macro or constant (BOARD_DIGITAL_MAX) |
+| `#elif defined(PINS_COUNT)` | tests/GenerateJSON/GenerateJSON.ino | 10 | Else-if for conditional compilation |
+| `#define BOARD_DIGITAL_MAX int(PINS_COUNT)` | tests/GenerateJSON/GenerateJSON.ino | 11 | Defines a macro or constant (BOARD_DIGITAL_MAX) |
+| `#else` | tests/GenerateJSON/GenerateJSON.ino | 12 | Else clause for conditional compilation |
+| `#warning "BOARD_DIGITAL_MAX not detected"` | tests/GenerateJSON/GenerateJSON.ino | 13 | Generates a compilation warning with a message: "BOARD_DIGITAL_MAX not detected" |
+| `#define BOARD_DIGITAL_MAX 32` | tests/GenerateJSON/GenerateJSON.ino | 14 | Defines a macro or constant (BOARD_DIGITAL_MAX) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 15 | Ends conditional compilation block |
+| `#if defined(NUM_ANALOG_INPUTS)` | tests/GenerateJSON/GenerateJSON.ino | 17 | Conditional compilation - evaluates compile-time expression - defined(NUM_ANALOG_INPUTS) |
+| `#define BOARD_ANALOG_IN_MAX int(NUM_ANALOG_INPUTS)` | tests/GenerateJSON/GenerateJSON.ino | 18 | Defines a macro or constant (BOARD_ANALOG_IN_MAX) |
+| `#else` | tests/GenerateJSON/GenerateJSON.ino | 19 | Else clause for conditional compilation |
+| `#warning "BOARD_ANALOG_IN_MAX not detected"` | tests/GenerateJSON/GenerateJSON.ino | 20 | Generates a compilation warning with a message: "BOARD_ANALOG_IN_MAX not detected" |
+| `#define BOARD_ANALOG_IN_MAX 0` | tests/GenerateJSON/GenerateJSON.ino | 21 | Defines a macro or constant (BOARD_ANALOG_IN_MAX) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 22 | Ends conditional compilation block |
+| `#if defined(BLYNK_USE_128_VPINS)` | tests/GenerateJSON/GenerateJSON.ino | 24 | Conditional compilation - evaluates compile-time expression - defined(BLYNK_USE_128_VPINS) |
+| `#define BOARD_VIRTUAL_MAX 127` | tests/GenerateJSON/GenerateJSON.ino | 25 | Defines a macro or constant (BOARD_VIRTUAL_MAX) |
+| `#else` | tests/GenerateJSON/GenerateJSON.ino | 26 | Else clause for conditional compilation |
+| `#define BOARD_VIRTUAL_MAX 31` | tests/GenerateJSON/GenerateJSON.ino | 27 | Defines a macro or constant (BOARD_VIRTUAL_MAX) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 28 | Ends conditional compilation block |
+| `#ifndef digitalPinHasPWM` | tests/GenerateJSON/GenerateJSON.ino | 34 | Conditional compilation - evaluates compile-time expression - ndef digitalPinHasPWM |
+| `#warning "No digitalPinHasPWM"` | tests/GenerateJSON/GenerateJSON.ino | 35 | Generates a compilation warning with a message: "No digitalPinHasPWM" |
+| `#define digitalPinHasPWM(x) false` | tests/GenerateJSON/GenerateJSON.ino | 36 | Defines a macro or constant (digitalPinHasPWM) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 37 | Ends conditional compilation block |
+| `#if !defined(analogInputToDigitalPin)` | tests/GenerateJSON/GenerateJSON.ino | 39 | Conditional compilation - evaluates compile-time expression - !defined(analogInputToDigitalPin) |
+| `#warning "No analogInputToDigitalPin"` | tests/GenerateJSON/GenerateJSON.ino | 40 | Generates a compilation warning with a message: "No analogInputToDigitalPin" |
+| `#define analogInputToDigitalPin(x) -1` | tests/GenerateJSON/GenerateJSON.ino | 41 | Defines a macro or constant (analogInputToDigitalPin) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 42 | Ends conditional compilation block |
+| `#if !defined(BOARD_PWM_MAX)` | tests/GenerateJSON/GenerateJSON.ino | 48 | Conditional compilation - evaluates compile-time expression - !defined(BOARD_PWM_MAX) |
+| `#if   defined(PWMRANGE)` | tests/GenerateJSON/GenerateJSON.ino | 49 | Conditional compilation - evaluates compile-time expression - defined(PWMRANGE) |
+| `#define BOARD_PWM_MAX    PWMRANGE` | tests/GenerateJSON/GenerateJSON.ino | 50 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#elif defined(PWM_RESOLUTION)` | tests/GenerateJSON/GenerateJSON.ino | 51 | Else-if for conditional compilation |
+| `#define BOARD_PWM_MAX    ((2^(PWM_RESOLUTION))-1)` | tests/GenerateJSON/GenerateJSON.ino | 52 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#else` | tests/GenerateJSON/GenerateJSON.ino | 53 | Else clause for conditional compilation |
+| `#warning "Cannot detect BOARD_PWM_MAX"` | tests/GenerateJSON/GenerateJSON.ino | 54 | Generates a compilation warning with a message: "Cannot detect BOARD_PWM_MAX" |
+| `#define BOARD_PWM_MAX    255` | tests/GenerateJSON/GenerateJSON.ino | 55 | Defines a macro or constant (BOARD_PWM_MAX) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 56 | Ends conditional compilation block |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 57 | Ends conditional compilation block |
+| `#if !defined(BOARD_ANALOG_MAX)` | tests/GenerateJSON/GenerateJSON.ino | 59 | Conditional compilation - evaluates compile-time expression - !defined(BOARD_ANALOG_MAX) |
+| `#if   defined(ADC_RESOLUTION)` | tests/GenerateJSON/GenerateJSON.ino | 60 | Conditional compilation - evaluates compile-time expression - defined(ADC_RESOLUTION) |
+| `#define BOARD_ANALOG_MAX    ((2^(ADC_RESOLUTION))-1)` | tests/GenerateJSON/GenerateJSON.ino | 61 | Defines a macro or constant (BOARD_ANALOG_MAX) |
+| `#else` | tests/GenerateJSON/GenerateJSON.ino | 62 | Else clause for conditional compilation |
+| `#warning "Cannot detect BOARD_ANALOG_MAX"` | tests/GenerateJSON/GenerateJSON.ino | 63 | Generates a compilation warning with a message: "Cannot detect BOARD_ANALOG_MAX" |
+| `#define BOARD_ANALOG_MAX    1023` | tests/GenerateJSON/GenerateJSON.ino | 64 | Defines a macro or constant (BOARD_ANALOG_MAX) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 65 | Ends conditional compilation block |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 66 | Ends conditional compilation block |
+| `#if defined(clockCyclesPerMicrosecond)` | tests/GenerateJSON/GenerateJSON.ino | 68 | Conditional compilation - evaluates compile-time expression - defined(clockCyclesPerMicrosecond) |
+| `#define BOARD_INFO_MHZ clockCyclesPerMicrosecond()` | tests/GenerateJSON/GenerateJSON.ino | 69 | Defines a macro or constant (BOARD_INFO_MHZ) |
+| `#elif defined(F_CPU)` | tests/GenerateJSON/GenerateJSON.ino | 70 | Else-if for conditional compilation |
+| `#define BOARD_INFO_MHZ ((F_CPU)/1000000UL)` | tests/GenerateJSON/GenerateJSON.ino | 71 | Defines a macro or constant (BOARD_INFO_MHZ) |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 72 | Ends conditional compilation block |
+| `#ifdef BLYNK_INFO_CPU` | tests/GenerateJSON/GenerateJSON.ino | 131 | Conditional compilation - evaluates compile-time expression - def BLYNK_INFO_CPU |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 133 | Ends conditional compilation block |
+| `#ifdef BOARD_INFO_MHZ` | tests/GenerateJSON/GenerateJSON.ino | 134 | Conditional compilation - evaluates compile-time expression - def BOARD_INFO_MHZ |
+| `#endif` | tests/GenerateJSON/GenerateJSON.ino | 136 | Ends conditional compilation block |
+| `#define ser1 Serial` | tests/SerialXconnect/SerialXconnect.ino | 17 | Defines a macro or constant (ser1) |
+| `#if defined(HAVE_HWSERIAL1)` | tests/SerialXconnect/SerialXconnect.ino | 19 | Conditional compilation - evaluates compile-time expression - defined(HAVE_HWSERIAL1) |
+| `#define ser2 Serial1` | tests/SerialXconnect/SerialXconnect.ino | 20 | Defines a macro or constant (ser2) |
+| `#else` | tests/SerialXconnect/SerialXconnect.ino | 21 | Else clause for conditional compilation |
+| `#warning Using Software Serial!` | tests/SerialXconnect/SerialXconnect.ino | 22 | Generates a compilation warning with a message: Using Software Serial! |
+| `#include <SoftwareSerial.h>` | tests/SerialXconnect/SerialXconnect.ino | 23 | Includes the contents of a file (SoftwareSerial.h) |
+| `#define ser2 SerialSw` | tests/SerialXconnect/SerialXconnect.ino | 25 | Defines a macro or constant (ser2) |
+| `#endif` | tests/SerialXconnect/SerialXconnect.ino | 26 | Ends conditional compilation block |
