@@ -1,0 +1,2453 @@
+Distinct #define Directives with Details
+================================================================================
+
+Macro: ADAFRUIT_CC3000_CS
+  Directive: #define ADAFRUIT_CC3000_CS   8
+  First occurrence: src/BlynkSimpleTinyDuino.h:23
+  Total occurrences: 1
+
+Macro: ADAFRUIT_CC3000_IRQ
+  Directive: #define ADAFRUIT_CC3000_IRQ  2
+  First occurrence: src/BlynkSimpleTinyDuino.h:21
+  Total occurrences: 1
+
+Macro: ADAFRUIT_CC3000_VBAT
+  Directive: #define ADAFRUIT_CC3000_VBAT A3
+  First occurrence: src/BlynkSimpleTinyDuino.h:22
+  Total occurrences: 1
+
+Macro: APP_DEBUG
+  Directive: #define APP_DEBUG
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino:32
+  Total occurrences: 3
+
+Macro: BLE_DEVICE_NAME
+  Directive: #define BLE_DEVICE_NAME            "Blynk"
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:42
+  Total occurrences: 1
+
+Macro: BLE_PERIPHERAL_APPEARANCE
+  Directive: #define BLE_PERIPHERAL_APPEARANCE  BLE_APPEARANCE_UNKNOWN
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:40
+  Total occurrences: 1
+
+Macro: BLYNKEVERYN_H
+  Directive: #define BLYNKEVERYN_H
+  First occurrence: src/Blynk/BlynkEveryN.h:3
+  Total occurrences: 1
+
+Macro: BLYNKTIMER_H
+  Directive: #define BLYNKTIMER_H
+  First occurrence: src/Blynk/BlynkTimer.h:30
+  Total occurrences: 1
+
+Macro: BLYNK_ASSERT
+  Directive: #define BLYNK_ASSERT(expr)   { if(!(expr)) { BLYNK_LOG2(BLYNK_F("Assertion failed: "), BLYNK_F(#expr)); BLYNK_DBG_BREAK() } }
+  First occurrence: src/Blynk/BlynkDebug.h:97
+  Total occurrences: 4
+
+Macro: BLYNK_ATTACH_WIDGET
+  Directive: #define BLYNK_ATTACH_WIDGET(widget, pin) \
+  First occurrence: src/Blynk/BlynkWidgetBase.h:58
+  Total occurrences: 1
+
+Macro: BLYNK_ATTR_PACKED
+  Directive: #define BLYNK_ATTR_PACKED     __attribute__ ((__packed__))
+  First occurrence: src/Blynk/BlynkHelpers.h:47
+  Total occurrences: 1
+
+Macro: BLYNK_BLUE
+  Directive: #define BLYNK_BLUE      "#04C0F8"
+  First occurrence: examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino:40
+  Total occurrences: 2
+
+Macro: BLYNK_BUFFERS_SIZE
+  Directive: #define BLYNK_BUFFERS_SIZE 1024
+  First occurrence: src/Blynk/BlynkDetectDevice.h:82
+  Total occurrences: 32
+
+Macro: BLYNK_CONCAT
+  Directive: #define BLYNK_CONCAT(a, b)    a ## b
+  First occurrence: src/Blynk/BlynkHelpers.h:39
+  Total occurrences: 1
+
+Macro: BLYNK_CONCAT2
+  Directive: #define BLYNK_CONCAT2(a, b)   BLYNK_CONCAT(a, b)
+  First occurrence: src/Blynk/BlynkHelpers.h:40
+  Total occurrences: 1
+
+Macro: BLYNK_CONNECTED
+  Directive: #define BLYNK_CONNECTED()    void BlynkOnConnected()
+  First occurrence: src/Blynk/BlynkHandlers.h:177
+  Total occurrences: 1
+
+Macro: BLYNK_CONSOLE_INPUT_BUFFER
+  Directive: #define BLYNK_CONSOLE_INPUT_BUFFER 256
+  First occurrence: src/Blynk/BlynkConsole.h:18
+  Total occurrences: 1
+
+Macro: BLYNK_CONSOLE_MAX_COMMANDS
+  Directive: #define BLYNK_CONSOLE_MAX_COMMANDS 64
+  First occurrence: src/Blynk/BlynkConsole.h:17
+  Total occurrences: 1
+
+Macro: BLYNK_CONSOLE_USE_STREAM
+  Directive: #define BLYNK_CONSOLE_USE_STREAM
+  First occurrence: src/Blynk/BlynkConsole.h:19
+  Total occurrences: 1
+
+Macro: BLYNK_CONSTRUCTOR
+  Directive: #define BLYNK_CONSTRUCTOR     __attribute__ ((constructor))
+  First occurrence: src/Blynk/BlynkHelpers.h:51
+  Total occurrences: 1
+
+Macro: BLYNK_COUNT_OF
+  Directive: #define BLYNK_COUNT_OF(x)     ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
+  First occurrence: src/Blynk/BlynkHelpers.h:45
+  Total occurrences: 1
+
+Macro: BLYNK_DARK_BLUE
+  Directive: #define BLYNK_DARK_BLUE "#5F7CD8"
+  First occurrence: examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino:43
+  Total occurrences: 2
+
+Macro: BLYNK_DBG_BREAK
+  Directive: #define BLYNK_DBG_BREAK()    { for(;;); }
+  First occurrence: src/Blynk/BlynkDebug.h:96
+  Total occurrences: 4
+
+Macro: BLYNK_DBG_DUMP
+  Directive: #define BLYNK_DBG_DUMP(msg, addr, len)
+  First occurrence: src/Blynk/BlynkDebug.h:257
+  Total occurrences: 1
+
+Macro: BLYNK_DEBUG
+  Directive: #define BLYNK_DEBUG
+  First occurrence: src/Blynk/BlynkDebug.h:57
+  Total occurrences: 1
+
+Macro: BLYNK_DECODE_PIN
+  Directive: #define BLYNK_DECODE_PIN(it) (((it).asStr()[0] == 'A') ? analogInputToDigitalPin(atoi((it).asStr()+1)) : (it).asInt())
+  First occurrence: linux/BlynkApiWiringPi.h:67
+  Total occurrences: 8
+
+Macro: BLYNK_DEFAULT_DOMAIN
+  Directive: #define BLYNK_DEFAULT_DOMAIN     "blynk.cloud"
+  First occurrence: src/Blynk/BlynkConfig.h:19
+  Total occurrences: 1
+
+Macro: BLYNK_DEFAULT_PORT
+  Directive: #define BLYNK_DEFAULT_PORT       80
+  First occurrence: src/Blynk/BlynkConfig.h:20
+  Total occurrences: 1
+
+Macro: BLYNK_DEFAULT_PORT_SSL
+  Directive: #define BLYNK_DEFAULT_PORT_SSL   443
+  First occurrence: src/Blynk/BlynkConfig.h:21
+  Total occurrences: 1
+
+Macro: BLYNK_DEPRECATED
+  Directive: #define BLYNK_DEPRECATED      __attribute__ ((deprecated))
+  First occurrence: src/Blynk/BlynkHelpers.h:50
+  Total occurrences: 1
+
+Macro: BLYNK_DISCONNECTED
+  Directive: #define BLYNK_DISCONNECTED() void BlynkOnDisconnected()
+  First occurrence: src/Blynk/BlynkHandlers.h:178
+  Total occurrences: 1
+
+Macro: BLYNK_ESP8266_MUX
+  Directive: #define BLYNK_ESP8266_MUX  1
+  First occurrence: src/BlynkSimpleShieldEsp8266.h:23
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_HOURS
+  Directive: #define BLYNK_EVERY_N_HOURS(N)   BLYNK_EVERY_N_HOURS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)
+  First occurrence: src/Blynk/BlynkEveryN.h:67
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_HOURS_I
+  Directive: #define BLYNK_EVERY_N_HOURS_I(NAME,N)   static BlynkEveryNHours NAME(N); if(NAME)
+  First occurrence: src/Blynk/BlynkEveryN.h:62
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_MILLIS
+  Directive: #define BLYNK_EVERY_N_MILLIS(N)  BLYNK_EVERY_N_MILLIS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)
+  First occurrence: src/Blynk/BlynkEveryN.h:64
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_MILLIS_I
+  Directive: #define BLYNK_EVERY_N_MILLIS_I(NAME,N)  static BlynkEveryNMillis NAME(N); if(NAME)
+  First occurrence: src/Blynk/BlynkEveryN.h:59
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_MINUTES
+  Directive: #define BLYNK_EVERY_N_MINUTES(N) BLYNK_EVERY_N_MINUTES_I(BLYNK_CONCAT2(PER, __COUNTER__),N)
+  First occurrence: src/Blynk/BlynkEveryN.h:66
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_MINUTES_I
+  Directive: #define BLYNK_EVERY_N_MINUTES_I(NAME,N) static BlynkEveryNMinutes NAME(N); if(NAME)
+  First occurrence: src/Blynk/BlynkEveryN.h:61
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_SECONDS
+  Directive: #define BLYNK_EVERY_N_SECONDS(N) BLYNK_EVERY_N_SECONDS_I(BLYNK_CONCAT2(PER, __COUNTER__),N)
+  First occurrence: src/Blynk/BlynkEveryN.h:65
+  Total occurrences: 1
+
+Macro: BLYNK_EVERY_N_SECONDS_I
+  Directive: #define BLYNK_EVERY_N_SECONDS_I(NAME,N) static BlynkEveryNSeconds NAME(N); if(NAME)
+  First occurrence: src/Blynk/BlynkEveryN.h:60
+  Total occurrences: 1
+
+Macro: BLYNK_F
+  Directive: #define BLYNK_F(s)        F(s)
+  First occurrence: src/Blynk/BlynkHelpers.h:73
+  Total occurrences: 2
+
+Macro: BLYNK_FALLTHROUGH
+  Directive: #define BLYNK_FALLTHROUGH     __attribute__ ((fallthrough))
+  First occurrence: src/Blynk/BlynkHelpers.h:52
+  Total occurrences: 1
+
+Macro: BLYNK_FATAL
+  Directive: #define BLYNK_FATAL(msg)     { BLYNK_LOG1(msg); BlynkFatal(); }
+  First occurrence: src/Blynk/BlynkDebug.h:47
+  Total occurrences: 1
+
+Macro: BLYNK_FILE_READ
+  Directive: #define BLYNK_FILE_READ  "r"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h:24
+  Total occurrences: 1
+
+Macro: BLYNK_FILE_WRITE
+  Directive: #define BLYNK_FILE_WRITE "w"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/BlynkEdgent.h:25
+  Total occurrences: 1
+
+Macro: BLYNK_FIRMWARE_TYPE
+  Directive: #define BLYNK_FIRMWARE_TYPE         BOARD_FIRMWARE_TYPE
+  First occurrence: src/Blynk/BlynkApi.h:17
+  Total occurrences: 3
+
+Macro: BLYNK_FIRMWARE_VERSION
+  Directive: #define BLYNK_FIRMWARE_VERSION        "0.1.0"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino:27
+  Total occurrences: 8
+
+Macro: BLYNK_FORCE_INLINE
+  Directive: #define BLYNK_FORCE_INLINE    inline //__attribute__((always_inline))
+  First occurrence: src/Blynk/BlynkHelpers.h:55
+  Total occurrences: 1
+
+Macro: BLYNK_FS
+  Directive: #define BLYNK_FS LittleFS
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h:12
+  Total occurrences: 4
+
+Macro: BLYNK_GREEN
+  Directive: #define BLYNK_GREEN     "#23C48E"
+  First occurrence: examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino:39
+  Total occurrences: 2
+
+Macro: BLYNK_HAS_FUNCTIONAL_H
+  Directive: #define BLYNK_HAS_FUNCTIONAL_H
+  First occurrence: src/Blynk/BlynkHelpers.h:84
+  Total occurrences: 1
+
+Macro: BLYNK_HAS_PROGMEM
+  Directive: #define BLYNK_HAS_PROGMEM
+  First occurrence: src/Blynk/BlynkHelpers.h:71
+  Total occurrences: 1
+
+Macro: BLYNK_HEARTBEAT
+  Directive: #define BLYNK_HEARTBEAT 60
+  First occurrence: src/Adapters/BlynkArduinoGSM.h:18
+  Total occurrences: 4
+
+Macro: BLYNK_HW_AR
+  Directive: #define BLYNK_HW_AR BLYNK_STR_16('a','r')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:109
+  Total occurrences: 1
+
+Macro: BLYNK_HW_AW
+  Directive: #define BLYNK_HW_AW BLYNK_STR_16('a','w')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:108
+  Total occurrences: 1
+
+Macro: BLYNK_HW_DR
+  Directive: #define BLYNK_HW_DR BLYNK_STR_16('d','r')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:107
+  Total occurrences: 1
+
+Macro: BLYNK_HW_DW
+  Directive: #define BLYNK_HW_DW BLYNK_STR_16('d','w')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:106
+  Total occurrences: 1
+
+Macro: BLYNK_HW_PM
+  Directive: #define BLYNK_HW_PM BLYNK_STR_16('p','m')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:105
+  Total occurrences: 1
+
+Macro: BLYNK_HW_VR
+  Directive: #define BLYNK_HW_VR BLYNK_STR_16('v','r')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:111
+  Total occurrences: 1
+
+Macro: BLYNK_HW_VW
+  Directive: #define BLYNK_HW_VW BLYNK_STR_16('v','w')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:110
+  Total occurrences: 1
+
+Macro: BLYNK_INFO_CONNECTION
+  Directive: #define BLYNK_INFO_CONNECTION  "MKRGSM"
+  First occurrence: src/Adapters/BlynkArduinoGSM.h:14
+  Total occurrences: 49
+
+Macro: BLYNK_INFO_CPU
+  Directive: #define BLYNK_INFO_CPU      "ATmega168"
+  First occurrence: src/Blynk/BlynkDetectDevice.h:23
+  Total occurrences: 18
+
+Macro: BLYNK_INFO_DEVICE
+  Directive: #define BLYNK_INFO_DEVICE  "Linux"
+  First occurrence: linux/BlynkApiLinux.h:17
+  Total occurrences: 117
+
+Macro: BLYNK_INPUT
+  Directive: #define BLYNK_INPUT(pin)        BLYNK_IN_2(pin)
+  First occurrence: src/Blynk/BlynkHandlers.h:173
+  Total occurrences: 1
+
+Macro: BLYNK_INPUT_DEFAULT
+  Directive: #define BLYNK_INPUT_DEFAULT()   BLYNK_IN_2(Default)
+  First occurrence: src/Blynk/BlynkHandlers.h:170
+  Total occurrences: 1
+
+Macro: BLYNK_INT_ACON
+  Directive: #define BLYNK_INT_ACON BLYNK_STR_32('a','c','o','n')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:118
+  Total occurrences: 1
+
+Macro: BLYNK_INT_ADIS
+  Directive: #define BLYNK_INT_ADIS BLYNK_STR_32('a','d','i','s')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:119
+  Total occurrences: 1
+
+Macro: BLYNK_INT_DBG
+  Directive: #define BLYNK_INT_DBG  BLYNK_STR_32('d','b','g',0)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:117
+  Total occurrences: 1
+
+Macro: BLYNK_INT_META
+  Directive: #define BLYNK_INT_META BLYNK_STR_32('m','e','t','a')
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:120
+  Total occurrences: 1
+
+Macro: BLYNK_INT_OTA
+  Directive: #define BLYNK_INT_OTA  BLYNK_STR_32('o','t','a',0)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:115
+  Total occurrences: 1
+
+Macro: BLYNK_INT_RTC
+  Directive: #define BLYNK_INT_RTC  BLYNK_STR_32('r','t','c',0)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:113
+  Total occurrences: 1
+
+Macro: BLYNK_INT_UTC
+  Directive: #define BLYNK_INT_UTC  BLYNK_STR_32('u','t','c',0)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:114
+  Total occurrences: 1
+
+Macro: BLYNK_INT_VFS
+  Directive: #define BLYNK_INT_VFS  BLYNK_STR_32('v','f','s',0)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:116
+  Total occurrences: 1
+
+Macro: BLYNK_IN_2
+  Directive: #define BLYNK_IN_2(pin)  \
+  First occurrence: src/Blynk/BlynkHandlers.h:164
+  Total occurrences: 1
+
+Macro: BLYNK_LOG
+  Directive: #define BLYNK_LOG(msg, ...)  BLYNK_LOG_UNAVAILABLE(msg, ##__VA_ARGS__)
+  First occurrence: src/Blynk/BlynkDebug.h:66
+  Total occurrences: 5
+
+Macro: BLYNK_LOG1
+  Directive: #define BLYNK_LOG1(p1)            { BLYNK_LOG_TIME(); BLYNK_PRINT.println(p1); }
+  First occurrence: src/Blynk/BlynkDebug.h:71
+  Total occurrences: 4
+
+Macro: BLYNK_LOG2
+  Directive: #define BLYNK_LOG2(p1,p2)         { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.println(p2); }
+  First occurrence: src/Blynk/BlynkDebug.h:72
+  Total occurrences: 4
+
+Macro: BLYNK_LOG3
+  Directive: #define BLYNK_LOG3(p1,p2,p3)      { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.println(p3); }
+  First occurrence: src/Blynk/BlynkDebug.h:73
+  Total occurrences: 4
+
+Macro: BLYNK_LOG4
+  Directive: #define BLYNK_LOG4(p1,p2,p3,p4)   { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.print(p3); BLYNK_PRINT.println(p4); }
+  First occurrence: src/Blynk/BlynkDebug.h:74
+  Total occurrences: 4
+
+Macro: BLYNK_LOG6
+  Directive: #define BLYNK_LOG6(p1,p2,p3,p4,p5,p6) { BLYNK_LOG_TIME(); BLYNK_PRINT.print(p1); BLYNK_PRINT.print(p2); BLYNK_PRINT.print(p3); BLYNK_PRINT.print(p4); BLYNK_PRINT.print(p5); BLYNK_PRINT.println(p6); }
+  First occurrence: src/Blynk/BlynkDebug.h:75
+  Total occurrences: 4
+
+Macro: BLYNK_LOG_FN
+  Directive: #define BLYNK_LOG_FN()       BLYNK_LOG3(BLYNK_F(__FUNCTION__), '@', __LINE__);
+  First occurrence: src/Blynk/BlynkDebug.h:49
+  Total occurrences: 1
+
+Macro: BLYNK_LOG_IP
+  Directive: #define BLYNK_LOG_IP(msg, ip)     { BLYNK_LOG_TIME(); BLYNK_PRINT.print(BLYNK_F(msg)); \
+  First occurrence: src/Blynk/BlynkDebug.h:76
+  Total occurrences: 2
+
+Macro: BLYNK_LOG_IP_REV
+  Directive: #define BLYNK_LOG_IP_REV(msg, ip) { BLYNK_LOG_TIME(); BLYNK_PRINT.print(BLYNK_F(msg)); \
+  First occurrence: src/Blynk/BlynkDebug.h:81
+  Total occurrences: 2
+
+Macro: BLYNK_LOG_RAM
+  Directive: #define BLYNK_LOG_RAM()      { BLYNK_LOG2(BLYNK_F("Free RAM: "), BlynkFreeRam()); }
+  First occurrence: src/Blynk/BlynkDebug.h:48
+  Total occurrences: 1
+
+Macro: BLYNK_LOG_TIME
+  Directive: #define BLYNK_LOG_TIME() BLYNK_PRINT.printf("[%ld]", BlynkMillis());
+  First occurrence: src/Blynk/BlynkDebug.h:160
+  Total occurrences: 2
+
+Macro: BLYNK_LOG_TROUBLE
+  Directive: #define BLYNK_LOG_TROUBLE(t) BLYNK_LOG2(BLYNK_F("Trouble detected: http://docs.blynk.cc/#troubleshooting-"), t)
+  First occurrence: src/Blynk/BlynkDebug.h:50
+  Total occurrences: 1
+
+Macro: BLYNK_MAX_CLIENT_QTY
+  Directive: #define BLYNK_MAX_CLIENT_QTY 4
+  First occurrence: src/BlynkMultiClient.h:22
+  Total occurrences: 1
+
+Macro: BLYNK_MAX_READBYTES
+  Directive: #define BLYNK_MAX_READBYTES  256
+  First occurrence: src/Blynk/BlynkConfig.h:48
+  Total occurrences: 2
+
+Macro: BLYNK_MAX_SENDBYTES
+  Directive: #define BLYNK_MAX_SENDBYTES  128
+  First occurrence: src/Blynk/BlynkConfig.h:53
+  Total occurrences: 2
+
+Macro: BLYNK_MAX_TIMERS
+  Directive: #define BLYNK_MAX_TIMERS 8
+  First occurrence: src/Blynk/BlynkDetectDevice.h:228
+  Total occurrences: 2
+
+Macro: BLYNK_MINIMIZE_PINMODE_USAGE
+  Directive: #define BLYNK_MINIMIZE_PINMODE_USAGE
+  First occurrence: src/BlynkSimpleIntelEdisonWiFi.h:18
+  Total occurrences: 1
+
+Macro: BLYNK_MSG_LIMIT
+  Directive: #define BLYNK_MSG_LIMIT      15
+  First occurrence: src/Blynk/BlynkConfig.h:43
+  Total occurrences: 1
+
+Macro: BLYNK_MULTI_STREAM_MAX_QTY
+  Directive: #define BLYNK_MULTI_STREAM_MAX_QTY 6
+  First occurrence: src/utility/BlynkStreamMulti.h:5
+  Total occurrences: 1
+
+Macro: BLYNK_MUTEX_DECL
+  Directive: #define BLYNK_MUTEX_DECL(x)     std::mutex x
+  First occurrence: src/Blynk/BlynkHelpers.h:91
+  Total occurrences: 2
+
+Macro: BLYNK_MUTEX_GUARD
+  Directive: #define BLYNK_MUTEX_GUARD(x)    std::lock_guard<std::mutex> BLYNK_CONCAT2(lg_, __LINE__)(x)
+  First occurrence: src/Blynk/BlynkHelpers.h:92
+  Total occurrences: 2
+
+Macro: BLYNK_NCP_BAUD
+  Directive: #define BLYNK_NCP_BAUD  115200
+  First occurrence: src/BlynkEdgentNCP.h:28
+  Total occurrences: 4
+
+Macro: BLYNK_NCP_PORT
+  Directive: #define BLYNK_NCP_PORT "/dev/ttyACM0"
+  First occurrence: src/BlynkEdgentNCP.h:71
+  Total occurrences: 2
+
+Macro: BLYNK_NEWLINE
+  Directive: #define BLYNK_NEWLINE         "\r\n"
+  First occurrence: src/Blynk/BlynkHelpers.h:37
+  Total occurrences: 1
+
+Macro: BLYNK_NEW_LIBRARY
+  Directive: #define BLYNK_NEW_LIBRARY
+  First occurrence: src/Blynk/BlynkConfig.h:29
+  Total occurrences: 1
+
+Macro: BLYNK_NORETURN
+  Directive: #define BLYNK_NORETURN        __attribute__ ((noreturn))
+  First occurrence: src/Blynk/BlynkHelpers.h:48
+  Total occurrences: 1
+
+Macro: BLYNK_NO_BUILTIN
+  Directive: #define BLYNK_NO_BUILTIN
+  First occurrence: tests/BlynkBuildTest/BlynkBuildTest.ino:16
+  Total occurrences: 2
+
+Macro: BLYNK_NO_DEFAULT_BANNER
+  Directive: #define BLYNK_NO_DEFAULT_BANNER
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:124
+  Total occurrences: 3
+
+Macro: BLYNK_NO_FLOAT
+  Directive: #define BLYNK_NO_FLOAT
+  First occurrence: src/Blynk/BlynkDetectDevice.h:71
+  Total occurrences: 2
+
+Macro: BLYNK_NO_INFO
+  Directive: #define BLYNK_NO_INFO
+  First occurrence: src/BlynkSimpleSerialBLE.h:21
+  Total occurrences: 3
+
+Macro: BLYNK_NO_LONGLONG
+  Directive: #define BLYNK_NO_LONGLONG
+  First occurrence: src/Blynk/BlynkDetectDevice.h:72
+  Total occurrences: 1
+
+Macro: BLYNK_NO_YIELD
+  Directive: #define BLYNK_NO_YIELD
+  First occurrence: src/Blynk/BlynkDetectDevice.h:64
+  Total occurrences: 8
+
+Macro: BLYNK_ON_READ_IMPL
+  Directive: #define BLYNK_ON_READ_IMPL(pin)  void BlynkWidgetRead  ## pin (BlynkReq BLYNK_UNUSED &req) \
+  First occurrence: src/utility/BlynkHandlers.cpp:27
+  Total occurrences: 1
+
+Macro: BLYNK_ON_WRITE_IMPL
+  Directive: #define BLYNK_ON_WRITE_IMPL(pin) void BlynkWidgetWrite ## pin (BlynkReq BLYNK_UNUSED &req, const BlynkParam BLYNK_UNUSED &param) \
+  First occurrence: src/utility/BlynkHandlers.cpp:30
+  Total occurrences: 1
+
+Macro: BLYNK_OUTPUT
+  Directive: #define BLYNK_OUTPUT(pin)       BLYNK_OUT_2(pin)
+  First occurrence: src/Blynk/BlynkHandlers.h:174
+  Total occurrences: 1
+
+Macro: BLYNK_OUTPUT_DEFAULT
+  Directive: #define BLYNK_OUTPUT_DEFAULT()  BLYNK_OUT_2(Default)
+  First occurrence: src/Blynk/BlynkHandlers.h:171
+  Total occurrences: 1
+
+Macro: BLYNK_OUT_2
+  Directive: #define BLYNK_OUT_2(pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:167
+  Total occurrences: 1
+
+Macro: BLYNK_PARAM_KV
+  Directive: #define BLYNK_PARAM_KV(k, v) k "\0" v "\0"
+  First occurrence: src/Blynk/BlynkParam.h:19
+  Total occurrences: 1
+
+Macro: BLYNK_PARAM_PLACEHOLDER_64
+  Directive: #define BLYNK_PARAM_PLACEHOLDER_64 "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"
+  First occurrence: src/Blynk/BlynkParam.h:20
+  Total occurrences: 1
+
+Macro: BLYNK_PRINT
+  Directive: #define BLYNK_PRINT Serial
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Edgent_ESP32.ino:29
+  Total occurrences: 80
+
+Macro: BLYNK_PROGMEM
+  Directive: #define BLYNK_PROGMEM     PROGMEM
+  First occurrence: src/Blynk/BlynkHelpers.h:72
+  Total occurrences: 2
+
+Macro: BLYNK_PROV_ERR_CLOUD
+  Directive: #define BLYNK_PROV_ERR_CLOUD    702    // Could not connect to the cloud
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:8
+  Total occurrences: 3
+
+Macro: BLYNK_PROV_ERR_CONFIG
+  Directive: #define BLYNK_PROV_ERR_CONFIG   700    // Invalid config from app (malformed token,etc)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:6
+  Total occurrences: 3
+
+Macro: BLYNK_PROV_ERR_INTERNAL
+  Directive: #define BLYNK_PROV_ERR_INTERNAL 704    // Other issues (i.e. hardware failure)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:10
+  Total occurrences: 3
+
+Macro: BLYNK_PROV_ERR_NETWORK
+  Directive: #define BLYNK_PROV_ERR_NETWORK  701    // Could not connect to the router
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:7
+  Total occurrences: 3
+
+Macro: BLYNK_PROV_ERR_NONE
+  Directive: #define BLYNK_PROV_ERR_NONE     0      // All good
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:5
+  Total occurrences: 3
+
+Macro: BLYNK_PROV_ERR_TOKEN
+  Directive: #define BLYNK_PROV_ERR_TOKEN    703    // Invalid token error (after connection)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:9
+  Total occurrences: 3
+
+Macro: BLYNK_PSTR
+  Directive: #define BLYNK_PSTR(s)     PSTR(s)
+  First occurrence: src/Blynk/BlynkHelpers.h:74
+  Total occurrences: 2
+
+Macro: BLYNK_READ
+  Directive: #define BLYNK_READ(pin)       BLYNK_READ_2(pin)
+  First occurrence: src/Blynk/BlynkHandlers.h:161
+  Total occurrences: 1
+
+Macro: BLYNK_READ_2
+  Directive: #define BLYNK_READ_2(pin)  \
+  First occurrence: src/Blynk/BlynkHandlers.h:154
+  Total occurrences: 1
+
+Macro: BLYNK_READ_DEFAULT
+  Directive: #define BLYNK_READ_DEFAULT()  BLYNK_READ_2(Default)
+  First occurrence: src/Blynk/BlynkHandlers.h:158
+  Total occurrences: 1
+
+Macro: BLYNK_RED
+  Directive: #define BLYNK_RED       "#D3435C"
+  First occurrence: examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino:42
+  Total occurrences: 2
+
+Macro: BLYNK_RUN_YIELD
+  Directive: #define BLYNK_RUN_YIELD() {}
+  First occurrence: src/Blynk/BlynkHelpers.h:59
+  Total occurrences: 4
+
+Macro: BLYNK_SECS_PER_DAY
+  Directive: #define BLYNK_SECS_PER_DAY     (BLYNK_SECS_PER_HOUR * 24UL)
+  First occurrence: src/Blynk/BlynkDateTime.h:40
+  Total occurrences: 1
+
+Macro: BLYNK_SECS_PER_HOUR
+  Directive: #define BLYNK_SECS_PER_HOUR    (3600UL)
+  First occurrence: src/Blynk/BlynkDateTime.h:39
+  Total occurrences: 1
+
+Macro: BLYNK_SECS_PER_MIN
+  Directive: #define BLYNK_SECS_PER_MIN     (60UL)
+  First occurrence: src/Blynk/BlynkDateTime.h:38
+  Total occurrences: 1
+
+Macro: BLYNK_SECS_PER_WEEK
+  Directive: #define BLYNK_SECS_PER_WEEK    (BLYNK_SECS_PER_DAY * 7UL)
+  First occurrence: src/Blynk/BlynkDateTime.h:41
+  Total occurrences: 1
+
+Macro: BLYNK_SEND_ATOMIC
+  Directive: #define BLYNK_SEND_ATOMIC
+  First occurrence: src/Adapters/BlynkArduinoGSM.h:25
+  Total occurrences: 24
+
+Macro: BLYNK_SEND_CHUNK
+  Directive: #define BLYNK_SEND_CHUNK 64
+  First occurrence: src/Blynk/BlynkDetectDevice.h:81
+  Total occurrences: 19
+
+Macro: BLYNK_SEND_THROTTLE
+  Directive: #define BLYNK_SEND_THROTTLE 0
+  First occurrence: src/Blynk/BlynkProtocol.h:436
+  Total occurrences: 3
+
+Macro: BLYNK_SERVER_PORT
+  Directive: #define BLYNK_SERVER_PORT BLYNK_DEFAULT_PORT_SSL
+  First occurrence: src/Adapters/BlynkEthernet.h:19
+  Total occurrences: 6
+
+Macro: BLYNK_SSL_RX_BUF_SIZE
+  Directive: #define BLYNK_SSL_RX_BUF_SIZE 2048
+  First occurrence: src/BlynkSimpleEsp8266_SSL.h:42
+  Total occurrences: 1
+
+Macro: BLYNK_SSL_TX_BUF_SIZE
+  Directive: #define BLYNK_SSL_TX_BUF_SIZE 512
+  First occurrence: src/BlynkSimpleEsp8266_SSL.h:46
+  Total occurrences: 1
+
+Macro: BLYNK_STRINGIFY
+  Directive: #define BLYNK_STRINGIFY(x)    #x
+  First occurrence: src/Blynk/BlynkHelpers.h:42
+  Total occurrences: 1
+
+Macro: BLYNK_STR_16
+  Directive: #define BLYNK_STR_16(a,b)     ((uint16_t(a) << 0) | (uint16_t(b) << 8))
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:96
+  Total occurrences: 2
+
+Macro: BLYNK_STR_32
+  Directive: #define BLYNK_STR_32(a,b,c,d) ((uint32_t(a) << 0) | (uint32_t(b) << 8) | (uint32_t(c) << 16) | (uint32_t(d) << 24))
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:97
+  Total occurrences: 2
+
+Macro: BLYNK_TEMPLATE_ID
+  Directive: #define BLYNK_TEMPLATE_ID           BOARD_TEMPLATE_ID
+  First occurrence: src/Blynk/BlynkApi.h:25
+  Total occurrences: 1
+
+Macro: BLYNK_TEMPLATE_NAME
+  Directive: #define BLYNK_TEMPLATE_NAME BLYNK_DEVICE_NAME
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/BlynkEdgent.h:27
+  Total occurrences: 3
+
+Macro: BLYNK_TERMINAL_BUFF_IN
+  Directive: #define BLYNK_TERMINAL_BUFF_IN BLYNK_MAX_READBYTES
+  First occurrence: src/WidgetTerminal.h:17
+  Total occurrences: 1
+
+Macro: BLYNK_TERMINAL_BUFF_OUT
+  Directive: #define BLYNK_TERMINAL_BUFF_OUT 250
+  First occurrence: src/WidgetTerminal.h:14
+  Total occurrences: 1
+
+Macro: BLYNK_TIMEOUT_MS
+  Directive: #define BLYNK_TIMEOUT_MS 6000
+  First occurrence: src/Adapters/BlynkArduinoGSM.h:22
+  Total occurrences: 5
+
+Macro: BLYNK_TOSTRING
+  Directive: #define BLYNK_TOSTRING(x)     BLYNK_STRINGIFY(x)
+  First occurrence: src/Blynk/BlynkHelpers.h:43
+  Total occurrences: 1
+
+Macro: BLYNK_UNUSED
+  Directive: #define BLYNK_UNUSED          __attribute__ ((__unused__))
+  First occurrence: src/Blynk/BlynkHelpers.h:49
+  Total occurrences: 1
+
+Macro: BLYNK_USE_128_VPINS
+  Directive: #define BLYNK_USE_128_VPINS
+  First occurrence: src/Blynk/BlynkDetectDevice.h:65
+  Total occurrences: 31
+
+Macro: BLYNK_USE_INTERNAL_ATOLL
+  Directive: #define BLYNK_USE_INTERNAL_ATOLL
+  First occurrence: src/Blynk/BlynkDetectDevice.h:227
+  Total occurrences: 2
+
+Macro: BLYNK_USE_INTERNAL_DTOSTRF
+  Directive: #define BLYNK_USE_INTERNAL_DTOSTRF
+  First occurrence: src/Blynk/BlynkDetectDevice.h:66
+  Total occurrences: 4
+
+Macro: BLYNK_USE_SSL
+  Directive: #define BLYNK_USE_SSL
+  First occurrence: src/BlynkSimpleEthernetSSL.h:24
+  Total occurrences: 1
+
+Macro: BLYNK_USE_STREAM_CLASS
+  Directive: #define BLYNK_USE_STREAM_CLASS
+  First occurrence: src/WidgetTerminal.h:21
+  Total occurrences: 2
+
+Macro: BLYNK_VAR_DOUBLE
+  Directive: #define BLYNK_VAR_DOUBLE(name, pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:193
+  Total occurrences: 1
+
+Macro: BLYNK_VAR_INT
+  Directive: #define BLYNK_VAR_INT(name, pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:182
+  Total occurrences: 1
+
+Macro: BLYNK_VAR_LONG
+  Directive: #define BLYNK_VAR_LONG(name, pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:187
+  Total occurrences: 1
+
+Macro: BLYNK_VAR_STRING
+  Directive: #define BLYNK_VAR_STRING(name, pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:200
+  Total occurrences: 1
+
+Macro: BLYNK_VERSION
+  Directive: #define BLYNK_VERSION        "1.3.2"
+  First occurrence: src/Blynk/BlynkConfig.h:27
+  Total occurrences: 1
+
+Macro: BLYNK_WRITE
+  Directive: #define BLYNK_WRITE(pin)      BLYNK_WRITE_2(pin)
+  First occurrence: src/Blynk/BlynkHandlers.h:160
+  Total occurrences: 1
+
+Macro: BLYNK_WRITE_2
+  Directive: #define BLYNK_WRITE_2(pin) \
+  First occurrence: src/Blynk/BlynkHandlers.h:151
+  Total occurrences: 1
+
+Macro: BLYNK_WRITE_DEFAULT
+  Directive: #define BLYNK_WRITE_DEFAULT() BLYNK_WRITE_2(Default)
+  First occurrence: src/Blynk/BlynkHandlers.h:157
+  Total occurrences: 1
+
+Macro: BLYNK_YELLOW
+  Directive: #define BLYNK_YELLOW    "#ED9D00"
+  First occurrence: examples/More/SetProperty/SetProperty_SingleValue/SetProperty_SingleValue.ino:41
+  Total occurrences: 2
+
+Macro: BOARD_ANALOG_IN_MAX
+  Directive: #define BOARD_ANALOG_IN_MAX int(NUM_ANALOG_INPUTS)
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:18
+  Total occurrences: 2
+
+Macro: BOARD_ANALOG_MAX
+  Directive: #define BOARD_ANALOG_MAX    ((2^(ADC_RESOLUTION))-1)
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:61
+  Total occurrences: 2
+
+Macro: BOARD_BUTTON_ACTIVE_LOW
+  Directive: #define BOARD_BUTTON_ACTIVE_LOW     true
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:9
+  Total occurrences: 12
+
+Macro: BOARD_BUTTON_PIN
+  Directive: #define BOARD_BUTTON_PIN            15
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:8
+  Total occurrences: 12
+
+Macro: BOARD_DIGITAL_MAX
+  Directive: #define BOARD_DIGITAL_MAX int(NUM_DIGITAL_PINS)
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:9
+  Total occurrences: 3
+
+Macro: BOARD_INFO_MHZ
+  Directive: #define BOARD_INFO_MHZ clockCyclesPerMicrosecond()
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:69
+  Total occurrences: 2
+
+Macro: BOARD_LEDC_BASE_FREQ
+  Directive: #define BOARD_LEDC_BASE_FREQ          12000
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:96
+  Total occurrences: 1
+
+Macro: BOARD_LEDC_CHANNEL_1
+  Directive: #define BOARD_LEDC_CHANNEL_1          1
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:92
+  Total occurrences: 1
+
+Macro: BOARD_LEDC_CHANNEL_2
+  Directive: #define BOARD_LEDC_CHANNEL_2          2
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:93
+  Total occurrences: 1
+
+Macro: BOARD_LEDC_CHANNEL_3
+  Directive: #define BOARD_LEDC_CHANNEL_3          3
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:94
+  Total occurrences: 1
+
+Macro: BOARD_LEDC_TIMER_BITS
+  Directive: #define BOARD_LEDC_TIMER_BITS         10
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:95
+  Total occurrences: 1
+
+Macro: BOARD_LED_BRIGHTNESS
+  Directive: #define BOARD_LED_BRIGHTNESS 255
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Indicator.h:11
+  Total occurrences: 14
+
+Macro: BOARD_LED_INVERSE
+  Directive: #define BOARD_LED_INVERSE           false
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:14
+  Total occurrences: 10
+
+Macro: BOARD_LED_IS_RGB
+  Directive: #define BOARD_LED_IS_RGB
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Indicator.h:15
+  Total occurrences: 3
+
+Macro: BOARD_LED_PIN
+  Directive: #define BOARD_LED_PIN               19
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:24
+  Total occurrences: 5
+
+Macro: BOARD_LED_PIN_B
+  Directive: #define BOARD_LED_PIN_B             4
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:13
+  Total occurrences: 2
+
+Macro: BOARD_LED_PIN_G
+  Directive: #define BOARD_LED_PIN_G             2
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:12
+  Total occurrences: 2
+
+Macro: BOARD_LED_PIN_R
+  Directive: #define BOARD_LED_PIN_R             0
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:11
+  Total occurrences: 2
+
+Macro: BOARD_LED_PIN_WS2812
+  Directive: #define BOARD_LED_PIN_WS2812        8
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:51
+  Total occurrences: 2
+
+Macro: BOARD_PWM_MAX
+  Directive: #define BOARD_PWM_MAX                 1023
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:90
+  Total occurrences: 6
+
+Macro: BOARD_VIRTUAL_MAX
+  Directive: #define BOARD_VIRTUAL_MAX 127
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:25
+  Total occurrences: 2
+
+Macro: BUTTON_HOLD_TIME_ACTION
+  Directive: #define BUTTON_HOLD_TIME_ACTION       10000
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:87
+  Total occurrences: 3
+
+Macro: BUTTON_HOLD_TIME_INDICATION
+  Directive: #define BUTTON_HOLD_TIME_INDICATION   3000
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:86
+  Total occurrences: 3
+
+Macro: BUTTON_PRESS_TIME_ACTION
+  Directive: #define BUTTON_PRESS_TIME_ACTION      50
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:88
+  Total occurrences: 3
+
+Macro: BlynkApiArduino_h
+  Directive: #define BlynkApiArduino_h
+  First occurrence: src/BlynkApiArduino.h:12
+  Total occurrences: 1
+
+Macro: BlynkApiLinux_h
+  Directive: #define BlynkApiLinux_h
+  First occurrence: linux/BlynkApiLinux.h:12
+  Total occurrences: 1
+
+Macro: BlynkApiMbed_h
+  Directive: #define BlynkApiMbed_h
+  First occurrence: src/BlynkApiMbed.h:12
+  Total occurrences: 1
+
+Macro: BlynkApiParticle_h
+  Directive: #define BlynkApiParticle_h
+  First occurrence: src/BlynkApiParticle.h:12
+  Total occurrences: 1
+
+Macro: BlynkApiWiringPi_h
+  Directive: #define BlynkApiWiringPi_h
+  First occurrence: linux/BlynkApiWiringPi.h:12
+  Total occurrences: 1
+
+Macro: BlynkApi_h
+  Directive: #define BlynkApi_h
+  First occurrence: src/Blynk/BlynkApi.h:12
+  Total occurrences: 2
+
+Macro: BlynkArduinoClient_h
+  Directive: #define BlynkArduinoClient_h
+  First occurrence: src/Adapters/BlynkArduinoClient.h:12
+  Total occurrences: 1
+
+Macro: BlynkArduinoGSM_h
+  Directive: #define BlynkArduinoGSM_h
+  First occurrence: src/Adapters/BlynkArduinoGSM.h:11
+  Total occurrences: 1
+
+Macro: BlynkArduinoNB_h
+  Directive: #define BlynkArduinoNB_h
+  First occurrence: src/Adapters/BlynkArduinoNB.h:11
+  Total occurrences: 1
+
+Macro: BlynkBLEPeripheralSerial_h
+  Directive: #define BlynkBLEPeripheralSerial_h
+  First occurrence: src/Adapters/BlynkBLEPeripheralSerial.h:2
+  Total occurrences: 1
+
+Macro: BlynkBitClear
+  Directive: #define BlynkBitClear(value, bit) ((value) &= ~(1UL << (bit)))
+  First occurrence: src/Blynk/BlynkUtility.h:187
+  Total occurrences: 1
+
+Macro: BlynkBitRead
+  Directive: #define BlynkBitRead(value, bit)  (((value) >> (bit)) & 0x01)
+  First occurrence: src/Blynk/BlynkUtility.h:188
+  Total occurrences: 1
+
+Macro: BlynkBitSet
+  Directive: #define BlynkBitSet(value, bit)   ((value) |= (1UL << (bit)))
+  First occurrence: src/Blynk/BlynkUtility.h:186
+  Total occurrences: 1
+
+Macro: BlynkBitWrite
+  Directive: #define BlynkBitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
+  First occurrence: src/Blynk/BlynkUtility.h:189
+  Total occurrences: 1
+
+Macro: BlynkCC3000_h
+  Directive: #define BlynkCC3000_h
+  First occurrence: src/Adapters/BlynkCC3000.h:12
+  Total occurrences: 1
+
+Macro: BlynkConfig_h
+  Directive: #define BlynkConfig_h
+  First occurrence: src/Blynk/BlynkConfig.h:12
+  Total occurrences: 1
+
+Macro: BlynkConsole_h
+  Directive: #define BlynkConsole_h
+  First occurrence: src/Blynk/BlynkConsole.h:12
+  Total occurrences: 1
+
+Macro: BlynkDateTime_h
+  Directive: #define BlynkDateTime_h
+  First occurrence: src/Blynk/BlynkDateTime.h:12
+  Total occurrences: 1
+
+Macro: BlynkDebug_h
+  Directive: #define BlynkDebug_h
+  First occurrence: src/Blynk/BlynkDebug.h:12
+  Total occurrences: 1
+
+Macro: BlynkDetectDevice_h
+  Directive: #define BlynkDetectDevice_h
+  First occurrence: src/Blynk/BlynkDetectDevice.h:12
+  Total occurrences: 1
+
+Macro: BlynkEthernet_h
+  Directive: #define BlynkEthernet_h
+  First occurrence: src/Adapters/BlynkEthernet.h:12
+  Total occurrences: 1
+
+Macro: BlynkFifo_h
+  Directive: #define BlynkFifo_h
+  First occurrence: src/utility/BlynkFifo.h:12
+  Total occurrences: 1
+
+Macro: BlynkGsmClient_h
+  Directive: #define BlynkGsmClient_h
+  First occurrence: src/Adapters/BlynkGsmClient.h:12
+  Total occurrences: 1
+
+Macro: BlynkHandlers_h
+  Directive: #define BlynkHandlers_h
+  First occurrence: src/Blynk/BlynkHandlers.h:12
+  Total occurrences: 1
+
+Macro: BlynkHelpers_h
+  Directive: #define BlynkHelpers_h
+  First occurrence: src/Blynk/BlynkHelpers.h:12
+  Total occurrences: 1
+
+Macro: BlynkMultiClient_h
+  Directive: #define BlynkMultiClient_h
+  First occurrence: src/BlynkMultiClient.h:12
+  Total occurrences: 1
+
+Macro: BlynkNcpClient_h
+  Directive: #define BlynkNcpClient_h
+  First occurrence: src/BlynkEdgentNCP.h:12
+  Total occurrences: 1
+
+Macro: BlynkParam_h
+  Directive: #define BlynkParam_h
+  First occurrence: src/Blynk/BlynkParam.h:12
+  Total occurrences: 1
+
+Macro: BlynkParticleBearSSL_h
+  Directive: #define BlynkParticleBearSSL_h
+  First occurrence: src/Adapters/BlynkParticleBearSSL.h:12
+  Total occurrences: 1
+
+Macro: BlynkParticle_h
+  Directive: #define BlynkParticle_h
+  First occurrence: src/Adapters/BlynkParticle.h:12
+  Total occurrences: 1
+
+Macro: BlynkProtocolDefs_h
+  Directive: #define BlynkProtocolDefs_h
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:12
+  Total occurrences: 1
+
+Macro: BlynkProtocol_h
+  Directive: #define BlynkProtocol_h
+  First occurrence: src/Blynk/BlynkProtocol.h:12
+  Total occurrences: 1
+
+Macro: BlynkSerialBLE_h
+  Directive: #define BlynkSerialBLE_h
+  First occurrence: src/BlynkSimpleSerialBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleArduinoNano_BLE_h
+  Directive: #define BlynkSimpleArduinoNano_BLE_h
+  First occurrence: src/BlynkSimpleArduinoNanoBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleBLEPeripheral_h
+  Directive: #define BlynkSimpleBLEPeripheral_h
+  First occurrence: src/BlynkSimpleBLEPeripheral.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleCC3000_h
+  Directive: #define BlynkSimpleCC3000_h
+  First occurrence: src/BlynkSimpleCC3000.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleCurieBLE_h
+  Directive: #define BlynkSimpleCurieBLE_h
+  First occurrence: src/BlynkSimpleCurieBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEnergiaEthernet_h
+  Directive: #define BlynkSimpleEnergiaEthernet_h
+  First occurrence: src/BlynkSimpleEnergiaEthernet.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEnergiaWiFi_h
+  Directive: #define BlynkSimpleEnergiaWiFi_h
+  First occurrence: src/BlynkSimpleEnergiaWiFi.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp32_BLE_h
+  Directive: #define BlynkSimpleEsp32_BLE_h
+  First occurrence: src/BlynkSimpleEsp32_BLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp32_BT_h
+  Directive: #define BlynkSimpleEsp32_BT_h
+  First occurrence: src/BlynkSimpleEsp32_BT.h:2
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp32_NimBLE_h
+  Directive: #define BlynkSimpleEsp32_NimBLE_h
+  First occurrence: src/BlynkSimpleEsp32_NimBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp32_SSL_h
+  Directive: #define BlynkSimpleEsp32_SSL_h
+  First occurrence: src/BlynkSimpleEsp32_SSL.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp32_h
+  Directive: #define BlynkSimpleEsp32_h
+  First occurrence: src/BlynkSimpleEsp32.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp8266_SSL_h
+  Directive: #define BlynkSimpleEsp8266_SSL_h
+  First occurrence: src/BlynkSimpleEsp8266_SSL.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEsp8266_h
+  Directive: #define BlynkSimpleEsp8266_h
+  First occurrence: src/BlynkSimpleEsp8266.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEthernetSSL_h
+  Directive: #define BlynkSimpleEthernetSSL_h
+  First occurrence: src/BlynkSimpleEthernetSSL.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleEthernet_h
+  Directive: #define BlynkSimpleEthernet_h
+  First occurrence: src/BlynkSimpleEthernet.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleFishino_h
+  Directive: #define BlynkSimpleFishino_h
+  First occurrence: src/BlynkSimpleFishino.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleIntelEdisonWiFi_h
+  Directive: #define BlynkSimpleIntelEdisonWiFi_h
+  First occurrence: src/BlynkSimpleIntelEdisonWiFi.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleLinkItONE_h
+  Directive: #define BlynkSimpleLinkItONE_h
+  First occurrence: src/BlynkSimpleLinkItONE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleMKR1000_h
+  Directive: #define BlynkSimpleMKR1000_h
+  First occurrence: src/BlynkSimpleMKR1000.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleMKRGSM_h
+  Directive: #define BlynkSimpleMKRGSM_h
+  First occurrence: src/BlynkSimpleMKRGSM.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleMKRNB_h
+  Directive: #define BlynkSimpleMKRNB_h
+  First occurrence: src/BlynkSimpleMKRNB.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleParticle_h
+  Directive: #define BlynkSimpleParticle_h
+  First occurrence: src/BlynkSimpleParticle.h:12
+  Total occurrences: 2
+
+Macro: BlynkSimpleRFduinoBLE_h
+  Directive: #define BlynkSimpleRFduinoBLE_h
+  First occurrence: src/BlynkSimpleRFduinoBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleRedBearLab_BLE_Nano_h
+  Directive: #define BlynkSimpleRedBearLab_BLE_Nano_h
+  First occurrence: src/BlynkSimpleRedBearLab_BLE_Nano.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleRedBear_Duo_BLE_h
+  Directive: #define BlynkSimpleRedBear_Duo_BLE_h
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleRedBear_Duo_h
+  Directive: #define BlynkSimpleRedBear_Duo_h
+  First occurrence: src/BlynkSimpleRedBear_Duo.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleShieldEsp8266_h
+  Directive: #define BlynkSimpleShieldEsp8266_h
+  First occurrence: src/BlynkSimpleShieldEsp8266.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleSimbleeBLE_h
+  Directive: #define BlynkSimpleSimbleeBLE_h
+  First occurrence: src/BlynkSimpleSimbleeBLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleStream_h
+  Directive: #define BlynkSimpleStream_h
+  First occurrence: src/BlynkSimpleStream.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleTinyDuino_h
+  Directive: #define BlynkSimpleTinyDuino_h
+  First occurrence: src/BlynkSimpleTinyDuino.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleTinyGSM_h
+  Directive: #define BlynkSimpleTinyGSM_h
+  First occurrence: src/BlynkSimpleTinyGSM.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleUipEthernet_h
+  Directive: #define BlynkSimpleUipEthernet_h
+  First occurrence: src/BlynkSimpleEthernetENC.h:12
+  Total occurrences: 2
+
+Macro: BlynkSimpleWiFiLink_h
+  Directive: #define BlynkSimpleWiFiLink_h
+  First occurrence: src/BlynkSimpleWiFiLink.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleWiFiNINA_h
+  Directive: #define BlynkSimpleWiFiNINA_h
+  First occurrence: src/BlynkSimpleWiFiNINA.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleWiFiShield101_h
+  Directive: #define BlynkSimpleWiFiShield101_h
+  First occurrence: src/BlynkSimpleWiFiShield101.h:12
+  Total occurrences: 2
+
+Macro: BlynkSimpleWiFly_h
+  Directive: #define BlynkSimpleWiFly_h
+  First occurrence: src/BlynkSimpleWiFly.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleWifi_h
+  Directive: #define BlynkSimpleWifi_h
+  First occurrence: src/BlynkSimpleWifi.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleWildFire_h
+  Directive: #define BlynkSimpleWildFire_h
+  First occurrence: src/BlynkSimpleWildFire.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleWioTerminal_BLE_h
+  Directive: #define BlynkSimpleWioTerminal_BLE_h
+  First occurrence: src/BlynkSimpleWioTerminal_BLE.h:12
+  Total occurrences: 1
+
+Macro: BlynkSimpleWioTerminal_h
+  Directive: #define BlynkSimpleWioTerminal_h
+  First occurrence: src/BlynkSimpleWioTerminal.h:12
+  Total occurrences: 2
+
+Macro: BlynkSimpleWizFi250_h
+  Directive: #define BlynkSimpleWizFi250_h
+  First occurrence: src/BlynkSimpleWizFi250.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleWizFi310_h
+  Directive: #define BlynkSimpleWizFi310_h
+  First occurrence: src/BlynkSimpleWizFi310.h:11
+  Total occurrences: 1
+
+Macro: BlynkSimpleYun_h
+  Directive: #define BlynkSimpleYun_h
+  First occurrence: src/BlynkSimpleYun.h:12
+  Total occurrences: 1
+
+Macro: BlynkSocket_h
+  Directive: #define BlynkSocket_h
+  First occurrence: linux/BlynkSocket.h:11
+  Total occurrences: 1
+
+Macro: BlynkStreamMulti_h
+  Directive: #define BlynkStreamMulti_h
+  First occurrence: src/utility/BlynkStreamMulti.h:2
+  Total occurrences: 1
+
+Macro: BlynkStreamNull_h
+  Directive: #define BlynkStreamNull_h
+  First occurrence: src/utility/BlynkStreamNull.h:2
+  Total occurrences: 1
+
+Macro: BlynkStream_h
+  Directive: #define BlynkStream_h
+  First occurrence: src/Adapters/BlynkSerial.h:12
+  Total occurrences: 1
+
+Macro: BlynkUtility_h
+  Directive: #define BlynkUtility_h
+  First occurrence: src/Blynk/BlynkUtility.h:12
+  Total occurrences: 1
+
+Macro: BlynkWiFiCommon_h
+  Directive: #define BlynkWiFiCommon_h
+  First occurrence: src/Adapters/BlynkWiFiCommon.h:12
+  Total occurrences: 1
+
+Macro: BlynkWiFly_h
+  Directive: #define BlynkWiFly_h
+  First occurrence: src/Adapters/BlynkWiFly.h:12
+  Total occurrences: 1
+
+Macro: BlynkWidgetBase_h
+  Directive: #define BlynkWidgetBase_h
+  First occurrence: src/Blynk/BlynkWidgetBase.h:11
+  Total occurrences: 1
+
+Macro: BlynkWildFire_h
+  Directive: #define BlynkWildFire_h
+  First occurrence: src/Adapters/BlynkWildFire.h:12
+  Total occurrences: 1
+
+Macro: BlynkWizFi250_h
+  Directive: #define BlynkWizFi250_h
+  First occurrence: src/Adapters/BlynkWizFi250.h:12
+  Total occurrences: 1
+
+Macro: Blynk_h
+  Directive: #define Blynk_h
+  First occurrence: src/Blynk.h:12
+  Total occurrences: 1
+
+Macro: CHARACTERISTIC1_MAX_LEN
+  Directive: #define CHARACTERISTIC1_MAX_LEN    20
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:44
+  Total occurrences: 1
+
+Macro: CHARACTERISTIC2_MAX_LEN
+  Directive: #define CHARACTERISTIC2_MAX_LEN    20
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:45
+  Total occurrences: 1
+
+Macro: CHARACTERISTIC_UUID_RX
+  Directive: #define CHARACTERISTIC_UUID_RX "713D0003-503E-4C75-BA94-3148F18D941E"
+  First occurrence: src/BlynkSimpleArduinoNanoBLE.h:27
+  Total occurrences: 4
+
+Macro: CHARACTERISTIC_UUID_TX
+  Directive: #define CHARACTERISTIC_UUID_TX "713D0002-503E-4C75-BA94-3148F18D941E"
+  First occurrence: src/BlynkSimpleArduinoNanoBLE.h:28
+  Total occurrences: 4
+
+Macro: CONFIG_AP_URL
+  Directive: #define CONFIG_AP_URL                 "blynk.setup"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:102
+  Total occurrences: 3
+
+Macro: CONFIG_DEFAULT_PORT
+  Directive: #define CONFIG_DEFAULT_PORT           443
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:108
+  Total occurrences: 3
+
+Macro: CONFIG_DEFAULT_SERVER
+  Directive: #define CONFIG_DEFAULT_SERVER         "blynk.cloud"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:105
+  Total occurrences: 3
+
+Macro: CONFIG_DEVICE_PREFIX
+  Directive: #define CONFIG_DEVICE_PREFIX          "Blynk"
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:99
+  Total occurrences: 3
+
+Macro: CONFIG_FLAG_STATIC_IP
+  Directive: #define CONFIG_FLAG_STATIC_IP   0x02
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:3
+  Total occurrences: 3
+
+Macro: CONFIG_FLAG_VALID
+  Directive: #define CONFIG_FLAG_VALID       0x01
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ConfigStore.h:2
+  Total occurrences: 3
+
+Macro: CONN_SUPERVISION_TIMEOUT
+  Directive: #define CONN_SUPERVISION_TIMEOUT   0x03E8 // 10s.
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:37
+  Total occurrences: 1
+
+Macro: DEBUG_PRINT
+  Directive: #define DEBUG_PRINT(...)  BLYNK_LOG1(__VA_ARGS__)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:127
+  Total occurrences: 6
+
+Macro: DEBUG_PRINTF
+  Directive: #define DEBUG_PRINTF(...) BLYNK_LOG(__VA_ARGS__)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:128
+  Total occurrences: 6
+
+Macro: DHTPIN
+  Directive: #define DHTPIN 2          // What digital pin we're connected to
+  First occurrence: examples/More/DHT11/DHT11.ino:45
+  Total occurrences: 1
+
+Macro: DHTTYPE
+  Directive: #define DHTTYPE DHT11     // DHT 11
+  First occurrence: examples/More/DHT11/DHT11.ino:48
+  Total occurrences: 1
+
+Macro: DIMM
+  Directive: #define DIMM(x)    ((uint32_t)(x)*(BOARD_LED_BRIGHTNESS)/255)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Indicator.h:18
+  Total occurrences: 3
+
+Macro: EEPROM_CONFIG_START
+  Directive: #define EEPROM_CONFIG_START 0
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/ConfigStore.h:102
+  Total occurrences: 1
+
+Macro: ENABLE_HANDLERS
+  Directive: #define ENABLE_HANDLERS
+  First occurrence: tests/BlynkFootprintTest/BlynkFootprintTest.ino:12
+  Total occurrences: 1
+
+Macro: ESP8266_BAUD
+  Directive: #define ESP8266_BAUD 115200
+  First occurrence: examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino:54
+  Total occurrences: 1
+
+Macro: EspSerial
+  Directive: #define EspSerial Serial1
+  First occurrence: examples/Boards_WiFi/ESP8266_Shield/ESP8266_Shield.ino:47
+  Total occurrences: 1
+
+Macro: GPRS_APN
+  Directive: #define GPRS_APN       "GPRS_APN" // replace your GPRS APN
+  First occurrence: examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino:36
+  Total occurrences: 2
+
+Macro: GPRS_LOGIN
+  Directive: #define GPRS_LOGIN     "login"    // replace with your GPRS login
+  First occurrence: examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino:37
+  Total occurrences: 1
+
+Macro: GPRS_PASSWORD
+  Directive: #define GPRS_PASSWORD  "password" // replace with your GPRS password
+  First occurrence: examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino:38
+  Total occurrences: 2
+
+Macro: GPRS_USER
+  Directive: #define GPRS_USER      ""           // Replace with your GPRS user
+  First occurrence: examples/Boards_With_HTTP_API/SIM800_SIM900/SIM800_SIM900.ino:40
+  Total occurrences: 1
+
+Macro: IS_LEAP_YEAR
+  Directive: #define IS_LEAP_YEAR(year)      (!((year) % 4) && (((year) % 100) || !((year) % 400)))
+  First occurrence: src/utility/BlynkTimeUtils.cpp:9
+  Total occurrences: 1
+
+Macro: LED_PIN
+  Directive: #define LED_PIN 4
+  First occurrence: examples/More/Stroboscope/Stroboscope.ino:40
+  Total occurrences: 1
+
+Macro: MAX_CONN_INTERVAL
+  Directive: #define MAX_CONN_INTERVAL          0x0190 // 500ms.
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:35
+  Total occurrences: 1
+
+Macro: MIN_CONN_INTERVAL
+  Directive: #define MIN_CONN_INTERVAL          0x0028 // 50ms.
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:34
+  Total occurrences: 1
+
+Macro: MKRETH_CS
+  Directive: #define MKRETH_CS  5
+  First occurrence: examples/Boards_ArduinoClient/Arduino_MKR1400_GSM_ETH/Arduino_MKR1400_GSM_ETH.ino:52
+  Total occurrences: 4
+
+Macro: NCP_RESETN
+  Directive: #define NCP_RESETN      (101)
+  First occurrence: src/BlynkEdgentNCP.h:129
+  Total occurrences: 1
+
+Macro: OTA_FATAL
+  Directive: #define OTA_FATAL(...) { BLYNK_LOG1(__VA_ARGS__); delay(1000); restartMCU(); }
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/OTA.h:2
+  Total occurrences: 2
+
+Macro: PAD_BLE_SERIAL_X_RX
+  Directive: #define PAD_BLE_SERIAL_X_RX (SERCOM_RX_PAD_2)
+  First occurrence: src/BlynkEdgentNCP.h:36
+  Total occurrences: 1
+
+Macro: PAD_BLE_SERIAL_X_TX
+  Directive: #define PAD_BLE_SERIAL_X_TX (UART_TX_PAD_0)
+  First occurrence: src/BlynkEdgentNCP.h:37
+  Total occurrences: 1
+
+Macro: PIN
+  Directive: #define PIN 8
+  First occurrence: examples/More/NeoPixel/NeoPixel.ino:41
+  Total occurrences: 1
+
+Macro: PINNUMBER
+  Directive: #define PINNUMBER ""
+  First occurrence: examples/Boards_With_HTTP_API/Arduino_GSM/Arduino_GSM.ino:33
+  Total occurrences: 1
+
+Macro: PIN_BLE_SERIAL_X_RX
+  Directive: #define PIN_BLE_SERIAL_X_RX (84ul)
+  First occurrence: src/BlynkEdgentNCP.h:34
+  Total occurrences: 1
+
+Macro: PIN_BLE_SERIAL_X_TX
+  Directive: #define PIN_BLE_SERIAL_X_TX (85ul)
+  First occurrence: src/BlynkEdgentNCP.h:35
+  Total occurrences: 1
+
+Macro: RGB
+  Directive: #define RGB(r,g,b) (DIMM(r) << 16 | DIMM(g) << 8 | DIMM(b) << 0)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Indicator.h:19
+  Total occurrences: 3
+
+Macro: SDCARD_CS
+  Directive: #define SDCARD_CS  4
+  First occurrence: examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino:57
+  Total occurrences: 8
+
+Macro: SECS_IN_DAY
+  Directive: #define SECS_IN_DAY             (24L * 60L * 60L)
+  First occurrence: src/utility/BlynkTimeUtils.cpp:8
+  Total occurrences: 1
+
+Macro: SERCOM_BLE_SERIAL_X
+  Directive: #define SERCOM_BLE_SERIAL_X sercom0
+  First occurrence: src/BlynkEdgentNCP.h:38
+  Total occurrences: 1
+
+Macro: SERVICE_UUID
+  Directive: #define SERVICE_UUID           "713D0000-503E-4C75-BA94-3148F18D941E"
+  First occurrence: src/BlynkSimpleArduinoNanoBLE.h:26
+  Total occurrences: 4
+
+Macro: SIMPLETIMER_H
+  Directive: #define SIMPLETIMER_H
+  First occurrence: src/Blynk/BlynkTimer.h:35
+  Total occurrences: 1
+
+Macro: SKIP_WRITES_TEST
+  Directive: #define SKIP_WRITES_TEST
+  First occurrence: tests/BlynkBuildTest/BlynkBuildTest.ino:18
+  Total occurrences: 1
+
+Macro: SLAVE_LATENCY
+  Directive: #define SLAVE_LATENCY              0x0000 // No slave latency.
+  First occurrence: src/BlynkSimpleRedBear_Duo_BLE.h:36
+  Total occurrences: 1
+
+Macro: SerialAT
+  Directive: #define SerialAT Serial1
+  First occurrence: examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino:57
+  Total occurrences: 1
+
+Macro: SerialNCP
+  Directive: #define SerialNCP       BLYNK_NCP_SERIAL
+  First occurrence: src/BlynkEdgentNCP.h:84
+  Total occurrences: 12
+
+Macro: SimpleTimer
+  Directive: #define SimpleTimer BlynkTimer
+  First occurrence: src/Blynk/BlynkTimer.h:36
+  Total occurrences: 1
+
+Macro: TIME_MAX
+  Directive: #define TIME_MAX                2147483647L
+  First occurrence: src/utility/BlynkTimeUtils.cpp:12
+  Total occurrences: 1
+
+Macro: TINY_GSM_MODEM_SIM800
+  Directive: #define TINY_GSM_MODEM_SIM800
+  First occurrence: examples/Boards_GSM/TinyGSM_SIM800_SIM900/TinyGSM_SIM800_SIM900.ino:35
+  Total occurrences: 1
+
+Macro: TINY_GSM_MODEM_UBLOX
+  Directive: #define TINY_GSM_MODEM_UBLOX
+  First occurrence: examples/Boards_GSM/TinyGSM_MKR1400/TinyGSM_MKR1400.ino:35
+  Total occurrences: 1
+
+Macro: TO_PWM
+  Directive: #define TO_PWM(x)  ((uint32_t)(x)*(BOARD_PWM_MAX)/255)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Indicator.h:20
+  Total occurrences: 3
+
+Macro: TXRX_BUF_LEN
+  Directive: #define TXRX_BUF_LEN 20
+  First occurrence: src/BlynkSimpleRedBearLab_BLE_Nano.h:36
+  Total occurrences: 1
+
+Macro: USE_PTHREAD
+  Directive: #define USE_PTHREAD
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:122
+  Total occurrences: 1
+
+Macro: USE_SSL
+  Directive: #define USE_SSL
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/OTA.h:4
+  Total occurrences: 2
+
+Macro: USE_TICKER
+  Directive: #define USE_TICKER
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP8266/Settings.h:86
+  Total occurrences: 1
+
+Macro: V0
+  Directive: #define V0  0
+  First occurrence: src/Blynk/BlynkHandlers.h:19
+  Total occurrences: 1
+
+Macro: V1
+  Directive: #define V1  1
+  First occurrence: src/Blynk/BlynkHandlers.h:20
+  Total occurrences: 1
+
+Macro: V10
+  Directive: #define V10 10
+  First occurrence: src/Blynk/BlynkHandlers.h:29
+  Total occurrences: 1
+
+Macro: V100
+  Directive: #define V100 100
+  First occurrence: src/Blynk/BlynkHandlers.h:120
+  Total occurrences: 1
+
+Macro: V101
+  Directive: #define V101 101
+  First occurrence: src/Blynk/BlynkHandlers.h:121
+  Total occurrences: 1
+
+Macro: V102
+  Directive: #define V102 102
+  First occurrence: src/Blynk/BlynkHandlers.h:122
+  Total occurrences: 1
+
+Macro: V103
+  Directive: #define V103 103
+  First occurrence: src/Blynk/BlynkHandlers.h:123
+  Total occurrences: 1
+
+Macro: V104
+  Directive: #define V104 104
+  First occurrence: src/Blynk/BlynkHandlers.h:124
+  Total occurrences: 1
+
+Macro: V105
+  Directive: #define V105 105
+  First occurrence: src/Blynk/BlynkHandlers.h:125
+  Total occurrences: 1
+
+Macro: V106
+  Directive: #define V106 106
+  First occurrence: src/Blynk/BlynkHandlers.h:126
+  Total occurrences: 1
+
+Macro: V107
+  Directive: #define V107 107
+  First occurrence: src/Blynk/BlynkHandlers.h:127
+  Total occurrences: 1
+
+Macro: V108
+  Directive: #define V108 108
+  First occurrence: src/Blynk/BlynkHandlers.h:128
+  Total occurrences: 1
+
+Macro: V109
+  Directive: #define V109 109
+  First occurrence: src/Blynk/BlynkHandlers.h:129
+  Total occurrences: 1
+
+Macro: V11
+  Directive: #define V11 11
+  First occurrence: src/Blynk/BlynkHandlers.h:30
+  Total occurrences: 1
+
+Macro: V110
+  Directive: #define V110 110
+  First occurrence: src/Blynk/BlynkHandlers.h:130
+  Total occurrences: 1
+
+Macro: V111
+  Directive: #define V111 111
+  First occurrence: src/Blynk/BlynkHandlers.h:131
+  Total occurrences: 1
+
+Macro: V112
+  Directive: #define V112 112
+  First occurrence: src/Blynk/BlynkHandlers.h:132
+  Total occurrences: 1
+
+Macro: V113
+  Directive: #define V113 113
+  First occurrence: src/Blynk/BlynkHandlers.h:133
+  Total occurrences: 1
+
+Macro: V114
+  Directive: #define V114 114
+  First occurrence: src/Blynk/BlynkHandlers.h:134
+  Total occurrences: 1
+
+Macro: V115
+  Directive: #define V115 115
+  First occurrence: src/Blynk/BlynkHandlers.h:135
+  Total occurrences: 1
+
+Macro: V116
+  Directive: #define V116 116
+  First occurrence: src/Blynk/BlynkHandlers.h:136
+  Total occurrences: 1
+
+Macro: V117
+  Directive: #define V117 117
+  First occurrence: src/Blynk/BlynkHandlers.h:137
+  Total occurrences: 1
+
+Macro: V118
+  Directive: #define V118 118
+  First occurrence: src/Blynk/BlynkHandlers.h:138
+  Total occurrences: 1
+
+Macro: V119
+  Directive: #define V119 119
+  First occurrence: src/Blynk/BlynkHandlers.h:139
+  Total occurrences: 1
+
+Macro: V12
+  Directive: #define V12 12
+  First occurrence: src/Blynk/BlynkHandlers.h:31
+  Total occurrences: 1
+
+Macro: V120
+  Directive: #define V120 120
+  First occurrence: src/Blynk/BlynkHandlers.h:140
+  Total occurrences: 1
+
+Macro: V121
+  Directive: #define V121 121
+  First occurrence: src/Blynk/BlynkHandlers.h:141
+  Total occurrences: 1
+
+Macro: V122
+  Directive: #define V122 122
+  First occurrence: src/Blynk/BlynkHandlers.h:142
+  Total occurrences: 1
+
+Macro: V123
+  Directive: #define V123 123
+  First occurrence: src/Blynk/BlynkHandlers.h:143
+  Total occurrences: 1
+
+Macro: V124
+  Directive: #define V124 124
+  First occurrence: src/Blynk/BlynkHandlers.h:144
+  Total occurrences: 1
+
+Macro: V125
+  Directive: #define V125 125
+  First occurrence: src/Blynk/BlynkHandlers.h:145
+  Total occurrences: 1
+
+Macro: V126
+  Directive: #define V126 126
+  First occurrence: src/Blynk/BlynkHandlers.h:146
+  Total occurrences: 1
+
+Macro: V127
+  Directive: #define V127 127
+  First occurrence: src/Blynk/BlynkHandlers.h:147
+  Total occurrences: 1
+
+Macro: V13
+  Directive: #define V13 13
+  First occurrence: src/Blynk/BlynkHandlers.h:32
+  Total occurrences: 1
+
+Macro: V14
+  Directive: #define V14 14
+  First occurrence: src/Blynk/BlynkHandlers.h:33
+  Total occurrences: 1
+
+Macro: V15
+  Directive: #define V15 15
+  First occurrence: src/Blynk/BlynkHandlers.h:34
+  Total occurrences: 1
+
+Macro: V16
+  Directive: #define V16 16
+  First occurrence: src/Blynk/BlynkHandlers.h:35
+  Total occurrences: 1
+
+Macro: V17
+  Directive: #define V17 17
+  First occurrence: src/Blynk/BlynkHandlers.h:36
+  Total occurrences: 1
+
+Macro: V18
+  Directive: #define V18 18
+  First occurrence: src/Blynk/BlynkHandlers.h:37
+  Total occurrences: 1
+
+Macro: V19
+  Directive: #define V19 19
+  First occurrence: src/Blynk/BlynkHandlers.h:38
+  Total occurrences: 1
+
+Macro: V2
+  Directive: #define V2  2
+  First occurrence: src/Blynk/BlynkHandlers.h:21
+  Total occurrences: 1
+
+Macro: V20
+  Directive: #define V20 20
+  First occurrence: src/Blynk/BlynkHandlers.h:39
+  Total occurrences: 1
+
+Macro: V21
+  Directive: #define V21 21
+  First occurrence: src/Blynk/BlynkHandlers.h:40
+  Total occurrences: 1
+
+Macro: V22
+  Directive: #define V22 22
+  First occurrence: src/Blynk/BlynkHandlers.h:41
+  Total occurrences: 1
+
+Macro: V23
+  Directive: #define V23 23
+  First occurrence: src/Blynk/BlynkHandlers.h:42
+  Total occurrences: 1
+
+Macro: V24
+  Directive: #define V24 24
+  First occurrence: src/Blynk/BlynkHandlers.h:43
+  Total occurrences: 1
+
+Macro: V25
+  Directive: #define V25 25
+  First occurrence: src/Blynk/BlynkHandlers.h:44
+  Total occurrences: 1
+
+Macro: V26
+  Directive: #define V26 26
+  First occurrence: src/Blynk/BlynkHandlers.h:45
+  Total occurrences: 1
+
+Macro: V27
+  Directive: #define V27 27
+  First occurrence: src/Blynk/BlynkHandlers.h:46
+  Total occurrences: 1
+
+Macro: V28
+  Directive: #define V28 28
+  First occurrence: src/Blynk/BlynkHandlers.h:47
+  Total occurrences: 1
+
+Macro: V29
+  Directive: #define V29 29
+  First occurrence: src/Blynk/BlynkHandlers.h:48
+  Total occurrences: 1
+
+Macro: V3
+  Directive: #define V3  3
+  First occurrence: src/Blynk/BlynkHandlers.h:22
+  Total occurrences: 1
+
+Macro: V30
+  Directive: #define V30 30
+  First occurrence: src/Blynk/BlynkHandlers.h:49
+  Total occurrences: 1
+
+Macro: V31
+  Directive: #define V31 31
+  First occurrence: src/Blynk/BlynkHandlers.h:50
+  Total occurrences: 1
+
+Macro: V32
+  Directive: #define V32 32
+  First occurrence: src/Blynk/BlynkHandlers.h:52
+  Total occurrences: 1
+
+Macro: V33
+  Directive: #define V33 33
+  First occurrence: src/Blynk/BlynkHandlers.h:53
+  Total occurrences: 1
+
+Macro: V34
+  Directive: #define V34 34
+  First occurrence: src/Blynk/BlynkHandlers.h:54
+  Total occurrences: 1
+
+Macro: V35
+  Directive: #define V35 35
+  First occurrence: src/Blynk/BlynkHandlers.h:55
+  Total occurrences: 1
+
+Macro: V36
+  Directive: #define V36 36
+  First occurrence: src/Blynk/BlynkHandlers.h:56
+  Total occurrences: 1
+
+Macro: V37
+  Directive: #define V37 37
+  First occurrence: src/Blynk/BlynkHandlers.h:57
+  Total occurrences: 1
+
+Macro: V38
+  Directive: #define V38 38
+  First occurrence: src/Blynk/BlynkHandlers.h:58
+  Total occurrences: 1
+
+Macro: V39
+  Directive: #define V39 39
+  First occurrence: src/Blynk/BlynkHandlers.h:59
+  Total occurrences: 1
+
+Macro: V4
+  Directive: #define V4  4
+  First occurrence: src/Blynk/BlynkHandlers.h:23
+  Total occurrences: 1
+
+Macro: V40
+  Directive: #define V40 40
+  First occurrence: src/Blynk/BlynkHandlers.h:60
+  Total occurrences: 1
+
+Macro: V41
+  Directive: #define V41 41
+  First occurrence: src/Blynk/BlynkHandlers.h:61
+  Total occurrences: 1
+
+Macro: V42
+  Directive: #define V42 42
+  First occurrence: src/Blynk/BlynkHandlers.h:62
+  Total occurrences: 1
+
+Macro: V43
+  Directive: #define V43 43
+  First occurrence: src/Blynk/BlynkHandlers.h:63
+  Total occurrences: 1
+
+Macro: V44
+  Directive: #define V44 44
+  First occurrence: src/Blynk/BlynkHandlers.h:64
+  Total occurrences: 1
+
+Macro: V45
+  Directive: #define V45 45
+  First occurrence: src/Blynk/BlynkHandlers.h:65
+  Total occurrences: 1
+
+Macro: V46
+  Directive: #define V46 46
+  First occurrence: src/Blynk/BlynkHandlers.h:66
+  Total occurrences: 1
+
+Macro: V47
+  Directive: #define V47 47
+  First occurrence: src/Blynk/BlynkHandlers.h:67
+  Total occurrences: 1
+
+Macro: V48
+  Directive: #define V48 48
+  First occurrence: src/Blynk/BlynkHandlers.h:68
+  Total occurrences: 1
+
+Macro: V49
+  Directive: #define V49 49
+  First occurrence: src/Blynk/BlynkHandlers.h:69
+  Total occurrences: 1
+
+Macro: V5
+  Directive: #define V5  5
+  First occurrence: src/Blynk/BlynkHandlers.h:24
+  Total occurrences: 1
+
+Macro: V50
+  Directive: #define V50 50
+  First occurrence: src/Blynk/BlynkHandlers.h:70
+  Total occurrences: 1
+
+Macro: V51
+  Directive: #define V51 51
+  First occurrence: src/Blynk/BlynkHandlers.h:71
+  Total occurrences: 1
+
+Macro: V52
+  Directive: #define V52 52
+  First occurrence: src/Blynk/BlynkHandlers.h:72
+  Total occurrences: 1
+
+Macro: V53
+  Directive: #define V53 53
+  First occurrence: src/Blynk/BlynkHandlers.h:73
+  Total occurrences: 1
+
+Macro: V54
+  Directive: #define V54 54
+  First occurrence: src/Blynk/BlynkHandlers.h:74
+  Total occurrences: 1
+
+Macro: V55
+  Directive: #define V55 55
+  First occurrence: src/Blynk/BlynkHandlers.h:75
+  Total occurrences: 1
+
+Macro: V56
+  Directive: #define V56 56
+  First occurrence: src/Blynk/BlynkHandlers.h:76
+  Total occurrences: 1
+
+Macro: V57
+  Directive: #define V57 57
+  First occurrence: src/Blynk/BlynkHandlers.h:77
+  Total occurrences: 1
+
+Macro: V58
+  Directive: #define V58 58
+  First occurrence: src/Blynk/BlynkHandlers.h:78
+  Total occurrences: 1
+
+Macro: V59
+  Directive: #define V59 59
+  First occurrence: src/Blynk/BlynkHandlers.h:79
+  Total occurrences: 1
+
+Macro: V6
+  Directive: #define V6  6
+  First occurrence: src/Blynk/BlynkHandlers.h:25
+  Total occurrences: 1
+
+Macro: V60
+  Directive: #define V60 60
+  First occurrence: src/Blynk/BlynkHandlers.h:80
+  Total occurrences: 1
+
+Macro: V61
+  Directive: #define V61 61
+  First occurrence: src/Blynk/BlynkHandlers.h:81
+  Total occurrences: 1
+
+Macro: V62
+  Directive: #define V62 62
+  First occurrence: src/Blynk/BlynkHandlers.h:82
+  Total occurrences: 1
+
+Macro: V63
+  Directive: #define V63 63
+  First occurrence: src/Blynk/BlynkHandlers.h:83
+  Total occurrences: 1
+
+Macro: V64
+  Directive: #define V64 64
+  First occurrence: src/Blynk/BlynkHandlers.h:84
+  Total occurrences: 1
+
+Macro: V65
+  Directive: #define V65 65
+  First occurrence: src/Blynk/BlynkHandlers.h:85
+  Total occurrences: 1
+
+Macro: V66
+  Directive: #define V66 66
+  First occurrence: src/Blynk/BlynkHandlers.h:86
+  Total occurrences: 1
+
+Macro: V67
+  Directive: #define V67 67
+  First occurrence: src/Blynk/BlynkHandlers.h:87
+  Total occurrences: 1
+
+Macro: V68
+  Directive: #define V68 68
+  First occurrence: src/Blynk/BlynkHandlers.h:88
+  Total occurrences: 1
+
+Macro: V69
+  Directive: #define V69 69
+  First occurrence: src/Blynk/BlynkHandlers.h:89
+  Total occurrences: 1
+
+Macro: V7
+  Directive: #define V7  7
+  First occurrence: src/Blynk/BlynkHandlers.h:26
+  Total occurrences: 1
+
+Macro: V70
+  Directive: #define V70 70
+  First occurrence: src/Blynk/BlynkHandlers.h:90
+  Total occurrences: 1
+
+Macro: V71
+  Directive: #define V71 71
+  First occurrence: src/Blynk/BlynkHandlers.h:91
+  Total occurrences: 1
+
+Macro: V72
+  Directive: #define V72 72
+  First occurrence: src/Blynk/BlynkHandlers.h:92
+  Total occurrences: 1
+
+Macro: V73
+  Directive: #define V73 73
+  First occurrence: src/Blynk/BlynkHandlers.h:93
+  Total occurrences: 1
+
+Macro: V74
+  Directive: #define V74 74
+  First occurrence: src/Blynk/BlynkHandlers.h:94
+  Total occurrences: 1
+
+Macro: V75
+  Directive: #define V75 75
+  First occurrence: src/Blynk/BlynkHandlers.h:95
+  Total occurrences: 1
+
+Macro: V76
+  Directive: #define V76 76
+  First occurrence: src/Blynk/BlynkHandlers.h:96
+  Total occurrences: 1
+
+Macro: V77
+  Directive: #define V77 77
+  First occurrence: src/Blynk/BlynkHandlers.h:97
+  Total occurrences: 1
+
+Macro: V78
+  Directive: #define V78 78
+  First occurrence: src/Blynk/BlynkHandlers.h:98
+  Total occurrences: 1
+
+Macro: V79
+  Directive: #define V79 79
+  First occurrence: src/Blynk/BlynkHandlers.h:99
+  Total occurrences: 1
+
+Macro: V8
+  Directive: #define V8  8
+  First occurrence: src/Blynk/BlynkHandlers.h:27
+  Total occurrences: 1
+
+Macro: V80
+  Directive: #define V80 80
+  First occurrence: src/Blynk/BlynkHandlers.h:100
+  Total occurrences: 1
+
+Macro: V81
+  Directive: #define V81 81
+  First occurrence: src/Blynk/BlynkHandlers.h:101
+  Total occurrences: 1
+
+Macro: V82
+  Directive: #define V82 82
+  First occurrence: src/Blynk/BlynkHandlers.h:102
+  Total occurrences: 1
+
+Macro: V83
+  Directive: #define V83 83
+  First occurrence: src/Blynk/BlynkHandlers.h:103
+  Total occurrences: 1
+
+Macro: V84
+  Directive: #define V84 84
+  First occurrence: src/Blynk/BlynkHandlers.h:104
+  Total occurrences: 1
+
+Macro: V85
+  Directive: #define V85 85
+  First occurrence: src/Blynk/BlynkHandlers.h:105
+  Total occurrences: 1
+
+Macro: V86
+  Directive: #define V86 86
+  First occurrence: src/Blynk/BlynkHandlers.h:106
+  Total occurrences: 1
+
+Macro: V87
+  Directive: #define V87 87
+  First occurrence: src/Blynk/BlynkHandlers.h:107
+  Total occurrences: 1
+
+Macro: V88
+  Directive: #define V88 88
+  First occurrence: src/Blynk/BlynkHandlers.h:108
+  Total occurrences: 1
+
+Macro: V89
+  Directive: #define V89 89
+  First occurrence: src/Blynk/BlynkHandlers.h:109
+  Total occurrences: 1
+
+Macro: V9
+  Directive: #define V9  9
+  First occurrence: src/Blynk/BlynkHandlers.h:28
+  Total occurrences: 1
+
+Macro: V90
+  Directive: #define V90 90
+  First occurrence: src/Blynk/BlynkHandlers.h:110
+  Total occurrences: 1
+
+Macro: V91
+  Directive: #define V91 91
+  First occurrence: src/Blynk/BlynkHandlers.h:111
+  Total occurrences: 1
+
+Macro: V92
+  Directive: #define V92 92
+  First occurrence: src/Blynk/BlynkHandlers.h:112
+  Total occurrences: 1
+
+Macro: V93
+  Directive: #define V93 93
+  First occurrence: src/Blynk/BlynkHandlers.h:113
+  Total occurrences: 1
+
+Macro: V94
+  Directive: #define V94 94
+  First occurrence: src/Blynk/BlynkHandlers.h:114
+  Total occurrences: 1
+
+Macro: V95
+  Directive: #define V95 95
+  First occurrence: src/Blynk/BlynkHandlers.h:115
+  Total occurrences: 1
+
+Macro: V96
+  Directive: #define V96 96
+  First occurrence: src/Blynk/BlynkHandlers.h:116
+  Total occurrences: 1
+
+Macro: V97
+  Directive: #define V97 97
+  First occurrence: src/Blynk/BlynkHandlers.h:117
+  Total occurrences: 1
+
+Macro: V98
+  Directive: #define V98 98
+  First occurrence: src/Blynk/BlynkHandlers.h:118
+  Total occurrences: 1
+
+Macro: V99
+  Directive: #define V99 99
+  First occurrence: src/Blynk/BlynkHandlers.h:119
+  Total occurrences: 1
+
+Macro: W5100_CS
+  Directive: #define W5100_CS   10
+  First occurrence: examples/Boards_ArduinoClient/Arduino_Ethernet/Arduino_Ethernet.ino:56
+  Total occurrences: 4
+
+Macro: WIFI_AP_IP
+  Directive: #define WIFI_AP_IP                    IPAddress(192, 168, 4, 1)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:114
+  Total occurrences: 3
+
+Macro: WIFI_AP_Subnet
+  Directive: #define WIFI_AP_Subnet                IPAddress(255, 255, 255, 0)
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:115
+  Total occurrences: 3
+
+Macro: WIFI_CLOUD_CONNECT_TIMEOUT
+  Directive: #define WIFI_CLOUD_CONNECT_TIMEOUT    50000
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:113
+  Total occurrences: 3
+
+Macro: WIFI_CLOUD_MAX_RETRIES
+  Directive: #define WIFI_CLOUD_MAX_RETRIES        500
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:111
+  Total occurrences: 3
+
+Macro: WIFI_NET_CONNECT_TIMEOUT
+  Directive: #define WIFI_NET_CONNECT_TIMEOUT      50000
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/Settings.h:112
+  Total occurrences: 3
+
+Macro: WiFlySerial
+  Directive: #define WiFlySerial Serial1
+  First occurrence: examples/Boards_WiFi/RN_XV_WiFly/RN_XV_WiFly.ino:48
+  Total occurrences: 2
+
+Macro: WidgetLCD_h
+  Directive: #define WidgetLCD_h
+  First occurrence: src/WidgetLCD.h:11
+  Total occurrences: 1
+
+Macro: WidgetLED_h
+  Directive: #define WidgetLED_h
+  First occurrence: src/WidgetLED.h:11
+  Total occurrences: 1
+
+Macro: WidgetMap_h
+  Directive: #define WidgetMap_h
+  First occurrence: src/WidgetMap.h:11
+  Total occurrences: 1
+
+Macro: WidgetRTC_h
+  Directive: #define WidgetRTC_h
+  First occurrence: src/WidgetRTC.h:12
+  Total occurrences: 1
+
+Macro: WidgetTerminal_h
+  Directive: #define WidgetTerminal_h
+  First occurrence: src/WidgetTerminal.h:11
+  Total occurrences: 1
+
+Macro: WidgetTimeInput_h
+  Directive: #define WidgetTimeInput_h
+  First occurrence: src/WidgetTimeInput.h:12
+  Total occurrences: 1
+
+Macro: YEAR_0
+  Directive: #define YEAR_0                  1900
+  First occurrence: src/utility/BlynkTimeUtils.cpp:6
+  Total occurrences: 1
+
+Macro: YEAR_DAYS
+  Directive: #define YEAR_DAYS(year)         (IS_LEAP_YEAR(year) ? 366 : 365)
+  First occurrence: src/utility/BlynkTimeUtils.cpp:10
+  Total occurrences: 1
+
+Macro: YEAR_EPOCH
+  Directive: #define YEAR_EPOCH              1970
+  First occurrence: src/utility/BlynkTimeUtils.cpp:7
+  Total occurrences: 1
+
+Macro: YIELD_FIX
+  Directive: #define YIELD_FIX() BLYNK_RUN_YIELD();
+  First occurrence: src/Adapters/BlynkArduinoClient.h:19
+  Total occurrences: 2
+
+Macro: _BLYNK_USE_DEFAULT_DELAY
+  Directive: #define _BLYNK_USE_DEFAULT_DELAY
+  First occurrence: src/utility/BlynkDebug.cpp:40
+  Total occurrences: 10
+
+Macro: _BLYNK_USE_DEFAULT_FREE_RAM
+  Directive: #define _BLYNK_USE_DEFAULT_FREE_RAM
+  First occurrence: src/utility/BlynkDebug.cpp:91
+  Total occurrences: 9
+
+Macro: _BLYNK_USE_DEFAULT_MILLIS
+  Directive: #define _BLYNK_USE_DEFAULT_MILLIS
+  First occurrence: src/utility/BlynkDebug.cpp:39
+  Total occurrences: 9
+
+Macro: _BLYNK_USE_DEFAULT_RESET
+  Directive: #define _BLYNK_USE_DEFAULT_RESET
+  First occurrence: src/utility/BlynkDebug.cpp:131
+  Total occurrences: 3
+
+Macro: _POSIX_C_SOURCE
+  Directive: #define _POSIX_C_SOURCE 200809L
+  First occurrence: src/utility/BlynkDebug.cpp:218
+  Total occurrences: 1
+
+Macro: analogInputToDigitalPin
+  Directive: #define analogInputToDigitalPin(x) -1
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:41
+  Total occurrences: 1
+
+Macro: digitalPinHasPWM
+  Directive: #define digitalPinHasPWM(x) false
+  First occurrence: tests/GenerateJSON/GenerateJSON.ino:36
+  Total occurrences: 1
+
+Macro: g_buttonPressTime
+  Directive: #define g_buttonPressTime   0
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h:49
+  Total occurrences: 3
+
+Macro: g_buttonPressed
+  Directive: #define g_buttonPressed     false
+  First occurrence: examples/Blynk.Edgent/Edgent_ESP32/ResetButton.h:48
+  Total occurrences: 3
+
+Macro: htonl
+  Directive: #define htonl(x) ( ((x)<<24 & 0xFF000000UL) | \
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:79
+  Total occurrences: 2
+
+Macro: htons
+  Directive: #define htons(x) ( ((x)<<8) | (((x)>>8)&0xFF) )
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:78
+  Total occurrences: 2
+
+Macro: interrupts
+  Directive: #define interrupts()   __enable_irq()
+  First occurrence: src/Blynk/BlynkDetectDevice.h:159
+  Total occurrences: 1
+
+Macro: noInterrupts
+  Directive: #define noInterrupts() __disable_irq()
+  First occurrence: src/Blynk/BlynkDetectDevice.h:158
+  Total occurrences: 1
+
+Macro: ntohl
+  Directive: #define ntohl(x) htonl(x)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:84
+  Total occurrences: 2
+
+Macro: ntohs
+  Directive: #define ntohs(x) htons(x)
+  First occurrence: src/Blynk/BlynkProtocolDefs.h:83
+  Total occurrences: 2
+
+Macro: ser1
+  Directive: #define ser1 Serial
+  First occurrence: tests/SerialXconnect/SerialXconnect.ino:17
+  Total occurrences: 1
+
+Macro: ser2
+  Directive: #define ser2 Serial1
+  First occurrence: tests/SerialXconnect/SerialXconnect.ino:20
+  Total occurrences: 2
+
